@@ -1,0 +1,1 @@
+Failed to run test zerocost for /home/shr/Code/zerocost/benchmarks/jpeg_overheads_6/zerocost.
