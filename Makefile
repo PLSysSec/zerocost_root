@@ -27,7 +27,7 @@ rlbox_mpk_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
 
 zerocost_testing_firefox:
-	git@github.com:PLSysSec/zerocost_testing_firefox.git $@
+	git clone git@github.com:PLSysSec/zerocost_testing_firefox.git $@
 
 get_source: $(DIRS)
 
