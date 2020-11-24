@@ -25,8 +25,10 @@ bootstrap: get_source
 		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
 		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm; \
+	elif [ -x "$(shell command -v trizen)" ]; then \
+		trizen -S curl cmake msr-tools cpuid cpufrequtils npm; \
 	else \
-		echo "Unknown installer. apt/dnf not found"; \
+		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
 	fi
 	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
