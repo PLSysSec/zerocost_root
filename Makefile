@@ -38,24 +38,21 @@ pull: $(DIRS)
 	cd zerocost_testing_firefox && git pull
 
 build: get_source
-	cd zerocost_testing_firefox && \
-	MOZCONFIG=mozconfig_fullsave_release ./mach build && \
-	MOZCONFIG=mozconfig_mpkfullsave_release ./mach build && \
-	MOZCONFIG=mozconfig_zerocost_release ./mach build && \
-	MOZCONFIG=mozconfig_regsave_release ./mach build && \
-	MOZCONFIG=mozconfig_stock_release ./mach build && \
-	echo "Done"
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
 
 build_debug: get_source
-	cd zerocost_testing_firefox && \
-	MOZCONFIG=mozconfig_fullsave_debug ./mach build && \
-	MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build && \
-	MOZCONFIG=mozconfig_zerocost_debug ./mach build && \
-	MOZCONFIG=mozconfig_regsave_debug ./mach build && \
-	MOZCONFIG=mozconfig_stock_debug ./mach build && \
-	echo "Done"
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
 benchmark:
+	sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz
 	cd zerocost_testing_firefox && \
 	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)"
 
