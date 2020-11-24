@@ -9,17 +9,6 @@ DIRS=zerocost_testing_sandbox rlbox_mpk_sandbox zerocost_testing_firefox
 
 CURR_DIR := $(shell realpath ./)
 
-bootstrap:
-	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm; \
-	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm; \
-	else \
-		echo "Unknown installer. apt/dnf not found"; \
-		exit 1; \
-	fi
-	touch ./bootstrap
-
 zerocost_testing_sandbox:
 	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
 
@@ -30,6 +19,18 @@ zerocost_testing_firefox:
 	git clone git@github.com:PLSysSec/zerocost_testing_firefox.git $@
 
 get_source: $(DIRS)
+
+bootstrap: get_source
+	if [ -x "$(shell command -v apt)" ]; then \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm; \
+	elif [ -x "$(shell command -v dnf)" ]; then \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm; \
+	else \
+		echo "Unknown installer. apt/dnf not found"; \
+		exit 1; \
+	fi
+	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
+	touch ./bootstrap
 
 pull: $(DIRS)
 	git pull
