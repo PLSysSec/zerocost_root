@@ -69,7 +69,7 @@ build_debug:
 
 benchmark:
 	if [ -x "$(shell command -v cpupower)" ]; then \
-		sudo cpupower frequency-set -c 1 --min 2200MHz --max 2200MHz \
+		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz \
 	else \
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz \
 	fi
