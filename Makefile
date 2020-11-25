@@ -41,14 +41,14 @@ pull: $(DIRS)
 	cd rlbox_mpk_sandbox && git pull
 	cd zerocost_testing_firefox && git pull
 
-build: get_source
+build: bootstrap
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
 
-build_debug: get_source
+build_debug: bootstrap
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
