@@ -1,0 +1,1 @@
+Failed to run test zerocost for /home/shr/Code/zerocost/benchmarks/jpeg_width_2020-11-23T23:50:59-08:00/zerocost.

@@ -1,0 +1,962 @@
+06:49:45     INFO - ConsoleLogger online at 20201124 06:49:45Z in /home/shr/Code/zerocost/zerocost_testing_firefox
+06:49:45     INFO - Run as ./mach talos-test --activeTests jpeg_width_perf
+06:49:45     INFO - Dumping config to /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/logs/localconfig.json.
+06:49:45     INFO - {'append_to_log': False,
+06:49:45     INFO -  u'base_work_dir': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness',
+06:49:45     INFO -  u'binary_path': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox',
+06:49:45     INFO -  'code_coverage': False,
+06:49:45     INFO -  'config_files': (),
+06:49:45     INFO -  u'default_actions': (u'populate-webroot', u'create-virtualenv', u'run-tests'),
+06:49:45     INFO -  'disable_ccov_upload': False,
+06:49:45     INFO -  'e10s': True,
+06:49:45     INFO -  'enable_fission': False,
+06:49:45     INFO -  'enable_webrender': False,
+06:49:45     INFO -  u'exes': {u'python': u'/home/shr/.mozbuild/_virtualenvs/mach_py2/bin/python',
+06:49:45     INFO -            u'virtualenv': (u'/home/shr/.mozbuild/_virtualenvs/mach_py2/bin/python',
+06:49:45     INFO -                            u'/home/shr/Code/zerocost/zerocost_testing_firefox/third_party/python/virtualenv/virtualenv.py')},
+06:49:45     INFO -  'extra_prefs': (),
+06:49:45     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub',),
+06:49:45     INFO -  'gecko_profile': False,
+06:49:45     INFO -  'gecko_profile_interval': 0,
+06:49:45     INFO -  'java_code_coverage': False,
+06:49:45     INFO -  'log_level': 'info',
+06:49:45     INFO -  u'log_name': u'talos',
+06:49:45     INFO -  'log_to_console': True,
+06:49:45     INFO -  u'obj_path': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release',
+06:49:45     INFO -  'opt_config_files': (),
+06:49:45     INFO -  'per_test_coverage': False,
+06:49:45     INFO -  'pip_index': False,
+06:49:45     INFO -  u'pypi_url': u'http://pypi.python.org/simple',
+06:49:45     INFO -  u'python3_manifest': {u'win32': u'python3.manifest',
+06:49:45     INFO -                        u'win64': u'python3_x64.manifest'},
+06:49:45     INFO -  u'repo_path': u'/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:45     INFO -  u'run_local': True,
+06:49:45     INFO -  'system_bits': '32',
+06:49:45     INFO -  u'talos_extra_options': (u'--develop', u'--activeTests', u'jpeg_width_perf'),
+06:49:45     INFO -  u'talos_json': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos.json',
+06:49:45     INFO -  u'title': u'shr-Desktop',
+06:49:45     INFO -  'use_talos_json': False,
+06:49:45     INFO -  'verify': False,
+06:49:45     INFO -  u'virtualenv_path': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv',
+06:49:45     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+06:49:45     INFO -  'work_dir': 'build'}
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.864652Z] Skipping clobber step.
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.864738Z] Skipping download-and-extract step.
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.864817Z] Running populate-webroot step.
+06:49:45     INFO - Running pre-action listener: _resource_record_pre_action
+06:49:45     INFO - Running main action method: populate_webroot
+06:49:45     INFO - {u'suites': {u'bcv': {u'tests': [u'basic_compositor_video']},
+06:49:45     INFO -              u'chromez': {u'tests': [u'about_preferences_basic',
+06:49:45     INFO -                                      u'tresize',
+06:49:45     INFO -                                      u'about_newtab_with_snippets']},
+06:49:45     INFO -              u'damp': {u'pagesets_name': u'tp5n.zip', u'tests': [u'damp']},
+06:49:45     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css', u'kraken']},
+06:49:45     INFO -              u'flex': {u'tests': [u'tart_flex', u'ts_paint_flex']},
+06:49:45     INFO -              u'g1': {u'pagesets_name': u'tp5n.zip',
+06:49:45     INFO -                      u'tests': [u'tp5o_scroll']},
+06:49:45     INFO -              u'g3': {u'tests': [u'dromaeo_dom']},
+06:49:45     INFO -              u'g4': {u'tests': [u'displaylist_mutate',
+06:49:45     INFO -                                 u'rasterflood_svg',
+06:49:45     INFO -                                 u'rasterflood_gradient']},
+06:49:45     INFO -              u'g5': {u'pagesets_name': u'tp5n.zip',
+06:49:45     INFO -                      u'tests': [u'ts_paint_webext', u'tp5o_webext']},
+06:49:45     INFO -              u'h1': {u'tests': [u'ts_paint_heavy']},
+06:49:45     INFO -              u'motionmark': {u'benchmark_zip': u'jetstream.zip',
+06:49:45     INFO -                              u'tests': [u'motionmark_animometer',
+06:49:45     INFO -                                         u'motionmark_htmlsuite',
+06:49:45     INFO -                                         u'JetStream',
+06:49:45     INFO -                                         u'ARES6']},
+06:49:45     INFO -              u'other': {u'_comment': u'Bug 1220362 - Disabled startup_about_home_paint_cached for high frequency intermittents',
+06:49:45     INFO -                         u'tests': [u'a11yr',
+06:49:45     INFO -                                    u'ts_paint',
+06:49:45     INFO -                                    u'twinopen',
+06:49:45     INFO -                                    u'sessionrestore',
+06:49:45     INFO -                                    u'sessionrestore_no_auto_restore',
+06:49:45     INFO -                                    u'tabpaint',
+06:49:45     INFO -                                    u'cpstartup',
+06:49:45     INFO -                                    u'startup_about_home_paint',
+06:49:45     INFO -                                    u'pdfpaint']},
+06:49:45     INFO -              u'perf-reftest': {u'tests': [u'perf_reftest']},
+06:49:45     INFO -              u'perf-reftest-singletons': {u'tests': [u'perf_reftest_singletons']},
+06:49:45     INFO -              u'realworld-webextensions': {u'tests': [u'startup_about_home_paint_realworld_webextensions'],
+06:49:45     INFO -                                           u'webextensions_zip': u'webextensions.zip'},
+06:49:45     INFO -              u'sessionrestore-many-windows': {u'tests': [u'sessionrestore_many_windows']},
+06:49:45     INFO -              u'svgr': {u'tests': [u'tsvgx',
+06:49:45     INFO -                                   u'tsvgr_opacity',
+06:49:45     INFO -                                   u'tart',
+06:49:45     INFO -                                   u'tscrollx',
+06:49:45     INFO -                                   u'tsvg_static']},
+06:49:45     INFO -              u'tabswitch': {u'pagesets_name': u'tp5n.zip',
+06:49:45     INFO -                             u'tests': [u'tabswitch']},
+06:49:45     INFO -              u'tp5o': {u'pagesets_name': u'tp5n.zip', u'tests': [u'tp5o']},
+06:49:45     INFO -              u'webgl': {u'tests': [u'glterrain',
+06:49:45     INFO -                                    u'glvideo',
+06:49:45     INFO -                                    u'motionmark_webgl']},
+06:49:45     INFO -              u'xperf': {u'pagesets_name': u'tp5n.zip',
+06:49:45     INFO -                         u'talos_options': [u'--xperf_path',
+06:49:45     INFO -                                            u'"c:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/xperf.exe"'],
+06:49:45     INFO -                         u'tests': [u'tp5n']},
+06:49:45     INFO -              u'zerocost': {u'tests': [u'jpeg_perf', u'jpeg_width_perf']}}}
+06:49:45     INFO - Running post-action listener: _resource_record_post_action
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.870725Z] Finished populate-webroot step (success)
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.870810Z] Running create-virtualenv step.
+06:49:45     INFO - Running pre-action listener: _resource_record_pre_action
+06:49:45     INFO - Running main action method: create_virtualenv
+06:49:45     INFO - Virtualenv already exists, skipping creation
+06:49:45     INFO - Running post-action listener: _resource_record_post_action
+06:49:45     INFO - Running post-action listener: _start_resource_monitoring
+06:49:45     INFO - Starting resource monitoring.
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.933623Z] Finished create-virtualenv step (success)
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.934602Z] Skipping install step.
+06:49:45     INFO - [mozharness: 2020-11-24 06:49:45.934745Z] Running run-tests step.
+06:49:45     INFO - Running pre-action listener: _resource_record_pre_action
+06:49:45     INFO - Running pre-action listener: _set_gcov_prefix
+06:49:45     INFO - Running main action method: run_tests
+06:49:45     INFO - Running command: [u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin/python', '--version']
+06:49:45     INFO - Copy/paste: /mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin/python --version
+06:49:45     INFO -  Python 2.7.18
+06:49:45     INFO - Return code: 0
+06:49:45     INFO - ENV: MOZ_UPLOAD_DIR is now /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+06:49:45     INFO - ENV: RUST_BACKTRACE is now full
+06:49:45     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+06:49:45     INFO - Running command: [u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin/python', u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox', '--title', u'shr-Desktop', u'--develop', u'--activeTests', u'jpeg_width_perf', '--log-tbpl-level=debug'] in /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build
+06:49:45     INFO - Copy/paste: /mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin/python /home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py --executablePath /mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox --title shr-Desktop --develop --activeTests jpeg_width_perf --log-tbpl-level=debug
+06:49:45     INFO - Using env: {'CAML_LD_LIBRARY_PATH': '/home/shr/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs',
+06:49:45     INFO -  'COLORTERM': 'truecolor',
+06:49:45     INFO -  'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+06:49:45     INFO -  'DEFAULTS_PATH': '/usr/share/gconf/gnome-xorg.default.path',
+06:49:45     INFO -  'DESKTOP_SESSION': 'gnome-xorg',
+06:49:45     INFO -  'DISPLAY': ':1',
+06:49:45     INFO -  'DOTNET_CLI_TELEMETRY_OPTOUT': '1',
+06:49:45     INFO -  'FSTAR_HOME': '/home/shr/Code/fstar_master/FStar',
+06:49:45     INFO -  'GDMSESSION': 'gnome-xorg',
+06:49:45     INFO -  'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated',
+06:49:45     INFO -  'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/28d73d46_b59e_4ce0_9d29_19e01d06a135',
+06:49:45     INFO -  'GNOME_TERMINAL_SERVICE': ':1.100',
+06:49:45     INFO -  'GOPATH': '/home/shr/go',
+06:49:45     INFO -  'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1',
+06:49:45     INFO -  'GTK2_MODULES': 'overlay-scrollbar',
+06:49:45     INFO -  'GTK_MODULES': 'gail:atk-bridge',
+06:49:45     INFO -  'HOME': '/home/shr',
+06:49:45     INFO -  'IM_CONFIG_PHASE': '1',
+06:49:45     INFO -  'INVOCATION_ID': '79cfb0de7932484ab4ff810d6b3ddb6c',
+06:49:45     INFO -  'JOURNAL_STREAM': '9:50315',
+06:49:45     INFO -  'KREMLIN_HOME': '/home/shr/Code/fstar_master/kremlin',
+06:49:45     INFO -  'LANG': 'en_US.UTF-8',
+06:49:45     INFO -  'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+06:49:45     INFO -  'LESSOPEN': '| /usr/bin/lesspipe %s',
+06:49:45     INFO -  'LOGNAME': 'shr',
+06:49:45     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+06:49:45     INFO -  'MACH_MAIN_PID': '4335',
+06:49:45     INFO -  'MAKEFLAGS': '',
+06:49:45     INFO -  'MAKELEVEL': '1',
+06:49:45     INFO -  'MAKE_TERMERR': '/dev/pts/0',
+06:49:45     INFO -  'MAKE_TERMOUT': '/dev/pts/0',
+06:49:45     INFO -  'MANAGERPID': '2332',
+06:49:45     INFO -  'MANDATORY_PATH': '/usr/share/gconf/gnome-xorg.mandatory.path',
+06:49:45     INFO -  'MANPATH': ':/home/shr/.opam/system/man',
+06:49:45     INFO -  'MFLAGS': '',
+06:49:45     INFO -  'MINIDUMP_SAVE_PATH': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+06:49:45     INFO -  'MOZCONFIG': 'mozconfig_fullsave_release',
+06:49:45     INFO -  'MOZ_DEVELOPER_OBJ_DIR': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release',
+06:49:45     INFO -  'MOZ_DEVELOPER_REPO_DIR': u'/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:45     INFO -  'MOZ_UPLOAD_DIR': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+06:49:45     INFO -  'OCAML_TOPLEVEL_PATH': '/home/shr/.opam/system/lib/toplevel',
+06:49:45     INFO -  'OLDPWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:45     INFO -  'PATH': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/.cargo/bin:/opt/cmake/bin/:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/.cargo/bin:/home/shr/bin:/home/shr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin:/bin:/home/shr/go/bin',
+06:49:45     INFO -  'PERL5LIB': '/home/shr/.opam/system/lib/perl5:',
+06:49:45     INFO -  'PWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:45     INFO -  'PYTHONPATH': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos',
+06:49:45     INFO -  'QT_ACCESSIBILITY': '1',
+06:49:45     INFO -  'QT_IM_MODULE': 'ibus',
+06:49:45     INFO -  'RUST_BACKTRACE': 'full',
+06:49:45     INFO -  'SESSION_MANAGER': 'local/shr-Desktop:@/tmp/.ICE-unix/2577,unix/shr-Desktop:/tmp/.ICE-unix/2577',
+06:49:45     INFO -  'SHELL': '/bin/bash',
+06:49:45     INFO -  'SHLVL': '1',
+06:49:45     INFO -  'SSH_AGENT_PID': '2542',
+06:49:45     INFO -  'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh',
+06:49:45     INFO -  'STYLO_FORCE_ENABLED': '1',
+06:49:45     INFO -  'TERM': 'xterm-256color',
+06:49:45     INFO -  'USER': 'shr',
+06:49:45     INFO -  'USERNAME': 'shr',
+06:49:45     INFO -  'VIRTUAL_ENV': u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv',
+06:49:45     INFO -  'VTE_VERSION': '6003',
+06:49:45     INFO -  'WINDOWPATH': '2',
+06:49:45     INFO -  'XAUTHORITY': '/run/user/1000/gdm/Xauthority',
+06:49:45     INFO -  'XDG_CONFIG_DIRS': '/etc/xdg/xdg-gnome-xorg:/etc/xdg',
+06:49:45     INFO -  'XDG_CURRENT_DESKTOP': 'GNOME',
+06:49:45     INFO -  'XDG_DATA_DIRS': '/usr/share/gnome-xorg:/home/shr/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/var/lib/snapd/desktop',
+06:49:45     INFO -  'XDG_MENU_PREFIX': 'gnome-',
+06:49:45     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+06:49:45     INFO -  'XDG_SESSION_CLASS': 'user',
+06:49:45     INFO -  'XDG_SESSION_DESKTOP': 'gnome-xorg',
+06:49:45     INFO -  'XDG_SESSION_TYPE': 'x11',
+06:49:45     INFO -  'XMODIFIERS': '@im=ibus',
+06:49:45     INFO -  '_': '/usr/bin/taskset'}
+06:49:45     INFO - Calling [u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin/python', u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox', '--title', u'shr-Desktop', u'--develop', u'--activeTests', u'jpeg_width_perf', '--log-tbpl-level=debug'] with output_timeout 3600
+06:49:46     INFO -  mozversion application_buildid: 20201123205501
+06:49:46     INFO -  mozversion application_display_name: Nightly
+06:49:46     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+06:49:46     INFO -  mozversion application_name: Firefox
+06:49:46     INFO -  mozversion application_remotingname: firefox
+06:49:46     INFO -  mozversion application_vendor: Mozilla
+06:49:46     INFO -  mozversion application_version: 81.0a1
+06:49:46     INFO -  mozversion platform_buildid: 20201123205501
+06:49:46     INFO -  mozversion platform_version: 81.0a1
+06:49:46     INFO -  using testdate: 1606200586
+06:49:46     INFO -  actual date: 1606200586
+06:49:46     INFO -  starting webserver on '127.0.0.1:38339'
+06:49:46     INFO -  SUITE-START | Running 1 tests
+06:49:46     INFO -  TEST-START | jpeg_width_perf
+06:49:46     INFO -  Initialising browser for jpeg_width_perf test...
+06:49:46     INFO -  Cloning profile located at /home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/base_profile
+06:49:46     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/base
+06:49:46     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/common
+06:49:46     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/perf
+06:49:46     INFO -  Installing Add-ons:
+06:49:46     INFO -  ['/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/talos-powers', '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/pageloader']
+06:49:46     INFO -  Installing Webextensions:
+06:49:46     INFO -  Application command: /mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox --no-remote http://127.0.0.1:38339/getInfo.html -profile /tmp/tmp9A8DWt/profile
+06:49:46     INFO -  TEST-INFO | started process 4392 (/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox --no-remote http://127.0.0.1:38339/getInfo.html)
+06:49:52     INFO -  console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+06:49:52     INFO -  __metrics
+06:49:52     INFO -  	Screen width/height: 1920/1080
+06:49:52     INFO -  	colorDepth: 24
+06:49:52     INFO -  	Browser inner width/height: 1280/844
+06:49:52     INFO -  __metrics
+06:49:53     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+06:49:53     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+06:49:53     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 5.4.0-54-generic #60-Ubuntu SMP Fri Nov 6 10:37:59 UTC 2020","version":"81.0a1","buildID":"20201123205501","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0","safeMode":false,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/81.0a1/Linux/en-US/","numTotalWindows":1,"numRemoteWindows":1,"remoteAutoStart":true,"autoStartStatus":1,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"processes":{"remoteTypes":{"web":1,"extension":1,"socket":1},"maxWebContentProcesses":8},"environmentVariables":{"MOZ_CRASHREPORTER":"1","MOZ_NO_REMOTE":"1","MOZ_DEVELOPER_OBJ_DIR":"/mnt/sata/ffbuilds/firefox_latest_fullsave_release","MOZ_UPLOAD_DIR":"/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir","DISPLAY":":1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_DEVELOPER_REPO_DIR":"/home/shr/Code/zerocost/zerocost_testing_firefox","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmp9A8DWt/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_0":"/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox","MOZ_CRASHREPORTER_RESTART_ARG_1":"--no-remote","MOZ_CRASHREPORTER_RESTART_ARG_2":"http://127.0.0.1:38339/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_3":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"/tmp/tmp9A8DWt/profile","MOZ_CRASHREPORTER_RESTART_ARG_5":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/shr/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/shr/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.filesystem_reported":1,"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.startup.homepage_override.mstone":"81.0a1","browser.startup.homepage_override.buildID":"20201123205501","browser.tabs.remote.autostart":true,"browser.tabs.unloadOnLowMemory":false,"dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.lastAppVersion":"81.0a1","general.useragent.updates.enabled":false,"gfx.webrender.all.qualified":false,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.block-webaudio":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"network.http.speculative-parallel-limit":0,"places.history.expiration.transient_current_max_pages":112348,"places.database.lastMaintenance":2147483647,"plugin.state.flash":0,"plugins.flashBlock.enabled":false,"privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.trackingprotection.pbmode.enabled":false,"security.sandbox.plugin.tempDirSuffix":"456b12f6-4b51-40b2-a034-7b2e9ef791fb","security.sandbox.content.tempDirSuffix":"663f1556-9381-4064-bf3e-b07544e4cf90","security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true},"lockedPreferences":{},"media":{"currentAudioBackend":"pulse-rust","currentMaxAudioChannels":2,"currentPreferredSampleRate":44100,"audioOutputDevices":[{"name":"TU116 High Definition Audio Controller Digital Stereo (HDMI 2)","groupId":"/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1","vendor":"NVIDIA Corporation","type":2,"state":2,"preferred":0,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0},{"name":"Built-in Audio Analog Stereo","groupId":"/devices/pci0000:00/0000:00:1f.3/sound/card0","vendor":"Intel Corporation","type":2,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"audioInputDevices":[{"name":"Monitor of TU116 High Definition Audio Controller Digital Stereo (HDMI 2)","groupId":"/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1","vendor":"NVIDIA Corporation","type":1,"state":2,"preferred":0,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0},{"name":"Webcam C270 Mono","groupId":"/devices/pci0000:00/0000:00:1c.0/0000:03:00.0/usb5/5-2/5-2.2/5-2.2.2/5-2.2.2:1.2/sound/card2","vendor":"Logitech, Inc.","type":1,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":16,"maxChannels":1,"defaultRate":48000,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0},{"name":"Monitor of Built-in Audio Analog Stereo","groupId":"/devices/pci0000:00/0000:00:1f.3/sound/card0","vendor":"Intel Corporation","type":1,"state":2,"preferred":0,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}]},"accessibility":{"isActive":false,"forceDisabled":0,"handlerUsed":false,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmp9A8DWt/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.28","version":"4.28"},"NSS":{"minVersion":"3.56","version":"3.56"},"NSSUTIL":{"minVersion":"3.56","version":"3.56"},"NSSSSL":{"minVersion":"3.56","version":"3.56"},"NSSSMIME":{"minVersion":"3.56","version":"3.56"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":4},"remoteAgent":{"listening":false,"url":""},"graphics":{"numTotalWindows":1,"numAcceleratedWindows":0,"windowLayerManagerType":"Basic","windowLayerManagerRemote":true,"windowUsingAdvancedLayers":false,"numAcceleratedWindowsMessage":{"key":""},"adapterDescription":"GeForce GTX 1660 SUPER/PCIe/SSE2","adapterVendorID":"0x10de","adapterDeviceID":"GeForce GTX 1660 SUPER/PCIe/SSE2","adapterRAM":0,"adapterDrivers":"","driverVendor":"nvidia/unknown","driverVersion":"450.80.2.0","driverDate":"","usesTiling":false,"contentUsesTiling":false,"offMainThreadPaintEnabled":true,"offMainThreadPaintWorkerCount":3,"targetFrameRate":60,"windowProtocol":"x11","desktopEnvironment":"gnome","webgl1Renderer":"NVIDIA Corporation -- GeForce GTX 1660 SUPER/PCIe/SSE2","webgl1Version":"4.6.0 NVIDIA 450.80.02","webgl1DriverExtensions":"GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_x11_sync_object GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vdpau_interop GL_NV_vdpau_interop2 GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"GLX 1.4\nGLX_VENDOR(client): NVIDIA Corporation\nGLX_VENDOR(server): NVIDIA Corporation\nExtensions: GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_import_context GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGI_video_sync GLX_SGI_swap_control GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_buffer_age GLX_ARB_create_context GLX_ARB_create_context_profile GLX_EXT_create_context_es_profile GLX_EXT_create_context_es2_profile GLX_ARB_create_context_no_error GLX_ARB_create_context_robustness GLX_NV_delay_before_swap GLX_EXT_stereo_tree GLX_ARB_context_flush_control GLX_NV_robustness_video_memory_purge GLX_NV_multigpu_context GLX_ARB_multisample GLX_NV_float_buffer GLX_ARB_fbconfig_float GLX_EXT_framebuffer_sRGB GLX_NV_copy_image GLX_ARB_get_proc_address ","webgl2Renderer":"NVIDIA Corporation -- GeForce GTX 1660 SUPER/PCIe/SSE2","webgl2Version":"3.2.0 NVIDIA 450.80.02","webgl2DriverExtensions":"GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_x11_sync_object GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vdpau_interop GL_NV_vdpau_interop2 GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum","webgl2Extensions":"EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"GLX 1.4\nGLX_VENDOR(client): NVIDIA Corporation\nGLX_VENDOR(server): NVIDIA Corporation\nExtensions: GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_import_context GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGI_video_sync GLX_SGI_swap_control GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_buffer_age GLX_ARB_create_context GLX_ARB_create_context_profile GLX_EXT_create_context_es_profile GLX_EXT_create_context_es2_profile GLX_ARB_create_context_no_error GLX_ARB_create_context_robustness GLX_NV_delay_before_swap GLX_EXT_stereo_tree GLX_ARB_context_flush_control GLX_NV_robustness_video_memory_purge GLX_NV_multigpu_context GLX_ARB_multisample GLX_NV_float_buffer GLX_ARB_fbconfig_float GLX_EXT_framebuffer_sRGB GLX_NV_copy_image GLX_ARB_get_proc_address ","info":{"AzureCanvasBackend":"skia","AzureFallbackCanvasBackend":"none","AzureContentBackend":"skia","CairoUseXRender":0,"ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"AAAF/GxjbXMEMAAAbW50clJHQiBYWVogB+QAAwATAAEAGQA0YWNzcEFQUEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1sY21zj/427llreUdaZc8cpfy+oQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOZGVzYwAAASwAAAAmY3BydAAAAVQAAACGd3RwdAAAAdwAAAAUY2hhZAAAAfAAAAAsclhZWgAAAhwAAAAUYlhZWgAAAjAAAAAUZ1hZWgAAAkQAAAAUclRSQwAAAlgAAAAQZ1RSQwAAAlgAAAAQYlRSQwAAAlgAAAAQY2hybQAAAmgAAAAkbWV0YQAAAowAAAL6ZG1uZAAABYgAAABMZG1kZAAABdQAAAAmbWx1YwAAAAAAAAABAAAADGVuVVMAAAAKAAAAHABWAEMAMgA3ADkAAG1sdWMAAAAAAAAAAQAAAAxlblVTAAAAagAAABwAVABoAGkAcwAgAHAAcgBvAGYAaQBsAGUAIABpAHMAIABmAHIAZQBlACAAbwBmACAAawBuAG8AdwBuACAAYwBvAHAAeQByAGkAZwBoAHQAIAByAGUAcwB0AHIAaQBjAHQAaQBvAG4AcwAuAABYWVogAAAAAAAA9tYAAQAAAADTLXNmMzIAAAAAAAELtwAABZb///NWAAAHKQAA/df///u2///9pQAAA9oAAMD2WFlaIAAAAAAAAGiTAAA1XgAAAPlYWVogAAAAAAAAJ28AABNVAADBMlhZWiAAAAAAAABm1AAAt0wAABECcGFyYQAAAAAAAAAAAAIzM2Nocm0AAAAAAAMAAAAAp0AAAFZAAABSAAAAnMAAACaAAAARgGRpY3QAAAAAAAAACgAAABAAAACwAAAAFgAAAMYAAAAMAAAA0gAAABYAAADoAAAAGAAAAQAAAAAUAAABFAAAACoAAAE+AAAAFgAAAVQAAAAqAAABfgAAABAAAAGOAAAAQAAAAc4AAAASAAAB4AAAAAYAAAHmAAAAFAAAAfoAAAAKAAACBAAAABYAAAIaAAAACAAAAiIAAAAiAAACRAAAAGQAAAKoAAAAIgAAAsoAAAAwAEMATQBGAF8AdgBlAHIAcwBpAG8AbgAzAC4AMgA4AC4AMQBFAEQASQBEAF8AcwBlAHIAaQBhAGwARwA3AEwATQBSAFMAMAAzADEANAA4ADIAQwBNAEYAXwBiAGkAbgBhAHIAeQBnAG4AbwBtAGUALQBzAGUAdAB0AGkAbgBnAHMALQBkAGEAZQBtAG8AbgBDAE0ARgBfAHAAcgBvAGQAdQBjAHQAZwBuAG8AbQBlAC0AcwBlAHQAdABpAG4AZwBzAC0AZABhAGUAbQBvAG4ARQBEAEkARABfAG0AZAA1ADcAZQAyADQANAAzADUAYgBkADEAZABhADEAYQA0AGMAYwBmADMAMgBlADQAMQA0ADgAZQA1AGQAMQBiADkAMwBFAEQASQBEAF8AbQBuAGYAdABBAEMASQBFAEQASQBEAF8AbQBvAGQAZQBsAFYAQwAyADcAOQBEAEEAVABBAF8AcwBvAHUAcgBjAGUAZQBkAGkAZABNAEEAUABQAEkATgBHAF8AZABlAHYAaQBjAGUAXwBpAGQAeAByAGEAbgBkAHIALQBBAG4AYwBvAHIAIABDAG8AbQBtAHUAbgBpAGMAYQB0AGkAbwBuAHMAIABJAG4AYwAtAFYAQwAyADcAOQAtAEcANwBMAE0AUgBTADAAMwAxADQAOAAyAEUARABJAEQAXwBtAGEAbgB1AGYAYQBjAHQAdQByAGUAcgBBAG4AYwBvAHIAIABDAG8AbQBtAHUAbgBpAGMAYQB0AGkAbwBuAHMAIABJAG4AYwAAbWx1YwAAAAAAAAABAAAADGVuVVMAAAAwAAAAHABBAG4AYwBvAHIAIABDAG8AbQBtAHUAbgBpAGMAYQB0AGkAbwBuAHMAIABJAG4AY21sdWMAAAAAAAAAAQAAAAxlblVTAAAACgAAABwAVgBDADIANwA5AAA=","DisplayCount":1,"Display0":"3840x1080 default"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","message":"Acceleration blocked by platform"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"unavailable","log":[{"type":"default","status":"unavailable","message":"Hardware compositing is disabled"}]},{"name":"WEBRENDER","description":"WebRender","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender is an opt-in feature"}]},{"name":"WEBRENDER_QUALIFIED","description":"WebRender qualified","status":"blocklisted","log":[{"type":"default","status":"available"},{"type":"env","status":"blocklisted","message":"No qualified hardware"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender ANGLE is an opt-in feature"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender DirectComposition is an opt-in feature"}]},{"name":"OMTP","description":"Off Main Thread Painting","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]}],"fallbacks":[]},"crashGuards":[]},"addons":[{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"}],"features":[{"name":"DoH Roll-Out","version":"2.0.0","id":"doh-rollout@mozilla.org"},{"name":"Firefox Screenshots","version":"39.0.0","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0","id":"formautofill@mozilla.org"},{"name":"Web Compat","version":"14.0.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"1.4.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["experimental-features-abouthome-startup-cache","browser.startup.homepage.abouthome_cache.enabled",false],["experimental-features-cookie-samesite-lax-by-default2","network.cookie.sameSite.laxByDefault",true],["experimental-features-cookie-samesite-none-requires-secure2","network.cookie.sameSite.noneRequiresSecure",true],["experimental-features-cookie-samesite-schemeful","network.cookie.sameSite.schemeful",true],["experimental-features-css-constructable-stylesheets","layout.css.constructable-stylesheets.enabled",false],["experimental-features-css-focus-visible","layout.css.focus-visible.enabled",true],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-devtools-color-scheme-simulation","devtools.inspector.color-scheme-simulation.enabled",false],["experimental-features-devtools-compatibility-panel","devtools.inspector.compatibility.enabled",true],["experimental-features-devtools-execution-context-selector","devtools.webconsole.input.context",true],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false],["experimental-features-graphics-desktop-zooming","apz.allow_zooming",true],["experimental-features-media-avif","image.avif.enabled",false],["experimental-features-media-session-api","dom.media.mediasession.enabled",true],["experimental-features-print-preview-tab-modal","print.tab_modal.enabled",true],["experimental-features-web-api-beforeinput","dom.input_events.beforeinput.enabled",false],["experimental-features-web-api-inputmode","dom.forms.inputmode",true],["experimental-features-web-api-link-preload","network.preload",true],["experimental-features-web-gpu2","dom.webgpu.enabled",false]]}
+06:49:57     INFO -  TEST-INFO | 4392: exit 0
+06:49:57     INFO -  Browser initialized.
+06:49:57     INFO -  Fission enabled: False
+06:49:57     INFO -  Running cycle 1/1 for jpeg_width_perf test...
+06:49:57     INFO -  Using env: {'CAML_LD_LIBRARY_PATH': '/home/shr/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs',
+06:49:57     INFO -   'COLORTERM': 'truecolor',
+06:49:57     INFO -   'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+06:49:57     INFO -   'DEFAULTS_PATH': '/usr/share/gconf/gnome-xorg.default.path',
+06:49:57     INFO -   'DESKTOP_SESSION': 'gnome-xorg',
+06:49:57     INFO -   'DISPLAY': ':1',
+06:49:57     INFO -   'DOTNET_CLI_TELEMETRY_OPTOUT': '1',
+06:49:57     INFO -   'FSTAR_HOME': '/home/shr/Code/fstar_master/FStar',
+06:49:57     INFO -   'GDMSESSION': 'gnome-xorg',
+06:49:57     INFO -   'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated',
+06:49:57     INFO -   'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/28d73d46_b59e_4ce0_9d29_19e01d06a135',
+06:49:57     INFO -   'GNOME_TERMINAL_SERVICE': ':1.100',
+06:49:57     INFO -   'GOPATH': '/home/shr/go',
+06:49:57     INFO -   'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1',
+06:49:57     INFO -   'GTK2_MODULES': 'overlay-scrollbar',
+06:49:57     INFO -   'GTK_MODULES': 'gail:atk-bridge',
+06:49:57     INFO -   'HOME': '/home/shr',
+06:49:57     INFO -   'IM_CONFIG_PHASE': '1',
+06:49:57     INFO -   'INVOCATION_ID': '79cfb0de7932484ab4ff810d6b3ddb6c',
+06:49:57     INFO -   'JOURNAL_STREAM': '9:50315',
+06:49:57     INFO -   'JSGC_DISABLE_POISONING': '1',
+06:49:57     INFO -   'KREMLIN_HOME': '/home/shr/Code/fstar_master/kremlin',
+06:49:57     INFO -   'LANG': 'en_US.UTF-8',
+06:49:57     INFO -   'LD_LIBRARY_PATH': '/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin',
+06:49:57     INFO -   'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+06:49:57     INFO -   'LESSOPEN': '| /usr/bin/lesspipe %s',
+06:49:57     INFO -   'LOGNAME': 'shr',
+06:49:57     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+06:49:57     INFO -   'MACH_MAIN_PID': '4335',
+06:49:57     INFO -   'MAKEFLAGS': '',
+06:49:57     INFO -   'MAKELEVEL': '1',
+06:49:57     INFO -   'MAKE_TERMERR': '/dev/pts/0',
+06:49:57     INFO -   'MAKE_TERMOUT': '/dev/pts/0',
+06:49:57     INFO -   'MANAGERPID': '2332',
+06:49:57     INFO -   'MANDATORY_PATH': '/usr/share/gconf/gnome-xorg.mandatory.path',
+06:49:57     INFO -   'MANPATH': ':/home/shr/.opam/system/man',
+06:49:57     INFO -   'MFLAGS': '',
+06:49:57     INFO -   'MINIDUMP_SAVE_PATH': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+06:49:57     INFO -   'MOZCONFIG': 'mozconfig_fullsave_release',
+06:49:57     INFO -   'MOZ_CRASHREPORTER': '1',
+06:49:57     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+06:49:57     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/mnt/sata/ffbuilds/firefox_latest_fullsave_release',
+06:49:57     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:57     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+06:49:57     INFO -   'MOZ_UPLOAD_DIR': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+06:49:57     INFO -   'MOZ_USE_PAGELOADER': '1',
+06:49:57     INFO -   'MOZ_WEBRENDER': '0',
+06:49:57     INFO -   'NO_EM_RESTART': '1',
+06:49:57     INFO -   'OCAML_TOPLEVEL_PATH': '/home/shr/.opam/system/lib/toplevel',
+06:49:57     INFO -   'OLDPWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:57     INFO -   'PATH': '/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/.cargo/bin:/opt/cmake/bin/:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/.cargo/bin:/home/shr/bin:/home/shr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin:/bin:/home/shr/go/bin',
+06:49:57     INFO -   'PERL5LIB': '/home/shr/.opam/system/lib/perl5:',
+06:49:57     INFO -   'PWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+06:49:57     INFO -   'PYTHONPATH': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos',
+06:49:57     INFO -   'QT_ACCESSIBILITY': '1',
+06:49:57     INFO -   'QT_IM_MODULE': 'ibus',
+06:49:57     INFO -   'RUST_BACKTRACE': 'full',
+06:49:57     INFO -   'SESSION_MANAGER': 'local/shr-Desktop:@/tmp/.ICE-unix/2577,unix/shr-Desktop:/tmp/.ICE-unix/2577',
+06:49:57     INFO -   'SHELL': '/bin/bash',
+06:49:57     INFO -   'SHLVL': '1',
+06:49:57     INFO -   'SSH_AGENT_PID': '2542',
+06:49:57     INFO -   'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh',
+06:49:57     INFO -   'STYLO_FORCE_ENABLED': '1',
+06:49:57     INFO -   'TERM': 'xterm-256color',
+06:49:57     INFO -   'USER': 'shr',
+06:49:57     INFO -   'USERNAME': 'shr',
+06:49:57     INFO -   'VIRTUAL_ENV': '/mnt/sata/ffbuilds/firefox_latest_fullsave_release/testing/talos-venv',
+06:49:57     INFO -   'VTE_VERSION': '6003',
+06:49:57     INFO -   'WINDOWPATH': '2',
+06:49:57     INFO -   'XAUTHORITY': '/run/user/1000/gdm/Xauthority',
+06:49:57     INFO -   'XDG_CONFIG_DIRS': '/etc/xdg/xdg-gnome-xorg:/etc/xdg',
+06:49:57     INFO -   'XDG_CURRENT_DESKTOP': 'GNOME',
+06:49:57     INFO -   'XDG_DATA_DIRS': '/usr/share/gnome-xorg:/home/shr/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/var/lib/snapd/desktop',
+06:49:57     INFO -   'XDG_MENU_PREFIX': 'gnome-',
+06:49:57     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+06:49:57     INFO -   'XDG_SESSION_CLASS': 'user',
+06:49:57     INFO -   'XDG_SESSION_DESKTOP': 'gnome-xorg',
+06:49:57     INFO -   'XDG_SESSION_TYPE': 'x11',
+06:49:57     INFO -   'XMODIFIERS': '@im=ibus',
+06:49:57     INFO -   '_': '/usr/bin/taskset'}
+06:49:57     INFO -  TEST-INFO | started process 4614 (/mnt/sata/ffbuilds/firefox_latest_fullsave_release/dist/bin/firefox --no-remote -profile /tmp/tmp9A8DWt/profile)
+06:50:00     INFO -  PID 4614 | IPDL protocol error: Handler returned error code!
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | IPDL protocol error: Handler returned error code!
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | IPDL protocol error: Handler returned error code!
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | IPDL protocol error: Handler returned error code!
+06:50:00     INFO -  PID 4614 |
+06:50:00     INFO -  PID 4614 | ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+06:50:00     INFO -  PID 4614 |
+06:50:02     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),1,1376635|
+06:50:02     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:02     INFO -  PID 4614 | Waiting for idle-callback
+06:50:03     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),2,1360571|
+06:50:03     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:03     INFO -  PID 4614 | Waiting for idle-callback
+06:50:03     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),3,1375633|
+06:50:03     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:03     INFO -  PID 4614 | Waiting for idle-callback
+06:50:04     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),4,1410874|
+06:50:04     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:04     INFO -  PID 4614 | Waiting for idle-callback
+06:50:04     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),5,1407471|
+06:50:04     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:04     INFO -  PID 4614 | Waiting for idle-callback
+06:50:05     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),6,1381444|
+06:50:05     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:05     INFO -  PID 4614 | Waiting for idle-callback
+06:50:05     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),7,928904|
+06:50:05     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:05     INFO -  PID 4614 | Waiting for idle-callback
+06:50:05     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),8,1367533|
+06:50:05     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:05     INFO -  PID 4614 | Waiting for idle-callback
+06:50:06     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),9,1386109|
+06:50:06     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:06     INFO -  PID 4614 | Waiting for idle-callback
+06:50:06     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),10,1358869|
+06:50:06     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:06     INFO -  PID 4614 | Waiting for idle-callback
+06:50:07     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),11,1356357|
+06:50:07     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:07     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),12,1372672|
+06:50:07     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:07     INFO -  PID 4614 | Waiting for idle-callback
+06:50:08     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),13,1385486|
+06:50:08     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:08     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),14,1388936|
+06:50:08     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:08     INFO -  PID 4614 | Waiting for idle-callback
+06:50:09     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),15,1372393|
+06:50:09     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:09     INFO -  PID 4614 | Waiting for idle-callback
+06:50:09     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),16,1400667|
+06:50:09     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:09     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),17,1369641|
+06:50:09     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:09     INFO -  PID 4614 | Waiting for idle-callback
+06:50:10     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),18,1399934|
+06:50:10     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:10     INFO -  PID 4614 | Waiting for idle-callback
+06:50:10     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),19,1361202|
+06:50:10     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:11     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_10.jpeg),20,1393957|
+06:50:11     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html)
+06:50:11     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),21,1826275|
+06:50:11     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:11     INFO -  PID 4614 | Waiting for idle-callback
+06:50:12     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),22,1870650|
+06:50:12     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:12     INFO -  PID 4614 | Waiting for idle-callback
+06:50:12     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),23,1866352|
+06:50:12     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:12     INFO -  PID 4614 | Waiting for idle-callback
+06:50:13     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),24,1081106|
+06:50:13     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:13     INFO -  PID 4614 | Waiting for idle-callback
+06:50:13     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),25,1172058|
+06:50:13     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:13     INFO -  PID 4614 | Waiting for idle-callback
+06:50:13     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),26,1855664|
+06:50:13     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:13     INFO -  PID 4614 | Waiting for idle-callback
+06:50:14     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),27,1842703|
+06:50:14     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:14     INFO -  PID 4614 | Waiting for idle-callback
+06:50:14     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),28,1821393|
+06:50:14     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:14     INFO -  PID 4614 | Waiting for idle-callback
+06:50:15     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),29,1822515|
+06:50:15     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:15     INFO -  PID 4614 | Waiting for idle-callback
+06:50:15     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),30,1070838|
+06:50:15     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:16     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),31,1872397|
+06:50:16     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:16     INFO -  PID 4614 | Waiting for idle-callback
+06:50:16     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),32,1066933|
+06:50:16     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:16     INFO -  PID 4614 | Waiting for idle-callback
+06:50:16     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),33,1888065|
+06:50:16     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:16     INFO -  PID 4614 | Waiting for idle-callback
+06:50:17     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),34,1836561|
+06:50:17     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:17     INFO -  PID 4614 | Waiting for idle-callback
+06:50:17     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),35,1839912|
+06:50:17     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:17     INFO -  PID 4614 | Waiting for idle-callback
+06:50:18     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),36,1834880|
+06:50:18     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:18     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),37,1841468|
+06:50:18     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:18     INFO -  PID 4614 | Waiting for idle-callback
+06:50:19     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),38,1864070|
+06:50:19     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:19     INFO -  PID 4614 | Waiting for idle-callback
+06:50:19     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),39,1862210|
+06:50:19     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:19     INFO -  PID 4614 | Waiting for idle-callback
+06:50:20     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_20.jpeg),40,1875336|
+06:50:20     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_20.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html)
+06:50:20     INFO -  PID 4614 | Waiting for idle-callback
+06:50:20     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),41,2288545|
+06:50:20     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:20     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),42,2374230|
+06:50:20     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:20     INFO -  PID 4614 | Waiting for idle-callback
+06:50:21     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),43,2302182|
+06:50:21     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:21     INFO -  PID 4614 | Waiting for idle-callback
+06:50:21     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),44,2358257|
+06:50:21     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:22     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),45,2295122|
+06:50:22     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:22     INFO -  PID 4614 | Waiting for idle-callback
+06:50:22     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),46,2279980|
+06:50:22     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:22     INFO -  PID 4614 | Waiting for idle-callback
+06:50:23     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),47,2293391|
+06:50:23     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:23     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),48,2349519|
+06:50:23     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:23     INFO -  PID 4614 | Waiting for idle-callback
+06:50:24     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),49,2284534|
+06:50:24     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:24     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),50,2288074|
+06:50:24     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:24     INFO -  PID 4614 | Waiting for idle-callback
+06:50:24     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),51,2329825|
+06:50:24     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:24     INFO -  PID 4614 | Waiting for idle-callback
+06:50:25     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),52,2289829|
+06:50:25     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:25     INFO -  PID 4614 | Waiting for idle-callback
+06:50:25     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),53,1362843|
+06:50:25     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:26     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),54,2299792|
+06:50:26     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:26     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),55,1522373|
+06:50:26     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:26     INFO -  PID 4614 | Waiting for idle-callback
+06:50:27     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),56,2361114|
+06:50:27     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:27     INFO -  PID 4614 | Waiting for idle-callback
+06:50:27     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),57,2282849|
+06:50:27     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:27     INFO -  PID 4614 | Waiting for idle-callback
+06:50:27     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),58,2399301|
+06:50:27     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:27     INFO -  PID 4614 | Waiting for idle-callback
+06:50:28     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),59,2323212|
+06:50:28     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:28     INFO -  PID 4614 | Waiting for idle-callback
+06:50:28     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_30.jpeg),60,2283375|
+06:50:28     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_30.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html)
+06:50:28     INFO -  PID 4614 | Waiting for idle-callback
+06:50:29     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),61,6067379|
+06:50:29     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:29     INFO -  PID 4614 | Waiting for idle-callback
+06:50:29     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),62,4004602|
+06:50:29     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:30     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),63,6255434|
+06:50:30     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:30     INFO -  PID 4614 | Waiting for idle-callback
+06:50:30     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),64,3972230|
+06:50:30     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:30     INFO -  PID 4614 | Waiting for idle-callback
+06:50:30     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),65,4080259|
+06:50:30     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:30     INFO -  PID 4614 | Waiting for idle-callback
+06:50:31     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),66,6141584|
+06:50:31     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:31     INFO -  PID 4614 | Waiting for idle-callback
+06:50:31     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),67,4121987|
+06:50:31     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:32     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),68,2315233|
+06:50:32     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:32     INFO -  PID 4614 | Waiting for idle-callback
+06:50:32     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),69,7429718|
+06:50:32     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:32     INFO -  PID 4614 | Waiting for idle-callback
+06:50:32     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),70,2724150|
+06:50:32     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:32     INFO -  PID 4614 | Waiting for idle-callback
+06:50:33     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),71,8518759|
+06:50:33     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:33     INFO -  PID 4614 | Waiting for idle-callback
+06:50:33     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),72,4924572|
+06:50:33     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:33     INFO -  PID 4614 | Waiting for idle-callback
+06:50:34     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),73,4010221|
+06:50:34     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:34     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),74,4970678|
+06:50:34     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:34     INFO -  PID 4614 | Waiting for idle-callback
+06:50:35     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),75,8913544|
+06:50:35     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:35     INFO -  PID 4614 | Waiting for idle-callback
+06:50:35     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),76,5415043|
+06:50:35     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:35     INFO -  PID 4614 | Waiting for idle-callback
+06:50:35     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),77,4893428|
+06:50:35     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:35     INFO -  PID 4614 | Waiting for idle-callback
+06:50:36     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),78,3957325|
+06:50:36     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:36     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),79,3967541|
+06:50:36     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:37     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_60.jpeg),80,7616740|
+06:50:37     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_60.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html)
+06:50:37     INFO -  PID 4614 | Waiting for idle-callback
+06:50:37     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),81,9805847|
+06:50:37     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:38     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),82,8226562|
+06:50:38     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:38     INFO -  PID 4614 | Waiting for idle-callback
+06:50:38     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),83,4202624|
+06:50:38     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:38     INFO -  PID 4614 | Waiting for idle-callback
+06:50:38     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),84,13099986|
+06:50:38     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:38     INFO -  PID 4614 | Waiting for idle-callback
+06:50:39     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),85,4302481|
+06:50:39     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:39     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),86,7508072|
+06:50:39     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:39     INFO -  PID 4614 | Waiting for idle-callback
+06:50:40     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),87,10653512|
+06:50:40     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:40     INFO -  PID 4614 | Waiting for idle-callback
+06:50:40     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),88,8216416|
+06:50:40     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:41     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),89,12989958|
+06:50:41     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:41     INFO -  PID 4614 | Waiting for idle-callback
+06:50:41     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),90,8244514|
+06:50:41     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:42     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),91,6240736|
+06:50:42     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:42     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),92,13517209|
+06:50:42     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:42     INFO -  PID 4614 | Waiting for idle-callback
+06:50:42     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),93,7863079|
+06:50:42     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:43     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),94,9108375|
+06:50:43     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:43     INFO -  PID 4614 | Waiting for idle-callback
+06:50:43     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),95,11830189|
+06:50:43     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:43     INFO -  PID 4614 | Waiting for idle-callback
+06:50:44     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),96,10433521|
+06:50:44     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:44     INFO -  PID 4614 | Waiting for idle-callback
+06:50:44     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),97,8518762|
+06:50:44     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:45     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),98,12911115|
+06:50:45     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:45     INFO -  PID 4614 | Waiting for idle-callback
+06:50:45     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),99,4070740|
+06:50:45     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:45     INFO -  PID 4614 | Waiting for idle-callback
+06:50:45     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_120.jpeg),100,12314746|
+06:50:45     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_120.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html)
+06:50:45     INFO -  PID 4614 | Waiting for idle-callback
+06:50:46     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:46     INFO -  PID 4614 | Waiting for idle-callback
+06:50:46     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),101,32049383|
+06:50:46     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),102,29654967|
+06:50:46     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:46     INFO -  PID 4614 | Waiting for idle-callback
+06:50:47     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:47     INFO -  PID 4614 | Waiting for idle-callback
+06:50:47     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),103,34452121|
+06:50:47     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),104,20576403|
+06:50:47     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:47     INFO -  PID 4614 | Waiting for idle-callback
+06:50:48     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:48     INFO -  PID 4614 | Waiting for idle-callback
+06:50:48     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),105,34079632|
+06:50:48     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),106,35114440|
+06:50:48     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:48     INFO -  PID 4614 | Waiting for idle-callback
+06:50:49     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),107,13389232|
+06:50:49     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:49     INFO -  PID 4614 | Waiting for idle-callback
+06:50:49     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),108,34865761|
+06:50:49     INFO -  PID 4614 |
+06:50:49     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),109,28822875|
+06:50:49     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:49     INFO -  PID 4614 | Waiting for idle-callback
+06:50:50     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),110,19106466|
+06:50:50     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:50     INFO -  PID 4614 | Waiting for idle-callback
+06:50:50     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),111,25225044|
+06:50:50     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:50     INFO -  PID 4614 | Waiting for idle-callback
+06:50:51     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),112,28685284|
+06:50:51     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:51     INFO -  PID 4614 | Waiting for idle-callback
+06:50:51     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:51     INFO -  PID 4614 | Waiting for idle-callback
+06:50:51     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),113,34574033|
+06:50:52     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),114,25652598|
+06:50:52     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:52     INFO -  PID 4614 | Waiting for idle-callback
+06:50:52     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),115,29729311|
+06:50:52     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:52     INFO -  PID 4614 | Waiting for idle-callback
+06:50:53     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:53     INFO -  PID 4614 | Waiting for idle-callback
+06:50:53     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),116,42607878|
+06:50:53     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),117,38433733|
+06:50:53     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:53     INFO -  PID 4614 | Waiting for idle-callback
+06:50:53     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),118,29313417|
+06:50:53     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:53     INFO -  PID 4614 | Waiting for idle-callback
+06:50:54     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),119,38919643|
+06:50:54     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:54     INFO -  PID 4614 | Waiting for idle-callback
+06:50:54     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_240.jpeg),120,24795733|
+06:50:54     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_240.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html)
+06:50:55     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:55     INFO -  PID 4614 | Waiting for idle-callback
+06:50:55     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),121,84826390|
+06:50:55     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:55     INFO -  PID 4614 | Waiting for idle-callback
+06:50:55     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),122,71197075|
+06:50:56     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:56     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),123,70091469|
+06:50:56     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:56     INFO -  PID 4614 | Waiting for idle-callback
+06:50:56     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),124,83942616|
+06:50:57     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:57     INFO -  PID 4614 | Waiting for idle-callback
+06:50:57     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),125,72590748|
+06:50:57     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:57     INFO -  PID 4614 | Waiting for idle-callback
+06:50:57     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),126,69278059|
+06:50:58     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:58     INFO -  PID 4614 | Waiting for idle-callback
+06:50:58     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),127,72969490|
+06:50:58     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:58     INFO -  PID 4614 | Waiting for idle-callback
+06:50:58     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),128,63450470|
+06:50:59     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),129,90876489|
+06:50:59     INFO -  PID 4614 |
+06:50:59     INFO -  PID 4614 | Waiting for idle-callback
+06:50:59     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:59     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),130,68679369|
+06:50:59     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:50:59     INFO -  PID 4614 | Waiting for idle-callback
+06:51:00     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),131,68666569|
+06:51:00     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:00     INFO -  PID 4614 | Waiting for idle-callback
+06:51:00     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),132,78329807|
+06:51:00     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:00     INFO -  PID 4614 | Waiting for idle-callback
+06:51:00     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),133,70193471|
+06:51:01     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:01     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),134,92182331|
+06:51:01     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:01     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),135,70520486|
+06:51:02     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:02     INFO -  PID 4614 | Waiting for idle-callback
+06:51:02     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),136,81856311|
+06:51:02     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:02     INFO -  PID 4614 | Waiting for idle-callback
+06:51:02     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),137,59270380|
+06:51:03     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:03     INFO -  PID 4614 | Waiting for idle-callback
+06:51:03     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),138,67857609|
+06:51:03     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:03     INFO -  PID 4614 | Waiting for idle-callback
+06:51:03     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),139,86143468|
+06:51:04     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_480.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html)
+06:51:04     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_480.jpeg),140,66715360|
+06:51:04     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:04     INFO -  PID 4614 | Waiting for idle-callback
+06:51:04     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),141,87960762|
+06:51:05     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:05     INFO -  PID 4614 | Waiting for idle-callback
+06:51:05     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),142,119142595|
+06:51:05     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:05     INFO -  PID 4614 | Waiting for idle-callback
+06:51:05     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),143,137185658|
+06:51:06     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:06     INFO -  PID 4614 | Waiting for idle-callback
+06:51:06     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),144,143890650|
+06:51:06     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:06     INFO -  PID 4614 | Waiting for idle-callback
+06:51:06     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),145,115353553|
+06:51:07     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:07     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),146,129625749|
+06:51:07     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:07     INFO -  PID 4614 | Waiting for idle-callback
+06:51:07     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),147,136798943|
+06:51:08     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:08     INFO -  PID 4614 | Waiting for idle-callback
+06:51:08     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),148,123644287|
+06:51:08     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:08     INFO -  PID 4614 | Waiting for idle-callback
+06:51:08     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),149,131728498|
+06:51:09     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:09     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),150,131856526|
+06:51:09     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:09     INFO -  PID 4614 | Waiting for idle-callback
+06:51:09     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),151,128077450|
+06:51:10     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:10     INFO -  PID 4614 | Waiting for idle-callback
+06:51:10     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),152,133576479|
+06:51:10     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:10     INFO -  PID 4614 | Waiting for idle-callback
+06:51:10     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),153,136029558|
+06:51:11     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:11     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),154,131268571|
+06:51:11     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:11     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),155,143304377|
+06:51:12     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:12     INFO -  PID 4614 | Waiting for idle-callback
+06:51:12     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),156,124139423|
+06:51:12     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:12     INFO -  PID 4614 | Waiting for idle-callback
+06:51:12     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),157,124848171|
+06:51:13     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:13     INFO -  PID 4614 | Waiting for idle-callback
+06:51:13     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),158,138975429|
+06:51:13     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:13     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),159,124426766|
+06:51:14     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_960.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html)
+06:51:14     INFO -  PID 4614 | Waiting for idle-callback
+06:51:14     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_960.jpeg),160,94740173|
+06:51:14     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:14     INFO -  PID 4614 | Waiting for idle-callback
+06:51:14     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),161,122828268|
+06:51:15     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:15     INFO -  PID 4614 | Waiting for idle-callback
+06:51:15     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),162,131562155|
+06:51:15     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:15     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),163,184101124|
+06:51:16     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:16     INFO -  PID 4614 | Waiting for idle-callback
+06:51:16     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),164,179588210|
+06:51:16     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:16     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),165,191387361|
+06:51:17     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:17     INFO -  PID 4614 | Waiting for idle-callback
+06:51:17     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),166,182140142|
+06:51:17     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:17     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),167,190958918|
+06:51:18     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:18     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),168,167383069|
+06:51:18     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:18     INFO -  PID 4614 | Waiting for idle-callback
+06:51:18     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),169,139032966|
+06:51:19     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:19     INFO -  PID 4614 | Waiting for idle-callback
+06:51:19     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),170,100396715|
+06:51:19     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:19     INFO -  PID 4614 | Waiting for idle-callback
+06:51:19     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),171,189536117|
+06:51:20     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:20     INFO -  PID 4614 | Waiting for idle-callback
+06:51:20     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),172,169093297|
+06:51:20     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:20     INFO -  PID 4614 | Waiting for idle-callback
+06:51:20     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),173,183482701|
+06:51:21     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:21     INFO -  PID 4614 | Waiting for idle-callback
+06:51:21     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),174,164677838|
+06:51:21     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:21     INFO -  PID 4614 | Waiting for idle-callback
+06:51:21     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),175,110246787|
+06:51:22     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:22     INFO -  PID 4614 | Waiting for idle-callback
+06:51:22     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),176,183926507|
+06:51:22     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:22     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),177,181733093|
+06:51:23     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:23     INFO -  PID 4614 | Waiting for idle-callback
+06:51:23     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),178,188812363|
+06:51:23     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:23     INFO -  PID 4614 | Waiting for idle-callback
+06:51:23     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),179,173889104|
+06:51:24     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1440.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html)
+06:51:24     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1440.jpeg),180,130209207|
+06:51:24     INFO -  PID 4614 | Cycle 1(1): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:24     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),181,222318287|
+06:51:25     INFO -  PID 4614 | Cycle 1(2): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:25     INFO -  PID 4614 | Waiting for idle-callback
+06:51:25     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),182,210051997|
+06:51:25     INFO -  PID 4614 | Cycle 1(3): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:25     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),183,215945921|
+06:51:26     INFO -  PID 4614 | Cycle 1(4): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:26     INFO -  PID 4614 | Waiting for idle-callback
+06:51:26     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),184,196155260|
+06:51:26     INFO -  PID 4614 | Cycle 1(5): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:26     INFO -  PID 4614 | Waiting for idle-callback
+06:51:26     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),185,206594519|
+06:51:27     INFO -  PID 4614 | Cycle 1(6): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:27     INFO -  PID 4614 | Waiting for idle-callback
+06:51:27     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),186,214738743|
+06:51:27     INFO -  PID 4614 | Cycle 1(7): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:27     INFO -  PID 4614 | Waiting for idle-callback
+06:51:27     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),187,213742410|
+06:51:28     INFO -  PID 4614 | Cycle 1(8): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:28     INFO -  PID 4614 | Waiting for idle-callback
+06:51:28     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),188,214991291|
+06:51:28     INFO -  PID 4614 | Cycle 1(9): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:28     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),189,198388789|
+06:51:29     INFO -  PID 4614 | Cycle 1(10): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:29     INFO -  PID 4614 | Waiting for idle-callback
+06:51:29     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),190,196979099|
+06:51:29     INFO -  PID 4614 | Cycle 1(11): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:29     INFO -  PID 4614 | Waiting for idle-callback
+06:51:30     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),191,215065121|
+06:51:30     INFO -  PID 4614 | Cycle 1(12): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:30     INFO -  PID 4614 | Waiting for idle-callback
+06:51:30     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),192,215631760|
+06:51:30     INFO -  PID 4614 | Cycle 1(13): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:30     INFO -  PID 4614 | Waiting for idle-callback
+06:51:31     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),193,213637221|
+06:51:31     INFO -  PID 4614 | Cycle 1(14): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:31     INFO -  PID 4614 | Waiting for idle-callback
+06:51:31     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),194,243357364|
+06:51:31     INFO -  PID 4614 | Cycle 1(15): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:31     INFO -  PID 4614 | Waiting for idle-callback
+06:51:32     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),195,201552815|
+06:51:32     INFO -  PID 4614 | Cycle 1(16): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:32     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),196,215275075|
+06:51:32     INFO -  PID 4614 | Cycle 1(17): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:32     INFO -  PID 4614 | Waiting for idle-callback
+06:51:33     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),197,207911663|
+06:51:33     INFO -  PID 4614 | Cycle 1(18): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:33     INFO -  PID 4614 | Waiting for idle-callback
+06:51:33     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),198,208341297|
+06:51:33     INFO -  PID 4614 | Cycle 1(19): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:33     INFO -  PID 4614 | Waiting for idle-callback
+06:51:34     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),199,216398252|
+06:51:34     INFO -  PID 4614 | Cycle 1(20): loaded http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_1920.html (next: http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs_html/artificial_rgb8bit_default_width_10.html)
+06:51:34     INFO -  PID 4614 | __start_tp_report
+06:51:34     INFO -  PID 4614 | _x_x_mozilla_page_load
+06:51:34     INFO -  PID 4614 | _x_x_mozilla_page_load_details
+06:51:34     INFO -  PID 4614 | |i|pagename|runs|
+06:51:34     INFO -  PID 4614 | |0;10.html;426.43245999999976;216.90963100000045;101.69678999999996;118.6952210000004;120.73043999999936;135.08381000000008;94.23020999999972;104.9800209999994;110.47585099999924;132.96064800000022;125.74271699999917;162.9217660000004;143.4545909999997;96.74266100000204;124.00229999999829;121.83105400000022;110.71676699999989;114.18417699999736;119.72820999999931;115.29321900000105
+06:51:34     INFO -  PID 4614 | |1;20.html;152.68700799999897;119.5009829999999;132.83761799999957;100.5984810000009;109.88730099999884;110.20623700000033;116.9607219999998;123.86361000000034;153.249917000001;118.22614100000101;112.93822199999886;83.88462599999912;120.9025870000005;129.30422499999986;121.84422000000268;131.83668399999806;99.91449099999954;111.65892099999837;131.31742600000143;107.77547200000117
+06:51:34     INFO -  PID 4614 | |2;30.html;131.14095499999894;108.45476599999893;100.14326199999778;128.13631199999872;145.262319999998;119.05277900000146;119.24752600000284;156.47112200000265;134.60274899999786;123.51955700000326;113.48678100000325;105.042975999997;114.10448900000483;120.91220199999952;91.78632500000094;117.1857409999975;90.36662299999807;110.85925199999838;117.26734899999792;127.47108699999808
+06:51:34     INFO -  PID 4614 | |3;60.html;115.62258000000293;124.40783699999884;118.47656599999755;133.87984499999948;121.91996799999833;129.1952040000033;117.41760499999873;83.39610099999845;114.80464800000482;86.32363699999769;91.53048500000295;111.58425500000158;134.3549439999988;125.03286500000104;94.70873800000118;93.86306299999706;106.29614200000651;139.20229900000413;130.55490799999825;106.21975000000384
+06:51:34     INFO -  PID 4614 | |4;120.html;114.9794699999984;126.76516100000299;111.3474040000001;132.92756299999746;120.85483500000555;105.48683000000165;128.96249800000078;134.1889680000022;120.67242399999668;136.12965400000394;128.51203000000532;106.06234399999084;128.6822109999921;127.53710599999613;139.2550210000045;141.23477300000377;137.02160500000173;101.0666920000076;113.52282099999866;128.5677860000069
+06:51:34     INFO -  PID 4614 | |5;240.html;115.74705499999982;142.47019300000102;120.65496100000018;131.05808799999795;116.17551900000399;139.43625299999985;113.3973960000003;119.94471799999883;142.01697499999864;92.65887400000065;122.27210200000263;149.1837139999916;114.56189499999891;140.68692300000112;132.69675600000483;112.64016000000265;136.44952699998976;151.2094849999994;133.10094899999967;134.35461999999825
+06:51:34     INFO -  PID 4614 | |6;480.html;156.69854799999302;119.15594899999996;135.1215019999945;160.02073400000518;114.45863499999541;118.39529200000106;171.50878200000443;117.24953899999673;162.08536299999832;133.48568000000523;144.27834499999153;173.13296999999147;111.35638199999084;159.2908829999942;149.51807699999335;143.94673099999636;152.7320319999999;141.91356000000087;146.500168999999;133.89759499998763
+06:51:34     INFO -  PID 4614 | |7;960.html;129.357686000003;152.79063499999756;136.8531210000001;159.63009099999908;132.04971199999272;169.02307300000393;155.96638499999244;162.58046399999876;167.4672850000061;143.05521500001487;149.3800630000187;144.451642;143.229554000005;161.26841699999932;144.32240300001286;140.0886429999955;141.93374900000344;165.3599130000075;151.67950800000108;161.65109600000142
+06:51:34     INFO -  PID 4614 | |8;1440.html;99.26321400000597;95.3411890000134;153.83683299999393;144.20945300000312;144.94944699999178;146.08072900000843;177.09761099999014;162.540279000008;125.48972899999353;102.57182300000568;162.44534000000567;158.30026699998416;154.44608799999696;185.74109199999657;91.0590050000028;170.6391360000125;144.3611419999943;177.60500599999796;145.30858799999987;148.30918699999165
+06:51:34     INFO -  PID 4614 | |9;1920.html;168.54970899998443;156.40467699999863;172.424291000003;159.91730799998913;154.61858700000448;229.90101900001173;150.08704300000682;154.97107299999334;162.3396700000012;174.1049490000005;154.84067399999185;169.34773799999675;160.96603100000357;182.76602500000445;153.67554299999028;150.7224220000062;173.94129300001077;160.29785299998184;151.04579400000512;122.74615200000699
+06:51:34     INFO -  PID 4614 | __end_tp_report
+06:51:34     INFO -  PID 4614 | __start_cc_report
+06:51:34     INFO -  PID 4614 | _x_x_mozilla_cycle_collect,11721.256927000126
+06:51:34     INFO -  PID 4614 | __end_cc_report
+06:51:34     INFO -  PID 4614 | __startTimestamp94286.856513__endTimestamp
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | ------- Summary: start -------
+06:51:34     INFO -  PID 4614 | Number of tests: 10
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#0] 10.html  Cycles:20  Average:139.84  Median:124.87  stddev:72.64 (58.2%)  stddev-sans-first:27.69
+06:51:34     INFO -  PID 4614 | Values: 426.4  216.9  101.7  118.7  120.7  135.1  94.2  105.0  110.5  133.0  125.7  162.9  143.5  96.7  124.0  121.8  110.7  114.2  119.7  115.3
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#1] 20.html  Cycles:20  Average:119.47  Median:122.85  stddev:16.66 (13.6%)  stddev-sans-first:15.11
+06:51:34     INFO -  PID 4614 | Values: 152.7  119.5  132.8  100.6  109.9  110.2  117.0  123.9  153.2  118.2  112.9  83.9  120.9  129.3  121.8  131.8  99.9  111.7  131.3  107.8
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#2] 30.html  Cycles:20  Average:118.73  Median:122.22  stddev:16.24 (13.3%)  stddev-sans-first:16.41
+06:51:34     INFO -  PID 4614 | Values: 131.1  108.5  100.1  128.1  145.3  119.1  119.2  156.5  134.6  123.5  113.5  105.0  114.1  120.9  91.8  117.2  90.4  110.9  117.3  127.5
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#3] 60.html  Cycles:20  Average:113.94  Median:129.88  stddev:16.84 (13.0%)  stddev-sans-first:17.30
+06:51:34     INFO -  PID 4614 | Values: 115.6  124.4  118.5  133.9  121.9  129.2  117.4  83.4  114.8  86.3  91.5  111.6  134.4  125.0  94.7  93.9  106.3  139.2  130.6  106.2
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#4] 120.html  Cycles:20  Average:124.19  Median:128.54  stddev:11.92 (9.3%)  stddev-sans-first:12.04
+06:51:34     INFO -  PID 4614 | Values: 115.0  126.8  111.3  132.9  120.9  105.5  129.0  134.2  120.7  136.1  128.5  106.1  128.7  127.5  139.3  141.2  137.0  101.1  113.5  128.6
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#5] 240.html  Cycles:20  Average:128.04  Median:133.73  stddev:14.82 (11.1%)  stddev-sans-first:14.94
+06:51:34     INFO -  PID 4614 | Values: 115.7  142.5  120.7  131.1  116.2  139.4  113.4  119.9  142.0  92.7  122.3  149.2  114.6  140.7  132.7  112.6  136.4  151.2  133.1  134.4
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#6] 480.html  Cycles:20  Average:142.24  Median:145.39  stddev:19.00 (13.1%)  stddev-sans-first:19.20
+06:51:34     INFO -  PID 4614 | Values: 156.7  119.2  135.1  160.0  114.5  118.4  171.5  117.2  162.1  133.5  144.3  173.1  111.4  159.3  149.5  143.9  152.7  141.9  146.5  133.9
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#7] 960.html  Cycles:20  Average:150.61  Median:152.24  stddev:11.92 (7.8%)  stddev-sans-first:11.11
+06:51:34     INFO -  PID 4614 | Values: 129.4  152.8  136.9  159.6  132.0  169.0  156.0  162.6  167.5  143.1  149.4  144.5  143.2  161.3  144.3  140.1  141.9  165.4  151.7  161.7
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#8] 1440.html  Cycles:20  Average:144.48  Median:160.37  stddev:28.12 (17.5%)  stddev-sans-first:26.74
+06:51:34     INFO -  PID 4614 | Values: 99.3  95.3  153.8  144.2  144.9  146.1  177.1  162.5  125.5  102.6  162.4  158.3  154.4  185.7  91.1  170.6  144.4  177.6  145.3  148.3
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | [#9] 1920.html  Cycles:20  Average:163.18  Median:160.63  stddev:20.13 (12.5%)  stddev-sans-first:20.65
+06:51:34     INFO -  PID 4614 | Values: 168.5  156.4  172.4  159.9  154.6  229.9  150.1  155.0  162.3  174.1  154.8  169.3  161.0  182.8  153.7  150.7  173.9  160.3  151.0  122.7
+06:51:34     INFO -  PID 4614 | -------- Summary: end --------
+06:51:34     INFO -  PID 4614 |
+06:51:34     INFO -  PID 4614 | Capture_Time:JPEG_destroy(http://127.0.0.1:38339/tests/jpeg_perf/generated_jpegs/artificial_rgb8bit_default_width_1920.jpeg),200,338817518|
+06:51:35     INFO -  TEST-INFO | 4614: exit 0
+06:51:35     INFO -  mozcrash checking /tmp/tmp9A8DWt/profile/minidumps for minidumps...
+06:51:35     INFO -  TEST-OK | jpeg_width_perf | took 108418ms
+06:51:35     INFO -  SUITE-END | took 108s
+06:51:35     INFO -  Completed test suite (00:01:48)
+06:51:35     INFO -  PERFHERDER_DATA: {"framework": {"name": "talos"}, "suites": [{"extraOptions": ["e10s", "stylo"], "name": "jpeg_width_perf", "lowerIsBetter": true, "alertThreshold": 2.0, "value": 132.89494085322025, "shouldAlert": true, "subtests": [{"value": 119.72820999999931, "name": "10.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [426.43245999999976, 216.90963100000045, 101.69678999999996, 118.6952210000004, 120.73043999999936, 135.08381000000008, 94.23020999999972, 104.9800209999994, 110.47585099999924, 132.96064800000022, 125.74271699999917, 162.9217660000004, 143.4545909999997, 96.74266100000204, 124.00229999999829, 121.83105400000022, 110.71676699999989, 114.18417699999736, 119.72820999999931, 115.29321900000105], "shouldAlert": false, "unit": "ms"}, {"value": 118.22614100000101, "name": "20.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [152.68700799999897, 119.5009829999999, 132.83761799999957, 100.5984810000009, 109.88730099999884, 110.20623700000033, 116.9607219999998, 123.86361000000034, 153.249917000001, 118.22614100000101, 112.93822199999886, 83.88462599999912, 120.9025870000005, 129.30422499999986, 121.84422000000268, 131.83668399999806, 99.91449099999954, 111.65892099999837, 131.31742600000143, 107.77547200000117], "shouldAlert": false, "unit": "ms"}, {"value": 117.26734899999792, "name": "30.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [131.14095499999894, 108.45476599999893, 100.14326199999778, 128.13631199999872, 145.262319999998, 119.05277900000146, 119.24752600000284, 156.47112200000265, 134.60274899999786, 123.51955700000326, 113.48678100000325, 105.042975999997, 114.10448900000483, 120.91220199999952, 91.78632500000094, 117.1857409999975, 90.36662299999807, 110.85925199999838, 117.26734899999792, 127.47108699999808], "shouldAlert": false, "unit": "ms"}, {"value": 111.58425500000158, "name": "60.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [115.62258000000293, 124.40783699999884, 118.47656599999755, 133.87984499999948, 121.91996799999833, 129.1952040000033, 117.41760499999873, 83.39610099999845, 114.80464800000482, 86.32363699999769, 91.53048500000295, 111.58425500000158, 134.3549439999988, 125.03286500000104, 94.70873800000118, 93.86306299999706, 106.29614200000651, 139.20229900000413, 130.55490799999825, 106.21975000000384], "shouldAlert": false, "unit": "ms"}, {"value": 128.5677860000069, "name": "120.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [114.9794699999984, 126.76516100000299, 111.3474040000001, 132.92756299999746, 120.85483500000555, 105.48683000000165, 128.96249800000078, 134.1889680000022, 120.67242399999668, 136.12965400000394, 128.51203000000532, 106.06234399999084, 128.6822109999921, 127.53710599999613, 139.2550210000045, 141.23477300000377, 137.02160500000173, 101.0666920000076, 113.52282099999866, 128.5677860000069], "shouldAlert": false, "unit": "ms"}, {"value": 133.10094899999967, "name": "240.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [115.74705499999982, 142.47019300000102, 120.65496100000018, 131.05808799999795, 116.17551900000399, 139.43625299999985, 113.3973960000003, 119.94471799999883, 142.01697499999864, 92.65887400000065, 122.27210200000263, 149.1837139999916, 114.56189499999891, 140.68692300000112, 132.69675600000483, 112.64016000000265, 136.44952699998976, 151.2094849999994, 133.10094899999967, 134.35461999999825], "shouldAlert": false, "unit": "ms"}, {"value": 144.27834499999153, "name": "480.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [156.69854799999302, 119.15594899999996, 135.1215019999945, 160.02073400000518, 114.45863499999541, 118.39529200000106, 171.50878200000443, 117.24953899999673, 162.08536299999832, 133.48568000000523, 144.27834499999153, 173.13296999999147, 111.35638199999084, 159.2908829999942, 149.51807699999335, 143.94673099999636, 152.7320319999999, 141.91356000000087, 146.500168999999, 133.89759499998763], "shouldAlert": false, "unit": "ms"}, {"value": 151.67950800000108, "name": "960.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [129.357686000003, 152.79063499999756, 136.8531210000001, 159.63009099999908, 132.04971199999272, 169.02307300000393, 155.96638499999244, 162.58046399999876, 167.4672850000061, 143.05521500001487, 149.3800630000187, 144.451642, 143.229554000005, 161.26841699999932, 144.32240300001286, 140.0886429999955, 141.93374900000344, 165.3599130000075, 151.67950800000108, 161.65109600000142], "shouldAlert": false, "unit": "ms"}, {"value": 154.44608799999696, "name": "1440.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [99.26321400000597, 95.3411890000134, 153.83683299999393, 144.20945300000312, 144.94944699999178, 146.08072900000843, 177.09761099999014, 162.540279000008, 125.48972899999353, 102.57182300000568, 162.44534000000567, 158.30026699998416, 154.44608799999696, 185.74109199999657, 91.0590050000028, 170.6391360000125, 144.3611419999943, 177.60500599999796, 145.30858799999987, 148.30918699999165], "shouldAlert": false, "unit": "ms"}, {"value": 160.29785299998184, "name": "1920.html", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [168.54970899998443, 156.40467699999863, 172.424291000003, 159.91730799998913, 154.61858700000448, 229.90101900001173, 150.08704300000682, 154.97107299999334, 162.3396700000012, 174.1049490000005, 154.84067399999185, 169.34773799999675, 160.96603100000357, 182.76602500000445, 153.67554299999028, 150.7224220000062, 173.94129300001077, 160.29785299998184, 151.04579400000512, 122.74615200000699], "shouldAlert": false, "unit": "ms"}]}]}
+06:51:35     INFO -  Thanks for running Talos locally. Results are in ['/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/local.json']
+06:51:35     INFO - Return code: 0
+06:51:35     INFO - Validating PERFHERDER_DATA against /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/external_tools/performance-artifact-schema.json
+06:51:35     INFO - # TBPL SUCCESS #
+06:51:35     INFO - Running post-action listener: _package_coverage_data
+06:51:35     INFO - Running post-action listener: _resource_record_post_action
+06:51:35     INFO - Running post-action listener: process_java_coverage_data
+06:51:35     INFO - [mozharness: 2020-11-24 06:51:35.593129Z] Finished run-tests step (success)
+06:51:35     INFO - Running post-run listener: _resource_record_post_run
+06:51:35     INFO - Total resource usage - Wall time: 109s; CPU: 23.0%; Read bytes: 252502016; Write bytes: 149463040; Read time: 6293; Write time: 12659
+06:51:35     INFO - TinderboxPrint: CPU usage<br/>22.5%
+06:51:35     INFO - TinderboxPrint: I/O read bytes / time<br/>252,502,016 / 6,293
+06:51:35     INFO - TinderboxPrint: I/O write bytes / time<br/>149,463,040 / 12,659
+06:51:35     INFO - TinderboxPrint: CPU idle<br/>336.9 (76.4%)
+06:51:35     INFO - TinderboxPrint: CPU iowait<br/>5.3 (1.2%)
+06:51:35     INFO - TinderboxPrint: CPU softirq<br/>6.6 (1.5%)
+06:51:35     INFO - TinderboxPrint: CPU system<br/>17.4 (3.9%)
+06:51:35     INFO - TinderboxPrint: CPU user<br/>73.1 (16.6%)
+06:51:35     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+06:51:35     INFO - run-tests - Wall time: 110s; CPU: 23.0%; Read bytes: 252502016; Write bytes: 149463040; Read time: 6293; Write time: 12659
