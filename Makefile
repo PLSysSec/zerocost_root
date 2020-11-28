@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=zerocost_testing_sandbox rlbox_mpk_sandbox zerocost_testing_firefox
+DIRS=zerocost_testing_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost_testing_firefox
 
 CURR_DIR := $(shell realpath ./)
 
@@ -14,6 +14,10 @@ zerocost_testing_sandbox:
 
 rlbox_mpk_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
+
+rlbox_mpkzerocost_sandbox:
+	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
+	cd $@ && git checkout zerocost
 
 zerocost_testing_firefox:
 	git clone git@github.com:PLSysSec/zerocost_testing_firefox.git $@
