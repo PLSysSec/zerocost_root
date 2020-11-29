@@ -46,6 +46,11 @@ bootstrap: get_source
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
 	fi
+	if [ ! -d /opt/wasi-sdk/ ]; then \
+		wget https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/wasi-sdk-10.0-linux.tar.gz -P /tmp/ && \
+		tar -xzf /tmp/wasi-sdk-10.0-linux.tar.gz && \
+		sudo mv wasi-sdk-10.0 /opt/wasi-sdk; \
+	fi
 	cd ./zerocost_testing_firefox && ./mach create-mach-environment
 	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
 	pip3 install simplejson
