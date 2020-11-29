@@ -80,6 +80,7 @@ build:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
 
 build_debug:
@@ -96,6 +97,7 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
 micro_benchmark:
