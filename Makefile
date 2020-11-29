@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler zerocost_testing_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox
+DIRS=lucet_sandbox_compiler zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox
 
 CURR_DIR := $(shell realpath ./)
 
@@ -15,6 +15,10 @@ lucet_sandbox_compiler:
 
 zerocost_testing_sandbox:
 	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
+
+rlbox_lucetstock_sandbox:
+	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
+	cd $@ && git checkout lucet-transitions
 
 rlbox_mpk_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
@@ -49,8 +53,12 @@ bootstrap: get_source
 
 pull: $(DIRS)
 	git pull
+	cd lucet_sandbox_compiler && git pull
 	cd zerocost_testing_sandbox && git pull
+	cd rlbox_lucetstock_sandbox && git pull
 	cd rlbox_mpk_sandbox && git pull
+	cd rlbox_mpkzerocost_sandbox && git pull
+	cd zerocost-libjpeg-turbo && git pull
 	cd zerocost_testing_firefox && git pull
 
 build:
@@ -66,6 +74,7 @@ build:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
 
 build_debug:
@@ -81,6 +90,7 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
 micro_benchmark:
