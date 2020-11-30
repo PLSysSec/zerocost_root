@@ -41,11 +41,11 @@ get_source: $(DIRS)
 
 bootstrap: get_source
 	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm; \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm; \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S curl cmake msr-tools cpuid cpupower npm clang llvm; \
+		trizen -S curl cmake msr-tools cpuid cpupower npm clang llvm xvfb; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
@@ -121,6 +121,10 @@ macro_image_benchmark:
 	else \
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
+	if [ -z "$(pgrep Xvfb)" ]; then \
+		Xvfb :99 &; \
+	fi
+	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)"
 
@@ -130,6 +134,10 @@ macro_graphite_benchmark:
 	else \
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
+	if [ -z "$(pgrep Xvfb)" ]; then \
+		Xvfb :99 &; \
+	fi
+	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
 
