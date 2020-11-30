@@ -121,7 +121,7 @@ macro_image_benchmark:
 	else \
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
-	if [ -z "$(pgrep Xvfb)" ]; then \
+	if [ -z "$(shell pgrep Xvfb)" ]; then \
 		Xvfb :99 &; \
 	fi
 	export DISPLAY=:99 && \
