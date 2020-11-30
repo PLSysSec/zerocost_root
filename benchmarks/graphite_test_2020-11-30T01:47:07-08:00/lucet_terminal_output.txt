@@ -1,0 +1,378 @@
+09:50:10     INFO - ConsoleLogger online at 20201130 09:50:10Z in /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox
+09:50:10     INFO - Run as ./mach talos-test --activeTests graphite_perf_test
+09:50:10     INFO - Dumping config to /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/logs/localconfig.json.
+09:50:10     INFO - {'append_to_log': False,
+09:50:10     INFO -  u'base_work_dir': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness',
+09:50:10     INFO -  u'binary_path': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox',
+09:50:10     INFO -  'code_coverage': False,
+09:50:10     INFO -  'config_files': (),
+09:50:10     INFO -  u'default_actions': (u'populate-webroot', u'create-virtualenv', u'run-tests'),
+09:50:10     INFO -  'disable_ccov_upload': False,
+09:50:10     INFO -  'e10s': True,
+09:50:10     INFO -  'enable_fission': False,
+09:50:10     INFO -  'enable_webrender': False,
+09:50:10     INFO -  u'exes': {u'python': u'/home/shravanrn/.mozbuild/_virtualenvs/mach_py2/bin/python',
+09:50:10     INFO -            u'virtualenv': (u'/home/shravanrn/.mozbuild/_virtualenvs/mach_py2/bin/python',
+09:50:10     INFO -                            u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/third_party/python/virtualenv/virtualenv.py')},
+09:50:10     INFO -  'extra_prefs': (),
+09:50:10     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub',),
+09:50:10     INFO -  'gecko_profile': False,
+09:50:10     INFO -  'gecko_profile_interval': 0,
+09:50:10     INFO -  'java_code_coverage': False,
+09:50:10     INFO -  'log_level': 'info',
+09:50:10     INFO -  u'log_name': u'talos',
+09:50:10     INFO -  'log_to_console': True,
+09:50:10     INFO -  u'obj_path': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release',
+09:50:10     INFO -  'opt_config_files': (),
+09:50:10     INFO -  'per_test_coverage': False,
+09:50:10     INFO -  'pip_index': False,
+09:50:10     INFO -  u'pypi_url': u'http://pypi.python.org/simple',
+09:50:10     INFO -  u'python3_manifest': {u'win32': u'python3.manifest',
+09:50:10     INFO -                        u'win64': u'python3_x64.manifest'},
+09:50:10     INFO -  u'repo_path': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:10     INFO -  u'run_local': True,
+09:50:10     INFO -  'system_bits': '32',
+09:50:10     INFO -  u'talos_extra_options': (u'--develop',
+09:50:10     INFO -                           u'--activeTests',
+09:50:10     INFO -                           u'graphite_perf_test'),
+09:50:10     INFO -  u'talos_json': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos.json',
+09:50:10     INFO -  u'title': u'bedsty',
+09:50:10     INFO -  'use_talos_json': False,
+09:50:10     INFO -  'verify': False,
+09:50:10     INFO -  u'virtualenv_path': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv',
+09:50:10     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+09:50:10     INFO -  'work_dir': 'build'}
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.970207Z] Skipping clobber step.
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.970250Z] Skipping download-and-extract step.
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.970291Z] Running populate-webroot step.
+09:50:10     INFO - Running pre-action listener: _resource_record_pre_action
+09:50:10     INFO - Running main action method: populate_webroot
+09:50:10     INFO - {u'suites': {u'bcv': {u'tests': [u'basic_compositor_video']},
+09:50:10     INFO -              u'chromez': {u'tests': [u'about_preferences_basic',
+09:50:10     INFO -                                      u'tresize',
+09:50:10     INFO -                                      u'about_newtab_with_snippets']},
+09:50:10     INFO -              u'damp': {u'pagesets_name': u'tp5n.zip', u'tests': [u'damp']},
+09:50:10     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css', u'kraken']},
+09:50:10     INFO -              u'flex': {u'tests': [u'tart_flex', u'ts_paint_flex']},
+09:50:10     INFO -              u'g1': {u'pagesets_name': u'tp5n.zip',
+09:50:10     INFO -                      u'tests': [u'tp5o_scroll']},
+09:50:10     INFO -              u'g3': {u'tests': [u'dromaeo_dom']},
+09:50:10     INFO -              u'g4': {u'tests': [u'displaylist_mutate',
+09:50:10     INFO -                                 u'rasterflood_svg',
+09:50:10     INFO -                                 u'rasterflood_gradient']},
+09:50:10     INFO -              u'g5': {u'pagesets_name': u'tp5n.zip',
+09:50:10     INFO -                      u'tests': [u'ts_paint_webext', u'tp5o_webext']},
+09:50:10     INFO -              u'h1': {u'tests': [u'ts_paint_heavy']},
+09:50:10     INFO -              u'motionmark': {u'benchmark_zip': u'jetstream.zip',
+09:50:10     INFO -                              u'tests': [u'motionmark_animometer',
+09:50:10     INFO -                                         u'motionmark_htmlsuite',
+09:50:10     INFO -                                         u'JetStream',
+09:50:10     INFO -                                         u'ARES6']},
+09:50:10     INFO -              u'other': {u'_comment': u'Bug 1220362 - Disabled startup_about_home_paint_cached for high frequency intermittents',
+09:50:10     INFO -                         u'tests': [u'a11yr',
+09:50:10     INFO -                                    u'ts_paint',
+09:50:10     INFO -                                    u'twinopen',
+09:50:10     INFO -                                    u'sessionrestore',
+09:50:10     INFO -                                    u'sessionrestore_no_auto_restore',
+09:50:10     INFO -                                    u'tabpaint',
+09:50:10     INFO -                                    u'cpstartup',
+09:50:10     INFO -                                    u'startup_about_home_paint',
+09:50:10     INFO -                                    u'pdfpaint']},
+09:50:10     INFO -              u'perf-reftest': {u'tests': [u'perf_reftest']},
+09:50:10     INFO -              u'perf-reftest-singletons': {u'tests': [u'perf_reftest_singletons']},
+09:50:10     INFO -              u'realworld-webextensions': {u'tests': [u'startup_about_home_paint_realworld_webextensions'],
+09:50:10     INFO -                                           u'webextensions_zip': u'webextensions.zip'},
+09:50:10     INFO -              u'sessionrestore-many-windows': {u'tests': [u'sessionrestore_many_windows']},
+09:50:10     INFO -              u'svgr': {u'tests': [u'tsvgx',
+09:50:10     INFO -                                   u'tsvgr_opacity',
+09:50:10     INFO -                                   u'tart',
+09:50:10     INFO -                                   u'tscrollx',
+09:50:10     INFO -                                   u'tsvg_static']},
+09:50:10     INFO -              u'tabswitch': {u'pagesets_name': u'tp5n.zip',
+09:50:10     INFO -                             u'tests': [u'tabswitch']},
+09:50:10     INFO -              u'tp5o': {u'pagesets_name': u'tp5n.zip', u'tests': [u'tp5o']},
+09:50:10     INFO -              u'webgl': {u'tests': [u'glterrain',
+09:50:10     INFO -                                    u'glvideo',
+09:50:10     INFO -                                    u'motionmark_webgl']},
+09:50:10     INFO -              u'xperf': {u'pagesets_name': u'tp5n.zip',
+09:50:10     INFO -                         u'talos_options': [u'--xperf_path',
+09:50:10     INFO -                                            u'"c:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/xperf.exe"'],
+09:50:10     INFO -                         u'tests': [u'tp5n']},
+09:50:10     INFO -              u'zerocost': {u'tests': [u'jpeg_width_perf',
+09:50:10     INFO -                                       u'jpeg_height_perf',
+09:50:10     INFO -                                       u'graphite_perf_test']}}}
+09:50:10     INFO - Running post-action listener: _resource_record_post_action
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.973463Z] Finished populate-webroot step (success)
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.973505Z] Running create-virtualenv step.
+09:50:10     INFO - Running pre-action listener: _resource_record_pre_action
+09:50:10     INFO - Running main action method: create_virtualenv
+09:50:10     INFO - Virtualenv already exists, skipping creation
+09:50:10     INFO - Running post-action listener: _resource_record_post_action
+09:50:10     INFO - Running post-action listener: _start_resource_monitoring
+09:50:10     INFO - Starting resource monitoring.
+/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/lib/python2.7/site-packages/mozsystemmonitor/resourcemonitor.py:266: UserWarning: psutil failed to run: not sure how to interpret line ' 259       0 nvme0n1 5329210 435714 585608654 1076378 1132955 422234 228087600 87980952 0 2415284 89155480 0 0 0 0 13033 98149\n'
+  warnings.warn('psutil failed to run: %s' % e)
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.993785Z] Finished create-virtualenv step (success)
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.993864Z] Skipping install step.
+09:50:10     INFO - [mozharness: 2020-11-30 09:50:10.993909Z] Running run-tests step.
+09:50:10     INFO - Running pre-action listener: _resource_record_pre_action
+09:50:10     INFO - Running pre-action listener: _set_gcov_prefix
+09:50:10     INFO - Running main action method: run_tests
+09:50:10     INFO - Running command: [u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin/python', '--version']
+09:50:10     INFO - Copy/paste: /home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin/python --version
+09:50:10     INFO -  Python 2.7.18
+09:50:11     INFO - Return code: 0
+09:50:11     INFO - ENV: MOZ_UPLOAD_DIR is now /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+09:50:11     INFO - ENV: RUST_BACKTRACE is now full
+09:50:11     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+09:50:11     INFO - Running command: [u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin/python', u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox', '--title', u'bedsty', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] in /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build
+09:50:11     INFO - Copy/paste: /home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin/python /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py --executablePath /home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox --title bedsty --develop --activeTests graphite_perf_test --log-tbpl-level=debug
+09:50:11     INFO - Using env: {'BINARYEN_ROOT': '/usr',
+09:50:11     INFO -  'COLORTERM': 'truecolor',
+09:50:11     INFO -  'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus',
+09:50:11     INFO -  'DESKTOP_SESSION': 'gnome-classic',
+09:50:11     INFO -  'DISPLAY': ':2',
+09:50:11     INFO -  'GDMSESSION': 'gnome-classic',
+09:50:11     INFO -  'GNOME_SHELL_SESSION_MODE': 'classic',
+09:50:11     INFO -  'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/22780a35_b354_44f4_8687_1f373f10794a',
+09:50:11     INFO -  'GNOME_TERMINAL_SERVICE': ':1.63',
+09:50:11     INFO -  'HG': '/usr/bin/hg',
+09:50:11     INFO -  'HOME': '/home/shravanrn',
+09:50:11     INFO -  'LANG': 'en_US.UTF-8',
+09:50:11     INFO -  'LOGNAME': 'shravanrn',
+09:50:11     INFO -  'MACH_MAIN_PID': '494003',
+09:50:11     INFO -  'MAIL': '/var/spool/mail/shravanrn',
+09:50:11     INFO -  'MAKEFLAGS': '',
+09:50:11     INFO -  'MAKELEVEL': '1',
+09:50:11     INFO -  'MAKE_TERMERR': '/dev/pts/2',
+09:50:11     INFO -  'MAKE_TERMOUT': '/dev/pts/2',
+09:50:11     INFO -  'MANPATH': '/home/shravanrn/.nvm/versions/node/v7.0.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man',
+09:50:11     INFO -  'MFLAGS': '',
+09:50:11     INFO -  'MINIDUMP_SAVE_PATH': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+09:50:11     INFO -  'MOZCONFIG': 'mozconfig_lucet_release',
+09:50:11     INFO -  'MOZ_DEVELOPER_OBJ_DIR': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release',
+09:50:11     INFO -  'MOZ_DEVELOPER_REPO_DIR': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:11     INFO -  'MOZ_PLUGIN_PATH': '/usr/lib/mozilla/plugins',
+09:50:11     INFO -  'MOZ_UPLOAD_DIR': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+09:50:11     INFO -  'NVM_BIN': '/home/shravanrn/.nvm/versions/node/v7.0.0/bin',
+09:50:11     INFO -  'NVM_CD_FLAGS': '',
+09:50:11     INFO -  'NVM_DIR': '/home/shravanrn/.nvm',
+09:50:11     INFO -  'NVM_IOJS_ORG_MIRROR': 'https://iojs.org/dist',
+09:50:11     INFO -  'NVM_NODEJS_ORG_MIRROR': 'https://nodejs.org/dist',
+09:50:11     INFO -  'NVM_PATH': '/home/shravanrn/.nvm/versions/node/v7.0.0/lib/node',
+09:50:11     INFO -  'OLDPWD': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:11     INFO -  'PATH': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin:/home/shravanrn/.nvm/versions/node/v7.0.0/bin:/home/shravanrn/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl',
+09:50:11     INFO -  'PWD': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:11     INFO -  'PYTHONPATH': u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos',
+09:50:11     INFO -  'RUST_BACKTRACE': 'full',
+09:50:11     INFO -  'SESSION_MANAGER': 'local/bedsty:@/tmp/.ICE-unix/914,unix/bedsty:/tmp/.ICE-unix/914',
+09:50:11     INFO -  'SHELL': '/bin/bash',
+09:50:11     INFO -  'SHLVL': '1',
+09:50:11     INFO -  'SSH_AUTH_SOCK': '/run/user/1001/keyring/ssh',
+09:50:11     INFO -  'STYLO_FORCE_ENABLED': '1',
+09:50:11     INFO -  'TERM': 'xterm-256color',
+09:50:11     INFO -  'USER': 'shravanrn',
+09:50:11     INFO -  'USERNAME': 'shravanrn',
+09:50:11     INFO -  'VIRTUAL_ENV': u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv',
+09:50:11     INFO -  'VTE_VERSION': '6201',
+09:50:11     INFO -  'XAUTHORITY': '/home/shravanrn/.Xauthority',
+09:50:11     INFO -  'XDG_CURRENT_DESKTOP': 'GNOME',
+09:50:11     INFO -  'XDG_DATA_DIRS': '/home/shravanrn/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share',
+09:50:11     INFO -  'XDG_DESKTOP_NAMES': 'GNOME-Classic:GNOME:',
+09:50:11     INFO -  'XDG_MENU_PREFIX': 'gnome-',
+09:50:11     INFO -  'XDG_RUNTIME_DIR': '/run/user/1001',
+09:50:11     INFO -  'XDG_SESSION_CLASS': 'user',
+09:50:11     INFO -  'XDG_SESSION_DESKTOP': 'gnome-classic',
+09:50:11     INFO -  'XDG_SESSION_TYPE': 'x11'}
+09:50:11     INFO - Calling [u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin/python', u'/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox', '--title', u'bedsty', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] with output_timeout 3600
+09:50:11     INFO -  mozversion application_buildid: 20201130013539
+09:50:11     INFO -  mozversion application_display_name: Nightly
+09:50:11     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+09:50:11     INFO -  mozversion application_name: Firefox
+09:50:11     INFO -  mozversion application_remotingname: firefox
+09:50:11     INFO -  mozversion application_vendor: Mozilla
+09:50:11     INFO -  mozversion application_version: 81.0a1
+09:50:11     INFO -  mozversion platform_buildid: 20201130013539
+09:50:11     INFO -  mozversion platform_version: 81.0a1
+09:50:11     INFO -  using testdate: 1606729811
+09:50:11     INFO -  actual date: 1606729811
+09:50:11     INFO -  starting webserver on '127.0.0.1:42361'
+09:50:11     INFO -  SUITE-START | Running 1 tests
+09:50:11     INFO -  TEST-START | graphite_perf_test
+09:50:11     INFO -  Initialising browser for graphite_perf_test test...
+09:50:11     INFO -  Cloning profile located at /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/base_profile
+09:50:11     INFO -  Merging profile: /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/profiles/base
+09:50:11     INFO -  Merging profile: /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/profiles/common
+09:50:11     INFO -  Merging profile: /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/profiles/perf
+09:50:11     INFO -  Installing Add-ons:
+09:50:11     INFO -  ['/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/talos-powers', '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos/talos/pageloader']
+09:50:11     INFO -  Installing Webextensions:
+09:50:11     INFO -  Application command: /home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox --no-remote http://127.0.0.1:42361/getInfo.html -profile /tmp/tmp6BVE11/profile
+09:50:11     INFO -  TEST-INFO | started process 494100 (/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox --no-remote http://127.0.0.1:42361/getInfo.html)
+09:50:12     INFO -  console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+09:50:13     INFO -  __metrics
+09:50:13     INFO -  	Screen width/height: 1024/768
+09:50:13     INFO -  	colorDepth: 24
+09:50:13     INFO -  	Browser inner width/height: 1024/591
+09:50:13     INFO -  __metrics
+09:50:13     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+09:50:13     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+09:50:13     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 5.9.10-arch1-1 #1 SMP PREEMPT Sun, 22 Nov 2020 14:16:59 +0000","version":"81.0a1","buildID":"20201130013539","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0","safeMode":false,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/81.0a1/Linux/en-US/","numTotalWindows":1,"numRemoteWindows":1,"remoteAutoStart":true,"autoStartStatus":1,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"processes":{"remoteTypes":{"web":1,"extension":1,"socket":1},"maxWebContentProcesses":8},"environmentVariables":{"MOZ_CRASHREPORTER":"1","MOZ_DEVELOPER_OBJ_DIR":"/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release","MOZ_UPLOAD_DIR":"/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_NO_REMOTE":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","DISPLAY":":2","MOZ_PLUGIN_PATH":"/usr/lib/mozilla/plugins","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_DEVELOPER_REPO_DIR":"/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmp6BVE11/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_0":"/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox","MOZ_CRASHREPORTER_RESTART_ARG_1":"--no-remote","MOZ_CRASHREPORTER_RESTART_ARG_2":"http://127.0.0.1:42361/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_3":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"/tmp/tmp6BVE11/profile","MOZ_CRASHREPORTER_RESTART_ARG_5":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/home/shravanrn/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/home/shravanrn/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.filesystem_reported":1,"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.startup.homepage_override.mstone":"81.0a1","browser.startup.homepage_override.buildID":"20201130013539","browser.tabs.remote.autostart":true,"browser.tabs.unloadOnLowMemory":false,"dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.lastAppVersion":"81.0a1","general.useragent.updates.enabled":false,"gfx.webrender.all.qualified":false,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.block-webaudio":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"network.http.speculative-parallel-limit":0,"places.history.expiration.transient_current_max_pages":112348,"places.database.lastMaintenance":2147483647,"plugin.state.flash":0,"plugins.flashBlock.enabled":false,"privacy.sanitize.pending":"[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]","privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.trackingprotection.pbmode.enabled":false,"security.sandbox.plugin.tempDirSuffix":"cd7d8885-b0b6-43ac-a760-db373c87b32b","security.sandbox.content.tempDirSuffix":"47ca7e6e-fb88-4781-bb09-dee230625401","security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true},"lockedPreferences":{},"media":{"currentAudioBackend":"pulse-rust","currentMaxAudioChannels":2,"currentPreferredSampleRate":44100,"audioOutputDevices":[{"name":"Dummy Output","groupId":"","vendor":"","type":2,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}],"audioInputDevices":[{"name":"Monitor of Dummy Output","groupId":"","vendor":"","type":1,"state":2,"preferred":15,"supportedFormat":12336,"defaultFormat":16,"maxChannels":2,"defaultRate":44100,"maxRate":384000,"minRate":1,"maxLatency":0,"minLatency":0}]},"accessibility":{"isActive":false,"forceDisabled":0,"handlerUsed":false,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmp6BVE11/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.28","version":"4.28"},"NSS":{"minVersion":"3.56","version":"3.56"},"NSSUTIL":{"minVersion":"3.56","version":"3.56"},"NSSSSL":{"minVersion":"3.56","version":"3.56"},"NSSSMIME":{"minVersion":"3.56","version":"3.56"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":4},"remoteAgent":{"listening":false,"url":""},"graphics":{"numTotalWindows":1,"numAcceleratedWindows":0,"windowLayerManagerType":"Basic","windowLayerManagerRemote":true,"windowUsingAdvancedLayers":false,"numAcceleratedWindowsMessage":{"key":"blocked-gfx-card"},"adapterDescription":"llvmpipe (LLVM 11.0.0, 256 bits)","adapterVendorID":"0xffff","adapterDeviceID":"0xffff","adapterRAM":64206,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"20.2.3.0","driverDate":"","usesTiling":false,"contentUsesTiling":false,"offMainThreadPaintEnabled":true,"offMainThreadPaintWorkerCount":4,"targetFrameRate":60,"windowProtocol":"x11","desktopEnvironment":"gnome","webgl1Renderer":"Mesa/X.org -- llvmpipe (LLVM 11.0.0, 256 bits)","webgl1Version":"3.1 Mesa 20.2.3","webgl1DriverExtensions":"GL_ARB_multisample GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_copy_texture GL_EXT_subtexture GL_EXT_texture_object GL_EXT_vertex_array GL_EXT_compiled_vertex_array GL_EXT_texture GL_EXT_texture3D GL_IBM_rasterpos_clip GL_ARB_point_parameters GL_EXT_draw_range_elements GL_EXT_packed_pixels GL_EXT_point_parameters GL_EXT_rescale_normal GL_EXT_separate_specular_color GL_EXT_texture_edge_clamp GL_SGIS_generate_mipmap GL_SGIS_texture_border_clamp GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_ARB_framebuffer_sRGB GL_ARB_multitexture GL_EXT_framebuffer_sRGB GL_IBM_multimode_draw_arrays GL_IBM_texture_mirrored_repeat GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_transpose_matrix GL_EXT_blend_func_separate GL_EXT_fog_coord GL_EXT_multi_draw_arrays GL_EXT_secondary_color GL_EXT_texture_env_add GL_EXT_texture_lod_bias GL_INGR_blend_func_separate GL_NV_blend_square GL_NV_light_max_exponent GL_NV_texgen_reflection GL_NV_texture_env_combine4 GL_S3_s3tc GL_SUN_multi_draw_arrays GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_EXT_framebuffer_object GL_EXT_texture_compression_s3tc GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_MESA_window_pos GL_NV_packed_depth_stencil GL_NV_texture_rectangle GL_ARB_depth_texture GL_ARB_occlusion_query GL_ARB_shadow GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_mirrored_repeat GL_ARB_window_pos GL_ATI_fragment_shader GL_EXT_stencil_two_side GL_EXT_texture_cube_map GL_NV_depth_clamp GL_NV_fog_distance GL_APPLE_packed_pixels GL_ARB_draw_buffers GL_ARB_fragment_program GL_ARB_fragment_shader GL_ARB_shader_objects GL_ARB_vertex_program GL_ARB_vertex_shader GL_ATI_draw_buffers GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_MESA_pack_invert GL_MESA_ycbcr_texture GL_NV_primitive_restart GL_ARB_depth_clamp GL_ARB_fragment_program_shadow GL_ARB_half_float_pixel GL_ARB_occlusion_query2 GL_ARB_point_sprite GL_ARB_shading_language_100 GL_ARB_sync GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ATI_blend_equation_separate GL_EXT_blend_equation_separate GL_OES_read_format GL_ARB_color_buffer_float GL_ARB_pixel_buffer_object GL_ARB_texture_compression_rgtc GL_ARB_texture_float GL_ARB_texture_rectangle GL_ATI_texture_compression_3dc GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_mirror_clamp GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_shared_exponent GL_ARB_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_packed_depth_stencil GL_ARB_vertex_array_object GL_ATI_separate_stencil GL_ATI_texture_mirror_once GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_texture_array GL_EXT_texture_compression_latc GL_EXT_texture_integer GL_EXT_texture_sRGB_decode GL_EXT_timer_query GL_OES_EGL_image GL_EXT_texture_buffer_object GL_AMD_texture_texture4 GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_draw_instanced GL_ARB_half_float_vertex GL_ARB_instanced_arrays GL_ARB_map_buffer_range GL_ARB_texture_buffer_object GL_ARB_texture_rg GL_ARB_texture_swizzle GL_ARB_vertex_array_bgra GL_EXT_texture_swizzle GL_EXT_vertex_array_bgra GL_NV_conditional_render GL_AMD_conservative_depth GL_AMD_draw_buffers_blend GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_ARB_ES2_compatibility GL_ARB_blend_func_extended GL_ARB_compatibility GL_ARB_debug_output GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_provoking_vertex GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_shader_stencil_export GL_ARB_shader_texture_lod GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_cube_map_array GL_ARB_texture_gather GL_ARB_texture_multisample GL_ARB_texture_query_lod GL_ARB_texture_rgb10_a2ui GL_ARB_uniform_buffer_object GL_ARB_vertex_type_2_10_10_10_rev GL_EXT_provoking_vertex GL_EXT_texture_snorm GL_MESA_texture_signed_rgba GL_NV_copy_image GL_NV_texture_barrier GL_ARB_draw_indirect GL_ARB_get_program_binary GL_ARB_robustness GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_subroutine GL_ARB_texture_compression_bptc GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_viewport_array GL_EXT_direct_state_access GL_AMD_multi_draw_indirect GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_base_instance GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_internalformat_query GL_ARB_map_buffer_alignment GL_ARB_shader_atomic_counters GL_ARB_shader_image_load_store GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_texture_storage GL_ARB_transform_feedback_instanced GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_transform_feedback GL_AMD_query_buffer_object GL_AMD_shader_trinary_minmax GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_clear_buffer_object GL_ARB_compute_shader GL_ARB_copy_image GL_ARB_explicit_uniform_location GL_ARB_fragment_layer_viewport GL_ARB_framebuffer_no_attachments GL_ARB_invalidate_subdata GL_ARB_multi_draw_indirect GL_ARB_program_interface_query GL_ARB_robust_buffer_access_behavior GL_ARB_shader_image_size GL_ARB_shader_storage_buffer_object GL_ARB_stencil_texturing GL_ARB_texture_buffer_range GL_ARB_texture_query_levels GL_ARB_texture_storage_multisample GL_ARB_texture_view GL_ARB_vertex_attrib_binding GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_ARB_buffer_storage GL_ARB_clear_texture GL_ARB_enhanced_layouts GL_ARB_indirect_parameters GL_ARB_internalformat_query2 GL_ARB_multi_bind GL_ARB_query_buffer_object GL_ARB_seamless_cubemap_per_texture GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shading_language_include GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_stencil8 GL_ARB_vertex_type_10f_11f_11f_rev GL_EXT_shader_integer_mix GL_ARB_clip_control GL_ARB_conditional_render_inverted GL_ARB_cull_distance GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_get_texture_sub_image GL_ARB_pipeline_statistics_query GL_ARB_shader_texture_image_samples GL_ARB_texture_barrier GL_ARB_transform_feedback_overflow_query GL_EXT_polygon_offset_clamp GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_ARB_parallel_shader_compile GL_ARB_post_depth_coverage GL_ARB_shader_atomic_counter_ops GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_MESA_shader_integer_functions GL_ARB_polygon_offset_clamp GL_KHR_parallel_shader_compile GL_EXT_EGL_image_storage GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_texture_sRGB_R8 GL_EXT_texture_shadow_lod GL_EXT_EGL_sync ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"GLX 1.4\nGLX_VENDOR(client): Mesa Project and SGI\nGLX_VENDOR(server): SGI\nExtensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_profile GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_import_context GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_OML_swap_method GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read ","webgl2Renderer":"Mesa/X.org -- llvmpipe (LLVM 11.0.0, 256 bits)","webgl2Version":"4.5 (Core Profile) Mesa 20.2.3","webgl2DriverExtensions":"GL_AMD_conservative_depth GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_bit_encoding GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_MESA_ycbcr_texture GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc","webgl2Extensions":"EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc MOZ_debug OES_texture_float_linear WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"GLX 1.4\nGLX_VENDOR(client): Mesa Project and SGI\nGLX_VENDOR(server): SGI\nExtensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_profile GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_import_context GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_OML_swap_method GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read ","info":{"AzureCanvasBackend":"skia","AzureFallbackCanvasBackend":"none","AzureContentBackend":"skia","CairoUseXRender":0,"ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"Empty profile data","DisplayCount":1,"Display0":"1024x768 default"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","message":"Acceleration blocked by platform"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"unavailable","log":[{"type":"default","status":"unavailable","message":"Hardware compositing is disabled"}]},{"name":"WEBRENDER","description":"WebRender","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender is an opt-in feature"}]},{"name":"WEBRENDER_QUALIFIED","description":"WebRender qualified","status":"denied","log":[{"type":"default","status":"available"},{"type":"env","status":"denied","message":"Not on allowlist"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender ANGLE is an opt-in feature"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender DirectComposition is an opt-in feature"}]},{"name":"OMTP","description":"Off Main Thread Painting","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]}],"fallbacks":[]},"crashGuards":[]},"experimentalFeatures":[["experimental-features-abouthome-startup-cache","browser.startup.homepage.abouthome_cache.enabled",false],["experimental-features-cookie-samesite-lax-by-default2","network.cookie.sameSite.laxByDefault",true],["experimental-features-cookie-samesite-none-requires-secure2","network.cookie.sameSite.noneRequiresSecure",true],["experimental-features-cookie-samesite-schemeful","network.cookie.sameSite.schemeful",true],["experimental-features-css-constructable-stylesheets","layout.css.constructable-stylesheets.enabled",false],["experimental-features-css-focus-visible","layout.css.focus-visible.enabled",true],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-devtools-color-scheme-simulation","devtools.inspector.color-scheme-simulation.enabled",false],["experimental-features-devtools-compatibility-panel","devtools.inspector.compatibility.enabled",true],["experimental-features-devtools-execution-context-selector","devtools.webconsole.input.context",true],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false],["experimental-features-graphics-desktop-zooming","apz.allow_zooming",true],["experimental-features-media-avif","image.avif.enabled",false],["experimental-features-media-session-api","dom.media.mediasession.enabled",true],["experimental-features-print-preview-tab-modal","print.tab_modal.enabled",true],["experimental-features-web-api-beforeinput","dom.input_events.beforeinput.enabled",false],["experimental-features-web-api-inputmode","dom.forms.inputmode",true],["experimental-features-web-api-link-preload","network.preload",true],["experimental-features-web-gpu2","dom.webgpu.enabled",false]],"addons":[{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"}],"features":[{"name":"DoH Roll-Out","version":"2.0.0","id":"doh-rollout@mozilla.org"},{"name":"Firefox Screenshots","version":"39.0.0","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0","id":"formautofill@mozilla.org"},{"name":"Web Compat","version":"14.0.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"1.4.0","id":"webcompat-reporter@mozilla.org"}]}
+09:50:15     INFO -  TEST-INFO | 494100: exit 0
+09:50:15     INFO -  Browser initialized.
+09:50:15     INFO -  Fission enabled: False
+09:50:15     INFO -  Running cycle 1/1 for graphite_perf_test test...
+09:50:15     INFO -  Using env: {'BINARYEN_ROOT': '/usr',
+09:50:15     INFO -   'COLORTERM': 'truecolor',
+09:50:15     INFO -   'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus',
+09:50:15     INFO -   'DESKTOP_SESSION': 'gnome-classic',
+09:50:15     INFO -   'DISPLAY': ':2',
+09:50:15     INFO -   'GDMSESSION': 'gnome-classic',
+09:50:15     INFO -   'GNOME_SHELL_SESSION_MODE': 'classic',
+09:50:15     INFO -   'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/22780a35_b354_44f4_8687_1f373f10794a',
+09:50:15     INFO -   'GNOME_TERMINAL_SERVICE': ':1.63',
+09:50:15     INFO -   'HG': '/usr/bin/hg',
+09:50:15     INFO -   'HOME': '/home/shravanrn',
+09:50:15     INFO -   'JSGC_DISABLE_POISONING': '1',
+09:50:15     INFO -   'LANG': 'en_US.UTF-8',
+09:50:15     INFO -   'LD_LIBRARY_PATH': '/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin',
+09:50:15     INFO -   'LOGNAME': 'shravanrn',
+09:50:15     INFO -   'MACH_MAIN_PID': '494003',
+09:50:15     INFO -   'MAIL': '/var/spool/mail/shravanrn',
+09:50:15     INFO -   'MAKEFLAGS': '',
+09:50:15     INFO -   'MAKELEVEL': '1',
+09:50:15     INFO -   'MAKE_TERMERR': '/dev/pts/2',
+09:50:15     INFO -   'MAKE_TERMOUT': '/dev/pts/2',
+09:50:15     INFO -   'MANPATH': '/home/shravanrn/.nvm/versions/node/v7.0.0/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man',
+09:50:15     INFO -   'MFLAGS': '',
+09:50:15     INFO -   'MINIDUMP_SAVE_PATH': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+09:50:15     INFO -   'MOZCONFIG': 'mozconfig_lucet_release',
+09:50:15     INFO -   'MOZ_CRASHREPORTER': '1',
+09:50:15     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+09:50:15     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release',
+09:50:15     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:15     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+09:50:15     INFO -   'MOZ_PLUGIN_PATH': '/usr/lib/mozilla/plugins',
+09:50:15     INFO -   'MOZ_UPLOAD_DIR': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+09:50:15     INFO -   'MOZ_USE_PAGELOADER': '1',
+09:50:15     INFO -   'MOZ_WEBRENDER': '0',
+09:50:15     INFO -   'NO_EM_RESTART': '1',
+09:50:15     INFO -   'NVM_BIN': '/home/shravanrn/.nvm/versions/node/v7.0.0/bin',
+09:50:15     INFO -   'NVM_CD_FLAGS': '',
+09:50:15     INFO -   'NVM_DIR': '/home/shravanrn/.nvm',
+09:50:15     INFO -   'NVM_IOJS_ORG_MIRROR': 'https://iojs.org/dist',
+09:50:15     INFO -   'NVM_NODEJS_ORG_MIRROR': 'https://nodejs.org/dist',
+09:50:15     INFO -   'NVM_PATH': '/home/shravanrn/.nvm/versions/node/v7.0.0/lib/node',
+09:50:15     INFO -   'OLDPWD': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:15     INFO -   'PATH': '/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/bin:/home/shravanrn/.nvm/versions/node/v7.0.0/bin:/home/shravanrn/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl',
+09:50:15     INFO -   'PWD': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox',
+09:50:15     INFO -   'PYTHONPATH': '/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/talos',
+09:50:15     INFO -   'RUST_BACKTRACE': 'full',
+09:50:15     INFO -   'SESSION_MANAGER': 'local/bedsty:@/tmp/.ICE-unix/914,unix/bedsty:/tmp/.ICE-unix/914',
+09:50:15     INFO -   'SHELL': '/bin/bash',
+09:50:15     INFO -   'SHLVL': '1',
+09:50:15     INFO -   'SSH_AUTH_SOCK': '/run/user/1001/keyring/ssh',
+09:50:15     INFO -   'STYLO_FORCE_ENABLED': '1',
+09:50:15     INFO -   'TERM': 'xterm-256color',
+09:50:15     INFO -   'USER': 'shravanrn',
+09:50:15     INFO -   'USERNAME': 'shravanrn',
+09:50:15     INFO -   'VIRTUAL_ENV': '/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv',
+09:50:15     INFO -   'VTE_VERSION': '6201',
+09:50:15     INFO -   'XAUTHORITY': '/home/shravanrn/.Xauthority',
+09:50:15     INFO -   'XDG_CURRENT_DESKTOP': 'GNOME',
+09:50:15     INFO -   'XDG_DATA_DIRS': '/home/shravanrn/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share',
+09:50:15     INFO -   'XDG_DESKTOP_NAMES': 'GNOME-Classic:GNOME:',
+09:50:15     INFO -   'XDG_MENU_PREFIX': 'gnome-',
+09:50:15     INFO -   'XDG_RUNTIME_DIR': '/run/user/1001',
+09:50:15     INFO -   'XDG_SESSION_CLASS': 'user',
+09:50:15     INFO -   'XDG_SESSION_DESKTOP': 'gnome-classic',
+09:50:15     INFO -   'XDG_SESSION_TYPE': 'x11'}
+09:50:15     INFO -  TEST-INFO | started process 494450 (/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/dist/bin/firefox --no-remote -profile /tmp/tmp6BVE11/profile)
+09:50:23     INFO -  PID 494450 | Capture_Time:Graphite,1,4580|
+09:50:23     INFO -  PID 494450 | Cycle 1(1): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:23     INFO -  PID 494450 | Waiting for idle-callback
+09:50:29     INFO -  PID 494450 | Capture_Time:Graphite,2,4468|
+09:50:29     INFO -  PID 494450 | Cycle 1(2): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:34     INFO -  PID 494450 | Capture_Time:Graphite,3,4424|
+09:50:34     INFO -  PID 494450 | Cycle 1(3): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:34     INFO -  PID 494450 | Waiting for idle-callback
+09:50:40     INFO -  PID 494450 | Capture_Time:Graphite,4,4471|
+09:50:40     INFO -  PID 494450 | Cycle 1(4): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:40     INFO -  PID 494450 | Waiting for idle-callback
+09:50:45     INFO -  PID 494450 | Capture_Time:Graphite,5,4412|
+09:50:45     INFO -  PID 494450 | Cycle 1(5): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:45     INFO -  PID 494450 | Waiting for idle-callback
+09:50:50     INFO -  PID 494450 | Capture_Time:Graphite,6,4424|
+09:50:50     INFO -  PID 494450 | Cycle 1(6): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:50     INFO -  PID 494450 | Waiting for idle-callback
+09:50:56     INFO -  PID 494450 | Capture_Time:Graphite,7,4389|
+09:50:56     INFO -  PID 494450 | Cycle 1(7): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:50:56     INFO -  PID 494450 | Waiting for idle-callback
+09:51:01     INFO -  PID 494450 | Capture_Time:Graphite,8,4416|
+09:51:01     INFO -  PID 494450 | Cycle 1(8): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:01     INFO -  PID 494450 | Waiting for idle-callback
+09:51:06     INFO -  PID 494450 | Capture_Time:Graphite,9,4420|
+09:51:07     INFO -  PID 494450 | Cycle 1(9): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:07     INFO -  PID 494450 | Waiting for idle-callback
+09:51:12     INFO -  PID 494450 | Capture_Time:Graphite,10,4397|
+09:51:12     INFO -  PID 494450 | Cycle 1(10): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:12     INFO -  PID 494450 | Waiting for idle-callback
+09:51:17     INFO -  PID 494450 | Capture_Time:Graphite,11,4491|
+09:51:17     INFO -  PID 494450 | Cycle 1(11): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:17     INFO -  PID 494450 | Waiting for idle-callback
+09:51:23     INFO -  PID 494450 | Capture_Time:Graphite,12,4428|
+09:51:23     INFO -  PID 494450 | Cycle 1(12): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:23     INFO -  PID 494450 | Waiting for idle-callback
+09:51:28     INFO -  PID 494450 | Capture_Time:Graphite,13,4407|
+09:51:28     INFO -  PID 494450 | Cycle 1(13): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:28     INFO -  PID 494450 | Waiting for idle-callback
+09:51:33     INFO -  PID 494450 | Capture_Time:Graphite,14,4415|
+09:51:34     INFO -  PID 494450 | Cycle 1(14): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:34     INFO -  PID 494450 | Waiting for idle-callback
+09:51:39     INFO -  PID 494450 | Capture_Time:Graphite,15,4374|
+09:51:39     INFO -  PID 494450 | Cycle 1(15): loaded http://127.0.0.1:42361/tests/graphite_perf_test/index.html (next: http://127.0.0.1:42361/tests/graphite_perf_test/index.html)
+09:51:39     INFO -  PID 494450 | Waiting for idle-callback
+09:51:39     INFO -  PID 494450 | __start_tp_report
+09:51:39     INFO -  PID 494450 | _x_x_mozilla_page_load
+09:51:39     INFO -  PID 494450 | _x_x_mozilla_page_load_details
+09:51:39     INFO -  PID 494450 | |i|pagename|runs|
+09:51:39     INFO -  PID 494450 | |0;/index.html;5651.270654;5162.108365000001;5092.331415000001;5143.963535000003;5088.574945;5084.126019000007;5057.372401000008;5076.985717000003;5084.247725000001;5050.702529000002;5174.305141000004;5076.524176999999;5057.09440300001;5084.128184000001;5033.989852000013
+09:51:39     INFO -  PID 494450 | __end_tp_report
+09:51:39     INFO -  PID 494450 | __start_cc_report
+09:51:39     INFO -  PID 494450 | _x_x_mozilla_cycle_collect,463.39436499999374
+09:51:39     INFO -  PID 494450 | __end_cc_report
+09:51:39     INFO -  PID 494450 | __startTimestamp82241.176814__endTimestamp
+09:51:39     INFO -  PID 494450 |
+09:51:39     INFO -  PID 494450 | ------- Summary: start -------
+09:51:39     INFO -  PID 494450 | Number of tests: 1
+09:51:39     INFO -  PID 494450 |
+09:51:39     INFO -  PID 494450 | [#0] /index.html  Cycles:15  Average:5127.85  Median:5084.13  stddev:150.25 (3.0%)  stddev-sans-first:41.61
+09:51:39     INFO -  PID 494450 | Values: 5651.3  5162.1  5092.3  5144.0  5088.6  5084.1  5057.4  5077.0  5084.2  5050.7  5174.3  5076.5  5057.1  5084.1  5034.0
+09:51:39     INFO -  PID 494450 | -------- Summary: end --------
+09:51:39     INFO -  PID 494450 |
+09:51:39     INFO -  TEST-INFO | 494450: exit 0
+09:51:39     INFO -  mozcrash checking /tmp/tmp6BVE11/profile/minidumps for minidumps...
+09:51:39     INFO -  TEST-OK | graphite_perf_test | took 88404ms
+09:51:39     INFO -  SUITE-END | took 88s
+09:51:39     INFO -  Completed test suite (00:01:28)
+09:51:39     INFO -  PERFHERDER_DATA: {"framework": {"name": "talos"}, "suites": [{"extraOptions": ["e10s", "stylo"], "name": "graphite_perf_test", "lowerIsBetter": true, "alertThreshold": 2.0, "shouldAlert": true, "subtests": [{"value": 5076.754947000001, "name": "", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [5651.270654, 5162.108365000001, 5092.331415000001, 5143.963535000003, 5088.574945, 5084.126019000007, 5057.372401000008, 5076.985717000003, 5084.247725000001, 5050.702529000002, 5174.305141000004, 5076.524176999999, 5057.09440300001, 5084.128184000001, 5033.989852000013], "shouldAlert": false, "unit": "ms"}]}]}
+09:51:39     INFO -  Thanks for running Talos locally. Results are in ['/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/local.json']
+09:51:39     INFO - Return code: 0
+09:51:39     INFO - Validating PERFHERDER_DATA against /home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/external_tools/performance-artifact-schema.json
+09:51:39     INFO - # TBPL SUCCESS #
+09:51:39     INFO - Running post-action listener: _package_coverage_data
+09:51:39     INFO - Running post-action listener: _resource_record_post_action
+09:51:39     INFO - Running post-action listener: process_java_coverage_data
+09:51:39     INFO - [mozharness: 2020-11-30 09:51:39.971151Z] Finished run-tests step (success)
+09:51:39     INFO - Running post-run listener: _resource_record_post_run
+09:51:39  WARNING - could not upload resource usage JSON
+09:51:39  WARNING - Traceback (most recent call last):
+09:51:39  WARNING - 
+09:51:39  WARNING -   File "/home/shravanrn/Code/zerocost_root/zerocost_testing_firefox/testing/mozharness/mozharness/base/python.py", line 588, in _resource_record_post_run
+09:51:39  WARNING -     json.dump(self._resource_monitor.as_dict(), fh,
+09:51:39  WARNING - 
+09:51:39  WARNING -   File "/home/shravanrn/Code/zerocost_root/ffbuilds/firefox_latest_lucet_release/testing/talos-venv/lib/python2.7/site-packages/mozsystemmonitor/resourcemonitor.py", line 626, in as_dict
+09:51:39  WARNING -     cpu_times_fields=list(self._cpu_times_type._fields),
+09:51:39  WARNING - 
+09:51:39  WARNING - AttributeError: 'SystemResourceMonitor' object has no attribute '_cpu_times_type'
+09:51:39  WARNING - 

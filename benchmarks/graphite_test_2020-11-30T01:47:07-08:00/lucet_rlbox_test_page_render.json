@@ -1,0 +1,44 @@
+{
+  "framework": {
+    "name": "talos"
+  },
+  "suites": [
+    {
+      "alertThreshold": 2.0,
+      "extraOptions": [
+        "e10s",
+        "stylo"
+      ],
+      "lowerIsBetter": true,
+      "name": "graphite_perf_test",
+      "shouldAlert": true,
+      "subtests": [
+        {
+          "alertThreshold": 2.0,
+          "lowerIsBetter": true,
+          "name": "",
+          "replicates": [
+            5651.270654,
+            5162.108365000001,
+            5092.331415000001,
+            5143.963535000003,
+            5088.574945,
+            5084.126019000007,
+            5057.372401000008,
+            5076.985717000003,
+            5084.247725000001,
+            5050.702529000002,
+            5174.305141000004,
+            5076.524176999999,
+            5057.09440300001,
+            5084.128184000001,
+            5033.989852000013
+          ],
+          "shouldAlert": false,
+          "unit": "ms",
+          "value": 5076.754947000001
+        }
+      ]
+    }
+  ]
+}
