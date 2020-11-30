@@ -122,7 +122,7 @@ macro_image_benchmark:
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
-		Xvfb :99 &; \
+		Xvfb :99 & \
 	fi
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
@@ -135,7 +135,7 @@ macro_graphite_benchmark:
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
-		Xvfb :99 &; \
+		Xvfb :99 & \
 	fi
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
