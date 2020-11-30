@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox
+DIRS=lucet_sandbox_compiler zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
 
 CURR_DIR := $(shell realpath ./)
 
@@ -32,6 +32,10 @@ zerocost-libjpeg-turbo:
 
 zerocost_testing_firefox:
 	git clone git@github.com:PLSysSec/zerocost_testing_firefox.git $@
+
+web_resource_crawler:
+	git clone git@github.com:shravanrn/web_resource_crawler.git $@
+	cd $@ && git checkout zerocost
 
 get_source: $(DIRS)
 
