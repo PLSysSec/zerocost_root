@@ -1,5 +1,5 @@
 .NOTPARALLEL:
-.PHONY : pull clean get_source build build_debug micro_benchmark macro_image_benchmark macro_graphite_benchmark
+.PHONY : pull clean get_source build build_debug benchmark_setup micro_benchmark macro_image_benchmark macro_graphite_benchmark
 
 .DEFAULT_GOAL := build
 
@@ -107,15 +107,8 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
-micro_benchmark:
-	if [ -x "$(shell command -v cpupower)" ]; then \
-		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
-	else \
-		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
-	fi
-	cd zerocost-libjpeg-turbo/build && make run
-
-macro_image_benchmark:
+benchmark_setup:
+	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
 		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
 	else \
@@ -124,19 +117,17 @@ macro_image_benchmark:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
 		Xvfb :99 & \
 	fi
+
+micro_benchmark: benchmark_setup
+	export DISPLAY=:99 && \
+	cd zerocost-libjpeg-turbo/build && make run
+
+macro_image_benchmark: benchmark_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)"
 
-macro_graphite_benchmark:
-	if [ -x "$(shell command -v cpupower)" ]; then \
-		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
-	else \
-		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
-	fi
-	if [ -z "$(shell pgrep Xvfb)" ]; then \
-		Xvfb :99 & \
-	fi
+macro_graphite_benchmark: benchmark_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
