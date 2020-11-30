@@ -50,6 +50,9 @@ bootstrap: get_source
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
 	fi
+	if [ ! -x "$(shell command -v rustc)" ] ; then \
+		curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.43.0 -y; \
+	fi
 	if [ ! -d /opt/wasi-sdk/ ]; then \
 		wget https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/wasi-sdk-10.0-linux.tar.gz -P /tmp/ && \
 		tar -xzf /tmp/wasi-sdk-10.0-linux.tar.gz && \
