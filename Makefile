@@ -1,17 +1,20 @@
 .NOTPARALLEL:
-.PHONY : pull clean get_source build build_debug benchmark_setup micro_benchmark macro_image_benchmark macro_graphite_benchmark
+.PHONY : pull clean get_source build build_debug benchmark_setup micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
 
 .DEFAULT_GOAL := build
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
 
 CURR_DIR := $(shell realpath ./)
 
 lucet_sandbox_compiler:
 	git clone git@github.com:PLSysSec/lucet_sandbox_compiler.git $@
 	cd $@ && git checkout lucet-wasi-wasmsbx && git submodule update --init --recursive
+
+rlbox_lucet_sandbox:
+	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
 
 zerocost_testing_sandbox:
 	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
@@ -66,6 +69,7 @@ bootstrap: get_source
 pull: $(DIRS)
 	git pull
 	cd lucet_sandbox_compiler && git pull
+	cd rlbox_lucet_sandbox && git pull
 	cd zerocost_testing_sandbox && git pull
 	cd rlbox_lucetstock_sandbox && git pull
 	cd rlbox_mpk_sandbox && git pull
@@ -81,6 +85,11 @@ build:
 		exit 1; \
 	fi
 	cd lucet_sandbox_compiler && cargo build --release
+	cd rlbox_lucet_sandbox       && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd zerocost_testing_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
@@ -98,6 +107,11 @@ build_debug:
 		exit 1; \
 	fi
 	cd lucet_sandbox_compiler && cargo build --release
+	cd rlbox_lucet_sandbox       && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd zerocost_testing_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
@@ -118,8 +132,14 @@ benchmark_setup:
 		Xvfb :99 & \
 	fi
 
-micro_benchmark: benchmark_setup
-	export DISPLAY=:99 && \
+micro_transition_benchmark: benchmark_setup
+	echo "zero"     && cd rlbox_lucet_sandbox/build_release       && taskset -c 1 ctest -V
+	echo "Heavy"    && cd zerocost_testing_sandbox/build_release  && taskset -c 1 ctest -V
+	echo "Lucet"    && cd rlbox_lucetstock_sandbox/build_release  && taskset -c 1 ctest -V
+	echo "Mpkheavy" && cd rlbox_mpk_sandbox/build_release         && taskset -c 1 ctest -V
+	echo "Mpkzero"  && cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V
+
+micro_jpeg_benchmark: benchmark_setup
 	cd zerocost-libjpeg-turbo/build && make run
 
 macro_image_benchmark: benchmark_setup
