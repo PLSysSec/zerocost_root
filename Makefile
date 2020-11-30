@@ -57,7 +57,7 @@ bootstrap: get_source
 	fi
 	cd ./zerocost_testing_firefox && ./mach create-mach-environment
 	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
-	pip3 install simplejson
+	pip3 install simplejson tldextract
 	touch ./bootstrap
 
 pull: $(DIRS)
