@@ -154,18 +154,23 @@ benchmark_env_close: restore_hyperthreading shielding_off
 micro_transition_benchmark: benchmark_env_setup
 	echo > ./benchmarks/micro_transition_benchmark.txt
 	echo "---------"
+	sleep 1
 	echo "Transition: Zero"     | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_lucet_sandbox/build_release       && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	sleep 1
 	echo "Transition: Heavy"    | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd zerocost_testing_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	sleep 1
 	echo "Transition: Lucet"    | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_lucetstock_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	sleep 1
 	echo "Transition: Mpkheavy" | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_mpk_sandbox/build_release         && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	sleep 1
 	echo "Transition: Mpkzero"  | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
 	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
-	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | grep -v "Unsandboxed" | tee -a ./benchmarks/micro_transition_benchmark.txt
 	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
 
 micro_jpeg_benchmark: benchmark_env_setup
