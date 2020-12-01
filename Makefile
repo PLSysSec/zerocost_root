@@ -134,15 +134,15 @@ restore_hyperthreading:
 	sudo bash -c "echo on > /sys/devices/system/cpu/smt/control"
 
 benchmark_env_setup:
+	if [ -z "$(shell pgrep Xvfb)" ]; then \
+		Xvfb :99 & \
+	fi
 	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "Shielding is on!") || (echo "shield not on. Run make shielding_on first!" && exit 1)
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
 		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
 	else \
 		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
-	fi
-	if [ -z "$(shell pgrep Xvfb)" ]; then \
-		Xvfb :99 & \
 	fi
 
 benchmark_env_close: restore_hyperthreading shielding_off
