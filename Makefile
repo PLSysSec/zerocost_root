@@ -123,7 +123,12 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
-shielding_on:
+run_xvfb:
+	if [ -z "$(shell pgrep Xvfb)" ]; then \
+		Xvfb :99 & \
+	fi
+
+shielding_on: run_xvfb
 	sudo cset shield -c 1 -k on
 	sudo cset shield -e sudo -- -u ${CURR_USER} env "PATH=${CURR_PATH}" bash
 
@@ -134,9 +139,7 @@ restore_hyperthreading:
 	sudo bash -c "echo on > /sys/devices/system/cpu/smt/control"
 
 benchmark_env_setup:
-	if [ -z "$(shell pgrep Xvfb)" ]; then \
-		Xvfb :99 & \
-	fi
+	sudo cset shield -c 1 -k on
 	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "Shielding is on!") || (echo "shield not on. Run make shielding_on first!" && exit 1)
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
