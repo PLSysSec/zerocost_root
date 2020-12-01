@@ -50,7 +50,7 @@ bootstrap: get_source
 	elif [ -x "$(shell command -v dnf)" ]; then \
 		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset; \
+		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
