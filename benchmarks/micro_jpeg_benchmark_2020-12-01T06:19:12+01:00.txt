@@ -1,0 +1,13 @@
+
+make[1]: Entering directory '/local/shr/zerocost_root/zerocost-libjpeg-turbo/build'
+Stock
+JPEG recoding time: 6862849
+StockLTO
+JPEG recoding time: 6561443
+Wasm
+JPEG recoding time: 14662803
+MPKZerocost
+JPEG recoding time: 6278783
+MPKZerocost+Safestack
+JPEG recoding time: 6471301
+make[1]: Leaving directory '/local/shr/zerocost_root/zerocost-libjpeg-turbo/build'
