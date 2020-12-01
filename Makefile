@@ -1,5 +1,5 @@
 .NOTPARALLEL:
-.PHONY : pull clean get_source build build_debug benchmark_setup micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
+.PHONY : pull clean get_source build build_debug restore_hyperthreading benchmark_setup micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
 
 .DEFAULT_GOAL := build
 
@@ -120,6 +120,9 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
+
+restore_hyperthreading:
+	sudo bash -c "echo on > /sys/devices/system/cpu/smt/control"
 
 benchmark_setup:
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
