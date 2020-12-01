@@ -132,7 +132,7 @@ benchmark_setup:
 		Xvfb :99 & \
 	fi
 
-micro_transition_benchmark:
+micro_transition_benchmark: benchmark_setup
 	echo > ./benchmarks/micro_transition_benchmark.txt
 	echo "---------"
 	echo "Transition: Zero"     | tee -a ./benchmarks/micro_transition_benchmark.txt
