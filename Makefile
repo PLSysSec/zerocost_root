@@ -132,12 +132,22 @@ benchmark_setup:
 		Xvfb :99 & \
 	fi
 
-micro_transition_benchmark: benchmark_setup
-	echo "zero"     && cd rlbox_lucet_sandbox/build_release       && taskset -c 1 ctest -V
-	echo "Heavy"    && cd zerocost_testing_sandbox/build_release  && taskset -c 1 ctest -V
-	echo "Lucet"    && cd rlbox_lucetstock_sandbox/build_release  && taskset -c 1 ctest -V
-	echo "Mpkheavy" && cd rlbox_mpk_sandbox/build_release         && taskset -c 1 ctest -V
-	echo "Mpkzero"  && cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V
+micro_transition_benchmark:
+	echo > ./benchmarks/micro_transition_benchmark.txt
+	echo "---------"
+	echo "Transition: Zero"     | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd rlbox_lucet_sandbox/build_release       && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	echo "Transition: Heavy"    | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd zerocost_testing_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	echo "Transition: Lucet"    | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd rlbox_lucetstock_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	echo "Transition: Mpkheavy" | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd rlbox_mpk_sandbox/build_release         && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	echo "Transition: Mpkzero"  | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
+	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | tee -a ./benchmarks/micro_transition_benchmark.txt
+	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
 
 micro_jpeg_benchmark: benchmark_setup
 	cd zerocost-libjpeg-turbo/build && make run
