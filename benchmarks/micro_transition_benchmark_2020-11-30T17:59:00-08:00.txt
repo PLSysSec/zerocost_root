@@ -1,0 +1,470 @@
+
+Transition: Zero
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Test project /home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 77
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+1: ===============================================================================
+1: All tests passed (45 assertions in 1 test case)
+1: 
+1/3 Test #1: sandbox glue tests rlbox_lucet_sandbox ............   Passed    0.13 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 77
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+2: ===============================================================================
+2: All tests passed (45 assertions in 1 test case)
+2: 
+2/3 Test #2: sandbox glue tests rlbox_lucet_sandbox preload ....   Passed    0.13 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 62
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 37
+3: ===============================================================================
+3: All tests passed (45 assertions in 1 test case)
+3: 
+3/3 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ...   Passed    0.11 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+[sandbox_glue_tests]    =   0.36 sec*proc (3 tests)
+
+Total Test time (real) =   0.37 sec
+Transition: Heavy
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Test project /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 201
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 119
+1: ===============================================================================
+1: All tests passed (45 assertions in 1 test case)
+1: 
+1/5 Test #1: sandbox glue tests rlbox_lucet_sandbox .................   Passed    0.33 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 182
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 108
+2: ===============================================================================
+2: All tests passed (45 assertions in 1 test case)
+2: 
+2/5 Test #2: sandbox glue tests rlbox_lucet_sandbox preload .........   Passed    0.30 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 199
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 108
+3: ===============================================================================
+3: All tests passed (45 assertions in 1 test case)
+3: 
+3/5 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ........   Passed    0.32 sec
+test 4
+    Start 4: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+
+4: Test command: /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue_noswitchstack "sandbox glue tests rlbox_lucet_sandbox noswitchstack"
+4: Test timeout computed to be: 1500
+4: simpleAddTest
+4: simpleAddTest
+4: simpleCallbackTest
+4: simpleCallbackTest
+4: simpleEchoTest
+4: simpleFloatAddTest
+4: simpleDoubleAddTest
+4: simpleFloatAddTest
+4: simplePointerValAddTest
+4: Filters: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+4: Unsandboxed function invocation time: 0
+4: Sandboxed function invocation time: 178
+4: Unsandboxed callback invocation time: 0
+4: Sandboxed callback invocation time: 94
+4: ===============================================================================
+4: All tests passed (45 assertions in 1 test case)
+4: 
+4/5 Test #4: sandbox glue tests rlbox_lucet_sandbox noswitchstack ...   Passed    0.29 sec
+test 5
+    Start 5: sandbox glue tests rlbox_lucet_sandbox windows mode
+
+5: Test command: /home/shravanrn/Code/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue_windowsmode "sandbox glue tests rlbox_lucet_sandbox windows mode"
+5: Test timeout computed to be: 1500
+5: simpleAddTest
+5: simpleAddTest
+5: simpleCallbackTest
+5: simpleCallbackTest
+5: simpleEchoTest
+5: simpleFloatAddTest
+5: simpleDoubleAddTest
+5: simpleFloatAddTest
+5: simplePointerValAddTest
+5: Filters: sandbox glue tests rlbox_lucet_sandbox windows mode
+5: Unsandboxed function invocation time: 0
+5: Sandboxed function invocation time: 191
+5: Unsandboxed callback invocation time: 0
+5: Sandboxed callback invocation time: 110
+5: ===============================================================================
+5: All tests passed (45 assertions in 1 test case)
+5: 
+5/5 Test #5: sandbox glue tests rlbox_lucet_sandbox windows mode ....   Passed    0.32 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Label Time Summary:
+[sandbox_glue_tests]    =   1.56 sec*proc (5 tests)
+
+Total Test time (real) =   1.56 sec
+Transition: Lucet
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Test project /home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 1197
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+1: ===============================================================================
+1: All tests passed (45 assertions in 1 test case)
+1: 
+1/3 Test #1: sandbox glue tests rlbox_lucet_sandbox ............   Passed    1.24 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 1166
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+2: ===============================================================================
+2: All tests passed (45 assertions in 1 test case)
+2: 
+2/3 Test #2: sandbox glue tests rlbox_lucet_sandbox preload ....   Passed    1.21 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /home/shravanrn/Code/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 1172
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 41
+3: ===============================================================================
+3: All tests passed (45 assertions in 1 test case)
+3: 
+3/3 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ...   Passed    1.23 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+[sandbox_glue_tests]    =   3.68 sec*proc (3 tests)
+
+Total Test time (real) =   3.69 sec
+Transition: Mpkheavy
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Test project /home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_mpk_sandbox
+
+1: Test command: /home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_mpk_sandbox"
+1: Test timeout computed to be: 1500
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 162
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 87
+1: ===============================================================================
+1: All tests passed (45 assertions in 1 test case)
+1: 
+1/2 Test #1: sandbox glue tests rlbox_mpk_sandbox ................   Passed    0.26 sec
+test 2
+    Start 2: sandbox glue tests rlbox_mpk_sandbox windows mode
+
+2: Test command: /home/shravanrn/Code/zerocost_root/rlbox_mpk_sandbox/build_release/test_rlbox_glue_windowsmode "sandbox glue tests rlbox_mpk_sandbox windows mode"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_mpk_sandbox windows mode
+2: simpleAddTest
+2: simpleAddTest
+2: simpleCallbackTest
+2: simpleCallbackTest
+2: simpleEchoTest
+2: simpleFloatAddTest
+2: simpleDoubleAddTest
+2: simpleFloatAddTest
+2: simplePointerValAddTest
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 202
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 105
+2: ===============================================================================
+2: All tests passed (45 assertions in 1 test case)
+2: 
+2/2 Test #2: sandbox glue tests rlbox_mpk_sandbox windows mode ...   Passed    0.31 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Label Time Summary:
+[sandbox_glue_tests]    =   0.57 sec*proc (2 tests)
+
+Total Test time (real) =   0.57 sec
+Transition: Mpkzero
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Test project /home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_mpk_sandbox
+
+1: Test command: /home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_mpk_sandbox"
+1: Test timeout computed to be: 1500
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: 
+1: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1: test_rlbox_glue is a Catch v2.9.1 host application.
+1: Run with -? for options
+1: 
+1: -------------------------------------------------------------------------------
+1: sandbox glue tests rlbox_mpk_sandbox
+1:   test simple function invocation
+1: -------------------------------------------------------------------------------
+1: /home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/_deps/rlbox-src/code/tests/rlbox_glue/test_sandbox_glue.inc.cpp:136
+1: ...............................................................................
+1: 
+1: /home/shravanrn/Code/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/_deps/rlbox-src/code/tests/rlbox_glue/test_sandbox_glue.inc.cpp:136: FAILED:
+1: due to a fatal error condition:
+1:   SIGILL - Illegal instruction signal
+1: 
+1: ===============================================================================
+1: test cases: 1 | 1 failed
+1: assertions: 1 | 1 failed
+1: 
+1/1 Test #1: sandbox glue tests rlbox_mpk_sandbox ...***Exception: Illegal  0.26 sec
+
+0% tests passed, 1 tests failed out of 1
+
+Label Time Summary:
+[sandbox_glue_tests]    =   0.26 sec*proc (1 test)
+
+Total Test time (real) =   0.26 sec
+
+The following tests FAILED:
+	  1 - sandbox glue tests rlbox_mpk_sandbox (ILLEGAL)
+---------
+Transition: Zero
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 77
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 77
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 62
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 37
+Transition: Heavy
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 201
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 119
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 182
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 108
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 199
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 108
+4: Filters: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+4: Unsandboxed function invocation time: 0
+4: Sandboxed function invocation time: 178
+4: Unsandboxed callback invocation time: 0
+4: Sandboxed callback invocation time: 94
+5: Filters: sandbox glue tests rlbox_lucet_sandbox windows mode
+5: Unsandboxed function invocation time: 0
+5: Sandboxed function invocation time: 191
+5: Unsandboxed callback invocation time: 0
+5: Sandboxed callback invocation time: 110
+Transition: Lucet
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 1197
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 1166
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 1172
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 41
+Transition: Mpkheavy
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 162
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 87
+2: Filters: sandbox glue tests rlbox_mpk_sandbox windows mode
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 202
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 105
+Transition: Mpkzero
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
