@@ -169,7 +169,7 @@ micro_transition_benchmark: benchmark_env_setup
 
 micro_jpeg_benchmark: benchmark_env_setup
 	echo > ./benchmarks/micro_jpeg_benchmark.txt
-	cd zerocost-libjpeg-turbo/build && make run | tee -a ./benchmarks/micro_jpeg_benchmark.txt
+	cd zerocost-libjpeg-turbo/build && $(MAKE) run | tee -a $(CURR_DIR)/benchmarks/micro_jpeg_benchmark.txt
 	mv ./benchmarks/micro_jpeg_benchmark.txt "./benchmarks/micro_jpeg_benchmark_$(shell date --iso=seconds).txt"
 
 macro_image_benchmark: benchmark_env_setup
