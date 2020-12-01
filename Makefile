@@ -1,5 +1,5 @@
 .NOTPARALLEL:
-.PHONY : pull clean get_source build build_debug restore_hyperthreading benchmark_setup micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
+.PHONY : pull clean get_source build build_debug restore_hyperthreading shielding_on shielding_off benchmark_env_setup benchmark_env_close micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
 
 .DEFAULT_GOAL := build
 
@@ -8,6 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
 
 CURR_DIR := $(shell realpath ./)
+CURR_USER := ${USER}
+CURR_PATH := ${PATH}
 
 lucet_sandbox_compiler:
 	git clone git@github.com:PLSysSec/lucet_sandbox_compiler.git $@
@@ -121,10 +123,18 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 
+shielding_on:
+	sudo cset shield -c 1 -k on
+	sudo cset shield -e sudo -- -u ${CURR_USER} env "PATH=${CURR_PATH}" bash
+
+shielding_off:
+	sudo cset shield --reset
+
 restore_hyperthreading:
 	sudo bash -c "echo on > /sys/devices/system/cpu/smt/control"
 
-benchmark_setup:
+benchmark_env_setup:
+	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "success!") || (echo "shield not on. Run make shielding_on first!" && exit 1)
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
 		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
@@ -135,7 +145,9 @@ benchmark_setup:
 		Xvfb :99 & \
 	fi
 
-micro_transition_benchmark: benchmark_setup
+benchmark_env_close: restore_hyperthreading shielding_off
+
+micro_transition_benchmark: benchmark_env_setup
 	echo > ./benchmarks/micro_transition_benchmark.txt
 	echo "---------"
 	echo "Transition: Zero"     | tee -a ./benchmarks/micro_transition_benchmark.txt
@@ -152,15 +164,15 @@ micro_transition_benchmark: benchmark_setup
 	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | tee -a ./benchmarks/micro_transition_benchmark.txt
 	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
 
-micro_jpeg_benchmark: benchmark_setup
+micro_jpeg_benchmark: benchmark_env_setup
 	cd zerocost-libjpeg-turbo/build && make run
 
-macro_image_benchmark: benchmark_setup
+macro_image_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)"
 
-macro_graphite_benchmark: benchmark_setup
+macro_graphite_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
