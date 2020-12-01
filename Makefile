@@ -143,9 +143,9 @@ benchmark_env_setup:
 	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "Shielded shell not running!") || (echo "Shielded shell not running. Run make shielding_on first!" && sudo cset shield --reset && exit 1)
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
-		sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
+		sudo cpupower -c 1 frequency-set -g performance && sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
 	else \
-		sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
+		sudo cpufreq-set -c 1 -g performance && sudo cpufreq-set -c 1 --min 2200MHz --max 2200MHz; \
 	fi
 
 benchmark_env_close: restore_hyperthreading shielding_off
