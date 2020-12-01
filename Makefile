@@ -17,6 +17,7 @@ lucet_sandbox_compiler:
 
 rlbox_lucet_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
+	cd $@ && git checkout zerocost
 
 zerocost_testing_sandbox:
 	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
