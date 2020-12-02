@@ -33,7 +33,7 @@ rlbox_mpkzerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
 	cd $@ && git checkout zerocost
 
-rlbox_sandboxing_api
+rlbox_sandboxing_api:
 	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
 	cd $@ && git checkout gettimeofday
 
