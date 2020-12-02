@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_sandboxing_api zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
 
 CURR_DIR := $(shell realpath ./)
 CURR_USER := ${USER}
@@ -32,6 +32,10 @@ rlbox_mpk_sandbox:
 rlbox_mpkzerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
 	cd $@ && git checkout zerocost
+
+rlbox_sandboxing_api
+	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
+	cd $@ && git checkout gettimeofday
 
 zerocost-libjpeg-turbo:
 	git clone git@github.com:PLSysSec/zerocost-libjpeg-turbo.git $@
@@ -66,7 +70,7 @@ bootstrap: get_source
 	fi
 	cd ./zerocost_testing_firefox && ./mach create-mach-environment
 	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
-	pip3 install simplejson tldextract
+	pip3 install simplejson tldextract matplotlib
 	touch ./bootstrap
 
 pull: $(DIRS)
@@ -77,6 +81,7 @@ pull: $(DIRS)
 	cd rlbox_lucetstock_sandbox && git pull
 	cd rlbox_mpk_sandbox && git pull
 	cd rlbox_mpkzerocost_sandbox && git pull
+	cd rlbox_sandboxing_api && git pull
 	cd zerocost-libjpeg-turbo && git pull
 	cd zerocost_testing_firefox && git pull
 
@@ -93,6 +98,7 @@ build:
 	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_sandboxing_api      && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
@@ -115,6 +121,7 @@ build_debug:
 	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_sandboxing_api      && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
@@ -169,6 +176,9 @@ micro_transition_benchmark: benchmark_env_setup
 	sleep 1
 	echo "Transition: Mpkzero"  | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	sleep 1
+	echo "Transition: NoOp"     | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cd rlbox_sandboxing_api/build_release      && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
 	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
 	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | grep -v "Unsandboxed" | tee -a ./benchmarks/micro_transition_benchmark.txt
 	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
