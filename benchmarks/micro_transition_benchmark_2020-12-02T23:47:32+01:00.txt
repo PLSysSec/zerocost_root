@@ -1,0 +1,1290 @@
+
+Transition: Zero
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/rlbox_lucet_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 81
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+1: Unsandboxed syscall callback invocation time: 29
+1: Sandboxed syscall callback invocation time: 66
+1: ===============================================================================
+1: All tests passed (46 assertions in 1 test case)
+1: 
+1/3 Test #1: sandbox glue tests rlbox_lucet_sandbox ............   Passed    0.23 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 81
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+2: Unsandboxed syscall callback invocation time: 29
+2: Sandboxed syscall callback invocation time: 66
+2: ===============================================================================
+2: All tests passed (46 assertions in 1 test case)
+2: 
+2/3 Test #2: sandbox glue tests rlbox_lucet_sandbox preload ....   Passed    0.22 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /local/shr/zerocost_root/rlbox_lucet_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 81
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 37
+3: Unsandboxed syscall callback invocation time: 29
+3: Sandboxed syscall callback invocation time: 66
+3: ===============================================================================
+3: All tests passed (46 assertions in 1 test case)
+3: 
+3/3 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ...   Passed    0.23 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+[sandbox_glue_tests]    =   0.68 sec*proc (3 tests)
+
+Total Test time (real) =   0.68 sec
+Transition: Heavy
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/zerocost_testing_sandbox/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/zerocost_testing_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /local/shr/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 206
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 109
+1: Unsandboxed syscall callback invocation time: 30
+1: Sandboxed syscall callback invocation time: 149
+1: ===============================================================================
+1: All tests passed (46 assertions in 1 test case)
+1: 
+1/5 Test #1: sandbox glue tests rlbox_lucet_sandbox .................   Passed    0.51 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /local/shr/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 203
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 107
+2: Unsandboxed syscall callback invocation time: 30
+2: Sandboxed syscall callback invocation time: 146
+2: ===============================================================================
+2: All tests passed (46 assertions in 1 test case)
+2: 
+2/5 Test #2: sandbox glue tests rlbox_lucet_sandbox preload .........   Passed    0.50 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /local/shr/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 205
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 107
+3: Unsandboxed syscall callback invocation time: 30
+3: Sandboxed syscall callback invocation time: 147
+3: ===============================================================================
+3: All tests passed (46 assertions in 1 test case)
+3: 
+3/5 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ........   Passed    0.50 sec
+test 4
+    Start 4: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+
+4: Test command: /local/shr/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue_noswitchstack "sandbox glue tests rlbox_lucet_sandbox noswitchstack"
+4: Test timeout computed to be: 1500
+4: simpleAddTest
+4: simpleAddTest
+4: simpleCallbackTest
+4: simpleCallbackTest
+4: simpleEchoTest
+4: simpleFloatAddTest
+4: simpleDoubleAddTest
+4: simpleFloatAddTest
+4: simplePointerValAddTest
+4: Filters: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+4: Unsandboxed function invocation time: 0
+4: Sandboxed function invocation time: 195
+4: Unsandboxed callback invocation time: 0
+4: Sandboxed callback invocation time: 92
+4: Unsandboxed syscall callback invocation time: 30
+4: Sandboxed syscall callback invocation time: 130
+4: ===============================================================================
+4: All tests passed (46 assertions in 1 test case)
+4: 
+4/5 Test #4: sandbox glue tests rlbox_lucet_sandbox noswitchstack ...   Passed    0.46 sec
+test 5
+    Start 5: sandbox glue tests rlbox_lucet_sandbox windows mode
+
+5: Test command: /local/shr/zerocost_root/zerocost_testing_sandbox/build_release/test_rlbox_glue_windowsmode "sandbox glue tests rlbox_lucet_sandbox windows mode"
+5: Test timeout computed to be: 1500
+5: simpleAddTest
+5: simpleAddTest
+5: simpleCallbackTest
+5: simpleCallbackTest
+5: simpleEchoTest
+5: simpleFloatAddTest
+5: simpleDoubleAddTest
+5: simpleFloatAddTest
+5: simplePointerValAddTest
+5: Filters: sandbox glue tests rlbox_lucet_sandbox windows mode
+5: Unsandboxed function invocation time: 0
+5: Sandboxed function invocation time: 209
+5: Unsandboxed callback invocation time: 0
+5: Sandboxed callback invocation time: 105
+5: Unsandboxed syscall callback invocation time: 30
+5: Sandboxed syscall callback invocation time: 144
+5: ===============================================================================
+5: All tests passed (46 assertions in 1 test case)
+5: 
+5/5 Test #5: sandbox glue tests rlbox_lucet_sandbox windows mode ....   Passed    0.50 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Label Time Summary:
+[sandbox_glue_tests]    =   2.47 sec*proc (5 tests)
+
+Total Test time (real) =   2.52 sec
+Transition: Lucet
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_lucet_sandbox
+
+1: Test command: /local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox"
+1: Test timeout computed to be: 1500
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 1104
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 37
+1: Unsandboxed syscall callback invocation time: 29
+1: Sandboxed syscall callback invocation time: 66
+1: ===============================================================================
+1: All tests passed (46 assertions in 1 test case)
+1: 
+1/3 Test #1: sandbox glue tests rlbox_lucet_sandbox ............   Passed    1.25 sec
+test 2
+    Start 2: sandbox glue tests rlbox_lucet_sandbox preload
+
+2: Test command: /local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox preload"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 1072
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 37
+2: Unsandboxed syscall callback invocation time: 29
+2: Sandboxed syscall callback invocation time: 66
+2: ===============================================================================
+2: All tests passed (46 assertions in 1 test case)
+2: 
+2/3 Test #2: sandbox glue tests rlbox_lucet_sandbox preload ....   Passed    1.21 sec
+test 3
+    Start 3: sandbox glue tests rlbox_lucet_sandbox embedder
+
+3: Test command: /local/shr/zerocost_root/rlbox_lucetstock_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox embedder"
+3: Test timeout computed to be: 1500
+3: simpleAddTest
+3: simpleAddTest
+3: simpleCallbackTest
+3: simpleCallbackTest
+3: simpleEchoTest
+3: simpleFloatAddTest
+3: simpleDoubleAddTest
+3: simpleFloatAddTest
+3: simplePointerValAddTest
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Unsandboxed function invocation time: 0
+3: Sandboxed function invocation time: 1078
+3: Unsandboxed callback invocation time: 0
+3: Sandboxed callback invocation time: 37
+3: Unsandboxed syscall callback invocation time: 29
+3: Sandboxed syscall callback invocation time: 66
+3: ===============================================================================
+3: All tests passed (46 assertions in 1 test case)
+3: 
+3/3 Test #3: sandbox glue tests rlbox_lucet_sandbox embedder ...   Passed    1.22 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+[sandbox_glue_tests]    =   3.69 sec*proc (3 tests)
+
+Total Test time (real) =   3.69 sec
+Transition: Mpkheavy
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/rlbox_mpk_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_mpk_sandbox
+
+1: Test command: /local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_mpk_sandbox"
+1: Test timeout computed to be: 1500
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 207
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 126
+1: Unsandboxed syscall callback invocation time: 30
+1: Sandboxed syscall callback invocation time: 161
+1: ===============================================================================
+1: All tests passed (46 assertions in 1 test case)
+1: 
+1/2 Test #1: sandbox glue tests rlbox_mpk_sandbox ................   Passed    0.53 sec
+test 2
+    Start 2: sandbox glue tests rlbox_mpk_sandbox windows mode
+
+2: Test command: /local/shr/zerocost_root/rlbox_mpk_sandbox/build_release/test_rlbox_glue_windowsmode "sandbox glue tests rlbox_mpk_sandbox windows mode"
+2: Test timeout computed to be: 1500
+2: Filters: sandbox glue tests rlbox_mpk_sandbox windows mode
+2: simpleAddTest
+2: simpleAddTest
+2: simpleCallbackTest
+2: simpleCallbackTest
+2: simpleEchoTest
+2: simpleFloatAddTest
+2: simpleDoubleAddTest
+2: simpleFloatAddTest
+2: simplePointerValAddTest
+2: Unsandboxed function invocation time: 0
+2: Sandboxed function invocation time: 211
+2: Unsandboxed callback invocation time: 0
+2: Sandboxed callback invocation time: 126
+2: Unsandboxed syscall callback invocation time: 30
+2: Sandboxed syscall callback invocation time: 161
+2: ===============================================================================
+2: All tests passed (46 assertions in 1 test case)
+2: 
+2/2 Test #2: sandbox glue tests rlbox_mpk_sandbox windows mode ...   Passed    0.53 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Label Time Summary:
+[sandbox_glue_tests]    =   1.06 sec*proc (2 tests)
+
+Total Test time (real) =   1.07 sec
+Transition: Mpkzero
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: sandbox glue tests rlbox_mpk_sandbox
+
+1: Test command: /local/shr/zerocost_root/rlbox_mpkzerocost_sandbox/build_release/test_rlbox_glue "sandbox glue tests rlbox_mpk_sandbox"
+1: Test timeout computed to be: 1500
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: simpleAddTest
+1: simpleAddTest
+1: simpleCallbackTest
+1: simpleCallbackTest
+1: simpleEchoTest
+1: simpleFloatAddTest
+1: simpleDoubleAddTest
+1: simpleFloatAddTest
+1: simplePointerValAddTest
+1: Unsandboxed function invocation time: 0
+1: Sandboxed function invocation time: 98
+1: Unsandboxed callback invocation time: 0
+1: Sandboxed callback invocation time: 54
+1: Unsandboxed syscall callback invocation time: 29
+1: Sandboxed syscall callback invocation time: 82
+1: ===============================================================================
+1: All tests passed (46 assertions in 1 test case)
+1: 
+1/1 Test #1: sandbox glue tests rlbox_mpk_sandbox ...   Passed    0.27 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Label Time Summary:
+[sandbox_glue_tests]    =   0.27 sec*proc (1 test)
+
+Total Test time (real) =   0.27 sec
+Transition: NoOp
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_sandboxing_api/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_sandboxing_api/build_release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/local/shr/zerocost_root/rlbox_sandboxing_api/build_release/DartConfiguration.tcl
+Parse Config file:/local/shr/zerocost_root/rlbox_sandboxing_api/build_release/DartConfiguration.tcl
+Test project /local/shr/zerocost_root/rlbox_sandboxing_api/build_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+      Start  1: Test bool operators
+
+1: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test bool operators"
+1: Test timeout computed to be: 1500
+1: Filters: Test bool operators
+1: ===============================================================================
+1: All tests passed (12 assertions in 1 test case)
+1: 
+ 1/66 Test  #1: Test bool operators ............................................................   Passed    0.00 sec
+test 2
+      Start  2: Test sandbox_callback assignment
+
+2: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test sandbox_callback assignment"
+2: Test timeout computed to be: 1500
+2: Filters: Test sandbox_callback assignment
+2: ===============================================================================
+2: All tests passed (2 assertions in 1 test case)
+2: 
+ 2/66 Test  #2: Test sandbox_callback assignment ...............................................   Passed    0.00 sec
+test 3
+      Start  3: callback sig checks
+
+3: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "callback sig checks"
+3: Test timeout computed to be: 1500
+3: Filters: callback sig checks
+3: ===============================================================================
+3: All tests passed (12 assertions in 1 test case)
+3: 
+ 3/66 Test  #3: callback sig checks ............................................................   Passed    0.00 sec
+test 4
+      Start  4: callback assignment check
+
+4: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "callback assignment check"
+4: Test timeout computed to be: 1500
+4: Filters: callback assignment check
+4: ===============================================================================
+4: All tests passed (1 assertion in 1 test case)
+4: 
+ 4/66 Test  #4: callback assignment check ......................................................   Passed    0.00 sec
+test 5
+      Start  5: callback re-register
+
+5: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "callback re-register"
+5: Test timeout computed to be: 1500
+5: Filters: callback re-register
+5: ===============================================================================
+5: test cases: 1 | 1 passed
+5: assertions: - none -
+5: 
+ 5/66 Test  #5: callback re-register ...........................................................   Passed    0.00 sec
+test 6
+      Start  6: Test comparisons to nullptr
+
+6: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test comparisons to nullptr"
+6: Test timeout computed to be: 1500
+6: Filters: Test comparisons to nullptr
+6: ===============================================================================
+6: All tests passed (3 assertions in 1 test case)
+6: 
+ 6/66 Test  #6: Test comparisons to nullptr ....................................................   Passed    0.00 sec
+test 7
+      Start  7: Test disallowed comparisons to tainted
+
+7: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test disallowed comparisons to tainted"
+7: Test timeout computed to be: 1500
+7: Filters: Test disallowed comparisons to tainted
+7: ===============================================================================
+7: All tests passed (1 assertion in 1 test case)
+7: 
+ 7/66 Test  #7: Test disallowed comparisons to tainted .........................................   Passed    0.00 sec
+test 8
+      Start  8: Test comparisons to tainted
+
+8: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test comparisons to tainted"
+8: Test timeout computed to be: 1500
+8: Filters: Test comparisons to tainted
+8: ===============================================================================
+8: All tests passed (18 assertions in 1 test case)
+8: 
+ 8/66 Test  #8: Test comparisons to tainted ....................................................   Passed    0.00 sec
+test 9
+      Start  9: Test comparisons to tainted_volatile
+
+9: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test comparisons to tainted_volatile"
+9: Test timeout computed to be: 1500
+9: Filters: Test comparisons to tainted_volatile
+9: ===============================================================================
+9: All tests passed (20 assertions in 1 test case)
+9: 
+ 9/66 Test  #9: Test comparisons to tainted_volatile ...........................................   Passed    0.00 sec
+test 10
+      Start 10: Test other comparison operators
+
+10: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test other comparison operators"
+10: Test timeout computed to be: 1500
+10: Filters: Test other comparison operators
+10: ===============================================================================
+10: All tests passed (1 assertion in 1 test case)
+10: 
+10/66 Test #10: Test other comparison operators ................................................   Passed    0.00 sec
+test 11
+      Start 11: convert_type_fundamental_or_array for numerics operates correctly
+
+11: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "convert_type_fundamental_or_array for numerics operates correctly"
+11: Test timeout computed to be: 1500
+11: Filters: convert_type_fundamental_or_array for numerics operates correctly
+11: ===============================================================================
+11: All tests passed (2 assertions in 1 test case)
+11: 
+11/66 Test #11: convert_type_fundamental_or_array for numerics operates correctly ..............   Passed    0.00 sec
+test 12
+      Start 12: convert_type_fundamental_or_array compile time checks for numerics operate
+
+12: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "convert_type_fundamental_or_array compile time checks for numerics operate"
+12: Test timeout computed to be: 1500
+12: Filters: convert_type_fundamental_or_array compile time checks for numerics operate
+12: ===============================================================================
+12: No tests ran
+12: 
+12/66 Test #12: convert_type_fundamental_or_array compile time checks for numerics operate .....   Passed    0.00 sec
+test 13
+      Start 13: correctly
+
+13: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "correctly"
+13: Test timeout computed to be: 1500
+13: Filters: correctly
+13: ===============================================================================
+13: No tests ran
+13: 
+13/66 Test #13: correctly ......................................................................   Passed    0.00 sec
+test 14
+      Start 14: convert_type_fundamental_or_array dynamic bounds checks for numerics operate
+
+14: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "convert_type_fundamental_or_array dynamic bounds checks for numerics operate"
+14: Test timeout computed to be: 1500
+14: Filters: convert_type_fundamental_or_array dynamic bounds checks for numerics operate
+14: ===============================================================================
+14: No tests ran
+14: 
+14/66 Test #14: convert_type_fundamental_or_array dynamic bounds checks for numerics operate ...   Passed    0.00 sec
+test 15
+      Start 15: correctly
+
+15: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "correctly"
+15: Test timeout computed to be: 1500
+15: Filters: correctly
+15: ===============================================================================
+15: No tests ran
+15: 
+15/66 Test #15: correctly ......................................................................   Passed    0.00 sec
+test 16
+      Start 16: convert_type_fundamental_or_array for arrays operates correctly
+
+16: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "convert_type_fundamental_or_array for arrays operates correctly"
+16: Test timeout computed to be: 1500
+16: Filters: convert_type_fundamental_or_array for arrays operates correctly
+16: ===============================================================================
+16: All tests passed (4 assertions in 1 test case)
+16: 
+16/66 Test #16: convert_type_fundamental_or_array for arrays operates correctly ................   Passed    0.00 sec
+test 17
+      Start 17: convert_type_fundamental_or_array checks for arrays operate correctly
+
+17: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "convert_type_fundamental_or_array checks for arrays operate correctly"
+17: Test timeout computed to be: 1500
+17: Filters: convert_type_fundamental_or_array checks for arrays operate correctly
+17: ===============================================================================
+17: All tests passed (1 assertion in 1 test case)
+17: 
+17/66 Test #17: convert_type_fundamental_or_array checks for arrays operate correctly ..........   Passed    0.00 sec
+test 18
+      Start 18: Test operator + for numerics
+
+18: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test operator + for numerics"
+18: Test timeout computed to be: 1500
+18: Filters: Test operator + for numerics
+18: ===============================================================================
+18: All tests passed (6 assertions in 1 test case)
+18: 
+18/66 Test #18: Test operator + for numerics ...................................................   Passed    0.00 sec
+test 19
+      Start 19: Test operator + with const refs
+
+19: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test operator + with const refs"
+19: Test timeout computed to be: 1500
+19: Filters: Test operator + with const refs
+19: ===============================================================================
+19: All tests passed (1 assertion in 1 test case)
+19: 
+19/66 Test #19: Test operator + with const refs ................................................   Passed    0.00 sec
+test 20
+      Start 20: Test compound assignment operators
+
+20: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test compound assignment operators"
+20: Test timeout computed to be: 1500
+20: Filters: Test compound assignment operators
+20: ===============================================================================
+20: All tests passed (3 assertions in 1 test case)
+20: 
+20/66 Test #20: Test compound assignment operators .............................................   Passed    0.00 sec
+test 21
+      Start 21: Test pre/post increment operators
+
+21: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test pre/post increment operators"
+21: Test timeout computed to be: 1500
+21: Filters: Test pre/post increment operators
+21: ===============================================================================
+21: All tests passed (6 assertions in 1 test case)
+21: 
+21/66 Test #21: Test pre/post increment operators ..............................................   Passed    0.00 sec
+test 22
+      Start 22: Test operators that produce new values for numerics
+
+22: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test operators that produce new values for numerics"
+22: Test timeout computed to be: 1500
+22: Filters: Test operators that produce new values for numerics
+22: ===============================================================================
+22: All tests passed (1 assertion in 1 test case)
+22: 
+22/66 Test #22: Test operators that produce new values for numerics ............................   Passed    0.00 sec
+test 23
+      Start 23: Test operator +, - for pointers
+
+23: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test operator +\, - for pointers"
+23: Test timeout computed to be: 1500
+23: Filters: Test operator +\, - for pointers
+23: ===============================================================================
+23: All tests passed (6 assertions in 1 test case)
+23: 
+23/66 Test #23: Test operator +, - for pointers ................................................   Passed    0.00 sec
+test 24
+      Start 24: Test operators that produce new values for tainted_volatile numerics
+
+24: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test operators that produce new values for tainted_volatile numerics"
+24: Test timeout computed to be: 1500
+24: Filters: Test operators that produce new values for tainted_volatile numerics
+24: ===============================================================================
+24: All tests passed (2 assertions in 1 test case)
+24: 
+24/66 Test #24: Test operators that produce new values for tainted_volatile numerics ...........   Passed    0.00 sec
+test 25
+      Start 25: Test sandbox_function assignment
+
+25: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Test sandbox_function assignment"
+25: Test timeout computed to be: 1500
+25: Filters: Test sandbox_function assignment
+25: ===============================================================================
+25: All tests passed (2 assertions in 1 test case)
+25: 
+25/66 Test #25: Test sandbox_function assignment ...............................................   Passed    0.00 sec
+test 26
+      Start 26: invoke in no_op sandbox
+
+26: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "invoke in no_op sandbox"
+26: Test timeout computed to be: 1500
+26: Filters: invoke in no_op sandbox
+26: ===============================================================================
+26: All tests passed (6 assertions in 1 test case)
+26: 
+26/66 Test #26: invoke in no_op sandbox ........................................................   Passed    0.00 sec
+test 27
+      Start 27: callback in no_op sandbox
+
+27: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "callback in no_op sandbox"
+27: Test timeout computed to be: 1500
+27: Filters: callback in no_op sandbox
+27: ===============================================================================
+27: All tests passed (1 assertion in 1 test case)
+27: 
+27/66 Test #27: callback in no_op sandbox ......................................................   Passed    0.00 sec
+test 28
+      Start 28: sandbox_lookup_symbol on no_op sandbox without #define causes error
+
+28: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "sandbox_lookup_symbol on no_op sandbox without #define causes error"
+28: Test timeout computed to be: 1500
+28: Filters: sandbox_lookup_symbol on no_op sandbox without #define causes error
+28: ===============================================================================
+28: All tests passed (1 assertion in 1 test case)
+28: 
+28/66 Test #28: sandbox_lookup_symbol on no_op sandbox without #define causes error ............   Passed    0.00 sec
+test 29
+      Start 29: Type get_[un]sandboxed_pointer
+
+29: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Type get_[un]sandboxed_pointer"
+29: Test timeout computed to be: 1500
+29: Filters: Type get_[un]sandboxed_pointer
+29: ===============================================================================
+29: No tests ran
+29: 
+29/66 Test #29: Type get_[un]sandboxed_pointer .................................................   Passed    0.00 sec
+test 30
+      Start 30: Type get_[un]sandboxed_pointer for const pointers
+
+30: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Type get_[un]sandboxed_pointer for const pointers"
+30: Test timeout computed to be: 1500
+30: Filters: Type get_[un]sandboxed_pointer for const pointers
+30: ===============================================================================
+30: No tests ran
+30: 
+30/66 Test #30: Type get_[un]sandboxed_pointer for const pointers ..............................   Passed    0.00 sec
+test 31
+      Start 31: test sandbox_reinterpret_cast
+
+31: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test sandbox_reinterpret_cast"
+31: Test timeout computed to be: 1500
+31: Filters: test sandbox_reinterpret_cast
+31: ===============================================================================
+31: All tests passed (3 assertions in 1 test case)
+31: 
+31/66 Test #31: test sandbox_reinterpret_cast ..................................................   Passed    0.00 sec
+test 32
+      Start 32: test sandbox_const_cast
+
+32: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test sandbox_const_cast"
+32: Test timeout computed to be: 1500
+32: Filters: test sandbox_const_cast
+32: ===============================================================================
+32: All tests passed (3 assertions in 1 test case)
+32: 
+32/66 Test #32: test sandbox_const_cast ........................................................   Passed    0.00 sec
+test 33
+      Start 33: test sandbox_static_cast
+
+33: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test sandbox_static_cast"
+33: Test timeout computed to be: 1500
+33: Filters: test sandbox_static_cast
+33: ===============================================================================
+33: All tests passed (2 assertions in 1 test case)
+33: 
+33/66 Test #33: test sandbox_static_cast .......................................................   Passed    0.00 sec
+test 34
+      Start 34: test memset
+
+34: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test memset"
+34: Test timeout computed to be: 1500
+34: Filters: test memset
+34: ===============================================================================
+34: All tests passed (36 assertions in 1 test case)
+34: 
+34/66 Test #34: test memset ....................................................................   Passed    0.00 sec
+test 35
+      Start 35: test memcpy
+
+35: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test memcpy"
+35: Test timeout computed to be: 1500
+35: Filters: test memcpy
+35: ===============================================================================
+35: All tests passed (24 assertions in 1 test case)
+35: 
+35/66 Test #35: test memcpy ....................................................................   Passed    0.00 sec
+test 36
+      Start 36: test memcmp
+
+36: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test memcmp"
+36: Test timeout computed to be: 1500
+36: Filters: test memcmp
+36: ===============================================================================
+36: All tests passed (6 assertions in 1 test case)
+36: 
+36/66 Test #36: test memcmp ....................................................................   Passed    0.00 sec
+test 37
+      Start 37: test grant deny access
+
+37: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "test grant deny access"
+37: Test timeout computed to be: 1500
+37: Filters: test grant deny access
+37: ===============================================================================
+37: All tests passed (2 assertions in 1 test case)
+37: 
+37/66 Test #37: test grant deny access .........................................................   Passed    0.00 sec
+test 38
+      Start 38: tainted assignment operates correctly
+
+38: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted assignment operates correctly"
+38: Test timeout computed to be: 1500
+38: Filters: tainted assignment operates correctly
+38: ===============================================================================
+38: All tests passed (5 assertions in 1 test case)
+38: 
+38/66 Test #38: tainted assignment operates correctly ..........................................   Passed    0.00 sec
+test 39
+      Start 39: tainted_volatile assignment operates correctly
+
+39: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted_volatile assignment operates correctly"
+39: Test timeout computed to be: 1500
+39: Filters: tainted_volatile assignment operates correctly
+39: ===============================================================================
+39: All tests passed (3 assertions in 1 test case)
+39: 
+39/66 Test #39: tainted_volatile assignment operates correctly .................................   Passed    0.00 sec
+test 40
+      Start 40: tainted tainted_volatile conversion operates correctly
+
+40: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted tainted_volatile conversion operates correctly"
+40: Test timeout computed to be: 1500
+40: Filters: tainted tainted_volatile conversion operates correctly
+40: ===============================================================================
+40: All tests passed (9 assertions in 1 test case)
+40: 
+40/66 Test #40: tainted tainted_volatile conversion operates correctly .........................   Passed    0.00 sec
+test 41
+      Start 41: tainted pointer assignments
+
+41: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted pointer assignments"
+41: Test timeout computed to be: 1500
+41: Filters: tainted pointer assignments
+41: ===============================================================================
+41: test cases: 1 | 1 passed
+41: assertions: - none -
+41: 
+41/66 Test #41: tainted pointer assignments ....................................................   Passed    0.00 sec
+test 42
+      Start 42: tainted opaque operates correctly
+
+42: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted opaque operates correctly"
+42: Test timeout computed to be: 1500
+42: Filters: tainted opaque operates correctly
+42: ===============================================================================
+42: All tests passed (9 assertions in 1 test case)
+42: 
+42/66 Test #42: tainted opaque operates correctly ..............................................   Passed    0.00 sec
+test 43
+      Start 43: tainted opaque free operates correctly
+
+43: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "tainted opaque free operates correctly"
+43: Test timeout computed to be: 1500
+43: Filters: tainted opaque free operates correctly
+43: ===============================================================================
+43: test cases: 1 | 1 passed
+43: assertions: - none -
+43: 
+43/66 Test #43: tainted opaque free operates correctly .........................................   Passed    0.00 sec
+test 44
+      Start 44: Tainted sizes work as expected
+
+44: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Tainted sizes work as expected"
+44: Test timeout computed to be: 1500
+44: Filters: Tainted sizes work as expected
+44: ===============================================================================
+44: All tests passed (13 assertions in 1 test case)
+44: 
+44/66 Test #44: Tainted sizes work as expected .................................................   Passed    0.00 sec
+test 45
+      Start 45: Tainted struct assignment
+
+45: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Tainted struct assignment"
+45: Test timeout computed to be: 1500
+45: Filters: Tainted struct assignment
+45: ===============================================================================
+45: All tests passed (7 assertions in 1 test case)
+45: 
+45/66 Test #45: Tainted struct assignment ......................................................   Passed    0.00 sec
+test 46
+      Start 46: Tainted struct pointer assignment
+
+46: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Tainted struct pointer assignment"
+46: Test timeout computed to be: 1500
+46: Filters: Tainted struct pointer assignment
+46: ===============================================================================
+46: All tests passed (7 assertions in 1 test case)
+46: 
+46/66 Test #46: Tainted struct pointer assignment ..............................................   Passed    0.00 sec
+test 47
+      Start 47: Tainted const structs
+
+47: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Tainted const structs"
+47: Test timeout computed to be: 1500
+47: Filters: Tainted const structs
+47: ===============================================================================
+47: All tests passed (2 assertions in 1 test case)
+47: 
+47/66 Test #47: Tainted const structs ..........................................................   Passed    0.00 sec
+test 48
+      Start 48: Tainted full struct assignment
+
+48: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "Tainted full struct assignment"
+48: Test timeout computed to be: 1500
+48: Filters: Tainted full struct assignment
+48: ===============================================================================
+48: test cases: 1 | 1 passed
+48: assertions: - none -
+48: 
+48/66 Test #48: Tainted full struct assignment .................................................   Passed    0.00 sec
+test 49
+      Start 49: all_extents_same
+
+49: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "all_extents_same"
+49: Test timeout computed to be: 1500
+49: Filters: all_extents_same
+49: ===============================================================================
+49: All tests passed (6 assertions in 1 test case)
+49: 
+49/66 Test #49: all_extents_same ...............................................................   Passed    0.00 sec
+test 50
+      Start 50: is_c_or_std_array_v
+
+50: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "is_c_or_std_array_v"
+50: Test timeout computed to be: 1500
+50: Filters: is_c_or_std_array_v
+50: ===============================================================================
+50: All tests passed (7 assertions in 1 test case)
+50: 
+50/66 Test #50: is_c_or_std_array_v ............................................................   Passed    0.00 sec
+test 51
+      Start 51: std_array_to_c_arr_t
+
+51: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "std_array_to_c_arr_t"
+51: Test timeout computed to be: 1500
+51: Filters: std_array_to_c_arr_t
+51: ===============================================================================
+51: All tests passed (3 assertions in 1 test case)
+51: 
+51/66 Test #51: std_array_to_c_arr_t ...........................................................   Passed    0.00 sec
+test 52
+      Start 52: RLBox test basic verification
+
+52: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test basic verification"
+52: Test timeout computed to be: 1500
+52: Filters: RLBox test basic verification
+52: ===============================================================================
+52: All tests passed (1 assertion in 1 test case)
+52: 
+52/66 Test #52: RLBox test basic verification ..................................................   Passed    0.00 sec
+test 53
+      Start 53: RLBox test enum verification
+
+53: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test enum verification"
+53: Test timeout computed to be: 1500
+53: Filters: RLBox test enum verification
+53: ===============================================================================
+53: test cases: 1 | 1 passed
+53: assertions: - none -
+53: 
+53/66 Test #53: RLBox test enum verification ...................................................   Passed    0.00 sec
+test 54
+      Start 54: RLBox test pointer verification
+
+54: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test pointer verification"
+54: Test timeout computed to be: 1500
+54: Filters: RLBox test pointer verification
+54: ===============================================================================
+54: All tests passed (3 assertions in 1 test case)
+54: 
+54/66 Test #54: RLBox test pointer verification ................................................   Passed    0.00 sec
+test 55
+      Start 55: RLBox test function pointer verification
+
+55: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test function pointer verification"
+55: Test timeout computed to be: 1500
+55: Filters: RLBox test function pointer verification
+55: ===============================================================================
+55: All tests passed (3 assertions in 1 test case)
+55: 
+55/66 Test #55: RLBox test function pointer verification .......................................   Passed    0.00 sec
+test 56
+      Start 56: RLBox test unverified value
+
+56: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test unverified value"
+56: Test timeout computed to be: 1500
+56: Filters: RLBox test unverified value
+56: ===============================================================================
+56: All tests passed (3 assertions in 1 test case)
+56: 
+56/66 Test #56: RLBox test unverified value ....................................................   Passed    0.00 sec
+test 57
+      Start 57: RLBox test unverified pointer
+
+57: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test unverified pointer"
+57: Test timeout computed to be: 1500
+57: Filters: RLBox test unverified pointer
+57: ===============================================================================
+57: All tests passed (2 assertions in 1 test case)
+57: 
+57/66 Test #57: RLBox test unverified pointer ..................................................   Passed    0.00 sec
+test 58
+      Start 58: RLBox test array verification
+
+58: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test array verification"
+58: Test timeout computed to be: 1500
+58: Filters: RLBox test array verification
+58: ===============================================================================
+58: All tests passed (8 assertions in 1 test case)
+58: 
+58/66 Test #58: RLBox test array verification ..................................................   Passed    0.00 sec
+test 59
+      Start 59: RLBox test range verification
+
+59: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test range verification"
+59: Test timeout computed to be: 1500
+59: Filters: RLBox test range verification
+59: ===============================================================================
+59: All tests passed (3 assertions in 1 test case)
+59: 
+59/66 Test #59: RLBox test range verification ..................................................   Passed    0.00 sec
+test 60
+      Start 60: RLBox test string verification
+
+60: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "RLBox test string verification"
+60: Test timeout computed to be: 1500
+60: Filters: RLBox test string verification
+60: ===============================================================================
+60: All tests passed (2 assertions in 1 test case)
+60: 
+60/66 Test #60: RLBox test string verification .................................................   Passed    0.00 sec
+test 61
+      Start 61: rlbox_is_tainted_v
+
+61: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "rlbox_is_tainted_v"
+61: Test timeout computed to be: 1500
+61: Filters: rlbox_is_tainted_v
+61: ===============================================================================
+61: All tests passed (15 assertions in 1 test case)
+61: 
+61/66 Test #61: rlbox_is_tainted_v .............................................................   Passed    0.00 sec
+test 62
+      Start 62: rlbox_remove_wrapper_t
+
+62: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox "rlbox_remove_wrapper_t"
+62: Test timeout computed to be: 1500
+62: Filters: rlbox_remove_wrapper_t
+62: ===============================================================================
+62: All tests passed (15 assertions in 1 test case)
+62: 
+62/66 Test #62: rlbox_remove_wrapper_t .........................................................   Passed    0.00 sec
+test 63
+      Start 63: sandbox timing tests
+
+63: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox_transition_timers "sandbox timing tests"
+63: Test timeout computed to be: 1500
+63: Filters: sandbox timing tests
+63: ===============================================================================
+63: All tests passed (12 assertions in 1 test case)
+63: 
+63/66 Test #63: sandbox timing tests ...........................................................   Passed    0.00 sec
+test 64
+      Start 64: sandbox transition customization
+
+64: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox_transition_customization "sandbox transition customization"
+64: Test timeout computed to be: 1500
+64: Filters: sandbox transition customization
+64: ===============================================================================
+64: All tests passed (2 assertions in 1 test case)
+64: 
+64/66 Test #64: sandbox transition customization ...............................................   Passed    0.00 sec
+test 65
+      Start 65: sandbox glue tests rlbox_noop_sandbox
+
+65: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox"
+65: Test timeout computed to be: 1500
+65: Filters: sandbox glue tests rlbox_noop_sandbox
+65: simpleAddTest
+65: simpleAddTest
+65: simpleCallbackTest
+65: simpleCallbackTest
+65: simpleEchoTest
+65: simpleFloatAddTest
+65: simpleDoubleAddTest
+65: simpleFloatAddTest
+65: simplePointerValAddTest
+65: Unsandboxed function invocation time: 0
+65: Sandboxed function invocation time: 2
+65: Unsandboxed callback invocation time: 0
+65: Sandboxed callback invocation time: 34
+65: Unsandboxed syscall callback invocation time: 29
+65: Sandboxed syscall callback invocation time: 63
+65: ===============================================================================
+65: All tests passed (46 assertions in 1 test case)
+65: 
+65/66 Test #65: sandbox glue tests rlbox_noop_sandbox ..........................................   Passed    0.13 sec
+test 66
+      Start 66: sandbox glue tests rlbox_noop_sandbox embedder
+
+66: Test command: /local/shr/zerocost_root/rlbox_sandboxing_api/build_release/test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox embedder"
+66: Test timeout computed to be: 1500
+66: Filters: sandbox glue tests rlbox_noop_sandbox embedder
+66: simpleAddTest
+66: simpleAddTest
+66: simpleCallbackTest
+66: 
+66: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+66: test_rlbox_glue is a Catch v2.9.1 host application.
+66: Run with -? for options
+66: 
+66: -------------------------------------------------------------------------------
+66: sandbox glue tests rlbox_noop_sandbox embedder
+66:   test callback 1 and re-entrancy
+66: -------------------------------------------------------------------------------
+66: /local/shr/zerocost_root/rlbox_sandboxing_api/code/tests/rlbox_glue/test_sandbox_glue.inc.cpp:241
+66: ...............................................................................
+66: 
+66: /local/shr/zerocost_root/rlbox_sandboxing_api/code/tests/rlbox_glue/test_sandbox_glue.inc.cpp:241: FAILED:
+66: due to a fatal error condition:
+66:   SIGSEGV - Segmentation violation signal
+66: 
+66: ===============================================================================
+66: test cases: 1 | 1 failed
+66: assertions: 6 | 5 passed | 1 failed
+66: 
+66/66 Test #66: sandbox glue tests rlbox_noop_sandbox embedder .................................***Exception: SegFault  0.00 sec
+
+98% tests passed, 1 tests failed out of 66
+
+Label Time Summary:
+[convert]                             =   0.01 sec*proc (5 tests)
+[get_sandboxed]                       =   0.01 sec*proc (2 tests)
+[no_op_sandbox]                       =   0.01 sec*proc (3 tests)
+[operator]                            =   0.02 sec*proc (8 tests)
+[sandbox_callback]                    =   0.01 sec*proc (4 tests)
+[sandbox_function]                    =   0.00 sec*proc (1 test)
+[sandbox_glue_tests]                  =   0.14 sec*proc (2 tests)
+[sandbox_timing_tests]                =   0.00 sec*proc (1 test)
+[sandbox_transition_customization]    =   0.00 sec*proc (1 test)
+[stdlib]                              =   0.02 sec*proc (7 tests)
+[tainted_assignment]                  =   0.01 sec*proc (4 tests)
+[tainted_compare]                     =   0.01 sec*proc (5 tests)
+[tainted_opaque]                      =   0.01 sec*proc (2 tests)
+[tainted_size]                        =   0.00 sec*proc (1 test)
+[tainted_struct]                      =   0.01 sec*proc (4 tests)
+[type_traits]                         =   0.01 sec*proc (3 tests)
+[verification]                        =   0.02 sec*proc (9 tests)
+[wrapper_traits]                      =   0.01 sec*proc (2 tests)
+
+Total Test time (real) =   0.32 sec
+
+The following tests FAILED:
+	 66 - sandbox glue tests rlbox_noop_sandbox embedder (SEGFAULT)
+---------
+Transition: Zero
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Sandboxed function invocation time: 81
+1: Sandboxed callback invocation time: 37
+1: Sandboxed syscall callback invocation time: 66
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Sandboxed function invocation time: 81
+2: Sandboxed callback invocation time: 37
+2: Sandboxed syscall callback invocation time: 66
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Sandboxed function invocation time: 81
+3: Sandboxed callback invocation time: 37
+3: Sandboxed syscall callback invocation time: 66
+Transition: Heavy
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Sandboxed function invocation time: 206
+1: Sandboxed callback invocation time: 109
+1: Sandboxed syscall callback invocation time: 149
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Sandboxed function invocation time: 203
+2: Sandboxed callback invocation time: 107
+2: Sandboxed syscall callback invocation time: 146
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Sandboxed function invocation time: 205
+3: Sandboxed callback invocation time: 107
+3: Sandboxed syscall callback invocation time: 147
+4: Filters: sandbox glue tests rlbox_lucet_sandbox noswitchstack
+4: Sandboxed function invocation time: 195
+4: Sandboxed callback invocation time: 92
+4: Sandboxed syscall callback invocation time: 130
+5: Filters: sandbox glue tests rlbox_lucet_sandbox windows mode
+5: Sandboxed function invocation time: 209
+5: Sandboxed callback invocation time: 105
+5: Sandboxed syscall callback invocation time: 144
+Transition: Lucet
+1: Filters: sandbox glue tests rlbox_lucet_sandbox
+1: Sandboxed function invocation time: 1104
+1: Sandboxed callback invocation time: 37
+1: Sandboxed syscall callback invocation time: 66
+2: Filters: sandbox glue tests rlbox_lucet_sandbox preload
+2: Sandboxed function invocation time: 1072
+2: Sandboxed callback invocation time: 37
+2: Sandboxed syscall callback invocation time: 66
+3: Filters: sandbox glue tests rlbox_lucet_sandbox embedder
+3: Sandboxed function invocation time: 1078
+3: Sandboxed callback invocation time: 37
+3: Sandboxed syscall callback invocation time: 66
+Transition: Mpkheavy
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: Sandboxed function invocation time: 207
+1: Sandboxed callback invocation time: 126
+1: Sandboxed syscall callback invocation time: 161
+2: Filters: sandbox glue tests rlbox_mpk_sandbox windows mode
+2: Sandboxed function invocation time: 211
+2: Sandboxed callback invocation time: 126
+2: Sandboxed syscall callback invocation time: 161
+Transition: Mpkzero
+1: Filters: sandbox glue tests rlbox_mpk_sandbox
+1: Sandboxed function invocation time: 98
+1: Sandboxed callback invocation time: 54
+1: Sandboxed syscall callback invocation time: 82
+Transition: NoOp
+1: Filters: Test bool operators
+2: Filters: Test sandbox_callback assignment
+3: Filters: callback sig checks
+4: Filters: callback assignment check
+5: Filters: callback re-register
+6: Filters: Test comparisons to nullptr
+7: Filters: Test disallowed comparisons to tainted
+8: Filters: Test comparisons to tainted
+9: Filters: Test comparisons to tainted_volatile
+10: Filters: Test other comparison operators
+11: Filters: convert_type_fundamental_or_array for numerics operates correctly
+12: Filters: convert_type_fundamental_or_array compile time checks for numerics operate
+13: Filters: correctly
+14: Filters: convert_type_fundamental_or_array dynamic bounds checks for numerics operate
+15: Filters: correctly
+16: Filters: convert_type_fundamental_or_array for arrays operates correctly
+17: Filters: convert_type_fundamental_or_array checks for arrays operate correctly
+18: Filters: Test operator + for numerics
+19: Filters: Test operator + with const refs
+20: Filters: Test compound assignment operators
+21: Filters: Test pre/post increment operators
+22: Filters: Test operators that produce new values for numerics
+23: Filters: Test operator +\, - for pointers
+24: Filters: Test operators that produce new values for tainted_volatile numerics
+25: Filters: Test sandbox_function assignment
+26: Filters: invoke in no_op sandbox
+27: Filters: callback in no_op sandbox
+28: Filters: sandbox_lookup_symbol on no_op sandbox without #define causes error
+29: Filters: Type get_[un]sandboxed_pointer
+30: Filters: Type get_[un]sandboxed_pointer for const pointers
+31: Filters: test sandbox_reinterpret_cast
+32: Filters: test sandbox_const_cast
+33: Filters: test sandbox_static_cast
+34: Filters: test memset
+35: Filters: test memcpy
+36: Filters: test memcmp
+37: Filters: test grant deny access
+38: Filters: tainted assignment operates correctly
+39: Filters: tainted_volatile assignment operates correctly
+40: Filters: tainted tainted_volatile conversion operates correctly
+41: Filters: tainted pointer assignments
+42: Filters: tainted opaque operates correctly
+43: Filters: tainted opaque free operates correctly
+44: Filters: Tainted sizes work as expected
+45: Filters: Tainted struct assignment
+46: Filters: Tainted struct pointer assignment
+47: Filters: Tainted const structs
+48: Filters: Tainted full struct assignment
+49: Filters: all_extents_same
+50: Filters: is_c_or_std_array_v
+51: Filters: std_array_to_c_arr_t
+52: Filters: RLBox test basic verification
+53: Filters: RLBox test enum verification
+54: Filters: RLBox test pointer verification
+55: Filters: RLBox test function pointer verification
+56: Filters: RLBox test unverified value
+57: Filters: RLBox test unverified pointer
+58: Filters: RLBox test array verification
+59: Filters: RLBox test range verification
+60: Filters: RLBox test string verification
+61: Filters: rlbox_is_tainted_v
+62: Filters: rlbox_remove_wrapper_t
+63: Filters: sandbox timing tests
+64: Filters: sandbox transition customization
+65: Filters: sandbox glue tests rlbox_noop_sandbox
+65: Sandboxed function invocation time: 2
+65: Sandboxed callback invocation time: 34
+65: Sandboxed syscall callback invocation time: 63
+66: Filters: sandbox glue tests rlbox_noop_sandbox embedder
