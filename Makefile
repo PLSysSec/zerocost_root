@@ -180,7 +180,10 @@ micro_transition_benchmark: benchmark_env_setup
 	echo "Transition: NoOp"     | tee -a ./benchmarks/micro_transition_benchmark.txt
 	cd rlbox_sandboxing_api/build_release      && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
 	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
-	cat ./benchmarks/micro_transition_benchmark.txt | grep "\(Transition:\)\|\(Filters:\)\|\(time:\)" | grep -v "Unsandboxed" | tee -a ./benchmarks/micro_transition_benchmark.txt
+	cat ./benchmarks/micro_transition_benchmark.txt | \
+		grep "\(Transition:\)\|\(Filters: sandbox glue tests\)\|\(time:\)" | \
+		grep -v "Unsandboxed" | \
+		tee -a ./benchmarks/micro_transition_benchmark.txt
 	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
 
 micro_jpeg_benchmark: benchmark_env_setup
