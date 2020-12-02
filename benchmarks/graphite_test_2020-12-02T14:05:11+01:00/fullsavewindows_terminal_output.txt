@@ -1,0 +1,566 @@
+13:18:36     INFO - ConsoleLogger online at 20201202 13:18:36Z in /local/shr/zerocost_root/zerocost_testing_firefox
+13:18:36     INFO - Run as ./mach talos-test --activeTests graphite_perf_test
+13:18:36     INFO - Dumping config to /local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/logs/localconfig.json.
+13:18:36     INFO - {'append_to_log': False,
+13:18:36     INFO -  u'base_work_dir': u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness',
+13:18:36     INFO -  u'binary_path': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox',
+13:18:36     INFO -  'code_coverage': False,
+13:18:36     INFO -  'config_files': (),
+13:18:36     INFO -  u'default_actions': (u'populate-webroot', u'create-virtualenv', u'run-tests'),
+13:18:36     INFO -  'disable_ccov_upload': False,
+13:18:36     INFO -  'e10s': True,
+13:18:36     INFO -  'enable_fission': False,
+13:18:36     INFO -  'enable_webrender': False,
+13:18:36     INFO -  u'exes': {u'python': u'/root/.mozbuild/_virtualenvs/mach_py2/bin/python',
+13:18:36     INFO -            u'virtualenv': (u'/root/.mozbuild/_virtualenvs/mach_py2/bin/python',
+13:18:36     INFO -                            u'/local/shr/zerocost_root/zerocost_testing_firefox/third_party/python/virtualenv/virtualenv.py')},
+13:18:36     INFO -  'extra_prefs': (),
+13:18:36     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub',),
+13:18:36     INFO -  'gecko_profile': False,
+13:18:36     INFO -  'gecko_profile_interval': 0,
+13:18:36     INFO -  'java_code_coverage': False,
+13:18:36     INFO -  'log_level': 'info',
+13:18:36     INFO -  u'log_name': u'talos',
+13:18:36     INFO -  'log_to_console': True,
+13:18:36     INFO -  u'obj_path': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release',
+13:18:36     INFO -  'opt_config_files': (),
+13:18:36     INFO -  'per_test_coverage': False,
+13:18:36     INFO -  'pip_index': False,
+13:18:36     INFO -  u'pypi_url': u'http://pypi.python.org/simple',
+13:18:36     INFO -  u'python3_manifest': {u'win32': u'python3.manifest',
+13:18:36     INFO -                        u'win64': u'python3_x64.manifest'},
+13:18:36     INFO -  u'repo_path': u'/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:36     INFO -  u'run_local': True,
+13:18:36     INFO -  'system_bits': '32',
+13:18:36     INFO -  u'talos_extra_options': (u'--develop',
+13:18:36     INFO -                           u'--activeTests',
+13:18:36     INFO -                           u'graphite_perf_test'),
+13:18:36     INFO -  u'talos_json': u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos.json',
+13:18:36     INFO -  u'title': u'xeon-gold-0',
+13:18:36     INFO -  'use_talos_json': False,
+13:18:36     INFO -  'verify': False,
+13:18:36     INFO -  u'virtualenv_path': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv',
+13:18:36     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+13:18:36     INFO -  'work_dir': 'build'}
+13:18:36     INFO - [mozharness: 2020-12-02 13:18:36.980914Z] Skipping clobber step.
+13:18:36     INFO - [mozharness: 2020-12-02 13:18:36.980977Z] Skipping download-and-extract step.
+13:18:36     INFO - [mozharness: 2020-12-02 13:18:36.981033Z] Running populate-webroot step.
+13:18:36     INFO - Running pre-action listener: _resource_record_pre_action
+13:18:36     INFO - Running main action method: populate_webroot
+13:18:36     INFO - {u'suites': {u'bcv': {u'tests': [u'basic_compositor_video']},
+13:18:36     INFO -              u'chromez': {u'tests': [u'about_preferences_basic',
+13:18:36     INFO -                                      u'tresize',
+13:18:36     INFO -                                      u'about_newtab_with_snippets']},
+13:18:36     INFO -              u'damp': {u'pagesets_name': u'tp5n.zip', u'tests': [u'damp']},
+13:18:36     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css', u'kraken']},
+13:18:36     INFO -              u'flex': {u'tests': [u'tart_flex', u'ts_paint_flex']},
+13:18:36     INFO -              u'g1': {u'pagesets_name': u'tp5n.zip',
+13:18:36     INFO -                      u'tests': [u'tp5o_scroll']},
+13:18:36     INFO -              u'g3': {u'tests': [u'dromaeo_dom']},
+13:18:36     INFO -              u'g4': {u'tests': [u'displaylist_mutate',
+13:18:36     INFO -                                 u'rasterflood_svg',
+13:18:36     INFO -                                 u'rasterflood_gradient']},
+13:18:36     INFO -              u'g5': {u'pagesets_name': u'tp5n.zip',
+13:18:36     INFO -                      u'tests': [u'ts_paint_webext', u'tp5o_webext']},
+13:18:36     INFO -              u'h1': {u'tests': [u'ts_paint_heavy']},
+13:18:36     INFO -              u'motionmark': {u'benchmark_zip': u'jetstream.zip',
+13:18:36     INFO -                              u'tests': [u'motionmark_animometer',
+13:18:36     INFO -                                         u'motionmark_htmlsuite',
+13:18:36     INFO -                                         u'JetStream',
+13:18:36     INFO -                                         u'ARES6']},
+13:18:36     INFO -              u'other': {u'_comment': u'Bug 1220362 - Disabled startup_about_home_paint_cached for high frequency intermittents',
+13:18:36     INFO -                         u'tests': [u'a11yr',
+13:18:36     INFO -                                    u'ts_paint',
+13:18:36     INFO -                                    u'twinopen',
+13:18:36     INFO -                                    u'sessionrestore',
+13:18:36     INFO -                                    u'sessionrestore_no_auto_restore',
+13:18:36     INFO -                                    u'tabpaint',
+13:18:36     INFO -                                    u'cpstartup',
+13:18:36     INFO -                                    u'startup_about_home_paint',
+13:18:36     INFO -                                    u'pdfpaint']},
+13:18:36     INFO -              u'perf-reftest': {u'tests': [u'perf_reftest']},
+13:18:36     INFO -              u'perf-reftest-singletons': {u'tests': [u'perf_reftest_singletons']},
+13:18:36     INFO -              u'realworld-webextensions': {u'tests': [u'startup_about_home_paint_realworld_webextensions'],
+13:18:36     INFO -                                           u'webextensions_zip': u'webextensions.zip'},
+13:18:36     INFO -              u'sessionrestore-many-windows': {u'tests': [u'sessionrestore_many_windows']},
+13:18:36     INFO -              u'svgr': {u'tests': [u'tsvgx',
+13:18:36     INFO -                                   u'tsvgr_opacity',
+13:18:36     INFO -                                   u'tart',
+13:18:36     INFO -                                   u'tscrollx',
+13:18:36     INFO -                                   u'tsvg_static']},
+13:18:36     INFO -              u'tabswitch': {u'pagesets_name': u'tp5n.zip',
+13:18:36     INFO -                             u'tests': [u'tabswitch']},
+13:18:36     INFO -              u'tp5o': {u'pagesets_name': u'tp5n.zip', u'tests': [u'tp5o']},
+13:18:36     INFO -              u'webgl': {u'tests': [u'glterrain',
+13:18:36     INFO -                                    u'glvideo',
+13:18:36     INFO -                                    u'motionmark_webgl']},
+13:18:36     INFO -              u'xperf': {u'pagesets_name': u'tp5n.zip',
+13:18:36     INFO -                         u'talos_options': [u'--xperf_path',
+13:18:36     INFO -                                            u'"c:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/xperf.exe"'],
+13:18:36     INFO -                         u'tests': [u'tp5n']},
+13:18:36     INFO -              u'zerocost': {u'tests': [u'jpeg_width_perf',
+13:18:36     INFO -                                       u'jpeg_black_width_perf',
+13:18:36     INFO -                                       u'jpeg_height_perf',
+13:18:36     INFO -                                       u'graphite_perf_test']}}}
+13:18:36     INFO - Running post-action listener: _resource_record_post_action
+13:18:36     INFO - [mozharness: 2020-12-02 13:18:36.985807Z] Finished populate-webroot step (success)
+13:18:36     INFO - [mozharness: 2020-12-02 13:18:36.985867Z] Running create-virtualenv step.
+13:18:36     INFO - Running pre-action listener: _resource_record_pre_action
+13:18:36     INFO - Running main action method: create_virtualenv
+13:18:36     INFO - Virtualenv already exists, skipping creation
+13:18:36     INFO - Running post-action listener: _resource_record_post_action
+13:18:36     INFO - Running post-action listener: _start_resource_monitoring
+13:18:37     INFO - Starting resource monitoring.
+13:18:37     INFO - [mozharness: 2020-12-02 13:18:37.012356Z] Finished create-virtualenv step (success)
+13:18:37     INFO - [mozharness: 2020-12-02 13:18:37.013238Z] Skipping install step.
+13:18:37     INFO - [mozharness: 2020-12-02 13:18:37.013348Z] Running run-tests step.
+13:18:37     INFO - Running pre-action listener: _resource_record_pre_action
+13:18:37     INFO - Running pre-action listener: _set_gcov_prefix
+13:18:37     INFO - Running main action method: run_tests
+13:18:37     INFO - Running command: [u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin/python', '--version']
+13:18:37     INFO - Copy/paste: /local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin/python --version
+13:18:37     INFO -  Python 2.7.16
+13:18:37     INFO - Return code: 0
+13:18:37     INFO - ENV: MOZ_UPLOAD_DIR is now /local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+13:18:37     INFO - ENV: RUST_BACKTRACE is now full
+13:18:37     INFO - ENV: MINIDUMP_SAVE_PATH is now /local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+13:18:37     INFO - Running command: [u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin/python', u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox', '--title', u'xeon-gold-0', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] in /local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build
+13:18:37     INFO - Copy/paste: /local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin/python /local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py --executablePath /local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox --title xeon-gold-0 --develop --activeTests graphite_perf_test --log-tbpl-level=debug
+13:18:37     INFO - Using env: {'DISPLAY': ':99',
+13:18:37     INFO -  'EDITOR': 'emacs',
+13:18:37     INFO -  'GUESS_ROOT': 'root',
+13:18:37     INFO -  'HISTCONTROL': 'ignoreboth',
+13:18:37     INFO -  'HISTSIZE': '10000',
+13:18:37     INFO -  'HISTTIMEFORMAT': '%F_%T  ',
+13:18:37     INFO -  'HOME': '/root',
+13:18:37     INFO -  'LANG': 'en_US.UTF-8',
+13:18:37     INFO -  'LOGNAME': 'root',
+13:18:37     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+13:18:37     INFO -  'LS_OPTIONS': '--color=auto',
+13:18:37     INFO -  'MACH_MAIN_PID': '20737',
+13:18:37     INFO -  'MAIL': '/var/mail/root',
+13:18:37     INFO -  'MAKEFLAGS': '',
+13:18:37     INFO -  'MAKELEVEL': '1',
+13:18:37     INFO -  'MAKE_TERMERR': '/dev/pts/0',
+13:18:37     INFO -  'MAKE_TERMOUT': '/dev/pts/0',
+13:18:37     INFO -  'MFLAGS': '',
+13:18:37     INFO -  'MINIDUMP_SAVE_PATH': u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+13:18:37     INFO -  'MOZCONFIG': 'mozconfig_fullsavewindows_release',
+13:18:37     INFO -  'MOZ_DEVELOPER_OBJ_DIR': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release',
+13:18:37     INFO -  'MOZ_DEVELOPER_REPO_DIR': u'/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:37     INFO -  'MOZ_UPLOAD_DIR': u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+13:18:37     INFO -  'OLDPWD': '/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:37     INFO -  'PATH': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin:/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+13:18:37     INFO -  'PWD': '/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:37     INFO -  'PYTHONPATH': u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos',
+13:18:37     INFO -  'RUST_BACKTRACE': 'full',
+13:18:37     INFO -  'SHELL': '/bin/bash',
+13:18:37     INFO -  'SHLVL': '1',
+13:18:37     INFO -  'STARTTIME': '2020-12-02_14:04:49',
+13:18:37     INFO -  'STYLO_FORCE_ENABLED': '1',
+13:18:37     INFO -  'SUDO_COMMAND': '/usr/bin/env PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin bash',
+13:18:37     INFO -  'SUDO_GID': '0',
+13:18:37     INFO -  'SUDO_UID': '0',
+13:18:37     INFO -  'SUDO_USER': 'root',
+13:18:37     INFO -  'TERM': 'xterm-256color',
+13:18:37     INFO -  'USER': 'root',
+13:18:37     INFO -  'VIRTUAL_ENV': u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv',
+13:18:37     INFO -  '_': '/usr/bin/taskset'}
+13:18:37     INFO - Calling [u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin/python', u'/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox', '--title', u'xeon-gold-0', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] with output_timeout 3600
+13:18:37     INFO -  mozversion application_buildid: 20201202140231
+13:18:37     INFO -  mozversion application_display_name: Nightly
+13:18:37     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+13:18:37     INFO -  mozversion application_name: Firefox
+13:18:37     INFO -  mozversion application_remotingname: firefox
+13:18:37     INFO -  mozversion application_vendor: Mozilla
+13:18:37     INFO -  mozversion application_version: 81.0a1
+13:18:37     INFO -  mozversion platform_buildid: 20201202140231
+13:18:37     INFO -  mozversion platform_version: 81.0a1
+13:18:37     INFO -  using testdate: 1606915117
+13:18:37     INFO -  actual date: 1606915117
+13:18:37     INFO -  starting webserver on '127.0.0.1:59601'
+13:18:37     INFO -  SUITE-START | Running 1 tests
+13:18:37     INFO -  TEST-START | graphite_perf_test
+13:18:37     INFO -  Initialising browser for graphite_perf_test test...
+13:18:37     INFO -  Cloning profile located at /local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/base_profile
+13:18:37     INFO -  Merging profile: /local/shr/zerocost_root/zerocost_testing_firefox/testing/profiles/base
+13:18:37     INFO -  Merging profile: /local/shr/zerocost_root/zerocost_testing_firefox/testing/profiles/common
+13:18:37     INFO -  Merging profile: /local/shr/zerocost_root/zerocost_testing_firefox/testing/profiles/perf
+13:18:37     INFO -  Installing Add-ons:
+13:18:37     INFO -  ['/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/talos-powers', '/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos/talos/pageloader']
+13:18:37     INFO -  Installing Webextensions:
+13:18:37     INFO -  Application command: /local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox --no-remote http://127.0.0.1:59601/getInfo.html -profile /tmp/tmpU1g5wm/profile
+13:18:37     INFO -  TEST-INFO | started process 20795 (/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox --no-remote http://127.0.0.1:59601/getInfo.html)
+13:18:40     INFO -  console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+13:18:41     INFO -  __metrics
+13:18:41     INFO -  	Screen width/height: 1280/1024
+13:18:41     INFO -  	colorDepth: 24
+13:18:41     INFO -  	Browser inner width/height: 1152/847
+13:18:41     INFO -  __metrics
+13:18:41     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+13:18:41     INFO -  JavaScript warning: resource://gre/modules/Troubleshoot.jsm, line 676: WebGL context was lost.
+13:18:41     INFO -  about:support	{"application":{"name":"Firefox","osVersion":"Linux 5.4.65.1.amd64-smp #1 SMP Tue Sep 15 15:32:55 CEST 2020","version":"81.0a1","buildID":"20201202140231","distributionID":"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0","safeMode":false,"updateChannel":"default","supportURL":"https://support.mozilla.org/1/firefox/81.0a1/Linux/en-US/","numTotalWindows":1,"numRemoteWindows":1,"remoteAutoStart":true,"autoStartStatus":1,"policiesStatus":0,"keyLocationServiceGoogleFound":false,"keySafebrowsingGoogleFound":false,"keyMozillaFound":false},"securitySoftware":{"registeredAntiVirus":"","registeredAntiSpyware":"","registeredFirewall":""},"processes":{"remoteTypes":{"web":1,"extension":1,"socket":1},"maxWebContentProcesses":8},"environmentVariables":{"MOZ_CRASHREPORTER":"1","MOZ_DEVELOPER_OBJ_DIR":"/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release","MOZ_UPLOAD_DIR":"/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir","DISPLAY":":99","MOZ_CRASHREPORTER_NO_REPORT":"1","MOZ_NO_REMOTE":"1","MOZ_DISABLE_NONLOCAL_CONNECTIONS":"1","XRE_NO_WINDOWS_CRASH_DIALOG":"1","MOZ_DEVELOPER_REPO_DIR":"/local/shr/zerocost_root/zerocost_testing_firefox","MOZ_ASSUME_USER_NS":"1","MOZ_CRASHREPORTER_EVENTS_DIRECTORY":"/tmp/tmpU1g5wm/profile/crashes/events","MOZ_CRASHREPORTER_RESTART_ARG_0":"/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox","MOZ_CRASHREPORTER_RESTART_ARG_1":"--no-remote","MOZ_CRASHREPORTER_RESTART_ARG_2":"http://127.0.0.1:59601/getInfo.html","MOZ_CRASHREPORTER_RESTART_ARG_3":"-profile","MOZ_CRASHREPORTER_RESTART_ARG_4":"/tmp/tmpU1g5wm/profile","MOZ_CRASHREPORTER_RESTART_ARG_5":"","MOZ_CRASHREPORTER_DATA_DIRECTORY":"/root/.mozilla/firefox/Crash Reports","MOZ_CRASHREPORTER_PING_DIRECTORY":"/root/.mozilla/firefox/Pending Pings","MOZ_CRASHREPORTER_STRINGS_OVERRIDE":"/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/browser/crashreporter-override.ini","MOZ_LAUNCHED_CHILD":"","XRE_PROFILE_PATH":"","XRE_PROFILE_LOCAL_PATH":"","XRE_START_OFFLINE":"","XRE_BINARY_PATH":"","XRE_RESTARTED_BY_PROFILE_MANAGER":""},"modifiedPreferences":{"browser.cache.disk.filesystem_reported":1,"browser.cache.disk.smart_size.enabled":false,"browser.contentblocking.category":"custom","browser.link.open_newwindow":2,"browser.search.region":"US","browser.startup.homepage_override.mstone":"81.0a1","browser.startup.homepage_override.buildID":"20201202140231","browser.tabs.remote.autostart":true,"browser.tabs.unloadOnLowMemory":false,"dom.forms.autocomplete.formautofill":true,"dom.allow_scripts_to_close_windows":true,"dom.disable_open_during_load":false,"dom.disable_window_flip":true,"dom.disable_window_move_resize":true,"dom.max_chrome_script_run_time":0,"dom.max_script_run_time":0,"dom.push.connection.enabled":false,"dom.send_after_paint_to_content":true,"extensions.checkCompatibility":false,"extensions.lastAppVersion":"81.0a1","general.useragent.updates.enabled":false,"gfx.webrender.all.qualified":false,"idle.lastDailyNotification":-1,"media.gmp.storage.version.observed":1,"media.allowed-to-play.enabled":true,"media.autoplay.ask-permission":false,"media.autoplay.block-webaudio":false,"media.autoplay.blocking_policy":0,"media.autoplay.default":0,"media.block-autoplay-until-in-foreground":false,"media.capturestream_hints.enabled":true,"media.geckoview.autoplay.request":false,"media.gmp-manager.updateEnabled":false,"media.gmp-manager.url":"http://127.0.0.1/gmpmanager-dummy/update.xml","media.libavcodec.allow-obsolete":true,"media.navigator.enabled":true,"media.navigator.permission.disabled":true,"media.peerconnection.enabled":true,"network.http.speculative-parallel-limit":0,"places.history.expiration.transient_current_max_pages":112348,"places.database.lastMaintenance":2147483647,"plugin.state.flash":0,"plugins.flashBlock.enabled":false,"privacy.reduceTimerPrecision":false,"privacy.trackingprotection.annotate_channels":false,"privacy.trackingprotection.enabled":false,"privacy.trackingprotection.introURL":"http://127.0.0.1/trackingprotection/tour","privacy.trackingprotection.pbmode.enabled":false,"security.sandbox.plugin.tempDirSuffix":"67ed4561-a05e-4a24-be62-051697a30ab1","security.sandbox.content.tempDirSuffix":"7cb65a30-605a-40ac-8b85-1532d379220e","security.certerrors.mitm.priming.enabled":false,"security.enable_java":false,"security.fileuri.strict_origin_policy":false,"security.turn_off_all_security_so_that_viruses_can_take_over_this_computer":true,"services.sync.engine.addresses.available":true},"lockedPreferences":{},"media":{"currentAudioBackend":"(remote error)","currentMaxAudioChannels":0,"currentPreferredSampleRate":44100,"audioOutputDevices":[],"audioInputDevices":[]},"accessibility":{"isActive":false,"forceDisabled":0,"handlerUsed":false,"instantiator":""},"startupCache":{"DiskCachePath":"/tmp/tmpU1g5wm/profile/startupCache/startupCache.8.little","IgnoreDiskCache":false,"FoundDiskCacheOnInit":false,"WroteToDiskCache":false},"libraryVersions":{"NSPR":{"minVersion":"4.28","version":"4.28"},"NSS":{"minVersion":"3.56","version":"3.56"},"NSSUTIL":{"minVersion":"3.56","version":"3.56"},"NSSSSL":{"minVersion":"3.56","version":"3.56"},"NSSSMIME":{"minVersion":"3.56","version":"3.56"}},"userJS":{"exists":true},"intl":{"localeService":{"requested":["en-US"],"available":["en-US"],"supported":["en-US"],"regionalPrefs":["en-US"],"defaultLocale":"en-US"},"osPrefs":{"systemLocales":["en-US"],"regionalPrefsLocales":["en-US"]}},"crashes":{"submitted":[],"pending":0},"sandbox":{"hasSeccompBPF":true,"hasSeccompTSync":true,"hasPrivilegedUserNamespaces":true,"hasUserNamespaces":true,"canSandboxContent":true,"canSandboxMedia":true,"syscallLog":[],"contentSandboxLevel":4,"effectiveContentSandboxLevel":4},"remoteAgent":{"listening":false,"url":""},"graphics":{"numTotalWindows":1,"numAcceleratedWindows":0,"windowLayerManagerType":"Basic","windowLayerManagerRemote":true,"windowUsingAdvancedLayers":false,"numAcceleratedWindowsMessage":{"key":"blocked-gfx-card"},"adapterDescription":"llvmpipe (LLVM 7.0, 256 bits)","adapterVendorID":"0xffff","adapterDeviceID":"0xffff","adapterRAM":385590,"adapterDrivers":"","driverVendor":"mesa/llvmpipe","driverVersion":"18.3.6.0","driverDate":"","usesTiling":false,"contentUsesTiling":false,"offMainThreadPaintEnabled":true,"offMainThreadPaintWorkerCount":4,"targetFrameRate":60,"windowProtocol":"x11","desktopEnvironment":"unknown","webgl1Renderer":"VMware, Inc. -- llvmpipe (LLVM 7.0, 256 bits)","webgl1Version":"3.1 Mesa 18.3.6","webgl1DriverExtensions":"GL_ARB_multisample GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_copy_texture GL_EXT_subtexture GL_EXT_texture_object GL_EXT_vertex_array GL_EXT_compiled_vertex_array GL_EXT_texture GL_EXT_texture3D GL_IBM_rasterpos_clip GL_ARB_point_parameters GL_EXT_draw_range_elements GL_EXT_packed_pixels GL_EXT_point_parameters GL_EXT_rescale_normal GL_EXT_separate_specular_color GL_EXT_texture_edge_clamp GL_SGIS_generate_mipmap GL_SGIS_texture_border_clamp GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_ARB_framebuffer_sRGB GL_ARB_multitexture GL_EXT_framebuffer_sRGB GL_IBM_multimode_draw_arrays GL_IBM_texture_mirrored_repeat GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_transpose_matrix GL_EXT_blend_func_separate GL_EXT_fog_coord GL_EXT_multi_draw_arrays GL_EXT_secondary_color GL_EXT_texture_env_add GL_EXT_texture_lod_bias GL_INGR_blend_func_separate GL_NV_blend_square GL_NV_light_max_exponent GL_NV_texgen_reflection GL_NV_texture_env_combine4 GL_S3_s3tc GL_SUN_multi_draw_arrays GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_EXT_framebuffer_object GL_EXT_texture_compression_s3tc GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_MESA_window_pos GL_NV_packed_depth_stencil GL_NV_texture_rectangle GL_ARB_depth_texture GL_ARB_occlusion_query GL_ARB_shadow GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_mirrored_repeat GL_ARB_window_pos GL_ATI_fragment_shader GL_EXT_stencil_two_side GL_EXT_texture_cube_map GL_NV_depth_clamp GL_NV_fog_distance GL_APPLE_packed_pixels GL_ARB_draw_buffers GL_ARB_fragment_program GL_ARB_fragment_shader GL_ARB_shader_objects GL_ARB_vertex_program GL_ARB_vertex_shader GL_ATI_draw_buffers GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_MESA_pack_invert GL_MESA_ycbcr_texture GL_NV_primitive_restart GL_ARB_depth_clamp GL_ARB_fragment_program_shadow GL_ARB_half_float_pixel GL_ARB_occlusion_query2 GL_ARB_point_sprite GL_ARB_shading_language_100 GL_ARB_sync GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ATI_blend_equation_separate GL_EXT_blend_equation_separate GL_OES_read_format GL_ARB_color_buffer_float GL_ARB_pixel_buffer_object GL_ARB_texture_compression_rgtc GL_ARB_texture_float GL_ARB_texture_rectangle GL_ATI_texture_compression_3dc GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_mirror_clamp GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_shared_exponent GL_ARB_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_packed_depth_stencil GL_ARB_vertex_array_object GL_ATI_separate_stencil GL_ATI_texture_mirror_once GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_gpu_program_parameters GL_EXT_texture_array GL_EXT_texture_compression_latc GL_EXT_texture_integer GL_EXT_texture_sRGB_decode GL_EXT_timer_query GL_OES_EGL_image GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_draw_instanced GL_ARB_half_float_vertex GL_ARB_instanced_arrays GL_ARB_map_buffer_range GL_ARB_texture_buffer_object GL_ARB_texture_rg GL_ARB_texture_swizzle GL_ARB_vertex_array_bgra GL_EXT_texture_swizzle GL_EXT_vertex_array_bgra GL_NV_conditional_render GL_AMD_conservative_depth GL_AMD_draw_buffers_blend GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_ARB_ES2_compatibility GL_ARB_blend_func_extended GL_ARB_compatibility GL_ARB_debug_output GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_provoking_vertex GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_shader_stencil_export GL_ARB_shader_texture_lod GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_cube_map_array GL_ARB_texture_gather GL_ARB_texture_multisample GL_ARB_texture_query_lod GL_ARB_texture_rgb10_a2ui GL_ARB_uniform_buffer_object GL_ARB_vertex_type_2_10_10_10_rev GL_EXT_provoking_vertex GL_EXT_texture_snorm GL_MESA_texture_signed_rgba GL_ARB_draw_indirect GL_ARB_get_program_binary GL_ARB_robustness GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_subroutine GL_ARB_texture_compression_bptc GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_viewport_array GL_AMD_multi_draw_indirect GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_base_instance GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_internalformat_query GL_ARB_map_buffer_alignment GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_texture_storage GL_ARB_transform_feedback_instanced GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_transform_feedback GL_AMD_shader_trinary_minmax GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_clear_buffer_object GL_ARB_copy_image GL_ARB_explicit_uniform_location GL_ARB_fragment_layer_viewport GL_ARB_invalidate_subdata GL_ARB_multi_draw_indirect GL_ARB_program_interface_query GL_ARB_stencil_texturing GL_ARB_texture_buffer_range GL_ARB_texture_query_levels GL_ARB_texture_storage_multisample GL_ARB_texture_view GL_ARB_vertex_attrib_binding GL_KHR_debug GL_KHR_texture_compression_astc_ldr GL_ARB_buffer_storage GL_ARB_clear_texture GL_ARB_enhanced_layouts GL_ARB_internalformat_query2 GL_ARB_multi_bind GL_ARB_seamless_cubemap_per_texture GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_stencil8 GL_ARB_vertex_type_10f_11f_11f_rev GL_EXT_shader_integer_mix GL_ARB_clip_control GL_ARB_conditional_render_inverted GL_ARB_cull_distance GL_ARB_direct_state_access GL_ARB_get_texture_sub_image GL_ARB_pipeline_statistics_query GL_ARB_transform_feedback_overflow_query GL_EXT_polygon_offset_clamp GL_KHR_context_flush_control GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_MESA_shader_integer_functions GL_ARB_polygon_offset_clamp ","webgl1Extensions":"ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context","webgl1WSIInfo":"GLX 1.4\nGLX_VENDOR(client): Mesa Project and SGI\nGLX_VENDOR(server): SGI\nExtensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_profile GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_import_context GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_OML_swap_method GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read ","webgl2Renderer":"VMware, Inc. -- llvmpipe (LLVM 7.0, 256 bits)","webgl2Version":"3.3 (Core Profile) Mesa 18.3.6","webgl2DriverExtensions":"GL_AMD_conservative_depth GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_robustness GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_stencil_export GL_ARB_shader_subroutine GL_ARB_shader_texture_lod GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_MESA_ycbcr_texture GL_NV_conditional_render GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_OES_EGL_image GL_S3_s3tc","webgl2Extensions":"EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc MOZ_debug OES_texture_float_linear WEBGL_compressed_texture_astc WEBGL_compressed_texture_etc WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context","webgl2WSIInfo":"GLX 1.4\nGLX_VENDOR(client): Mesa Project and SGI\nGLX_VENDOR(server): SGI\nExtensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_profile GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_import_context GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_OML_swap_method GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read ","info":{"AzureCanvasBackend":"skia","AzureFallbackCanvasBackend":"none","AzureContentBackend":"skia","CairoUseXRender":0,"ApzWheelInput":1,"ApzDragInput":1,"ApzKeyboardInput":1,"ApzAutoscrollInput":1,"ApzZoomingInput":1,"CMSOutputProfile":"Empty profile data","DisplayCount":1,"Display0":"1280x1024 default"},"featureLog":{"features":[{"name":"HW_COMPOSITING","description":"Compositing","status":"blocked","log":[{"type":"default","status":"available"},{"type":"env","status":"blocked","message":"Acceleration blocked by platform"}]},{"name":"OPENGL_COMPOSITING","description":"OpenGL Compositing","status":"unavailable","log":[{"type":"default","status":"unavailable","message":"Hardware compositing is disabled"}]},{"name":"WEBRENDER","description":"WebRender","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender is an opt-in feature"}]},{"name":"WEBRENDER_QUALIFIED","description":"WebRender qualified","status":"denied","log":[{"type":"default","status":"available"},{"type":"env","status":"denied","message":"Not on allowlist"}]},{"name":"WEBRENDER_COMPOSITOR","description":"WebRender native compositor","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]},{"name":"WEBRENDER_ANGLE","description":"WebRender ANGLE","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender ANGLE is an opt-in feature"}]},{"name":"WEBRENDER_DCOMP_PRESENT","description":"WebRender DirectComposition","status":"opt-in","log":[{"type":"default","status":"opt-in","message":"WebRender DirectComposition is an opt-in feature"}]},{"name":"OMTP","description":"Off Main Thread Painting","status":"available","log":[{"type":"default","status":"available"}]},{"name":"WEBGPU","description":"WebGPU","status":"disabled","log":[{"type":"default","status":"disabled","message":"Disabled by default"}]}],"fallbacks":[]},"crashGuards":[]},"addons":[{"name":"PageLoader extension","type":"extension","version":"1.1","isActive":true,"id":"pageloader@mozilla.org"},{"name":"Talos Powers","type":"extension","version":"1.1","isActive":true,"id":"talos-powers@mozilla.org"}],"features":[{"name":"DoH Roll-Out","version":"2.0.0","id":"doh-rollout@mozilla.org"},{"name":"Firefox Screenshots","version":"39.0.0","id":"screenshots@mozilla.org"},{"name":"Form Autofill","version":"1.0","id":"formautofill@mozilla.org"},{"name":"Web Compat","version":"14.0.0","id":"webcompat@mozilla.org"},{"name":"WebCompat Reporter","version":"1.4.0","id":"webcompat-reporter@mozilla.org"}],"experimentalFeatures":[["experimental-features-abouthome-startup-cache","browser.startup.homepage.abouthome_cache.enabled",false],["experimental-features-cookie-samesite-lax-by-default2","network.cookie.sameSite.laxByDefault",true],["experimental-features-cookie-samesite-none-requires-secure2","network.cookie.sameSite.noneRequiresSecure",true],["experimental-features-cookie-samesite-schemeful","network.cookie.sameSite.schemeful",true],["experimental-features-css-constructable-stylesheets","layout.css.constructable-stylesheets.enabled",false],["experimental-features-css-focus-visible","layout.css.focus-visible.enabled",true],["experimental-features-css-masonry2","layout.css.grid-template-masonry-value.enabled",false],["experimental-features-devtools-color-scheme-simulation","devtools.inspector.color-scheme-simulation.enabled",false],["experimental-features-devtools-compatibility-panel","devtools.inspector.compatibility.enabled",true],["experimental-features-devtools-execution-context-selector","devtools.webconsole.input.context",true],["experimental-features-devtools-serviceworker-debugger-support","devtools.debugger.features.windowless-service-workers",false],["experimental-features-graphics-desktop-zooming","apz.allow_zooming",true],["experimental-features-media-avif","image.avif.enabled",false],["experimental-features-media-session-api","dom.media.mediasession.enabled",true],["experimental-features-print-preview-tab-modal","print.tab_modal.enabled",true],["experimental-features-web-api-beforeinput","dom.input_events.beforeinput.enabled",false],["experimental-features-web-api-inputmode","dom.forms.inputmode",true],["experimental-features-web-api-link-preload","network.preload",true],["experimental-features-web-gpu2","dom.webgpu.enabled",false]]}
+13:18:45     INFO -  TEST-INFO | 20795: exit 0
+13:18:45     INFO -  Browser initialized.
+13:18:45     INFO -  Fission enabled: False
+13:18:45     INFO -  Running cycle 1/1 for graphite_perf_test test...
+13:18:45     INFO -  Using env: {'DISPLAY': ':99',
+13:18:45     INFO -   'EDITOR': 'emacs',
+13:18:45     INFO -   'GUESS_ROOT': 'root',
+13:18:45     INFO -   'HISTCONTROL': 'ignoreboth',
+13:18:45     INFO -   'HISTSIZE': '10000',
+13:18:45     INFO -   'HISTTIMEFORMAT': '%F_%T  ',
+13:18:45     INFO -   'HOME': '/root',
+13:18:45     INFO -   'JSGC_DISABLE_POISONING': '1',
+13:18:45     INFO -   'LANG': 'en_US.UTF-8',
+13:18:45     INFO -   'LD_LIBRARY_PATH': '/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin',
+13:18:45     INFO -   'LOGNAME': 'root',
+13:18:45     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+13:18:45     INFO -   'LS_OPTIONS': '--color=auto',
+13:18:45     INFO -   'MACH_MAIN_PID': '20737',
+13:18:45     INFO -   'MAIL': '/var/mail/root',
+13:18:45     INFO -   'MAKEFLAGS': '',
+13:18:45     INFO -   'MAKELEVEL': '1',
+13:18:45     INFO -   'MAKE_TERMERR': '/dev/pts/0',
+13:18:45     INFO -   'MAKE_TERMOUT': '/dev/pts/0',
+13:18:45     INFO -   'MFLAGS': '',
+13:18:45     INFO -   'MINIDUMP_SAVE_PATH': '/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+13:18:45     INFO -   'MOZCONFIG': 'mozconfig_fullsavewindows_release',
+13:18:45     INFO -   'MOZ_CRASHREPORTER': '1',
+13:18:45     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+13:18:45     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release',
+13:18:45     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:45     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+13:18:45     INFO -   'MOZ_UPLOAD_DIR': '/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+13:18:45     INFO -   'MOZ_USE_PAGELOADER': '1',
+13:18:45     INFO -   'MOZ_WEBRENDER': '0',
+13:18:45     INFO -   'NO_EM_RESTART': '1',
+13:18:45     INFO -   'OLDPWD': '/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:45     INFO -   'PATH': '/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv/bin:/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+13:18:45     INFO -   'PWD': '/local/shr/zerocost_root/zerocost_testing_firefox',
+13:18:45     INFO -   'PYTHONPATH': '/local/shr/zerocost_root/zerocost_testing_firefox/testing/talos',
+13:18:45     INFO -   'RUST_BACKTRACE': 'full',
+13:18:45     INFO -   'SHELL': '/bin/bash',
+13:18:45     INFO -   'SHLVL': '1',
+13:18:45     INFO -   'STARTTIME': '2020-12-02_14:04:49',
+13:18:45     INFO -   'STYLO_FORCE_ENABLED': '1',
+13:18:45     INFO -   'SUDO_COMMAND': '/usr/bin/env PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin bash',
+13:18:45     INFO -   'SUDO_GID': '0',
+13:18:45     INFO -   'SUDO_UID': '0',
+13:18:45     INFO -   'SUDO_USER': 'root',
+13:18:45     INFO -   'TERM': 'xterm-256color',
+13:18:45     INFO -   'USER': 'root',
+13:18:45     INFO -   'VIRTUAL_ENV': '/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/testing/talos-venv',
+13:18:45     INFO -   '_': '/usr/bin/taskset'}
+13:18:45     INFO -  TEST-INFO | started process 21073 (/local/shr/zerocost_root/ffbuilds/firefox_latest_fullsavewindows_release/dist/bin/firefox --no-remote -profile /tmp/tmpU1g5wm/profile)
+13:18:53     INFO -  PID 21073 | Capture_Time:Graphite,1,1714|
+13:18:53     INFO -  PID 21073 | Cycle 1(1): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:18:53     INFO -  PID 21073 | Waiting for idle-callback
+13:18:56     INFO -  PID 21073 | Capture_Time:Graphite,2,1612|
+13:18:56     INFO -  PID 21073 | Cycle 1(2): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:18:58     INFO -  PID 21073 | Capture_Time:Graphite,3,1538|
+13:18:58     INFO -  PID 21073 | Cycle 1(3): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:01     INFO -  PID 21073 | Capture_Time:Graphite,4,1550|
+13:19:01     INFO -  PID 21073 | Cycle 1(4): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:01     INFO -  PID 21073 | Waiting for idle-callback
+13:19:03     INFO -  PID 21073 | Capture_Time:Graphite,5,1519|
+13:19:03     INFO -  PID 21073 | Cycle 1(5): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:06     INFO -  PID 21073 | Capture_Time:Graphite,6,1545|
+13:19:06     INFO -  PID 21073 | Cycle 1(6): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:08     INFO -  PID 21073 | Capture_Time:Graphite,7,1573|
+13:19:08     INFO -  PID 21073 | Cycle 1(7): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:11     INFO -  PID 21073 | Capture_Time:Graphite,8,1534|
+13:19:11     INFO -  PID 21073 | Cycle 1(8): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:11     INFO -  PID 21073 | Waiting for idle-callback
+13:19:13     INFO -  PID 21073 | Capture_Time:Graphite,9,1532|
+13:19:13     INFO -  PID 21073 | Cycle 1(9): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:15     INFO -  PID 21073 | Capture_Time:Graphite,10,1523|
+13:19:15     INFO -  PID 21073 | Cycle 1(10): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:18     INFO -  PID 21073 | Capture_Time:Graphite,11,1544|
+13:19:18     INFO -  PID 21073 | Cycle 1(11): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:20     INFO -  PID 21073 | Capture_Time:Graphite,12,1522|
+13:19:20     INFO -  PID 21073 | Cycle 1(12): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:23     INFO -  PID 21073 | Capture_Time:Graphite,13,1529|
+13:19:23     INFO -  PID 21073 | Cycle 1(13): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:25     INFO -  PID 21073 | Capture_Time:Graphite,14,1532|
+13:19:25     INFO -  PID 21073 | Cycle 1(14): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:25     INFO -  PID 21073 | Waiting for idle-callback
+13:19:27     INFO -  PID 21073 | Capture_Time:Graphite,15,1529|
+13:19:27     INFO -  PID 21073 | Cycle 1(15): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:27     INFO -  PID 21073 | Waiting for idle-callback
+13:19:30     INFO -  PID 21073 | Capture_Time:Graphite,16,1530|
+13:19:30     INFO -  PID 21073 | Cycle 1(16): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:30     INFO -  PID 21073 | Waiting for idle-callback
+13:19:32     INFO -  PID 21073 | Capture_Time:Graphite,17,1525|
+13:19:32     INFO -  PID 21073 | Cycle 1(17): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:32     INFO -  PID 21073 | Waiting for idle-callback
+13:19:35     INFO -  PID 21073 | Capture_Time:Graphite,18,1524|
+13:19:35     INFO -  PID 21073 | Cycle 1(18): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:37     INFO -  PID 21073 | Capture_Time:Graphite,19,1530|
+13:19:37     INFO -  PID 21073 | Cycle 1(19): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:37     INFO -  PID 21073 | Waiting for idle-callback
+13:19:39     INFO -  PID 21073 | Capture_Time:Graphite,20,1522|
+13:19:39     INFO -  PID 21073 | Cycle 1(20): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:39     INFO -  PID 21073 | Waiting for idle-callback
+13:19:42     INFO -  PID 21073 | Capture_Time:Graphite,21,1539|
+13:19:42     INFO -  PID 21073 | Cycle 1(21): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:42     INFO -  PID 21073 | Waiting for idle-callback
+13:19:44     INFO -  PID 21073 | Capture_Time:Graphite,22,1519|
+13:19:44     INFO -  PID 21073 | Cycle 1(22): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:44     INFO -  PID 21073 | Waiting for idle-callback
+13:19:47     INFO -  PID 21073 | Capture_Time:Graphite,23,1749|
+13:19:47     INFO -  PID 21073 | Cycle 1(23): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:47     INFO -  PID 21073 | Waiting for idle-callback
+13:19:49     INFO -  PID 21073 | Capture_Time:Graphite,24,1556|
+13:19:49     INFO -  PID 21073 | Cycle 1(24): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:49     INFO -  PID 21073 | Waiting for idle-callback
+13:19:52     INFO -  PID 21073 | Capture_Time:Graphite,25,1561|
+13:19:52     INFO -  PID 21073 | Cycle 1(25): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:54     INFO -  PID 21073 | Capture_Time:Graphite,26,1526|
+13:19:54     INFO -  PID 21073 | Cycle 1(26): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:57     INFO -  PID 21073 | Capture_Time:Graphite,27,1540|
+13:19:57     INFO -  PID 21073 | Cycle 1(27): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:19:57     INFO -  PID 21073 | Waiting for idle-callback
+13:19:59     INFO -  PID 21073 | Capture_Time:Graphite,28,1523|
+13:19:59     INFO -  PID 21073 | Cycle 1(28): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:01     INFO -  PID 21073 | Capture_Time:Graphite,29,1528|
+13:20:01     INFO -  PID 21073 | Cycle 1(29): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:01     INFO -  PID 21073 | Waiting for idle-callback
+13:20:04     INFO -  PID 21073 | Capture_Time:Graphite,30,1552|
+13:20:04     INFO -  PID 21073 | Cycle 1(30): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:04     INFO -  PID 21073 | Waiting for idle-callback
+13:20:06     INFO -  PID 21073 | Capture_Time:Graphite,31,1528|
+13:20:06     INFO -  PID 21073 | Cycle 1(31): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:09     INFO -  PID 21073 | Capture_Time:Graphite,32,1530|
+13:20:09     INFO -  PID 21073 | Cycle 1(32): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:09     INFO -  PID 21073 | Waiting for idle-callback
+13:20:11     INFO -  PID 21073 | Capture_Time:Graphite,33,1537|
+13:20:11     INFO -  PID 21073 | Cycle 1(33): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:11     INFO -  PID 21073 | Waiting for idle-callback
+13:20:13     INFO -  PID 21073 | Capture_Time:Graphite,34,1519|
+13:20:14     INFO -  PID 21073 | Cycle 1(34): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:16     INFO -  PID 21073 | Capture_Time:Graphite,35,1534|
+13:20:16     INFO -  PID 21073 | Cycle 1(35): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:18     INFO -  PID 21073 | Capture_Time:Graphite,36,1543|
+13:20:18     INFO -  PID 21073 | Cycle 1(36): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:21     INFO -  PID 21073 | Capture_Time:Graphite,37,1539|
+13:20:21     INFO -  PID 21073 | Cycle 1(37): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:21     INFO -  PID 21073 | Waiting for idle-callback
+13:20:23     INFO -  PID 21073 | Capture_Time:Graphite,38,1522|
+13:20:23     INFO -  PID 21073 | Cycle 1(38): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:26     INFO -  PID 21073 | Capture_Time:Graphite,39,1533|
+13:20:26     INFO -  PID 21073 | Cycle 1(39): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:28     INFO -  PID 21073 | Capture_Time:Graphite,40,1539|
+13:20:28     INFO -  PID 21073 | Cycle 1(40): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:28     INFO -  PID 21073 | Waiting for idle-callback
+13:20:30     INFO -  PID 21073 | Capture_Time:Graphite,41,1536|
+13:20:30     INFO -  PID 21073 | Cycle 1(41): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:30     INFO -  PID 21073 | Waiting for idle-callback
+13:20:33     INFO -  PID 21073 | Capture_Time:Graphite,42,1522|
+13:20:33     INFO -  PID 21073 | Cycle 1(42): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:35     INFO -  PID 21073 | Capture_Time:Graphite,43,1532|
+13:20:35     INFO -  PID 21073 | Cycle 1(43): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:35     INFO -  PID 21073 | Waiting for idle-callback
+13:20:38     INFO -  PID 21073 | Capture_Time:Graphite,44,1531|
+13:20:38     INFO -  PID 21073 | Cycle 1(44): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:38     INFO -  PID 21073 | Waiting for idle-callback
+13:20:40     INFO -  PID 21073 | Capture_Time:Graphite,45,1531|
+13:20:40     INFO -  PID 21073 | Cycle 1(45): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:40     INFO -  PID 21073 | Waiting for idle-callback
+13:20:42     INFO -  PID 21073 | Capture_Time:Graphite,46,1540|
+13:20:42     INFO -  PID 21073 | Cycle 1(46): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:42     INFO -  PID 21073 | Waiting for idle-callback
+13:20:45     INFO -  PID 21073 | Capture_Time:Graphite,47,1532|
+13:20:45     INFO -  PID 21073 | Cycle 1(47): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:45     INFO -  PID 21073 | Waiting for idle-callback
+13:20:47     INFO -  PID 21073 | Capture_Time:Graphite,48,1538|
+13:20:47     INFO -  PID 21073 | Cycle 1(48): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:47     INFO -  PID 21073 | Waiting for idle-callback
+13:20:50     INFO -  PID 21073 | Capture_Time:Graphite,49,1523|
+13:20:50     INFO -  PID 21073 | Cycle 1(49): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:50     INFO -  PID 21073 | Waiting for idle-callback
+13:20:52     INFO -  PID 21073 | Capture_Time:Graphite,50,1539|
+13:20:52     INFO -  PID 21073 | Cycle 1(50): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:52     INFO -  PID 21073 | Waiting for idle-callback
+13:20:54     INFO -  PID 21073 | Capture_Time:Graphite,51,1519|
+13:20:55     INFO -  PID 21073 | Cycle 1(51): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:55     INFO -  PID 21073 | Waiting for idle-callback
+13:20:57     INFO -  PID 21073 | Capture_Time:Graphite,52,1548|
+13:20:57     INFO -  PID 21073 | Cycle 1(52): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:57     INFO -  PID 21073 | Waiting for idle-callback
+13:20:59     INFO -  PID 21073 | Capture_Time:Graphite,53,1572|
+13:20:59     INFO -  PID 21073 | Cycle 1(53): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:20:59     INFO -  PID 21073 | Waiting for idle-callback
+13:21:02     INFO -  PID 21073 | Capture_Time:Graphite,54,1537|
+13:21:02     INFO -  PID 21073 | Cycle 1(54): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:02     INFO -  PID 21073 | Waiting for idle-callback
+13:21:04     INFO -  PID 21073 | Capture_Time:Graphite,55,1534|
+13:21:04     INFO -  PID 21073 | Cycle 1(55): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:04     INFO -  PID 21073 | Waiting for idle-callback
+13:21:07     INFO -  PID 21073 | Capture_Time:Graphite,56,1529|
+13:21:07     INFO -  PID 21073 | Cycle 1(56): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:09     INFO -  PID 21073 | Capture_Time:Graphite,57,1533|
+13:21:09     INFO -  PID 21073 | Cycle 1(57): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:09     INFO -  PID 21073 | Waiting for idle-callback
+13:21:12     INFO -  PID 21073 | Capture_Time:Graphite,58,1540|
+13:21:12     INFO -  PID 21073 | Cycle 1(58): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:12     INFO -  PID 21073 | Waiting for idle-callback
+13:21:14     INFO -  PID 21073 | Capture_Time:Graphite,59,1532|
+13:21:14     INFO -  PID 21073 | Cycle 1(59): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:16     INFO -  PID 21073 | Capture_Time:Graphite,60,1526|
+13:21:16     INFO -  PID 21073 | Cycle 1(60): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:16     INFO -  PID 21073 | Waiting for idle-callback
+13:21:19     INFO -  PID 21073 | Capture_Time:Graphite,61,1519|
+13:21:19     INFO -  PID 21073 | Cycle 1(61): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:19     INFO -  PID 21073 | Waiting for idle-callback
+13:21:21     INFO -  PID 21073 | Capture_Time:Graphite,62,1537|
+13:21:21     INFO -  PID 21073 | Cycle 1(62): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:21     INFO -  PID 21073 | Waiting for idle-callback
+13:21:24     INFO -  PID 21073 | Capture_Time:Graphite,63,1533|
+13:21:24     INFO -  PID 21073 | Cycle 1(63): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:24     INFO -  PID 21073 | Waiting for idle-callback
+13:21:26     INFO -  PID 21073 | Capture_Time:Graphite,64,1537|
+13:21:26     INFO -  PID 21073 | Cycle 1(64): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:26     INFO -  PID 21073 | Waiting for idle-callback
+13:21:28     INFO -  PID 21073 | Capture_Time:Graphite,65,1538|
+13:21:29     INFO -  PID 21073 | Cycle 1(65): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:29     INFO -  PID 21073 | Waiting for idle-callback
+13:21:31     INFO -  PID 21073 | Capture_Time:Graphite,66,1532|
+13:21:31     INFO -  PID 21073 | Cycle 1(66): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:31     INFO -  PID 21073 | Waiting for idle-callback
+13:21:33     INFO -  PID 21073 | Capture_Time:Graphite,67,1536|
+13:21:33     INFO -  PID 21073 | Cycle 1(67): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:33     INFO -  PID 21073 | Waiting for idle-callback
+13:21:36     INFO -  PID 21073 | Capture_Time:Graphite,68,1538|
+13:21:36     INFO -  PID 21073 | Cycle 1(68): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:36     INFO -  PID 21073 | Waiting for idle-callback
+13:21:38     INFO -  PID 21073 | Capture_Time:Graphite,69,1525|
+13:21:38     INFO -  PID 21073 | Cycle 1(69): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:38     INFO -  PID 21073 | Waiting for idle-callback
+13:21:40     INFO -  PID 21073 | Capture_Time:Graphite,70,1528|
+13:21:41     INFO -  PID 21073 | Cycle 1(70): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:41     INFO -  PID 21073 | Waiting for idle-callback
+13:21:43     INFO -  PID 21073 | Capture_Time:Graphite,71,1527|
+13:21:43     INFO -  PID 21073 | Cycle 1(71): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:43     INFO -  PID 21073 | Waiting for idle-callback
+13:21:45     INFO -  PID 21073 | Capture_Time:Graphite,72,1521|
+13:21:45     INFO -  PID 21073 | Cycle 1(72): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:45     INFO -  PID 21073 | Waiting for idle-callback
+13:21:48     INFO -  PID 21073 | Capture_Time:Graphite,73,1529|
+13:21:48     INFO -  PID 21073 | Cycle 1(73): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:48     INFO -  PID 21073 | Waiting for idle-callback
+13:21:50     INFO -  PID 21073 | Capture_Time:Graphite,74,1529|
+13:21:50     INFO -  PID 21073 | Cycle 1(74): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:50     INFO -  PID 21073 | Waiting for idle-callback
+13:21:53     INFO -  PID 21073 | Capture_Time:Graphite,75,1537|
+13:21:53     INFO -  PID 21073 | Cycle 1(75): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:53     INFO -  PID 21073 | Waiting for idle-callback
+13:21:55     INFO -  PID 21073 | Capture_Time:Graphite,76,1538|
+13:21:55     INFO -  PID 21073 | Cycle 1(76): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:57     INFO -  PID 21073 | Capture_Time:Graphite,77,1526|
+13:21:58     INFO -  PID 21073 | Cycle 1(77): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:21:58     INFO -  PID 21073 | Waiting for idle-callback
+13:22:00     INFO -  PID 21073 | Capture_Time:Graphite,78,1525|
+13:22:00     INFO -  PID 21073 | Cycle 1(78): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:00     INFO -  PID 21073 | Waiting for idle-callback
+13:22:02     INFO -  PID 21073 | Capture_Time:Graphite,79,1522|
+13:22:02     INFO -  PID 21073 | Cycle 1(79): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:02     INFO -  PID 21073 | Waiting for idle-callback
+13:22:05     INFO -  PID 21073 | Capture_Time:Graphite,80,1520|
+13:22:05     INFO -  PID 21073 | Cycle 1(80): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:05     INFO -  PID 21073 | Waiting for idle-callback
+13:22:07     INFO -  PID 21073 | Capture_Time:Graphite,81,1542|
+13:22:07     INFO -  PID 21073 | Cycle 1(81): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:07     INFO -  PID 21073 | Waiting for idle-callback
+13:22:10     INFO -  PID 21073 | Capture_Time:Graphite,82,1529|
+13:22:10     INFO -  PID 21073 | Cycle 1(82): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:12     INFO -  PID 21073 | Capture_Time:Graphite,83,1538|
+13:22:12     INFO -  PID 21073 | Cycle 1(83): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:12     INFO -  PID 21073 | Waiting for idle-callback
+13:22:14     INFO -  PID 21073 | Capture_Time:Graphite,84,1526|
+13:22:14     INFO -  PID 21073 | Cycle 1(84): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:14     INFO -  PID 21073 | Waiting for idle-callback
+13:22:17     INFO -  PID 21073 | Capture_Time:Graphite,85,1523|
+13:22:17     INFO -  PID 21073 | Cycle 1(85): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:17     INFO -  PID 21073 | Waiting for idle-callback
+13:22:19     INFO -  PID 21073 | Capture_Time:Graphite,86,1531|
+13:22:19     INFO -  PID 21073 | Cycle 1(86): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:19     INFO -  PID 21073 | Waiting for idle-callback
+13:22:22     INFO -  PID 21073 | Capture_Time:Graphite,87,1553|
+13:22:22     INFO -  PID 21073 | Cycle 1(87): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:24     INFO -  PID 21073 | Capture_Time:Graphite,88,1521|
+13:22:24     INFO -  PID 21073 | Cycle 1(88): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:24     INFO -  PID 21073 | Waiting for idle-callback
+13:22:26     INFO -  PID 21073 | Capture_Time:Graphite,89,1539|
+13:22:27     INFO -  PID 21073 | Cycle 1(89): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:27     INFO -  PID 21073 | Waiting for idle-callback
+13:22:29     INFO -  PID 21073 | Capture_Time:Graphite,90,1533|
+13:22:29     INFO -  PID 21073 | Cycle 1(90): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:29     INFO -  PID 21073 | Waiting for idle-callback
+13:22:31     INFO -  PID 21073 | Capture_Time:Graphite,91,1539|
+13:22:31     INFO -  PID 21073 | Cycle 1(91): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:31     INFO -  PID 21073 | Waiting for idle-callback
+13:22:34     INFO -  PID 21073 | Capture_Time:Graphite,92,1526|
+13:22:34     INFO -  PID 21073 | Cycle 1(92): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:34     INFO -  PID 21073 | Waiting for idle-callback
+13:22:36     INFO -  PID 21073 | Capture_Time:Graphite,93,1545|
+13:22:36     INFO -  PID 21073 | Cycle 1(93): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:36     INFO -  PID 21073 | Waiting for idle-callback
+13:22:39     INFO -  PID 21073 | Capture_Time:Graphite,94,1519|
+13:22:39     INFO -  PID 21073 | Cycle 1(94): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:39     INFO -  PID 21073 | Waiting for idle-callback
+13:22:41     INFO -  PID 21073 | Capture_Time:Graphite,95,1529|
+13:22:41     INFO -  PID 21073 | Cycle 1(95): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:43     INFO -  PID 21073 | Capture_Time:Graphite,96,1543|
+13:22:43     INFO -  PID 21073 | Cycle 1(96): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:46     INFO -  PID 21073 | Capture_Time:Graphite,97,1522|
+13:22:46     INFO -  PID 21073 | Cycle 1(97): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:46     INFO -  PID 21073 | Waiting for idle-callback
+13:22:48     INFO -  PID 21073 | Capture_Time:Graphite,98,1538|
+13:22:48     INFO -  PID 21073 | Cycle 1(98): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:51     INFO -  PID 21073 | Capture_Time:Graphite,99,1538|
+13:22:51     INFO -  PID 21073 | Cycle 1(99): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:51     INFO -  PID 21073 | Waiting for idle-callback
+13:22:53     INFO -  PID 21073 | Capture_Time:Graphite,100,1535|
+13:22:53     INFO -  PID 21073 | Cycle 1(100): loaded http://127.0.0.1:59601/tests/graphite_perf_test/index.html (next: http://127.0.0.1:59601/tests/graphite_perf_test/index.html)
+13:22:53     INFO -  PID 21073 | __start_tp_report
+13:22:53     INFO -  PID 21073 | _x_x_mozilla_page_load
+13:22:53     INFO -  PID 21073 | _x_x_mozilla_page_load_details
+13:22:53     INFO -  PID 21073 | |i|pagename|runs|
+13:22:53     INFO -  PID 21073 | |0;/index.html;3246.8598439999996;2198.1722930000005;2132.5386370000006;2131.234485000001;2095.833138;2087.3501670000005;2134.364028;2084.873542000001;2064.231338000005;2063.222883999999;2115.2371390000008;2047.9074369999944;2063.073209000002;2062.7167160000026;2059.834692000004;2060.123897000005;2066.022060999996;2050.1348790000047;2064.1917170000015;2057.4480079999994;2108.9168280000013;2076.381653999997;2291.3151199999993;2102.0515280000036;2089.318532999998;2060.0166360000003;2061.354804000017;2054.355158999999;2041.1075539999874;2079.742204000024;2078.046583000003;2045.9234769999894;2063.228887999998;2031.8471149999823;2076.363927000013;2111.6259030000074;2063.266724000001;2032.5654670000076;2062.100961999997;2067.217446999988;2074.528224000009;2053.2442509999964;2061.1274780000094;2074.531912999999;2048.1352789999946;2073.9372259999946;2054.2315989999915;2071.9442600000184;2051.1114459999953;2097.2598629999993;2045.223662999997;2070.2339059999795;2111.9203060000145;2073.7348180000263;2067.566340999998;2106.517938999983;2079.258535000001;2069.057033000019;2078.065012999985;2066.5803379999998;2034.5813519999792;2059.490938999981;2098.8484589999716;2068.2786879999912;2072.584882999974;2050.1713159999927;2061.2350430000224;2058.6306599999953;2059.3314120000286;2084.8501800000085;2040.4042279999994;2061.817806999985;2038.779241000011;2055.816577999969;2060.4204179999942;2084.8154910000158;2058.390585999994;2052.8480469999777;2091.784149999992;2053.8874150000047;2082.6234689999837;2052.7031499999866;2063.4509160000016;2054.271240000002;2073.3640799999994;2054.8858499999915;2130.0875990000204;2054.1534469999897;2067.8596910000197;2051.637058000022;2062.3190510000277;2037.3446859999967;2083.781948000018;2052.8797119999945;2049.8904709999915;2108.849397999991;2072.625068000023;2087.4949609999894;2078.1363710000005;2087.299831000011
+13:22:53     INFO -  PID 21073 | __end_tp_report
+13:22:53     INFO -  PID 21073 | __start_cc_report
+13:22:53     INFO -  PID 21073 | _x_x_mozilla_cycle_collect,7515.365192000036
+13:22:53     INFO -  PID 21073 | __end_cc_report
+13:22:53     INFO -  PID 21073 | __startTimestamp244899.843846__endTimestamp
+13:22:53     INFO -  PID 21073 |
+13:22:53     INFO -  PID 21073 | ------- Summary: start -------
+13:22:53     INFO -  PID 21073 | Number of tests: 1
+13:22:53     INFO -  PID 21073 |
+13:22:53     INFO -  PID 21073 | [#0] /index.html  Cycles:100  Average:2085.63  Median:2066.30  stddev:122.04 (5.9%)  stddev-sans-first:33.87
+13:22:53     INFO -  PID 21073 | Values: 3246.9  2198.2  2132.5  2131.2  2095.8  2087.4  2134.4  2084.9  2064.2  2063.2  2115.2  2047.9  2063.1  2062.7  2059.8  2060.1  2066.0  2050.1  2064.2  2057.4  2108.9  2076.4  2291.3  2102.1  2089.3  2060.0  2061.4  2054.4  2041.1  2079.7  2078.0  2045.9  2063.2  2031.8  2076.4  2111.6  2063.3  2032.6  2062.1  2067.2  2074.5  2053.2  2061.1  2074.5  2048.1  2073.9  2054.2  2071.9  2051.1  2097.3  2045.2  2070.2  2111.9  2073.7  2067.6  2106.5  2079.3  2069.1  2078.1  2066.6  2034.6  2059.5  2098.8  2068.3  2072.6  2050.2  2061.2  2058.6  2059.3  2084.9  2040.4  2061.8  2038.8  2055.8  2060.4  2084.8  2058.4  2052.8  2091.8  2053.9  2082.6  2052.7  2063.5  2054.3  2073.4  2054.9  2130.1  2054.2  2067.9  2051.6  2062.3  2037.3  2083.8  2052.9  2049.9  2108.8  2072.6  2087.5  2078.1  2087.3
+13:22:53     INFO -  PID 21073 | -------- Summary: end --------
+13:22:53     INFO -  PID 21073 |
+13:22:54     INFO -  TEST-INFO | 21073: exit 0
+13:22:54     INFO -  mozcrash checking /tmp/tmpU1g5wm/profile/minidumps for minidumps...
+13:22:54     INFO -  TEST-OK | graphite_perf_test | took 256811ms
+13:22:54     INFO -  SUITE-END | took 256s
+13:22:54     INFO -  Completed test suite (00:04:17)
+13:22:54     INFO -  PERFHERDER_DATA: {"framework": {"name": "talos"}, "suites": [{"extraOptions": ["e10s", "stylo"], "name": "graphite_perf_test", "lowerIsBetter": true, "alertThreshold": 2.0, "shouldAlert": true, "subtests": [{"value": 2063.4509160000016, "name": "", "lowerIsBetter": true, "alertThreshold": 2.0, "replicates": [3246.8598439999996, 2198.1722930000005, 2132.5386370000006, 2131.234485000001, 2095.833138, 2087.3501670000005, 2134.364028, 2084.873542000001, 2064.231338000005, 2063.222883999999, 2115.2371390000008, 2047.9074369999944, 2063.073209000002, 2062.7167160000026, 2059.834692000004, 2060.123897000005, 2066.022060999996, 2050.1348790000047, 2064.1917170000015, 2057.4480079999994, 2108.9168280000013, 2076.381653999997, 2291.3151199999993, 2102.0515280000036, 2089.318532999998, 2060.0166360000003, 2061.354804000017, 2054.355158999999, 2041.1075539999874, 2079.742204000024, 2078.046583000003, 2045.9234769999894, 2063.228887999998, 2031.8471149999823, 2076.363927000013, 2111.6259030000074, 2063.266724000001, 2032.5654670000076, 2062.100961999997, 2067.217446999988, 2074.528224000009, 2053.2442509999964, 2061.1274780000094, 2074.531912999999, 2048.1352789999946, 2073.9372259999946, 2054.2315989999915, 2071.9442600000184, 2051.1114459999953, 2097.2598629999993, 2045.223662999997, 2070.2339059999795, 2111.9203060000145, 2073.7348180000263, 2067.566340999998, 2106.517938999983, 2079.258535000001, 2069.057033000019, 2078.065012999985, 2066.5803379999998, 2034.5813519999792, 2059.490938999981, 2098.8484589999716, 2068.2786879999912, 2072.584882999974, 2050.1713159999927, 2061.2350430000224, 2058.6306599999953, 2059.3314120000286, 2084.8501800000085, 2040.4042279999994, 2061.817806999985, 2038.779241000011, 2055.816577999969, 2060.4204179999942, 2084.8154910000158, 2058.390585999994, 2052.8480469999777, 2091.784149999992, 2053.8874150000047, 2082.6234689999837, 2052.7031499999866, 2063.4509160000016, 2054.271240000002, 2073.3640799999994, 2054.8858499999915, 2130.0875990000204, 2054.1534469999897, 2067.8596910000197, 2051.637058000022, 2062.3190510000277, 2037.3446859999967, 2083.781948000018, 2052.8797119999945, 2049.8904709999915, 2108.849397999991, 2072.625068000023, 2087.4949609999894, 2078.1363710000005, 2087.299831000011], "shouldAlert": false, "unit": "ms"}]}]}
+13:22:54     INFO -  Thanks for running Talos locally. Results are in ['/local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/build/local.json']
+13:22:54     INFO - Return code: 0
+13:22:54     INFO - Validating PERFHERDER_DATA against /local/shr/zerocost_root/zerocost_testing_firefox/testing/mozharness/external_tools/performance-artifact-schema.json
+13:22:54     INFO - # TBPL SUCCESS #
+13:22:54     INFO - Running post-action listener: _package_coverage_data
+13:22:54     INFO - Running post-action listener: _resource_record_post_action
+13:22:54     INFO - Running post-action listener: process_java_coverage_data
+13:22:54     INFO - [mozharness: 2020-12-02 13:22:54.799510Z] Finished run-tests step (success)
+13:22:54     INFO - Running post-run listener: _resource_record_post_run
+13:22:54     INFO - Total resource usage - Wall time: 257s; CPU: 3.0%; Read bytes: 0; Write bytes: 336378880; Read time: 0; Write time: 14378
+13:22:54     INFO - TinderboxPrint: CPU usage<br/>2.9%
+13:22:54     INFO - TinderboxPrint: I/O read bytes / time<br/>0 / 0
+13:22:54     INFO - TinderboxPrint: I/O write bytes / time<br/>336,378,880 / 14,378
+13:22:54     INFO - TinderboxPrint: CPU idle<br/>7,994.9 (97.1%)
+13:22:54     INFO - TinderboxPrint: CPU user<br/>219.7 (2.7%)
+13:22:54     INFO - TinderboxPrint: Swap in / out<br/>0 / 0
+13:22:54     INFO - run-tests - Wall time: 258s; CPU: 3.0%; Read bytes: 0; Write bytes: 336378880; Read time: 0; Write time: 14378
