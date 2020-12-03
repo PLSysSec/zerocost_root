@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_sandboxing_api zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
 
 CURR_DIR := $(shell realpath ./)
 CURR_USER := ${USER}
@@ -46,6 +46,9 @@ zerocost_testing_firefox:
 web_resource_crawler:
 	git clone git@github.com:shravanrn/web_resource_crawler.git $@
 	cd $@ && git checkout zerocost
+
+rlbox_lucet_directcall_benchmarks:
+	git clone git@github.com:PLSysSec/rlbox_lucet_directcall_benchmarks.git $@
 
 get_source: $(DIRS)
 
@@ -93,12 +96,13 @@ build:
 		exit 1; \
 	fi
 	cd lucet_sandbox_compiler && cargo build --release
-	cd rlbox_lucet_sandbox       && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd zerocost_testing_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_sandboxing_api      && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_mpkzerocost_sandbox         && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_sandboxing_api              && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
@@ -116,12 +120,13 @@ build_debug:
 		exit 1; \
 	fi
 	cd lucet_sandbox_compiler && cargo build --release
-	cd rlbox_lucet_sandbox       && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd zerocost_testing_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_lucetstock_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_mpk_sandbox         && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_mpkzerocost_sandbox && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_sandboxing_api      && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd zerocost_testing_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_mpkzerocost_sandbox         && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_sandboxing_api              && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
@@ -160,25 +165,7 @@ benchmark_env_close: restore_hyperthreading shielding_off
 
 micro_transition_benchmark: benchmark_env_setup
 	echo > ./benchmarks/micro_transition_benchmark.txt
-	echo "---------"
-	sleep 1
-	echo "Transition: Zero"     | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd rlbox_lucet_sandbox/build_release       && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
-	sleep 1
-	echo "Transition: Heavy"    | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd zerocost_testing_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
-	sleep 1
-	echo "Transition: Lucet"    | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd rlbox_lucetstock_sandbox/build_release  && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
-	sleep 1
-	echo "Transition: Mpkheavy" | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd rlbox_mpk_sandbox/build_release         && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
-	sleep 1
-	echo "Transition: Mpkzero"  | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd rlbox_mpkzerocost_sandbox/build_release && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
-	sleep 1
-	echo "Transition: NoOp"     | tee -a ./benchmarks/micro_transition_benchmark.txt
-	cd rlbox_sandboxing_api/build_release      && taskset -c 1 ctest -V | tee -a $(CURR_DIR)/benchmarks/micro_transition_benchmark.txt
+	taskset -c 1 ./run_transitions_benchmark.sh | tee -a ./benchmarks/micro_transition_benchmark.txt
 	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
 	cat ./benchmarks/micro_transition_benchmark.txt | \
 		grep "\(Transition:\)\|\(Filters: sandbox glue tests\)\|\(time:\)" | \
