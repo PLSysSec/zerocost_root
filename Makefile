@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
 CURR_USER := ${USER}
@@ -33,6 +33,9 @@ rlbox_mpkzerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
 	cd $@ && git checkout zerocost
 
+rlbox_segmentsfizerocost_sandbox:
+	git clone git@github.com:PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
+
 rlbox_sandboxing_api:
 	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
 	cd $@ && git checkout gettimeofday
@@ -50,15 +53,28 @@ web_resource_crawler:
 rlbox_lucet_directcall_benchmarks:
 	git clone git@github.com:PLSysSec/rlbox_lucet_directcall_benchmarks.git $@
 
+zerocost_llvm:
+	git clone https://github.com/llvm/llvm-project.git $@
+
+$(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
+	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
+	cd $(OUTPUT_PATH)/zerocost_llvm && \
+	cmake -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
+		  -DLLVM_TARGETS_TO_BUILD="X86" \
+		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
+		  -DCMAKE_BUILD_TYPE=Debug \
+		  $(CURR_DIR)/zerocost_llvm/llvm && \
+	$(MAKE) -j8
+
 get_source: $(DIRS)
 
 bootstrap: get_source
 	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset; \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset; \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset; \
+		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
@@ -84,17 +100,25 @@ pull: $(DIRS)
 	cd rlbox_lucetstock_sandbox && git pull
 	cd rlbox_mpk_sandbox && git pull
 	cd rlbox_mpkzerocost_sandbox && git pull
+	cd rlbox_segmentsfizerocost_sandbox && git pull
 	cd rlbox_sandboxing_api && git pull
 	cd zerocost-libjpeg-turbo && git pull
 	cd zerocost_testing_firefox && git pull
+	cd web_resource_crawler && git pull
+	cd rlbox_lucet_directcall_benchmarks && git pull
+	cd zerocost_llvm && git pull
 
-build:
+build_check:
 	@if [ ! -e "$(CURR_DIR)/bootstrap" ]; then \
 		echo "Before building, run the following commands" ; \
 		echo "make bootstrap" ; \
 		echo "source ~/.profile" ; \
 		exit 1; \
 	fi
+
+zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
+
+build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
 	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
@@ -189,5 +213,5 @@ macro_graphite_benchmark: benchmark_env_setup
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
 
 clean:
-	-rm -rf ./ff_builds
+	-rm -rf $(OUTPUT_PATH)
 
