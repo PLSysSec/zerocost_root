@@ -54,7 +54,7 @@ rlbox_lucet_directcall_benchmarks:
 	git clone git@github.com:PLSysSec/rlbox_lucet_directcall_benchmarks.git $@
 
 zerocost_llvm:
-	git clone https://github.com/llvm/llvm-project.git $@
+	git clone git@github.com:PLSysSec/zerocost_llvm.git $@
 
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
