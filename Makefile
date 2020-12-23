@@ -8,6 +8,7 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
+OUTPUT_PATH := $(CURR_DIR)/../ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -70,11 +71,11 @@ get_source: $(DIRS)
 
 bootstrap: get_source
 	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib; \
+		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
@@ -82,6 +83,7 @@ bootstrap: get_source
 	if [ ! -x "$(shell command -v rustc)" ] ; then \
 		curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.43.0 -y; \
 	fi
+	rustup target install i686-unknown-linux-gnu
 	if [ ! -d /opt/wasi-sdk/ ]; then \
 		wget https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/wasi-sdk-10.0-linux.tar.gz -P /tmp/ && \
 		tar -xzf /tmp/wasi-sdk-10.0-linux.tar.gz && \
@@ -127,6 +129,7 @@ build: build_check zerocost_clang
 	cd rlbox_mpkzerocost_sandbox         && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd rlbox_sandboxing_api              && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
+	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
@@ -135,6 +138,8 @@ build: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
 
 build_debug:
 	@if [ ! -e "$(CURR_DIR)/bootstrap" ]; then \
@@ -151,6 +156,7 @@ build_debug:
 	cd rlbox_mpkzerocost_sandbox         && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_sandboxing_api              && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
+	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
@@ -159,6 +165,8 @@ build_debug:
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
 
 run_xvfb:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
