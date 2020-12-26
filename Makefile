@@ -141,13 +141,7 @@ build: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
 
-build_debug:
-	@if [ ! -e "$(CURR_DIR)/bootstrap" ]; then \
-		echo "Before building, run the following commands" ; \
-		echo "make bootstrap" ; \
-		echo "source ~/.profile" ; \
-		exit 1; \
-	fi
+build_debug: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
 	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost_testing_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
@@ -158,15 +152,15 @@ build_debug:
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
 
 run_xvfb:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
