@@ -8,7 +8,7 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
-OUTPUT_PATH := $(CURR_DIR)/../ffbuilds
+OUTPUT_PATH := $(CURR_DIR)/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
