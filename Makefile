@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm nodejs-sandboxed
 
 CURR_DIR := $(shell realpath ./)
 OUTPUT_PATH := $(CURR_DIR)/ffbuilds
@@ -57,6 +57,12 @@ rlbox_lucet_directcall_benchmarks:
 zerocost_llvm:
 	git clone git@github.com:PLSysSec/zerocost_llvm.git $@
 
+nginx:
+	wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1i.tar.gz -O openssl.tar.gz
+	tar xzvf openssl.tar.gz
+	mv openssl-OpenSSL_1_1_1i openssl
+	git clone git@github.com:PLSysSec/nginx-sandboxed.git nginx
+
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
 	cd $(OUTPUT_PATH)/zerocost_llvm && \
@@ -67,15 +73,19 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
 	$(MAKE) -j8
 
+nodejs-sandboxed:
+	git clone git@github.com:PLSysSec/nodejs-sandboxed.git $@
+	cd $@ && CC=clang CXX=clang++ ./configure --debug
+
 get_source: $(DIRS)
 
 bootstrap: get_source
 	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 nghttp2-client; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 nghttp2-client; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386; \
+		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 nghttp2-client; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
@@ -131,6 +141,8 @@ build: build_check zerocost_clang
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build
+	# cd nginx && CFLAGS="-O3 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_release && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
+	cd nodejs-sandboxed && make -j8
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
@@ -152,15 +164,17 @@ build_debug: build_check zerocost_clang
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
-	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
+	# cd nginx && CFLAGS="-g -O0 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_debug  && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
+	cd nodejs-sandboxed && make -j8
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
 
 run_xvfb:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
