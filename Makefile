@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm nodejs-sandboxed
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm node-sandboxed
 
 CURR_DIR := $(shell realpath ./)
 OUTPUT_PATH := $(CURR_DIR)/ffbuilds
@@ -73,7 +73,7 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
 	$(MAKE) -j8
 
-nodejs-sandboxed:
+node-sandboxed:
 	git clone git@github.com:PLSysSec/nodejs-sandboxed.git $@
 	cd $@ && CC=clang CXX=clang++ ./configure --debug
 
