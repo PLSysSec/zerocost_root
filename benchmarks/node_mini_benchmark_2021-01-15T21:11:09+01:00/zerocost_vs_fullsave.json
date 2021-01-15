@@ -1,0 +1,531 @@
+{
+  "express": {
+    "requests": {
+      "valid": false,
+      "difference": "-5.84%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-5.83%",
+      "pValue": 1.4117221343274097e-23,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "6.28%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "spirit": {
+    "requests": {
+      "valid": false,
+      "difference": "-1.05%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-1.05%",
+      "pValue": 0.016601295466868705,
+      "significant": "*"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "1.1%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "micro-route": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "vapr": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "connect-router": {
+    "requests": {
+      "valid": false,
+      "difference": "-6.76%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-6.77%",
+      "pValue": 2.274405042657812e-17,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "7.41%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "connect": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "micro": {
+    "requests": {
+      "valid": false,
+      "difference": "-6.67%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-6.68%",
+      "pValue": 4.17430417554297e-14,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "7.33%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "fastify": {
+    "requests": {
+      "valid": false,
+      "difference": "-1.58%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-1.58%",
+      "pValue": 0.03731382016970634,
+      "significant": "*"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "1.6%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "trek-engine": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "express-route-prefix": {
+    "requests": {
+      "valid": false,
+      "difference": "-7.22%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-7.22%",
+      "pValue": 1.8004634087821187e-27,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "7.93%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "polka": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "0http": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "polkadot": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "microrouter": {
+    "requests": {
+      "valid": false,
+      "difference": "-2.64%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-2.63%",
+      "pValue": 8.82505266381453e-11,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "2.73%",
+      "pValue": 1.4516267305574616e-105,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "restana": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "yeps": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "fastify-big-json": {
+    "requests": {
+      "valid": false,
+      "difference": "-3.26%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-3.26%",
+      "pValue": 7.779855998232427e-05,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "3.43%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "spirit-router": {
+    "requests": {
+      "valid": false,
+      "difference": "2.27%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "2.27%",
+      "pValue": 0.08181404449522042,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "-2.36%",
+      "pValue": 2.8915883431605187e-179,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "express-with-middlewares": {
+    "requests": {
+      "valid": false,
+      "difference": "-6.56%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-6.56%",
+      "pValue": 5.963937884528713e-24,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "7.14%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "yeps-router": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "trek-router": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "total.js": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "bare": {
+    "requests": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "NaN%",
+      "pValue": null,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  }
+}
