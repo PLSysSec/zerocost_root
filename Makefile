@@ -72,7 +72,7 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
 		  -DCMAKE_BUILD_TYPE=Debug \
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
-	$(MAKE) -j8
+	$(MAKE) -j8 install
 
 node-sandboxed:
 	git clone git@github.com:PLSysSec/nodejs-sandboxed.git $@
