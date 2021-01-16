@@ -66,8 +66,8 @@ nginx:
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
 	cd $(OUTPUT_PATH)/zerocost_llvm && \
-	cmake -DCMAKE_C_COMPILER=clang-11 -DCMAKE_CXX_COMPILER=clang++-11 \
-                  -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
+	cmake -DCMAKE_C_FLAGS="-fuse-ld=gold" -DCMAKE_CXX_FLAGS="-fuse-ld=gold" \
+		  -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
 		  -DLLVM_TARGETS_TO_BUILD="X86" \
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
 		  -DCMAKE_BUILD_TYPE=Debug \
