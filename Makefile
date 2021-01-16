@@ -69,6 +69,7 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	cmake -DCMAKE_C_FLAGS="-fuse-ld=gold" -DCMAKE_CXX_FLAGS="-fuse-ld=gold" \
 		  -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
 		  -DLLVM_TARGETS_TO_BUILD="X86" \
+		  -DLLVM_BINUTILS_INCDIR=/usr/include/ \
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
 		  -DCMAKE_BUILD_TYPE=Debug \
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
