@@ -1,0 +1,13 @@
+Test,,../../zerocost-nodejs-benchmarks/curr_results/zerocost_vs_fullsave,
+
+, Thru, Lat, TailLat
+connect-router, -4.01%(n), 4.26%(n), -2.44%
+express, -3.36%(n), 3.44%(n), -4.55%
+express-route-prefix, -5.61%(n), 5.98%(n), -4.55%
+express-with-middlewares, -4.1%(n), 4.47%(n), -4.55%
+fastify, -1.22%(n), 1.26%(n), 8.97%
+fastify-big-json, -1.24%(y), 1.26%(n), 12.5%
+micro, -3.08%(n), 3.3%(n), -2.94%
+microrouter, -3.29%(n), -0.06%(y), -3.33%
+spirit, -2.18%(n), 2.31%(n), -2.86%
+spirit-router, -1.92%(y), 1.8%(n), -1.22%

@@ -1,0 +1,20 @@
+- Started connect-router
+✔ Results saved for connect-router
+- Started express
+✔ Results saved for express
+- Started express-route-prefix
+✔ Results saved for express-route-prefix
+- Started express-with-middlewares
+✔ Results saved for express-with-middlewares
+- Started fastify
+✔ Results saved for fastify
+- Started fastify-big-json
+✔ Results saved for fastify-big-json
+- Started micro
+✔ Results saved for micro
+- Started microrouter
+✔ Results saved for microrouter
+- Started spirit
+✔ Results saved for spirit
+- Started spirit-router
+✔ Results saved for spirit-router

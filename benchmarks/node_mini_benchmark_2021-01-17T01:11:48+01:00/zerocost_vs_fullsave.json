@@ -1,0 +1,232 @@
+{
+  "express-route-prefix": {
+    "requests": {
+      "valid": false,
+      "difference": "-5.61%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-5.61%",
+      "pValue": 6.03942657774336e-20,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "5.98%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": true,
+    "equal": false
+  },
+  "spirit-router": {
+    "requests": {
+      "valid": false,
+      "difference": "-1.91%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": true,
+      "difference": "-1.92%",
+      "pValue": 0.10163271679018736,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "1.8%",
+      "pValue": 3.8219661877427495e-103,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "spirit": {
+    "requests": {
+      "valid": false,
+      "difference": "-2.18%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-2.18%",
+      "pValue": 4.618651633287337e-06,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "2.31%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "fastify": {
+    "requests": {
+      "valid": false,
+      "difference": "-1.23%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-1.22%",
+      "pValue": 0.09954183234089763,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "1.26%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "express-with-middlewares": {
+    "requests": {
+      "valid": false,
+      "difference": "-4.1%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-4.1%",
+      "pValue": 1.7624282248008094e-12,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "4.47%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "micro": {
+    "requests": {
+      "valid": false,
+      "difference": "-3.08%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-3.08%",
+      "pValue": 2.0954957458831047e-05,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "3.3%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "fastify-big-json": {
+    "requests": {
+      "valid": false,
+      "difference": "-1.24%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": true,
+      "difference": "-1.24%",
+      "pValue": 0.12076627585996962,
+      "significant": ""
+    },
+    "latency": {
+      "valid": false,
+      "difference": "1.26%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "connect-router": {
+    "requests": {
+      "valid": false,
+      "difference": "-4.02%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-4.01%",
+      "pValue": 5.987988684205038e-08,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "4.26%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "express": {
+    "requests": {
+      "valid": false,
+      "difference": "-3.36%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-3.36%",
+      "pValue": 2.3965392641866017e-11,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": false,
+      "difference": "3.44%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  },
+  "microrouter": {
+    "requests": {
+      "valid": false,
+      "difference": "-3.3%",
+      "pValue": 0,
+      "significant": "***"
+    },
+    "throughput": {
+      "valid": false,
+      "difference": "-3.29%",
+      "pValue": 4.857115566663403e-14,
+      "significant": "***"
+    },
+    "latency": {
+      "valid": true,
+      "difference": "-0.06%",
+      "pValue": 0.6146841326119622,
+      "significant": ""
+    },
+    "aWins": false,
+    "bWins": false,
+    "equal": true
+  }
+}
