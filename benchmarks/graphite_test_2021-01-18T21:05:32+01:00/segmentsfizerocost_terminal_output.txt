@@ -1,0 +1,1 @@
+Failed to run test zerocost for /local/shr/zerocost_root/benchmarks/graphite_test_2021-01-18T21:05:32+01:00/segmentsfizerocost.
