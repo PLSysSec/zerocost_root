@@ -1,0 +1,354 @@
+20:57:56     INFO - ConsoleLogger online at 20210118 20:57:56Z in /home/shr/Code/zerocost/zerocost_testing_firefox
+20:57:56     INFO - Run as ./mach talos-test --activeTests graphite_perf_test
+20:57:56     INFO - Dumping config to /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/logs/localconfig.json.
+20:57:56     INFO - {'append_to_log': False,
+20:57:56     INFO -  u'base_work_dir': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness',
+20:57:56     INFO -  u'binary_path': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox',
+20:57:56     INFO -  'code_coverage': False,
+20:57:56     INFO -  'config_files': (),
+20:57:56     INFO -  u'default_actions': (u'populate-webroot', u'create-virtualenv', u'run-tests'),
+20:57:56     INFO -  'disable_ccov_upload': False,
+20:57:56     INFO -  'e10s': True,
+20:57:56     INFO -  'enable_fission': False,
+20:57:56     INFO -  'enable_webrender': False,
+20:57:56     INFO -  u'exes': {u'python': u'/home/shr/.mozbuild/_virtualenvs/mach_py2/bin/python',
+20:57:56     INFO -            u'virtualenv': (u'/home/shr/.mozbuild/_virtualenvs/mach_py2/bin/python',
+20:57:56     INFO -                            u'/home/shr/Code/zerocost/zerocost_testing_firefox/third_party/python/virtualenv/virtualenv.py')},
+20:57:56     INFO -  'extra_prefs': (),
+20:57:56     INFO -  'find_links': ('https://pypi.pub.build.mozilla.org/pub',),
+20:57:56     INFO -  'gecko_profile': False,
+20:57:56     INFO -  'gecko_profile_interval': 0,
+20:57:56     INFO -  'java_code_coverage': False,
+20:57:56     INFO -  'log_level': 'info',
+20:57:56     INFO -  u'log_name': u'talos',
+20:57:56     INFO -  'log_to_console': True,
+20:57:56     INFO -  u'obj_path': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release',
+20:57:56     INFO -  'opt_config_files': (),
+20:57:56     INFO -  'per_test_coverage': False,
+20:57:56     INFO -  'pip_index': False,
+20:57:56     INFO -  u'pypi_url': u'http://pypi.python.org/simple',
+20:57:56     INFO -  u'python3_manifest': {u'win32': u'python3.manifest',
+20:57:56     INFO -                        u'win64': u'python3_x64.manifest'},
+20:57:56     INFO -  u'repo_path': u'/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:57:56     INFO -  u'run_local': True,
+20:57:56     INFO -  'system_bits': '32',
+20:57:56     INFO -  u'talos_extra_options': (u'--develop',
+20:57:56     INFO -                           u'--activeTests',
+20:57:56     INFO -                           u'graphite_perf_test'),
+20:57:56     INFO -  u'talos_json': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos.json',
+20:57:56     INFO -  u'title': u'shr-Desktop',
+20:57:56     INFO -  'use_talos_json': False,
+20:57:56     INFO -  'verify': False,
+20:57:56     INFO -  u'virtualenv_path': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv',
+20:57:56     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+20:57:56     INFO -  'work_dir': 'build'}
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.517172Z] Skipping clobber step.
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.517218Z] Skipping download-and-extract step.
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.517260Z] Running populate-webroot step.
+20:57:56     INFO - Running pre-action listener: _resource_record_pre_action
+20:57:56     INFO - Running main action method: populate_webroot
+20:57:56     INFO - {u'suites': {u'bcv': {u'tests': [u'basic_compositor_video']},
+20:57:56     INFO -              u'chromez': {u'tests': [u'about_preferences_basic',
+20:57:56     INFO -                                      u'tresize',
+20:57:56     INFO -                                      u'about_newtab_with_snippets']},
+20:57:56     INFO -              u'damp': {u'pagesets_name': u'tp5n.zip', u'tests': [u'damp']},
+20:57:56     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css', u'kraken']},
+20:57:56     INFO -              u'flex': {u'tests': [u'tart_flex', u'ts_paint_flex']},
+20:57:56     INFO -              u'g1': {u'pagesets_name': u'tp5n.zip',
+20:57:56     INFO -                      u'tests': [u'tp5o_scroll']},
+20:57:56     INFO -              u'g3': {u'tests': [u'dromaeo_dom']},
+20:57:56     INFO -              u'g4': {u'tests': [u'displaylist_mutate',
+20:57:56     INFO -                                 u'rasterflood_svg',
+20:57:56     INFO -                                 u'rasterflood_gradient']},
+20:57:56     INFO -              u'g5': {u'pagesets_name': u'tp5n.zip',
+20:57:56     INFO -                      u'tests': [u'ts_paint_webext', u'tp5o_webext']},
+20:57:56     INFO -              u'h1': {u'tests': [u'ts_paint_heavy']},
+20:57:56     INFO -              u'motionmark': {u'benchmark_zip': u'jetstream.zip',
+20:57:56     INFO -                              u'tests': [u'motionmark_animometer',
+20:57:56     INFO -                                         u'motionmark_htmlsuite',
+20:57:56     INFO -                                         u'JetStream',
+20:57:56     INFO -                                         u'ARES6']},
+20:57:56     INFO -              u'other': {u'_comment': u'Bug 1220362 - Disabled startup_about_home_paint_cached for high frequency intermittents',
+20:57:56     INFO -                         u'tests': [u'a11yr',
+20:57:56     INFO -                                    u'ts_paint',
+20:57:56     INFO -                                    u'twinopen',
+20:57:56     INFO -                                    u'sessionrestore',
+20:57:56     INFO -                                    u'sessionrestore_no_auto_restore',
+20:57:56     INFO -                                    u'tabpaint',
+20:57:56     INFO -                                    u'cpstartup',
+20:57:56     INFO -                                    u'startup_about_home_paint',
+20:57:56     INFO -                                    u'pdfpaint']},
+20:57:56     INFO -              u'perf-reftest': {u'tests': [u'perf_reftest']},
+20:57:56     INFO -              u'perf-reftest-singletons': {u'tests': [u'perf_reftest_singletons']},
+20:57:56     INFO -              u'realworld-webextensions': {u'tests': [u'startup_about_home_paint_realworld_webextensions'],
+20:57:56     INFO -                                           u'webextensions_zip': u'webextensions.zip'},
+20:57:56     INFO -              u'sessionrestore-many-windows': {u'tests': [u'sessionrestore_many_windows']},
+20:57:56     INFO -              u'svgr': {u'tests': [u'tsvgx',
+20:57:56     INFO -                                   u'tsvgr_opacity',
+20:57:56     INFO -                                   u'tart',
+20:57:56     INFO -                                   u'tscrollx',
+20:57:56     INFO -                                   u'tsvg_static']},
+20:57:56     INFO -              u'tabswitch': {u'pagesets_name': u'tp5n.zip',
+20:57:56     INFO -                             u'tests': [u'tabswitch']},
+20:57:56     INFO -              u'tp5o': {u'pagesets_name': u'tp5n.zip', u'tests': [u'tp5o']},
+20:57:56     INFO -              u'webgl': {u'tests': [u'glterrain',
+20:57:56     INFO -                                    u'glvideo',
+20:57:56     INFO -                                    u'motionmark_webgl']},
+20:57:56     INFO -              u'xperf': {u'pagesets_name': u'tp5n.zip',
+20:57:56     INFO -                         u'talos_options': [u'--xperf_path',
+20:57:56     INFO -                                            u'"c:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/xperf.exe"'],
+20:57:56     INFO -                         u'tests': [u'tp5n']},
+20:57:56     INFO -              u'zerocost': {u'tests': [u'jpeg_width_perf',
+20:57:56     INFO -                                       u'jpeg_black_width_perf',
+20:57:56     INFO -                                       u'jpeg_random_width_perf',
+20:57:56     INFO -                                       u'jpeg_height_perf',
+20:57:56     INFO -                                       u'graphite_perf_test']}}}
+20:57:56     INFO - Running post-action listener: _resource_record_post_action
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.520523Z] Finished populate-webroot step (success)
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.520568Z] Running create-virtualenv step.
+20:57:56     INFO - Running pre-action listener: _resource_record_pre_action
+20:57:56     INFO - Running main action method: create_virtualenv
+20:57:56     INFO - Virtualenv already exists, skipping creation
+20:57:56     INFO - Running post-action listener: _resource_record_post_action
+20:57:56     INFO - Running post-action listener: _start_resource_monitoring
+20:57:56     INFO - Starting resource monitoring.
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.534631Z] Finished create-virtualenv step (success)
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.535193Z] Skipping install step.
+20:57:56     INFO - [mozharness: 2021-01-18 20:57:56.535277Z] Running run-tests step.
+20:57:56     INFO - Running pre-action listener: _resource_record_pre_action
+20:57:56     INFO - Running pre-action listener: _set_gcov_prefix
+20:57:56     INFO - Running main action method: run_tests
+20:57:56     INFO - Running command: [u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin/python', '--version']
+20:57:56     INFO - Copy/paste: /mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin/python --version
+20:57:56     INFO -  Python 2.7.18
+20:57:56     INFO - Return code: 0
+20:57:56     INFO - ENV: MOZ_UPLOAD_DIR is now /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+20:57:56     INFO - ENV: RUST_BACKTRACE is now full
+20:57:56     INFO - ENV: MINIDUMP_SAVE_PATH is now /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir
+20:57:56     INFO - Running command: [u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin/python', u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox', '--title', u'shr-Desktop', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] in /home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build
+20:57:56     INFO - Copy/paste: /mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin/python /home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py --executablePath /mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox --title shr-Desktop --develop --activeTests graphite_perf_test --log-tbpl-level=debug
+20:57:56     INFO - Using env: {'BROWSER_BUILD_PATH': '/mnt/sata/ffbuilds',
+20:57:56     INFO -  'CAML_LD_LIBRARY_PATH': '/home/shr/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs',
+20:57:56     INFO -  'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:57:56     INFO -  'DISPLAY': 'localhost:10.0',
+20:57:56     INFO -  'DOTNET_CLI_TELEMETRY_OPTOUT': '1',
+20:57:56     INFO -  'FSTAR_HOME': '/home/shr/Code/fstar_master/FStar',
+20:57:56     INFO -  'GOPATH': '/home/shr/go',
+20:57:56     INFO -  'HOME': '/home/shr',
+20:57:56     INFO -  'KREMLIN_HOME': '/home/shr/Code/fstar_master/kremlin',
+20:57:56     INFO -  'LANG': 'en_US.UTF-8',
+20:57:56     INFO -  'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+20:57:56     INFO -  'LESSOPEN': '| /usr/bin/lesspipe %s',
+20:57:56     INFO -  'LOGNAME': 'shr',
+20:57:56     INFO -  'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+20:57:56     INFO -  'MACH_MAIN_PID': '1798663',
+20:57:56     INFO -  'MANPATH': ':/home/shr/.opam/system/man',
+20:57:56     INFO -  'MINIDUMP_SAVE_PATH': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+20:57:56     INFO -  'MOTD_SHOWN': 'pam',
+20:57:56     INFO -  'MOZCONFIG': 'mozconfig_segmentsfizerocost_release',
+20:57:56     INFO -  'MOZ_DEVELOPER_OBJ_DIR': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release',
+20:57:56     INFO -  'MOZ_DEVELOPER_REPO_DIR': u'/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:57:56     INFO -  'MOZ_UPLOAD_DIR': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+20:57:56     INFO -  'NVM_BIN': '/home/shr/.nvm/versions/node/v15.5.1/bin',
+20:57:56     INFO -  'NVM_CD_FLAGS': '',
+20:57:56     INFO -  'NVM_DIR': '/home/shr/.nvm',
+20:57:56     INFO -  'NVM_INC': '/home/shr/.nvm/versions/node/v15.5.1/include/node',
+20:57:56     INFO -  'OCAML_TOPLEVEL_PATH': '/home/shr/.opam/system/lib/toplevel',
+20:57:56     INFO -  'OLDPWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:57:56     INFO -  'PATH': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin:/opt/cmake/bin/:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/.cargo/bin:/home/shr/bin:/home/shr/.local/bin:/home/shr/.nvm/versions/node/v15.5.1/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/bin:/home/shr/go/bin:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin',
+20:57:56     INFO -  'PERL5LIB': '/home/shr/.opam/system/lib/perl5:',
+20:57:56     INFO -  'PWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:57:56     INFO -  'PYTHONPATH': u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos',
+20:57:56     INFO -  'RUST_BACKTRACE': 'full',
+20:57:56     INFO -  'SHELL': '/bin/bash',
+20:57:56     INFO -  'SHLVL': '1',
+20:57:56     INFO -  'SSH_AUTH_SOCK': '/tmp/ssh-6LGQAszcCJ/agent.1798146',
+20:57:56     INFO -  'SSH_CLIENT': '49.207.205.53 21117 2262',
+20:57:56     INFO -  'SSH_CONNECTION': '49.207.205.53 21117 132.239.95.108 2262',
+20:57:56     INFO -  'SSH_TTY': '/dev/pts/0',
+20:57:56     INFO -  'STYLO_FORCE_ENABLED': '1',
+20:57:56     INFO -  'TERM': 'xterm-256color',
+20:57:56     INFO -  'USER': 'shr',
+20:57:56     INFO -  'VIRTUAL_ENV': u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv',
+20:57:56     INFO -  'XDG_DATA_DIRS': '/home/shr/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+20:57:56     INFO -  'XDG_RUNTIME_DIR': '/run/user/1000',
+20:57:56     INFO -  'XDG_SESSION_CLASS': 'user',
+20:57:56     INFO -  'XDG_SESSION_ID': '5939',
+20:57:56     INFO -  'XDG_SESSION_TYPE': 'tty',
+20:57:56     INFO -  '_': '/usr/bin/taskset'}
+20:57:56     INFO - Calling [u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin/python', u'/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/run_tests.py', '--executablePath', u'/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox', '--title', u'shr-Desktop', u'--develop', u'--activeTests', u'graphite_perf_test', '--log-tbpl-level=debug'] with output_timeout 3600
+20:57:56     INFO -  mozversion application_buildid: 20210118115119
+20:57:56     INFO -  mozversion application_display_name: Nightly
+20:57:56     INFO -  mozversion application_id: {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+20:57:56     INFO -  mozversion application_name: Firefox
+20:57:56     INFO -  mozversion application_remotingname: firefox
+20:57:56     INFO -  mozversion application_vendor: Mozilla
+20:57:56     INFO -  mozversion application_version: 81.0a1
+20:57:56     INFO -  mozversion platform_buildid: 20210118115119
+20:57:56     INFO -  mozversion platform_version: 81.0a1
+20:57:56     INFO -  using testdate: 1611003476
+20:57:56     INFO -  actual date: 1611003476
+20:57:56     INFO -  starting webserver on '127.0.0.1:51125'
+20:57:56     INFO -  SUITE-START | Running 1 tests
+20:57:56     INFO -  TEST-START | graphite_perf_test
+20:57:56     INFO -  Initialising browser for graphite_perf_test test...
+20:57:56     INFO -  Cloning profile located at /home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/base_profile
+20:57:56     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/base
+20:57:56     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/common
+20:57:56     INFO -  Merging profile: /home/shr/Code/zerocost/zerocost_testing_firefox/testing/profiles/perf
+20:57:56     INFO -  Installing Add-ons:
+20:57:56     INFO -  ['/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/talos-powers', '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos/talos/pageloader']
+20:57:56     INFO -  Installing Webextensions:
+20:57:56     INFO -  Application command: /mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox --no-remote http://127.0.0.1:51125/getInfo.html -profile /tmp/tmpU9Yv6e/profile
+20:57:56     INFO -  TEST-INFO | started process 1798727 (/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox --no-remote http://127.0.0.1:51125/getInfo.html)
+20:58:22     INFO -  Gtk-Message: 12:58:22.705: Failed to load module "canberra-gtk-module"
+20:58:23     INFO -  Gtk-Message: 12:58:23.417: Failed to load module "canberra-gtk-module"
+20:58:53     INFO -  TEST-INFO | 1798727: killed by SIGTERM
+20:58:53     INFO -  Browser initialized.
+20:58:53     INFO -  Fission enabled: False
+20:58:53     INFO -  Running cycle 1/1 for graphite_perf_test test...
+20:58:53     INFO -  Using env: {'BROWSER_BUILD_PATH': '/mnt/sata/ffbuilds',
+20:58:53     INFO -   'CAML_LD_LIBRARY_PATH': '/home/shr/.opam/system/lib/stublibs:/usr/lib/ocaml/stublibs',
+20:58:53     INFO -   'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus',
+20:58:53     INFO -   'DISPLAY': 'localhost:10.0',
+20:58:53     INFO -   'DOTNET_CLI_TELEMETRY_OPTOUT': '1',
+20:58:53     INFO -   'FSTAR_HOME': '/home/shr/Code/fstar_master/FStar',
+20:58:53     INFO -   'GOPATH': '/home/shr/go',
+20:58:53     INFO -   'HOME': '/home/shr',
+20:58:53     INFO -   'JSGC_DISABLE_POISONING': '1',
+20:58:53     INFO -   'KREMLIN_HOME': '/home/shr/Code/fstar_master/kremlin',
+20:58:53     INFO -   'LANG': 'en_US.UTF-8',
+20:58:53     INFO -   'LD_LIBRARY_PATH': '/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin',
+20:58:53     INFO -   'LESSCLOSE': '/usr/bin/lesspipe %s %s',
+20:58:53     INFO -   'LESSOPEN': '| /usr/bin/lesspipe %s',
+20:58:53     INFO -   'LOGNAME': 'shr',
+20:58:53     INFO -   'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:',
+20:58:53     INFO -   'MACH_MAIN_PID': '1798663',
+20:58:53     INFO -   'MANPATH': ':/home/shr/.opam/system/man',
+20:58:53     INFO -   'MINIDUMP_SAVE_PATH': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+20:58:53     INFO -   'MOTD_SHOWN': 'pam',
+20:58:53     INFO -   'MOZCONFIG': 'mozconfig_segmentsfizerocost_release',
+20:58:53     INFO -   'MOZ_CRASHREPORTER': '1',
+20:58:53     INFO -   'MOZ_CRASHREPORTER_NO_REPORT': '1',
+20:58:53     INFO -   'MOZ_DEVELOPER_OBJ_DIR': '/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release',
+20:58:53     INFO -   'MOZ_DEVELOPER_REPO_DIR': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:58:53     INFO -   'MOZ_DISABLE_NONLOCAL_CONNECTIONS': '1',
+20:58:53     INFO -   'MOZ_UPLOAD_DIR': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/mozharness/build/blobber_upload_dir',
+20:58:53     INFO -   'MOZ_USE_PAGELOADER': '1',
+20:58:53     INFO -   'MOZ_WEBRENDER': '0',
+20:58:53     INFO -   'NO_EM_RESTART': '1',
+20:58:53     INFO -   'NVM_BIN': '/home/shr/.nvm/versions/node/v15.5.1/bin',
+20:58:53     INFO -   'NVM_CD_FLAGS': '',
+20:58:53     INFO -   'NVM_DIR': '/home/shr/.nvm',
+20:58:53     INFO -   'NVM_INC': '/home/shr/.nvm/versions/node/v15.5.1/include/node',
+20:58:53     INFO -   'OCAML_TOPLEVEL_PATH': '/home/shr/.opam/system/lib/toplevel',
+20:58:53     INFO -   'OLDPWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:58:53     INFO -   'PATH': '/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv/bin:/opt/cmake/bin/:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/.cargo/bin:/home/shr/bin:/home/shr/.local/bin:/home/shr/.nvm/versions/node/v15.5.1/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/bin:/home/shr/go/bin:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin',
+20:58:53     INFO -   'PERL5LIB': '/home/shr/.opam/system/lib/perl5:',
+20:58:53     INFO -   'PWD': '/home/shr/Code/zerocost/zerocost_testing_firefox',
+20:58:53     INFO -   'PYTHONPATH': '/home/shr/Code/zerocost/zerocost_testing_firefox/testing/talos',
+20:58:53     INFO -   'RUST_BACKTRACE': 'full',
+20:58:53     INFO -   'SHELL': '/bin/bash',
+20:58:53     INFO -   'SHLVL': '1',
+20:58:53     INFO -   'SSH_AUTH_SOCK': '/tmp/ssh-6LGQAszcCJ/agent.1798146',
+20:58:53     INFO -   'SSH_CLIENT': '49.207.205.53 21117 2262',
+20:58:53     INFO -   'SSH_CONNECTION': '49.207.205.53 21117 132.239.95.108 2262',
+20:58:53     INFO -   'SSH_TTY': '/dev/pts/0',
+20:58:53     INFO -   'STYLO_FORCE_ENABLED': '1',
+20:58:53     INFO -   'TERM': 'xterm-256color',
+20:58:53     INFO -   'USER': 'shr',
+20:58:53     INFO -   'VIRTUAL_ENV': '/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/testing/talos-venv',
+20:58:53     INFO -   'XDG_DATA_DIRS': '/home/shr/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+20:58:53     INFO -   'XDG_RUNTIME_DIR': '/run/user/1000',
+20:58:53     INFO -   'XDG_SESSION_CLASS': 'user',
+20:58:53     INFO -   'XDG_SESSION_ID': '5939',
+20:58:53     INFO -   'XDG_SESSION_TYPE': 'tty',
+20:58:53     INFO -   '_': '/usr/bin/taskset'}
+20:58:53     INFO -  TEST-INFO | started process 1798854 (/mnt/sata/ffbuilds/firefox_latest_segmentsfizerocost_release/dist/bin/firefox --no-remote -profile /tmp/tmpU9Yv6e/profile)
+20:59:21     INFO -  PID 1798854 | Gtk-Message: 12:59:21.483: Failed to load module "canberra-gtk-module"
+20:59:22     INFO -  PID 1798854 | Gtk-Message: 12:59:22.158: Failed to load module "canberra-gtk-module"
+21:00:05     INFO -  PID 1798854 | Gtk-Message: 13:00:05.207: Failed to load module "canberra-gtk-module"
+21:00:05     INFO -  PID 1798854 | Gtk-Message: 13:00:05.780: Failed to load module "canberra-gtk-module"
+21:00:23     INFO -  PID 1798854 | console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+21:00:59     INFO -  PID 1798854 | Gtk-Message: 13:00:59.070: Failed to load module "canberra-gtk-module"
+21:00:59     INFO -  PID 1798854 | Gtk-Message: 13:00:59.644: Failed to load module "canberra-gtk-module"
+21:01:26     INFO -  PID 1798854 | Gtk-Message: 13:01:26.696: Failed to load module "canberra-gtk-module"
+21:01:27     INFO -  PID 1798854 | Gtk-Message: 13:01:27.296: Failed to load module "canberra-gtk-module"
+21:01:41     INFO -  PID 1798854 | Capture_Time:Graphite,1,902|
+21:01:46     INFO -  PID 1798854 | Cycle 1(1): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:01:46     INFO -  PID 1798854 | Waiting for idle-callback
+21:01:51     INFO -  PID 1798854 | Capture_Time:Graphite,2,914|
+21:01:51     INFO -  PID 1798854 | Cycle 1(2): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:01:54     INFO -  PID 1798854 | Capture_Time:Graphite,3,901|
+21:02:00     INFO -  PID 1798854 | Cycle 1(3): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:00     INFO -  PID 1798854 | Waiting for idle-callback
+21:02:01     INFO -  PID 1798854 | Capture_Time:Graphite,4,911|
+21:02:01     INFO -  PID 1798854 | Cycle 1(4): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:01     INFO -  PID 1798854 | Waiting for idle-callback
+21:02:03     INFO -  PID 1798854 | Capture_Time:Graphite,5,910|
+21:02:03     INFO -  PID 1798854 | Cycle 1(5): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:04     INFO -  PID 1798854 | Capture_Time:Graphite,6,909|
+21:02:05     INFO -  PID 1798854 | Cycle 1(6): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:06     INFO -  PID 1798854 | Capture_Time:Graphite,7,909|
+21:02:06     INFO -  PID 1798854 | Cycle 1(7): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:07     INFO -  PID 1798854 | Capture_Time:Graphite,8,909|
+21:02:08     INFO -  PID 1798854 | Cycle 1(8): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:09     INFO -  PID 1798854 | Capture_Time:Graphite,9,920|
+21:02:09     INFO -  PID 1798854 | Cycle 1(9): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:11     INFO -  PID 1798854 | Capture_Time:Graphite,10,918|
+21:02:11     INFO -  PID 1798854 | Cycle 1(10): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:12     INFO -  PID 1798854 | Capture_Time:Graphite,11,919|
+21:02:12     INFO -  PID 1798854 | Cycle 1(11): loaded http://127.0.0.1:51125/tests/graphite_perf_test/index.html (next: http://127.0.0.1:51125/tests/graphite_perf_test/index.html)
+21:02:13     INFO -  PID 1798854 | Gtk-Message: 13:02:13.175: Failed to load module "canberra-gtk-module"
+21:02:13     INFO -  PID 1798854 | Setting up segments failed
+21:02:13     INFO -  PID 1798854 | Redirecting call to abort() to mozalloc_abort
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][MessageChannel] Error: (msgtype=0x360002,name=PCompositorBridge::Msg_DidComposite) Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 | [Parent 1798854, Compositor] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /home/shr/Code/zerocost/zerocost_testing_firefox/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 19
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+21:02:13     INFO -  PID 1798854 |
+21:02:13     INFO -  PID 1798854 | Gtk-Message: 13:02:13.740: Failed to load module "canberra-gtk-module"
+21:02:39     INFO -  PID 1798854 | Gtk-Message: 13:02:39.731: Failed to load module "canberra-gtk-module"
+21:02:40     INFO -  PID 1798854 | Gtk-Message: 13:02:40.301: Failed to load module "canberra-gtk-module"
+21:10:22     INFO -  PID 1798854 | 1611004222902	addons.xpi	ERROR	System addon update list error Error: got node name: parsererror, expected: updates
+Failed to run test zerocost for /home/shr/Code/zerocost/benchmarks/graphite_test_2021-01-18T12:56:34-08:00/segmentsfizerocost. Retrying...
