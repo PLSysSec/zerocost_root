@@ -24,8 +24,8 @@ ctest -V
 cd ../..
 
 sleep 1
-echo "Transition: Mpkzero"
-cd rlbox_mpkzerocost_sandbox/build_release
+echo "Transition: Segmentzero"
+cd rlbox_segmentsfizerocost_sandbox/build_release
 ctest -V
 cd ../..
 
