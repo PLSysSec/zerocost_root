@@ -58,3 +58,15 @@ echo "Transition: Direct Win"
 cd rlbox_lucet_directcall_benchmarks/build_release
 ./main_win
 cd ../..
+
+sleep 1
+echo "Transition: Direct MPK"
+cd rlbox_lucet_directcall_benchmarks/build_release
+./main_mpkfullsave
+cd ../..
+
+sleep 1
+echo "Transition: Direct Segment"
+cd rlbox_lucet_directcall_benchmarks/build_release
+./main_segmentsfi
+cd ../..
