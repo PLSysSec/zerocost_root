@@ -9,7 +9,9 @@ WORKDIR /usr/src/
 COPY id_rsa.pub /root/.ssh/id_rsa.pub
 COPY id_rsa /root/.ssh/id_rsa
 
+RUN dpkg --add-architecture i386
 RUN apt update
+RUN apt -y dist-upgrade
 
 RUN apt install -y apt-utils
 
@@ -27,10 +29,6 @@ RUN chmod 400 /root/.ssh/id_rsa
 
 # install editor for convenience
 RUN apt install -y nano
-
-RUN dpkg --add-architecture i386
-
-RUN apt -y dist-upgrade
 
 # Setup shell env
 ENV SHELL=/bin/bash
