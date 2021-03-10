@@ -30,7 +30,7 @@ RUN apt install -y nano
 
 RUN dpkg --add-architecture i386
 
-RUN apt dist-upgrade
+RUN apt -y dist-upgrade
 
 # Setup shell env
 ENV SHELL=/bin/bash
