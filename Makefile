@@ -86,11 +86,11 @@ get_source: $(DIRS)
 
 bootstrap: get_source
 	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget; \
+		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget python3 python3-pip; \
 	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget; \
+		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget python3 python3-pip; \
 	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget; \
+		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libpulse-dev:i386 nghttp2-client wget python3 python3-pip; \
 	else \
 		echo "Unknown installer. apt/dnf/trizen not found"; \
 		exit 1; \
