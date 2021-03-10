@@ -248,7 +248,7 @@ macro_graphite_benchmark: benchmark_env_setup
 
 docker_setup_host_ubuntu_debian:
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(shell [[ -z $(lsb_release -a 2>&1 | grep -i ubuntu) ]] && echo "debian" || echo "ubuntu") $(shell lsb_release -cs) stable"
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(shell ./get_os.sh) $(shell lsb_release -cs) stable"
 	sudo apt update
 	sudo apt install -qq -y curl git apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io
 
