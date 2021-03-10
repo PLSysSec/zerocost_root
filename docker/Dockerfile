@@ -38,6 +38,7 @@ RUN apt -y install git make
 RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
 RUN git clone git@github.com:PLSysSec/zerocost_root.git
 RUN cd ./zerocost_root && make get_source
+RUN cd ./zerocost_root && make pull
 RUN cd ./zerocost_root && make bootstrap
 
 # Run bash automatically on startup
