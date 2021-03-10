@@ -8,8 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
 
 CURR_DIR := $(shell realpath ./)
-OUTPUT_PATH := $(CURR_DIR)/ffbuilds
-# OUTPUT_PATH := /mnt/sata/ffbuilds
+# OUTPUT_PATH := $(CURR_DIR)/ffbuilds
+OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -263,6 +263,9 @@ build_docker_img: docker_setup_host
 	sudo docker build --network host ./docker --tag zerocostff
 	sudo docker run --cap-add SYS_ADMIN --network host -it --name zerocostff_inst zerocostff
 	touch ./build_docker_img
+
+run_docker_img: build_docker_img
+	sudo docker exec -it zerocostff_inst bash
 
 clean:
 	-rm -rf $(OUTPUT_PATH)
