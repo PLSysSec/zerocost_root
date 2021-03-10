@@ -97,8 +97,10 @@ bootstrap: get_source
 	fi
 	if [ ! -x "$(shell command -v rustc)" ] ; then \
 		curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.46.0 -y; \
+		source ~/.cargo/env && rustup target install i686-unknown-linux-gnu; \
+	else \
+		rustup target install i686-unknown-linux-gnu; \
 	fi
-	rustup target install i686-unknown-linux-gnu
 	if [ ! -d /opt/wasi-sdk/ ]; then \
 		wget https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/wasi-sdk-10.0-linux.tar.gz -P /tmp/ && \
 		tar -xzf /tmp/wasi-sdk-10.0-linux.tar.gz && \
