@@ -246,15 +246,15 @@ macro_graphite_benchmark: benchmark_env_setup
 	cp ~/.ssh/id_rsa ./docker/id_rsa
 	cp ~/.ssh/id_rsa.pub ./docker/id_rsa.pub
 
-docker_setup_host_ubuntu:
+docker_setup_host_ubuntu_debian:
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(shell lsb_release -cs) stable"
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(shell [[ -z $(lsb_release -a 2>&1 | grep -i ubuntu) ]] && echo "debian" || echo "ubuntu") $(shell lsb_release -cs) stable"
 	sudo apt update
 	sudo apt install -qq -y curl git apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io
 
 docker_setup_host: ./docker/id_rsa
 	chmod 604 ./docker/id_rsa
-	$(MAKE) -C $(CURR_DIR) docker_setup_host_ubuntu
+	$(MAKE) -C $(CURR_DIR) docker_setup_host_ubuntu_debian
 	touch ./docker_setup_host
 
 build_docker_img: docker_setup_host
