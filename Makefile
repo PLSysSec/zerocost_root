@@ -138,7 +138,7 @@ build_check:
 
 zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
-build:
+build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
 	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
 	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
@@ -237,6 +237,30 @@ macro_graphite_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
+
+./docker/id_rsa:
+	@echo -n "This will copy SSH keys for the current user to the created docker image. You can also say no and create a new key pair in the docker folder and re-reun this makefile. Please confirm if you want to proceed with the system key pair? [y/N] " && read ans; \
+	if [ ! $${ans:-N} = y ]; then \
+		exit 1; \
+	fi
+	cp ~/.ssh/id_rsa ./docker/id_rsa
+	cp ~/.ssh/id_rsa.pub ./docker/id_rsa.pub
+
+docker_setup_host_ubuntu:
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(shell lsb_release -cs) stable"
+	sudo apt update
+	sudo apt install -qq -y curl git apt-transport-https ca-certificates curl gnupg-agent software-properties-common docker-ce docker-ce-cli containerd.io
+
+docker_setup_host: ./docker/id_rsa
+	chmod 604 ./docker/id_rsa
+	$(MAKE) -C $(CURR_DIR) docker_setup_host_ubuntu
+	touch ./docker_setup_host
+
+build_docker_img: docker_setup_host
+	sudo docker build --network host ./docker --tag zerocostff
+	sudo docker run --cap-add SYS_ADMIN --network host -it --name zerocostff_inst zerocostff
+	touch ./build_docker_img
 
 clean:
 	-rm -rf $(OUTPUT_PATH)

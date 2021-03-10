@@ -1,5 +1,9 @@
 bootstrap
+build_docker_img
 csf-2020-sfi
+docker/id_rsa
+docker/id_rsa.pub
+docker_setup_host
 ffbuilds
 lucet_sandbox_compiler
 nginx
