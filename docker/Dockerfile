@@ -28,6 +28,10 @@ RUN chmod 400 /root/.ssh/id_rsa
 # install editor for convenience
 RUN apt install -y nano
 
+RUN dpkg --add-architecture i386
+
+RUN apt dist-upgrade
+
 # Setup shell env
 ENV SHELL=/bin/bash
 
