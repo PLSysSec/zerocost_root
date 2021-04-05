@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
 
 CURR_DIR := $(shell realpath ./)
 # OUTPUT_PATH := $(CURR_DIR)/ffbuilds
@@ -20,6 +20,9 @@ lucet_sandbox_compiler:
 rlbox_lucet_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
 	cd $@ && git checkout zerocost
+
+zerocost_heavy_trampoline:
+	git clone git@github.com:PLSysSec/zerocost_heavy_trampoline.git $@
 
 zerocost_testing_sandbox:
 	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
@@ -116,6 +119,7 @@ pull: $(DIRS)
 	git pull --rebase --autostash
 	cd lucet_sandbox_compiler && git pull --rebase --autostash
 	cd rlbox_lucet_sandbox && git pull --rebase --autostash
+	cd zerocost_heavy_trampoline && git pull --rebase --autostash
 	cd zerocost_testing_sandbox && git pull --rebase --autostash
 	cd rlbox_lucetstock_sandbox && git pull --rebase --autostash
 	cd rlbox_mpk_sandbox && git pull --rebase --autostash
