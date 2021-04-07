@@ -8,8 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
 
 CURR_DIR := $(shell realpath ./)
-# OUTPUT_PATH := $(CURR_DIR)/ffbuilds
-OUTPUT_PATH := /mnt/sata/ffbuilds
+OUTPUT_PATH := $(CURR_DIR)/ffbuilds
+# OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -157,16 +157,14 @@ build: build_check zerocost_clang
 	cd zerocost-libjpeg-turbo/build && make -j8 build
 	# cd nginx && CFLAGS="-O3 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_release && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
 	# cd node-sandboxed/build && make build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_release ./mach build
 
 build_debug: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
@@ -181,16 +179,14 @@ build_debug: build_check zerocost_clang
 	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
 	# cd nginx && CFLAGS="-g -O0 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_debug  && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
 	# cd node-sandboxed/build && make build_debug
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_debug ./mach build
 
 run_xvfb:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
