@@ -164,7 +164,7 @@ build: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_release ./mach build
 
 build_debug: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
@@ -186,7 +186,7 @@ build_debug: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
-	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
 
 run_xvfb:
 	if [ -z "$(shell pgrep Xvfb)" ]; then \
@@ -237,6 +237,10 @@ macro_image_benchmark: benchmark_env_setup
 
 macro_graphite_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
+	cd zerocost_testing_firefox && \
+	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
+
+macro_graphite_benchmark_ui: benchmark_env_setup
 	cd zerocost_testing_firefox && \
 	./newRunGraphiteTest "../benchmarks/graphite_test_$(shell date --iso=seconds)"
 
