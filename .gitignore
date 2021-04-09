@@ -17,7 +17,9 @@ rlbox_mpkzerocost_sandbox
 rlbox_sandboxing_api
 rlbox_segmentsfizerocost_sandbox
 web_resource_crawler
+zerocost_heavy_trampoline
 zerocost-libjpeg-turbo
 zerocost_llvm
+zerocost-nodejs-benchmarks
 zerocost_testing_firefox
 zerocost_testing_sandbox
