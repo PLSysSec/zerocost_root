@@ -5,13 +5,15 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
+DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
 
 CURR_DIR := $(shell realpath ./)
 OUTPUT_PATH := $(CURR_DIR)/ffbuilds
 # OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
+
+CORE_COUNT= $(shell nproc --all)
 
 lucet_sandbox_compiler:
 	git clone git@github.com:PLSysSec/lucet_sandbox_compiler.git $@
@@ -40,6 +42,9 @@ rlbox_mpkzerocost_sandbox:
 
 rlbox_segmentsfizerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
+
+rlbox_nacl_sandbox:
+	git clone git@github.com:PLSysSec/rlbox_nacl_sandbox.git $@
 
 rlbox_sandboxing_api:
 	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
@@ -77,7 +82,7 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
 		  -DCMAKE_BUILD_TYPE=Debug \
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
-	$(MAKE) -j8 install
+	$(MAKE) -j${CORE_COUNT} install
 
 # node-sandboxed:
 # 	git clone git@github.com:PLSysSec/nodejs-sandboxed.git $@
@@ -125,6 +130,7 @@ pull: $(DIRS)
 	cd rlbox_mpk_sandbox && git pull --rebase --autostash
 	cd rlbox_mpkzerocost_sandbox && git pull --rebase --autostash
 	cd rlbox_segmentsfizerocost_sandbox && git pull --rebase --autostash
+	cd rlbox_nacl_sandbox && git pull --rebase --autostash
 	cd rlbox_sandboxing_api && git pull --rebase --autostash
 	cd zerocost-libjpeg-turbo && git pull --rebase --autostash
 	cd zerocost_testing_firefox && git pull --rebase --autostash
@@ -146,15 +152,16 @@ zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
-	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_sandboxing_api              && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j8
-	cd zerocost-libjpeg-turbo/build && make -j8 build
-	# cd nginx && CFLAGS="-O3 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_release && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
+	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_sandboxing_api              && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	# cd rlbox_nacl_sandbox                && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd zerocost-libjpeg-turbo/build && make -j${CORE_COUNT} build
+	# cd nginx && CFLAGS="-O3 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_release && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j${CORE_COUNT}
 	# cd node-sandboxed/build && make build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
@@ -163,20 +170,22 @@ build: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_naclfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_release ./mach build
 
 build_debug: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
-	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd zerocost_testing_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_sandboxing_api              && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j8
-	cd zerocost-libjpeg-turbo/build && make -j8 build_debug
-	# cd nginx && CFLAGS="-g -O0 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_debug  && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j8
+	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd zerocost_testing_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_sandboxing_api              && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	# cd rlbox_nacl_sandbox                && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd zerocost-libjpeg-turbo/build && make -j${CORE_COUNT} build_debug
+	# cd nginx && CFLAGS="-g -O0 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_debug  && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j${CORE_COUNT}
 	# cd node-sandboxed/build && make build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
@@ -185,6 +194,7 @@ build_debug: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
+	# cd zerocost_testing_firefox && MOZCONFIG=mozconfig_naclfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stockindirect32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock32_debug ./mach build
 
