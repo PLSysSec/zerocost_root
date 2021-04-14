@@ -30,6 +30,12 @@ ctest -V
 cd ../..
 
 sleep 1
+echo "Transition: NaCl"
+cd rlbox_nacl_sandbox/build_release
+ctest -V
+cd ../..
+
+sleep 1
 echo "Transition: NoOp"
 cd rlbox_sandboxing_api/build_release
 ctest -V

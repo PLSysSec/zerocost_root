@@ -1,5 +1,5 @@
 .NOTPARALLEL:
-.PHONY : pull clean get_source build build_debug restore_hyperthreading shielding_on shielding_off benchmark_env_setup benchmark_env_close micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_graphite_benchmark
+.PHONY : pull clean get_source build build_debug restore_hyperthreading shielding_on shielding_off benchmark_env_setup benchmark_env_close micro_transition_benchmark micro_jpeg_benchmark macro_image_benchmark macro_image_random_benchmark macro_graphite_benchmark
 
 .DEFAULT_GOAL := build
 
@@ -244,6 +244,11 @@ macro_image_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
 	cd zerocost_testing_firefox && \
 	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)"
+
+macro_image_random_benchmark: benchmark_env_setup
+	export DISPLAY=:99 && \
+	cd zerocost_testing_firefox && \
+	./newRunMicroImageTest "../benchmarks/jpeg_width_$(shell date --iso=seconds)" "random"
 
 macro_graphite_benchmark: benchmark_env_setup
 	export DISPLAY=:99 && \
