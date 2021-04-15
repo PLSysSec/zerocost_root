@@ -1,0 +1,54 @@
+
+Transition: Func
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed callback invocation time: 0
+Unsandboxed syscall callback invocation time: 18
+Indirect call: Sandboxed function invocation time: 57
+----------------------------
+Transition: WasmLucet
+Indirect call: Sandboxed function invocation time: 1188
+Sandboxed callback invocation time: 37
+Sandboxed syscall callback invocation time: 67
+Direct call: N/A
+----------------------------
+Transition: WasmFullSave
+Indirect call: Sandboxed function invocation time: 175
+Sandboxed callback invocation time: 163
+Sandboxed syscall callback invocation time: 191
+Direct call: Sandboxed function invocation time: 116
+----------------------------
+Transition: WasmRegSave
+Indirect call: Sandboxed function invocation time: 206
+Sandboxed callback invocation time: 170
+Sandboxed syscall callback invocation time: 179
+Direct call: Sandboxed function invocation time: 77
+----------------------------
+Transition: WasmZero
+Indirect call: Sandboxed function invocation time: 60
+Sandboxed callback invocation time: 37
+Sandboxed syscall callback invocation time: 67
+Direct call: Sandboxed function invocation time: 7
+----------------------------
+Transition: Func (32-bit)
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed callback invocation time: 0
+Unsandboxed syscall callback invocation time: 37
+Indirect call: Sandboxed function invocation time: 110
+----------------------------
+Transition: IdealFullSave
+Indirect call: Sandboxed function invocation time: 178
+Sandboxed callback invocation time: 111
+Sandboxed syscall callback invocation time: 178
+Direct call: Sandboxed function invocation time: 346
+----------------------------
+Transition: NaClFullSave
+Indirect call: Sandboxed function invocation time: 732
+Sandboxed callback invocation time: 375
+Direct call: N/A
+----------------------------
+Transition: SegmentZero
+Indirect call: Sandboxed function invocation time: 121
+Sandboxed callback invocation time: 50
+Sandboxed syscall callback invocation time: 89
+Direct call: Sandboxed function invocation time: 24
+----------------------------
