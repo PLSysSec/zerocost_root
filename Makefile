@@ -157,6 +157,7 @@ build: build_check zerocost_clang
 	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_sandboxing_api              && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
+	cd rlbox_sandboxing_api              && CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" cmake -DCMAKE_BUILD_TYPE=Release -S . -B ./build_release_32bit  cd ./build_release_32bit && make -j${CORE_COUNT}
 	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_nacl_sandbox                && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
@@ -181,6 +182,7 @@ build_debug: build_check zerocost_clang
 	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_mpk_sandbox                 && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_sandboxing_api              && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
+	cd rlbox_sandboxing_api              && CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" cmake -DCMAKE_BUILD_TYPE=Debug -S . -B ./build_debug_32bit  cd ./build_debug_32bit && make -j${CORE_COUNT}
 	cd rlbox_segmentsfizerocost_sandbox  && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_nacl_sandbox                && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
@@ -228,11 +230,6 @@ benchmark_env_close: restore_hyperthreading shielding_off
 micro_transition_benchmark: benchmark_env_setup
 	echo > ./benchmarks/micro_transition_benchmark.txt
 	taskset -c 1 ./run_transitions_benchmark.sh | tee -a ./benchmarks/micro_transition_benchmark.txt
-	echo "---------" >> ./benchmarks/micro_transition_benchmark.txt
-	cat ./benchmarks/micro_transition_benchmark.txt | \
-		grep "\(Transition:\)\|\(Filters: sandbox glue tests\)\|\(time:\)" | \
-		grep -v "Unsandboxed" | \
-		tee -a ./benchmarks/micro_transition_benchmark.txt
 	mv ./benchmarks/micro_transition_benchmark.txt "./benchmarks/micro_transition_benchmark_$(shell date --iso=seconds).txt"
 
 micro_jpeg_benchmark: benchmark_env_setup
