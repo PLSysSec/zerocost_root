@@ -1,0 +1,50 @@
+
+Transition: Func
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed syscall callback invocation time: 24
+Callback and Indirect call: Sandboxed function invocation time: 39
+----------------------------
+Transition: WasmLucet
+Indirect call: Sandboxed function invocation time: 1193
+Direct call, Callback, Syscall: N/A
+----------------------------
+Transition: WasmFullSave
+Indirect call: Sandboxed function invocation time: 225
+Sandboxed callback invocation time: 172
+Sandboxed syscall callback invocation time: 192
+Direct call: Sandboxed function invocation time: 117
+----------------------------
+Transition: WasmRegSave
+Indirect call: Sandboxed function invocation time: 210
+Sandboxed callback invocation time: 173
+Sandboxed syscall callback invocation time: 191
+Direct call: Sandboxed function invocation time: 119
+----------------------------
+Transition: WasmZero
+Indirect call: Sandboxed function invocation time: 79
+Sandboxed callback invocation time: 37
+Sandboxed syscall callback invocation time: 68
+Direct call: Sandboxed function invocation time: 7
+----------------------------
+Transition: Func (32-bit)
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed syscall callback invocation time: 37
+Callback and Indirect call: Sandboxed function invocation time: 110
+----------------------------
+Transition: IdealFullSave
+Indirect call: Sandboxed function invocation time: 179
+Sandboxed callback invocation time: 154
+Sandboxed syscall callback invocation time: 182
+Direct call: Sandboxed function invocation time: 346
+----------------------------
+Transition: NaClFullSave
+Indirect call: Sandboxed function invocation time: 719
+Sandboxed callback invocation time: 376
+Direct call: N/A
+----------------------------
+Transition: SegmentZero
+Indirect call: Sandboxed function invocation time: 106
+Sandboxed callback invocation time: 50
+Sandboxed syscall callback invocation time: 89
+Direct call: Sandboxed function invocation time: 24
+----------------------------

@@ -4,8 +4,8 @@ sleep 1
 echo "Transition: Func"
 cd rlbox_sandboxing_api/build_release
 echo -n "Direct call: "
-./test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox" | grep "Unsandboxed"
-echo -n "Indirect call: "
+./test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox" | egrep "Unsandboxed function|Unsandboxed syscall"
+echo -n "Callback and Indirect call: "
 ./test_rlbox_glue_indirect | grep "Sandboxed function invocation time"
 cd ../..
 echo "----------------------------"
@@ -14,8 +14,8 @@ sleep 1
 echo "Transition: WasmLucet"
 cd rlbox_lucetstock_sandbox/build_release
 echo -n "Indirect call: "
-./test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox" | grep "Sandboxed"
-echo "Direct call: N/A"
+./test_rlbox_glue "sandbox glue tests rlbox_lucet_sandbox" | grep "Sandboxed function invocation"
+echo "Direct call, Callback, Syscall: N/A"
 cd ../..
 echo "----------------------------"
 
@@ -56,8 +56,8 @@ sleep 1
 echo "Transition: Func (32-bit)"
 cd rlbox_sandboxing_api/build_release_32bit
 echo -n "Direct call: "
-./test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox" | grep "Unsandboxed"
-echo -n "Indirect call: "
+./test_rlbox_glue "sandbox glue tests rlbox_noop_sandbox" | egrep "Unsandboxed function|Unsandboxed syscall"
+echo -n "Callback and Indirect call: "
 ./test_rlbox_glue_indirect | grep "Sandboxed function invocation time"
 cd ../..
 echo "----------------------------"
@@ -78,6 +78,8 @@ echo "Transition: NaClFullSave"
 cd rlbox_nacl_sandbox/build_release
 echo -n "Indirect call: "
 ./test_rlbox_glue "sandbox glue tests rlbox_nacl_sandbox" | grep "Sandboxed"
+echo -n "Syscall: "
+./_deps/modnacl-src/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -f ./nacl/syscall_bench_nacl.nexe -B ./_deps/modnacl-src/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe 2>&1 | grep "syscall invocation"
 echo "Direct call: N/A"
 cd ../..
 echo "----------------------------"
