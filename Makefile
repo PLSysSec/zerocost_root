@@ -8,8 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
-OUTPUT_PATH := $(CURR_DIR)/ffbuilds
-# OUTPUT_PATH := /mnt/sata/ffbuilds
+# OUTPUT_PATH := $(CURR_DIR)/ffbuilds
+OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -81,7 +81,7 @@ get_source: $(DIRS)
 
 bootstrap: get_source
 	sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset \
-		nghttp2-client wget python3 python3-pip binutils-dev
+		nghttp2-client wget python python3 python3-pip binutils-dev \
 		gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 \
 		flex bison libc6-dev-i386 texinfo;
 	if [ ! -x "$(shell command -v rustc)" ] ; then \
