@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
+DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
 OUTPUT_PATH := $(CURR_DIR)/ffbuilds
@@ -38,10 +38,6 @@ rlbox_lucetstock_sandbox:
 
 rlbox_mpk_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
-
-rlbox_mpkzerocost_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
-	cd $@ && git checkout zerocost
 
 rlbox_segmentsfizerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
@@ -113,7 +109,6 @@ pull: $(DIRS)
 	cd zerocost_testing_sandbox && git pull --rebase --autostash
 	cd rlbox_lucetstock_sandbox && git pull --rebase --autostash
 	cd rlbox_mpk_sandbox && git pull --rebase --autostash
-	cd rlbox_mpkzerocost_sandbox && git pull --rebase --autostash
 	cd rlbox_segmentsfizerocost_sandbox && git pull --rebase --autostash
 	cd rlbox_nacl_sandbox && git pull --rebase --autostash
 	cd rlbox_sandboxing_api && git pull --rebase --autostash
