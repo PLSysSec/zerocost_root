@@ -5,7 +5,7 @@
 
 SHELL := /bin/bash
 
-DIRS=lucet_sandbox_compiler rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm zerocost-nodejs-benchmarks
+DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_mpkzerocost_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
 OUTPUT_PATH := $(CURR_DIR)/ffbuilds
@@ -18,6 +18,9 @@ CORE_COUNT= $(shell nproc --all)
 lucet_sandbox_compiler:
 	git clone git@github.com:PLSysSec/lucet_sandbox_compiler.git $@
 	cd $@ && git checkout lucet-wasi-wasmsbx && git submodule update --init --recursive
+
+Sandboxing_NaCl :
+	git clone https://github.com/shravanrn/Sandboxing_NaCl.git $@
 
 rlbox_lucet_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
@@ -66,12 +69,6 @@ rlbox_lucet_directcall_benchmarks:
 zerocost_llvm:
 	git clone git@github.com:PLSysSec/zerocost_llvm.git $@
 
-nginx:
-	wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1i.tar.gz -O openssl.tar.gz
-	tar xzvf openssl.tar.gz
-	mv openssl-OpenSSL_1_1_1i openssl
-	git clone git@github.com:PLSysSec/nginx-sandboxed.git nginx
-
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
 	cd $(OUTPUT_PATH)/zerocost_llvm && \
@@ -84,25 +81,13 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
 	$(MAKE) -j${CORE_COUNT} install
 
-# node-sandboxed:
-# 	git clone git@github.com:PLSysSec/nodejs-sandboxed.git $@
-
-zerocost-nodejs-benchmarks:
-	git clone git@github.com:PLSysSec/zerocost-nodejs-benchmarks.git $@
-
 get_source: $(DIRS)
 
 bootstrap: get_source
-	if [ -x "$(shell command -v apt)" ]; then \
-		sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 nghttp2-client wget python3 python3-pip binutils-dev; \
-	elif [ -x "$(shell command -v dnf)" ]; then \
-		sudo dnf -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 nghttp2-client wget python3 python3-pip binutils-dev; \
-	elif [ -x "$(shell command -v trizen)" ]; then \
-		trizen -S --noconfirm curl cmake msr-tools cpuid cpupower npm clang llvm xvfb cpuset gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 nghttp2-client wget python3 python3-pip binutils-dev; \
-	else \
-		echo "Unknown installer. apt/dnf/trizen not found"; \
-		exit 1; \
-	fi
+	sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset \
+		nghttp2-client wget python3 python3-pip binutils-dev
+		gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 \
+		flex bison libc6-dev-i386 texinfo;
 	if [ ! -x "$(shell command -v rustc)" ] ; then \
 		curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.46.0 -y; \
 		source ~/.cargo/env && rustup target install i686-unknown-linux-gnu; \
@@ -116,13 +101,13 @@ bootstrap: get_source
 	fi
 	cd ./zerocost_testing_firefox && ./mach create-mach-environment
 	cd ./zerocost_testing_firefox && ./mach bootstrap --no-interactive --application-choice browser
-	cd ./zerocost-nodejs-benchmarks && npm install && npm install autocannon-compare
 	pip3 install simplejson tldextract matplotlib
 	touch ./bootstrap
 
 pull: $(DIRS)
 	git pull --rebase --autostash
 	cd lucet_sandbox_compiler && git pull --rebase --autostash
+	cd Sandboxing_NaCl && git pull --rebase --autostash
 	cd rlbox_lucet_sandbox && git pull --rebase --autostash
 	cd zerocost_heavy_trampoline && git pull --rebase --autostash
 	cd zerocost_testing_sandbox && git pull --rebase --autostash
@@ -137,8 +122,6 @@ pull: $(DIRS)
 	cd web_resource_crawler && git pull --rebase --autostash
 	cd rlbox_lucet_directcall_benchmarks && git pull --rebase --autostash
 	cd zerocost_llvm && git pull --rebase --autostash
-	# cd node-sandboxed && git pull --rebase --autostash
-	cd zerocost-nodejs-benchmarks && git pull --rebase --autostash
 
 build_check:
 	@if [ ! -e "$(CURR_DIR)/bootstrap" ]; then \
@@ -152,6 +135,7 @@ zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
+	cd Sandboxing_NaCl && make init
 	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd zerocost_testing_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
@@ -162,8 +146,6 @@ build: build_check zerocost_clang
 	cd rlbox_nacl_sandbox                && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_release -DCMAKE_BUILD_TYPE=Release && cd ./build_release && make -j${CORE_COUNT}
 	cd zerocost-libjpeg-turbo/build && make -j${CORE_COUNT} build
-	# cd nginx && CFLAGS="-O3 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_release && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j${CORE_COUNT}
-	# cd node-sandboxed/build && make build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
@@ -177,6 +159,7 @@ build: build_check zerocost_clang
 
 build_debug: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
+	cd Sandboxing_NaCl && make init
 	cd rlbox_lucet_sandbox               && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd zerocost_testing_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_lucetstock_sandbox          && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
@@ -187,8 +170,6 @@ build_debug: build_check zerocost_clang
 	cd rlbox_nacl_sandbox                && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd rlbox_lucet_directcall_benchmarks && cmake -S . -B ./build_debug -DCMAKE_BUILD_TYPE=Debug && cd ./build_debug && make -j${CORE_COUNT}
 	cd zerocost-libjpeg-turbo/build && make -j${CORE_COUNT} build_debug
-	# cd nginx && CFLAGS="-g -O0 -fpermissive -std=c++17" ./auto/configure --with-openssl=../openssl --with-http_ssl_module --with-stream_ssl_module --with-stream_ssl_preread_module --builddir=$(OUTPUT_PATH)/nginx_debug  && sed -i 's/LINK =\t$(CC)/LINK =\tg++/' $(OUTPUT_PATH)/nginx_debug/Makefile && make -j${CORE_COUNT}
-	# cd node-sandboxed/build && make build_debug
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_zerocost_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
@@ -285,4 +266,24 @@ run_docker_img: build_docker_img
 
 clean:
 	-rm -rf $(OUTPUT_PATH)
+	# optimized builds
+	-rm -rf ./rlbox_lucet_sandbox/build_release
+	-rm -rf ./zerocost_testing_sandbox/build_release
+	-rm -rf ./rlbox_lucetstock_sandbox/build_release
+	-rm -rf ./rlbox_mpk_sandbox/build_release
+	-rm -rf ./rlbox_sandboxing_api/build_release
+	-rm -rf ./rlbox_sandboxing_api/build_release_32bit
+	-rm -rf ./rlbox_segmentsfizerocost_sandbox/build_release
+	-rm -rf ./rlbox_nacl_sandbox/build_release
+	-rm -rf ./rlbox_lucet_directcall_benchmarks/build_release
+	# debug builds
+	-rm -rf ./rlbox_lucet_sandbox/build_debug
+	-rm -rf ./zerocost_testing_sandbox/build_debug
+	-rm -rf ./rlbox_lucetstock_sandbox/build_debug
+	-rm -rf ./rlbox_mpk_sandbox/build_debug
+	-rm -rf ./rlbox_sandboxing_api/build_debug
+	-rm -rf ./rlbox_sandboxing_api/build_debug_32bit
+	-rm -rf ./rlbox_segmentsfizerocost_sandbox/build_debug
+	-rm -rf ./rlbox_nacl_sandbox/build_debug
+	-rm -rf ./rlbox_lucet_directcall_benchmarks/build_debug
 
