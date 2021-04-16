@@ -83,7 +83,7 @@ bootstrap: get_source
 	sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset \
 		nghttp2-client wget python python3 python3-pip binutils-dev \
 		gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 \
-		flex bison libc6-dev-i386 texinfo;
+		flex bison libc6-dev-i386 texinfo libtinfo5;
 	if [ ! -x "$(shell command -v rustc)" ] ; then \
 		curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.46.0 -y; \
 		source ~/.cargo/env && rustup target install i686-unknown-linux-gnu; \

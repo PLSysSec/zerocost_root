@@ -85,7 +85,7 @@ cd rlbox_nacl_sandbox/build_release
 echo -n "Indirect call: "
 ./test_rlbox_glue "sandbox glue tests rlbox_nacl_sandbox" | grep "Sandboxed"
 echo -n "Syscall: "
-./_deps/modnacl-src/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -f ./nacl/syscall_bench_nacl.nexe -B ./_deps/modnacl-src/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe 2>&1 | grep "syscall invocation"
+../../Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -f ./nacl/syscall_bench_nacl.nexe -B ../../Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe 2>&1 | grep "syscall invocation"
 echo "Direct call: N/A"
 cd ../..
 echo "----------------------------"
