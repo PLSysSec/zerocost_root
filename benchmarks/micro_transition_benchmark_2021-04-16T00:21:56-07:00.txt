@@ -1,0 +1,51 @@
+
+Transition: Func
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed syscall callback invocation time: 28
+Callback and Indirect call: Sandboxed function invocation time: 56
+----------------------------
+Transition: WasmLucet
+Indirect call: Sandboxed function invocation time: 1137
+Direct call, Callback, Syscall: N/A
+----------------------------
+Transition: WasmFullSave
+Indirect call: Sandboxed function invocation time: 206
+Sandboxed callback invocation time: 170
+Sandboxed syscall callback invocation time: 191
+Direct call: Sandboxed function invocation time: 116
+----------------------------
+Transition: WasmRegSave
+Indirect call: Sandboxed function invocation time: 209
+Sandboxed callback invocation time: 170
+Sandboxed syscall callback invocation time: 190
+Direct call: Sandboxed function invocation time: 117
+----------------------------
+Transition: WasmZero
+Indirect call: Sandboxed function invocation time: 60
+Sandboxed callback invocation time: 37
+Sandboxed syscall callback invocation time: 67
+Direct call: Sandboxed function invocation time: 7
+----------------------------
+Transition: Func (32-bit)
+Direct call: Unsandboxed function invocation time: 0
+Unsandboxed syscall callback invocation time: 37
+Callback and Indirect call: Sandboxed function invocation time: 92
+----------------------------
+Transition: IdealFullSave
+Indirect call: Sandboxed function invocation time: 176
+Sandboxed callback invocation time: 152
+Sandboxed syscall callback invocation time: 180
+Direct call: Sandboxed function invocation time: 324
+----------------------------
+Transition: NaClFullSave
+Indirect call: Sandboxed function invocation time: 731
+Sandboxed callback invocation time: 373
+Syscall: NaCl syscall invocation time: 356
+Direct call: N/A
+----------------------------
+Transition: SegmentZero
+Indirect call: Sandboxed function invocation time: 119
+Sandboxed callback invocation time: 50
+Sandboxed syscall callback invocation time: 88
+Direct call: Sandboxed function invocation time: 23
+----------------------------

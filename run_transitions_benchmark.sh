@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sleep 1
+SLEEP_TIME=3
+sleep $SLEEP_TIME
 echo "Transition: Func"
 cd rlbox_sandboxing_api/build_release
 echo -n "Direct call: "
@@ -10,7 +11,8 @@ echo -n "Callback and Indirect call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: WasmLucet"
 cd rlbox_lucetstock_sandbox/build_release
 echo -n "Indirect call: "
@@ -19,7 +21,8 @@ echo "Direct call, Callback, Syscall: N/A"
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: WasmFullSave"
 cd zerocost_testing_sandbox/build_release
 echo -n "Indirect call: "
@@ -30,7 +33,7 @@ echo -n "Direct call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+sleep $SLEEP_TIME
 echo "Transition: WasmRegSave"
 cd zerocost_testing_sandbox/build_release
 echo -n "Indirect call: "
@@ -41,7 +44,8 @@ echo -n "Direct call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: WasmZero"
 cd rlbox_lucet_sandbox/build_release
 echo -n "Indirect call: "
@@ -52,7 +56,8 @@ echo -n "Direct call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: Func (32-bit)"
 cd rlbox_sandboxing_api/build_release_32bit
 echo -n "Direct call: "
@@ -62,7 +67,8 @@ echo -n "Callback and Indirect call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: IdealFullSave"
 cd rlbox_mpk_sandbox/build_release
 echo -n "Indirect call: "
@@ -73,7 +79,7 @@ echo -n "Direct call: "
 cd ../..
 echo "----------------------------"
 
-sleep 1
+sleep $SLEEP_TIME
 echo "Transition: NaClFullSave"
 cd rlbox_nacl_sandbox/build_release
 echo -n "Indirect call: "
@@ -84,7 +90,8 @@ echo "Direct call: N/A"
 cd ../..
 echo "----------------------------"
 
-sleep 1
+
+sleep $SLEEP_TIME
 echo "Transition: SegmentZero"
 cd rlbox_segmentsfizerocost_sandbox/build_release
 echo -n "Indirect call: "
