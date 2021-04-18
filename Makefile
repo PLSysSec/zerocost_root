@@ -38,6 +38,7 @@ rlbox_lucetstock_sandbox:
 
 rlbox_mpk_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
+	cd $@ && git checkout ideal
 
 rlbox_segmentsfizerocost_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
