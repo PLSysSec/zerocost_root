@@ -83,7 +83,7 @@ get_source: $(DIRS)
 bootstrap: get_source
 	sudo dpkg --add-architecture i386
 	sudo apt -y install curl cmake msr-tools cpuid cpufrequtils npm clang llvm xvfb cpuset \
-		nghttp2-client wget python python3 python3-pip binutils-dev \
+		nghttp2-client wget python python3 python3-pip python3-future binutils-dev \
 		gcc-multilib g++-multilib libdbus-glib-1-dev:i386 libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386 libx11-xcb-dev:i386 libpulse-dev:i386 libdrm-dev:i386 \
 		flex bison libc6-dev-i386 texinfo libtinfo5;
 	# Have to install separately due to conflicts
@@ -197,7 +197,7 @@ restore_hyperthreading:
 
 benchmark_env_setup:
 	sudo cset shield -c 1 -k on
-	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "Shielded shell not running!") || (echo "Shielded shell not running. Run make shielding_on first!" && sudo cset shield --reset && exit 1)
+	(taskset -c 1 echo "testing shield..." > /dev/null 2>&1 && echo "Shielded shell running!") || (echo "Shielded shell not running. Run make shielding_on first!" && sudo cset shield --reset && exit 1)
 	sudo bash -c "echo off > /sys/devices/system/cpu/smt/control"
 	if [ -x "$(shell command -v cpupower)" ]; then \
 		sudo cpupower -c 1 frequency-set -g performance && sudo cpupower -c 1 frequency-set --min 2200MHz --max 2200MHz; \
