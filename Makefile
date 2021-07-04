@@ -8,8 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
-OUTPUT_PATH := $(CURR_DIR)/ffbuilds
-# OUTPUT_PATH := /mnt/sata/ffbuilds
+# OUTPUT_PATH := $(CURR_DIR)/ffbuilds
+OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -131,6 +131,32 @@ build_check:
 	fi
 
 zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
+
+SPEC_BUILDS= linux64-amd64-clangzerocost # linux64-amd64-clang
+
+zerocost-specbenchmark: # libnsl/build/lib/libnsl.so.1
+	git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
+	# LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" SPEC_INSTALL_NOCHECK=1 SPEC_FORCE_INSTALL=1
+	cd zerocost-specbenchmark && sh install.sh -f
+
+build_spec: zerocost-specbenchmark
+	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
+	cd zerocost-specbenchmark && source shrc && \
+	cd config && \
+	echo "Cleaning dirs" && \
+	for spec_build in $(SPEC_BUILDS); do \
+		runspec --config=$$spec_build.cfg --action=clobber all_c_cpp 2&>1 > /dev/null; \
+	done && \
+	for spec_build in $(SPEC_BUILDS); do \
+		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1 | grep "Build "; \
+	done
+
+run_spec:
+	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
+	cd zerocost-specbenchmark && source shrc && cd config && \
+	for spec_build in $(SPEC_BUILDS); do \
+		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref all_c_cpp; \
+	done && \
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
