@@ -13,6 +13,9 @@ OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
+SPEC_PATH := ./zerocost-specbenchmark
+# SPEC_PATH := /mnt/sata/Code/zerocost/zerocost-specbenchmark
+
 CORE_COUNT= $(shell nproc --all)
 
 lucet_sandbox_compiler:
@@ -132,31 +135,37 @@ build_check:
 
 zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
-SPEC_BUILDS= linux64-amd64-clangzerocost # linux64-amd64-clang
+NATIVE_BUILDS=linux32-i386-clangzerocost linux32-i386-clang
+NACL_BUILDS=linux32-i386-nacl
+SPEC_BUILDS=$(NATIVE_BUILDS) $(NACL_BUILDS)
 
-zerocost-specbenchmark: # libnsl/build/lib/libnsl.so.1
-	git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
+$(SPEC_PATH): # libnsl/build/lib/libnsl.so.1
+	cd $(shell realpath $(SPEC_PATH)/..) && git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
 	# LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" SPEC_INSTALL_NOCHECK=1 SPEC_FORCE_INSTALL=1
-	cd zerocost-specbenchmark && sh install.sh -f
+	cd $(SPEC_PATH) && sh install.sh -f
 
-build_spec: zerocost-specbenchmark
+build_spec: $(SPEC_PATH)
 	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
-	cd zerocost-specbenchmark && source shrc && \
+	cd $(SPEC_PATH) && source shrc && \
 	cd config && \
-	echo "Cleaning dirs" && \
 	for spec_build in $(SPEC_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=clobber all_c_cpp 2&>1 > /dev/null; \
-	done && \
-	for spec_build in $(SPEC_BUILDS); do \
-		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1 | grep "Build "; \
+		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1; \
 	done
 
+# echo "Cleaning dirs" && \
+# for spec_build in $(SPEC_BUILDS); do \
+# 	runspec --config=$$spec_build.cfg --action=clobber all_c_cpp 2&>1 > /dev/null; \
+# done && \
+#  2>&1 | egrep -i "(Build |Error)"
+
 run_spec:
-	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
-	cd zerocost-specbenchmark && source shrc && cd config && \
-	for spec_build in $(SPEC_BUILDS); do \
+	cd $(SPEC_PATH) && source shrc && cd config && \
+	for spec_build in $(NATIVE_BUILDS); do \
 		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref all_c_cpp; \
 	done && \
+	for spec_build in $(NACL_BUILDS); do \
+		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
+	done
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
