@@ -72,12 +72,11 @@ zerocost_llvm:
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
 	cd $(OUTPUT_PATH)/zerocost_llvm && \
-	cmake -DCMAKE_C_FLAGS="-fuse-ld=gold" -DCMAKE_CXX_FLAGS="-fuse-ld=gold" \
-		  -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
+	cmake -DLLVM_ENABLE_PROJECTS="clang;compiler-rt;lld" \
 		  -DLLVM_TARGETS_TO_BUILD="X86" \
 		  -DLLVM_BINUTILS_INCDIR=/usr/include/ \
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
-		  -DCMAKE_BUILD_TYPE=Debug \
+		  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
 	$(MAKE) -j${CORE_COUNT} install
 
@@ -135,9 +134,9 @@ build_check:
 
 zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
-NATIVE_BUILDS=linux32-i386-clangzerocost linux32-i386-clang
+NATIVE_BUILDS=linux32-i386-clang linux32-i386-clangzerocost
 NACL_BUILDS=linux32-i386-nacl
-SPEC_BUILDS=$(NATIVE_BUILDS) $(NACL_BUILDS)
+SPEC_BUILDS=$(NACL_BUILDS) $(NATIVE_BUILDS)
 
 $(SPEC_PATH): # libnsl/build/lib/libnsl.so.1
 	cd $(shell realpath $(SPEC_PATH)/..) && git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
@@ -149,25 +148,25 @@ build_spec: $(SPEC_PATH)
 	cd $(SPEC_PATH) && source shrc && \
 	cd config && \
 	for spec_build in $(SPEC_BUILDS); do \
-		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1; \
+		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1 | grep -i "building"; \
 	done
 
 # echo "Cleaning dirs" && \
 # for spec_build in $(SPEC_BUILDS); do \
 # 	runspec --config=$$spec_build.cfg --action=clobber all_c_cpp 2&>1 > /dev/null; \
 # done && \
-#  2>&1 | egrep -i "(Build |Error)"
+#  2>&1 | grep -i "building"
 
 run_spec:
 	cd $(SPEC_PATH) && source shrc && cd config && \
 	for spec_build in $(NATIVE_BUILDS); do \
-		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref all_c_cpp; \
+		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
 	done && \
 	for spec_build in $(NACL_BUILDS); do \
-		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
+		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
 	done
 	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  \
-		"$(SPEC_PATH)/result/spec_results=Stock:Stock,NaCl:NaCl,SegmentZero:SegmentZero" -n 3
+		"$(SPEC_PATH)/result/spec_results=Stock:Stock,NaCl:NaCl,SegmentZero:SegmentZero" -n 3 --usePercent
 	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
 
 build: build_check zerocost_clang
