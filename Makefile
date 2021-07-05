@@ -166,6 +166,8 @@ run_spec:
 	for spec_build in $(NACL_BUILDS); do \
 		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
 	done
+	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  \
+		"$(SPEC_PATH)/result/spec_results=Stock:Stock,NaCl:NaCl,SegmentZero:SegmentZero" -n 3
 	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
 
 build: build_check zerocost_clang
