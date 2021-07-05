@@ -166,6 +166,7 @@ run_spec:
 	for spec_build in $(NACL_BUILDS); do \
 		runspec --config=$$spec_build.cfg --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
 	done
+	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
