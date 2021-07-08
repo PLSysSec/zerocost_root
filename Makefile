@@ -8,8 +8,8 @@ SHELL := /bin/bash
 DIRS=lucet_sandbox_compiler Sandboxing_NaCl rlbox_lucet_sandbox zerocost_heavy_trampoline zerocost_testing_sandbox rlbox_lucetstock_sandbox rlbox_mpk_sandbox rlbox_segmentsfizerocost_sandbox rlbox_nacl_sandbox rlbox_sandboxing_api rlbox_lucet_directcall_benchmarks zerocost-libjpeg-turbo zerocost_testing_firefox web_resource_crawler zerocost_llvm
 
 CURR_DIR := $(shell realpath ./)
-# OUTPUT_PATH := $(CURR_DIR)/ffbuilds
-OUTPUT_PATH := /mnt/sata/ffbuilds
+OUTPUT_PATH := $(CURR_DIR)/ffbuilds
+# OUTPUT_PATH := /mnt/sata/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
@@ -76,7 +76,7 @@ $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 		  -DLLVM_TARGETS_TO_BUILD="X86" \
 		  -DLLVM_BINUTILS_INCDIR=/usr/include/ \
 		  -DCMAKE_INSTALL_PREFIX=$(OUTPUT_PATH)/zerocost_llvm_install \
-		  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+		  -DCMAKE_BUILD_TYPE=Release \
 		  $(CURR_DIR)/zerocost_llvm/llvm && \
 	$(MAKE) -j${CORE_COUNT} install
 
@@ -147,8 +147,11 @@ build_spec: $(SPEC_PATH)
 	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
 	cd $(SPEC_PATH) && source shrc && \
 	cd config && \
-	for spec_build in $(SPEC_BUILDS); do \
-		echo "Building $$spec_build" && runspec --config=$$spec_build.cfg --action=build all_c_cpp 2>&1 | grep -i "building"; \
+	for spec_build in $(NATIVE_BUILDS); do \
+		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
+	done && \
+	for spec_build in $(NACL_BUILDS); do \
+		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
 	done
 
 # echo "Cleaning dirs" && \
@@ -167,6 +170,15 @@ run_spec:
 	done
 	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  \
 		"$(SPEC_PATH)/result/spec_results=Stock:Stock,NaCl:NaCl,SegmentZero:SegmentZero" -n 3 --usePercent
+	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
+
+run_spec_native:
+	cd $(SPEC_PATH) && source shrc && cd config && \
+	for spec_build in $(NATIVE_BUILDS); do \
+		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
+		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
+	done
+	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  "$(SPEC_PATH)/result/spec_results=Stock:Stock,SegmentZero:SegmentZero" -n 2 --usePercent
 	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
 
 build: build_check zerocost_clang
