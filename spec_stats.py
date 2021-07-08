@@ -61,7 +61,11 @@ def summarise(input_path, spec2017=False):
                 name = line.split('.')[3]
                 success_code = line.split()[-1]
                 print(success_code)
-                times[name] = float(success_code)
+                try:
+                    times[name] = float(success_code)
+                except:
+                    print("Error parsing line: " + line + ". Fragment: " + success_code)
+                    times[name] = 1
         if ext_label in line:
                 mitigation_name = line.split()[1]
 
@@ -162,12 +166,16 @@ def make_graph(all_times, output_path, use_percent=False):
 
 def get_merged_summary(result_path, n):
     int_input_path = f"{result_path}/CINT2006.{str(n).zfill(3)}.ref.rsf"
-    fp_input_path  = f"{result_path}/CFP2006.{str(n).zfill(3)}.ref.rsf"
     name1,int_times = summarise(int_input_path)
-    name2,fp_times  = summarise(fp_input_path)
+
     times = {}
     times.update(int_times)
-    times.update(fp_times)
+
+    fp_input_path  = f"{result_path}/CFP2006.{str(n).zfill(3)}.ref.rsf"
+    name2 = ""
+    if os.path.exists(fp_input_path):
+        name2,fp_times  = summarise(fp_input_path)
+        times.update(fp_times)
     assert( (not (name1 != "" and name2 == "")) and (name1 == name2) or (name1 == "") or (name2 == ""))
     #print(name1, name2)
     return name1,times
@@ -200,7 +208,12 @@ def normalize_times(times):
     for bench in base_times:
         base_time = base_times[bench]
         for mitigation in times:
-            normalized_times[mitigation][bench] = times[mitigation][bench] / base_time
+            try:
+                curr_time = times[mitigation][bench]
+            except:
+                print("Error getting time for: " + mitigation + ", " + bench)
+                curr_time = 1
+            normalized_times[mitigation][bench] = curr_time / base_time
 
     return dict(normalized_times)
 
