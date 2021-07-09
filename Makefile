@@ -197,6 +197,8 @@ build: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_release ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_release ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_naclfullsave32_release ./mach build
@@ -221,6 +223,8 @@ build_debug: build_check zerocost_clang
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_regsave_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_fullsavewindows_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_lucet_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave_debug ./mach build
+	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_stock_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_mpkfullsave32_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_segmentsfizerocost_debug ./mach build
 	cd zerocost_testing_firefox && MOZCONFIG=mozconfig_naclfullsave32_debug ./mach build
