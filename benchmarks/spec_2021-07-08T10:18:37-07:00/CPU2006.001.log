@@ -1,0 +1,474 @@
+runspec v6152 started at Thu Jul  8 10:18:36 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clangzerocost.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = SegmentZero
+Size      = ref
+Machine   = default
+benchmarks= 458.sjeng
+outputs   = asc
+username  = shr
+Benchmarks selected: 458.sjeng
+Compiling Binaries
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 511a9b4cd68b7918b476894bae7d19c1)(expected: f924c65c45d7c28e349f8a58594532ca)
+  Building 458.sjeng base SegmentZero default: (build_base_SegmentZero.0001)
+Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001/Makefile.spec':
+TUNE=base
+EXT=SegmentZero
+NUMBER=458
+NAME=sjeng
+SOURCES= attacks.c book.c crazy.c draw.c ecache.c epd.c eval.c leval.c \
+	 moves.c neval.c partner.c proof.c rcfile.c search.c see.c seval.c \
+	 sjeng.c ttable.c utils.c
+EXEBASE=sjeng
+NEED_MATH=
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+CC               = /mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition
+COPTIMIZE        = -O2
+CXX              = /mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03
+CXXOPTIMIZE      = -O2
+FC               = /usr/local/bin/gfortran
+FOPTIMIZE        = -O2
+FPBASE           = yes
+OS               = unix
+absolutely_no_locking = 0
+abstol           = 
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = sjeng
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 458.sjeng
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = sjeng_base.SegmentZero
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = SegmentZero
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+license_num      = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log
+lognum           = 001
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j8
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = sjeng
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes0100        =  C base flags: -O2
+notes0110        =  C++ base flags: -O2
+notes0120        =  Fortran base flags: -O2
+notes25          = 
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 458
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+path             = /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng
+plain_train      = 1
+preenv           = 1
+prefix           = 
+prepared_by      = 
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec --config=linux32-i386-clangzerocost.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+size_class       = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 32-bit
+sw_compiler      = gcc , g++ & gfortran 4.2 Snapshot 20060715 (for i386)
+sw_file          = ext3
+sw_os            = SUSE Linux 10.1 (for i386)
+sw_other         = None
+sw_peak_ptrsize  = 32-bit
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Jul-2021
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /mnt/sata/Code/zerocost/zerocost-specbenchmark
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = shr
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = train.out
+  Compile for '458.sjeng' started at: Thu Jul  8 10:18:38 2021 (1625764718)
+Issuing make.clean command 'specmake -j8 clean'
+specmake -j8 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Thu Jul  8 10:18:38 2021 (1625764718)
+specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+rm -rf sjeng
+rm -rf sjeng.exe
+rm -rf *.o  train.out
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core
+rm -rf 
+specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+Stop make.clean command: Thu Jul  8 10:18:38 2021 (1625764718)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j8 build'
+specmake -j8 build 2> make.err | tee make.out
+Start make command: Thu Jul  8 10:18:38 2021 (1625764718)
+specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o attacks.o -DSPEC_CPU -DNDEBUG    -O2                attacks.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o book.o -DSPEC_CPU -DNDEBUG    -O2                book.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o crazy.o -DSPEC_CPU -DNDEBUG    -O2                crazy.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o draw.o -DSPEC_CPU -DNDEBUG    -O2                draw.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o ecache.o -DSPEC_CPU -DNDEBUG    -O2                ecache.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o epd.o -DSPEC_CPU -DNDEBUG    -O2                epd.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o eval.o -DSPEC_CPU -DNDEBUG    -O2                eval.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o leval.o -DSPEC_CPU -DNDEBUG    -O2                leval.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12clang-12: : warningwarning: : -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]-Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+
+clang-12clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o moves.o -DSPEC_CPU -DNDEBUG    -O2                moves.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o neval.o -DSPEC_CPU -DNDEBUG    -O2                neval.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o partner.o -DSPEC_CPU -DNDEBUG    -O2                partner.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o proof.o -DSPEC_CPU -DNDEBUG    -O2                proof.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warningclang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o rcfile.o -DSPEC_CPU -DNDEBUG    -O2                rcfile.c
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o search.o -DSPEC_CPU -DNDEBUG    -O2                search.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+moves.c:847:53: warning: for loop has empty body [-Wempty-body]
+                for (l = wking_loc-11; board[l] == npiece; l -=11);
+clang-12clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning:                                                                   ^
+moves.c:847:53: note: put the semicolon on a separate line to silence this warning
+argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+moves.c:862:53: warning: for loop has empty body [-Wempty-body]
+                for (l = wking_loc-12; board[l] == npiece; l -=12);
+                                                                  ^
+moves.c:862:53: note: put the semicolon on a separate line to silence this warning
+: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+moves.cpartner.c:166:2: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+        DIE;
+        ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+partner.c:166:2: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+partner.c:321:2: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+        DIE;
+        ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+partner.c:321:2: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+:1181:51: warning: for loop has empty body [-Wempty-body]
+        for (l = bking_loc-13; board[l] == npiece; l-=13);    
+                                                         ^
+moves.c:1181/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o see.o -DSPEC_CPU -DNDEBUG    -O2                see.c
+:51: note: put the semicolon on a separate line to silence this warning
+moves.c:1194:51: warning: for loop has empty body [-Wempty-body]
+        for (l = bking_loc-11; board[l] == npiece; l-=11);    
+                                                         ^
+moves.c:1194:51: note: put the semicolon on a separate line to silence this warning
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o seval.o -DSPEC_CPU -DNDEBUG    -O2                seval.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o sjeng.o -DSPEC_CPU -DNDEBUG    -O2                sjeng.c
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+search.c:1858:30: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      if (bestmovenum == -1) DIE;
+                             ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+search.c:1858:30: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+2 warnings generated.
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o ttable.o -DSPEC_CPU -DNDEBUG    -O2                ttable.c
+clang-12/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o utils.o -DSPEC_CPU -DNDEBUG    -O2                utils.c
+: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+clang-12: warning: -Wl,--allow-multiple-definition: 'linker' input unused [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-fuse-ld=gold' [-Wunused-command-line-argument]
+utils.c:773:7: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      DIE;
+      ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:773:7: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+utils.c:779:2: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+        DIE;
+        ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:779:2: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+utils.c:785:7: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      DIE;
+      ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:785:7: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+utils.c:794:7: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      DIE;
+      ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:794:7: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+utils.c:800:7: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      DIE;
+      ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:800:7: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+utils.c:806:7: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+      DIE;
+      ^~~
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^~~~~~~~~~~~~~
+utils.c:806:7: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+./sjeng.h:26:14: note: expanded from macro 'DIE'
+#define DIE (*(int *)(NULL) = 0)
+             ^
+!!!!!!Found special file! Not adding flags.['/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang', '-fno-asm', '-fno-asm-blocks', '-fsanitize=safe-stack', '-fstack-clash-protection', '-flto', '-fuse-ld=gold', '-fsanitize=cfi-icall', '-fsanitize-cfi-canonical-jump-tables', '-fsanitize-cfi-cross-dso', '-mseparate-stack-seg', '-m32', '-Wl,--allow-multiple-definition', '-c', '-o', 'seval.o', '-DSPEC_CPU', '-DNDEBUG', '-O2', 'seval.c']
+!!!!!!Found special file! Not adding flags.['/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang', '-fno-asm', '-fno-asm-blocks', '-fsanitize=safe-stack', '-fstack-clash-protection', '-flto', '-fuse-ld=gold', '-fsanitize=cfi-icall', '-fsanitize-cfi-canonical-jump-tables', '-fsanitize-cfi-cross-dso', '-mseparate-stack-seg', '-m32', '-Wl,--allow-multiple-definition', '-c', '-o', 'sjeng.o', '-DSPEC_CPU', '-DNDEBUG', '-O2', 'sjeng.c']
+1 warning generated.
+!!!!!!Found special file! Not adding flags.['/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang', '-fno-asm', '-fno-asm-blocks', '-fsanitize=safe-stack', '-fstack-clash-protection', '-flto', '-fuse-ld=gold', '-fsanitize=cfi-icall', '-fsanitize-cfi-canonical-jump-tables', '-fsanitize-cfi-cross-dso', '-mseparate-stack-seg', '-m32', '-Wl,--allow-multiple-definition', '-c', '-o', 'search.o', '-DSPEC_CPU', '-DNDEBUG', '-O2', 'search.c']
+6 warnings generated.
+4 warnings generated.
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition   -O2          attacks.o book.o crazy.o draw.o ecache.o epd.o eval.o leval.o moves.o neval.o partner.o proof.o rcfile.o search.o see.o seval.o sjeng.o ttable.o utils.o                     -o sjeng
+clang-12: warning: argument unused during compilation: '-enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang' [-Wunused-command-line-argument]
+specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+Stop make command: Thu Jul  8 10:18:40 2021 (1625764720)
+Elapsed time for make command: 00:00:02 (2)
+Issuing options command 'specmake -j8 options'
+specmake -j8 options 2> options.err | tee options.out
+Start options command: Thu Jul  8 10:18:40 2021 (1625764720)
+specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+COMP: /mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -c -o options.o -DSPEC_CPU -DNDEBUG    -O2                <source>
+C: CC="/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O2"
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition   -O2          <objects>           -o options
+C: LD="/mnt/sata/Code/zerocost/zerocost-specbenchmark/passthrough.py /mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition"
+O: COPTIMIZE="-O2"
+C: LDOUT="-o options"
+specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/build/build_base_SegmentZero.0001'
+Stop options command: Thu Jul  8 10:18:40 2021 (1625764720)
+Elapsed time for options command: 00:00:00 (0)
+  Compile for '458.sjeng' ended at: Thu Jul  8 10:18:40 2021 (1625764720)
+  Elapsed compile for '458.sjeng': 00:00:02 (2)
+
+Build successes: 458.sjeng(base)
+
+Build Complete
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log
+
+runspec finished at Thu Jul  8 10:18:40 2021; 4 total seconds elapsed

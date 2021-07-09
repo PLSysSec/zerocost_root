@@ -1,0 +1,194 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 400.perlbench (base) had invalid runs!                                     #
+# Run of 400.perlbench (base) was not valid; status is VE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: Output miscompare                                     #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                      Tyan Tyan Thunder KKQS Pro (S4882)
+                           Mon Jul  5 23:32:58 2021
+
+CPU2006 License: 0                                       Test date: Jul-2021
+Test sponsor: Turbo Computers                Hardware availability: Dec-9999
+Tested by:    Turbo Computers                Software availability: Dec-9999
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770        210            VE                                 
+401.bzip2        9650        376       25.7 *                                  
+403.gcc          8050        171       47.1 *                                  
+429.mcf          9120        155       58.7 *                                  
+445.gobmk       10490        310       33.9 *                                  
+456.hmmer        9330        331       28.2 *                                  
+458.sjeng       12100        340       35.6 *                                  
+462.libquantum  20720        291       71.3 *                                  
+464.h264ref                                 NR                                 
+471.omnetpp      6250        239       26.2 *                                  
+473.astar        7020        282       24.9 *                                  
+483.xalancbmk    6900        134       51.4 *                                  
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2        9650        376       25.7 *                                  
+403.gcc          8050        171       47.1 *                                  
+429.mcf          9120        155       58.7 *                                  
+445.gobmk       10490        310       33.9 *                                  
+456.hmmer        9330        331       28.2 *                                  
+458.sjeng       12100        340       35.6 *                                  
+462.libquantum  20720        291       71.3 *                                  
+464.h264ref                                 NR                                 
+471.omnetpp      6250        239       26.2 *                                  
+473.astar        7020        282       24.9 *                                  
+483.xalancbmk    6900        134       51.4 *                                  
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: AMD Opteron 256
+ CPU Characteristics:  
+             CPU MHz: 3000
+                 FPU: Integrated
+      CPU(s) enabled: 1 core, 1 chip, 1 core/chip
+    CPU(s) orderable: 1 chip
+       Primary Cache: 64 KB I + 64 KB D on chip per chip
+     Secondary Cache: 1 MB I+D on chip per chip
+            L3 Cache: None
+         Other Cache: None
+              Memory: 2 GB (2 x 1GB DDR333 CL2.5)
+      Disk Subsystem: SATA
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: SUSE Linux 10.1 (for i386)
+            Compiler: gcc , g++ & gfortran 4.2 Snapshot 20060715 (for
+                      i386)
+       Auto Parallel: No
+         File System: ext3
+        System State: runlevel 3
+       Base Pointers: 32-bit
+       Peak Pointers: 32-bit
+      Other Software: None
+
+
+                                General Notes
+                                -------------
+    
+     400.perlbench: -DSPEC_CPU_LINUX_IA32
+     462.libquantum: -DSPEC_CPU_LINUX
+     C base flags: -O2
+     C++ base flags: -O2
+     Fortran base flags: -O2
+
+                              Base Unknown Flags
+                              ------------------
+  400.perlbench: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      401.bzip2: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+        403.gcc: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+        429.mcf: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      445.gobmk: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      456.hmmer: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      458.sjeng: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+ 462.libquantum: "clang -flto -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "clang -flto -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+    471.omnetpp: "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+      473.astar: "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+  483.xalancbmk: "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+
+                            Base Portability Flags
+                            ----------------------
+  400.perlbench: -DSPEC_CPU_LINUX_IA32
+ 462.libquantum: -DSPEC_CPU_LINUX
+  483.xalancbmk: -DSPEC_CPU_LINUX
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 400.perlbench (base) had invalid runs!                                     #
+# Run of 400.perlbench (base) was not valid; status is VE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: Output miscompare                                     #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Tue Jul  6 00:24:47 2021 by CPU2006 ASCII formatter v6128.

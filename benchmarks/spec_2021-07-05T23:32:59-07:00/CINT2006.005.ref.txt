@@ -1,0 +1,296 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 471.omnetpp (base) had invalid runs!                                       #
+# 456.hmmer (base) had invalid runs!                                         #
+# 445.gobmk (base) had invalid runs!                                         #
+# 458.sjeng (base) had invalid runs!                                         #
+# 429.mcf (base) had invalid runs!                                           #
+# 473.astar (base) had invalid runs!                                         #
+# 483.xalancbmk (base) had invalid runs!                                     #
+# 400.perlbench (base) had invalid runs!                                     #
+# 462.libquantum (base) had invalid runs!                                    #
+# 401.bzip2 (base) had invalid runs!                                         #
+# 403.gcc (base) had invalid runs!                                           #
+# Run of 400.perlbench (base) was not valid; status is RE                    #
+# Run of 401.bzip2 (base) was not valid; status is RE                        #
+# Run of 403.gcc (base) was not valid; status is RE                          #
+# Run of 429.mcf (base) was not valid; status is RE                          #
+# Run of 445.gobmk (base) was not valid; status is RE                        #
+# Run of 456.hmmer (base) was not valid; status is RE                        #
+# Run of 458.sjeng (base) was not valid; status is RE                        #
+# Run of 462.libquantum (base) was not valid; status is RE                   #
+# Run of 471.omnetpp (base) was not valid; status is RE                      #
+# Run of 473.astar (base) was not valid; status is RE                        #
+# Run of 483.xalancbmk (base) was not valid; status is RE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 429.mcf: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 458.sjeng: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 462.libquantum: copy 0 non-zero return code (exit code=11, signal=0) #
+# Error 471.omnetpp: copy 0 non-zero return code (exit code=1, signal=0)     #
+# Error 473.astar: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 473.astar: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 483.xalancbmk: copy 0 non-zero return code (exit code=11, signal=0)  #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                      Tyan Tyan Thunder KKQS Pro (S4882)
+                           Tue Jul  6 00:24:49 2021
+
+CPU2006 License: 0                                       Test date: Jul-2021
+Test sponsor: Turbo Computers                Hardware availability: Dec-9999
+Tested by:    Turbo Computers                Software availability: Dec-9999
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench    9770    0.320              RE                                 
+401.bzip2        9650    1.04               RE                                 
+403.gcc          8050    0.969              RE                                 
+429.mcf          9120    0.108              RE                                 
+445.gobmk       10490    0.541              RE                                 
+456.hmmer        9330    0.215              RE                                 
+458.sjeng       12100    0.109              RE                                 
+462.libquantum  20720    0.108              RE                                 
+464.h264ref                                 NR                                 
+471.omnetpp      6250    0.00218            RE                                 
+473.astar        7020    0.216              RE                                 
+483.xalancbmk    6900    0.109              RE                                 
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp                                 NR                                 
+473.astar                                   NR                                 
+483.xalancbmk                               NR                                 
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: AMD Opteron 256
+ CPU Characteristics:  
+             CPU MHz: 3000
+                 FPU: Integrated
+      CPU(s) enabled: 1 core, 1 chip, 1 core/chip
+    CPU(s) orderable: 1 chip
+       Primary Cache: 64 KB I + 64 KB D on chip per chip
+     Secondary Cache: 1 MB I+D on chip per chip
+            L3 Cache: None
+         Other Cache: None
+              Memory: 2 GB (2 x 1GB DDR333 CL2.5)
+      Disk Subsystem: SATA
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: SUSE Linux 10.1 (for i386)
+            Compiler: gcc , g++ & gfortran 4.2 Snapshot 20060715 (for
+                      i386)
+       Auto Parallel: No
+         File System: ext3
+        System State: runlevel 3
+       Base Pointers: 32-bit
+       Peak Pointers: 32-bit
+      Other Software: None
+
+
+                                General Notes
+                                -------------
+    
+     400.perlbench: -DSPEC_CPU_LINUX_IA32
+     462.libquantum: -DSPEC_CPU_LINUX
+     C base flags: -O2
+     C++ base flags: -O2
+     Fortran base flags: -O2
+
+                              Base Unknown Flags
+                              ------------------
+  400.perlbench: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      401.bzip2: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+        403.gcc: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+        429.mcf: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      445.gobmk: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      456.hmmer: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+      458.sjeng: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+ 462.libquantum: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in CC)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+    471.omnetpp: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+      473.astar: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+  483.xalancbmk: "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in CXX)
+                 "/mnt/sata/ffbuilds/zerocost_llvm_install/bin/clang++ -fno-asm -fno-asm-blocks -fsanitize=safe-stack -fstack-clash-protection -flto -fuse-ld=gold -fsanitize=cfi-icall -fsanitize-cfi-canonical-jump-tables -fsanitize-cfi-cross-dso -ftrivial-auto-var-init=zero -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang -mseparate-stack-seg -m32 -Wl,--allow-multiple-definition -std=gnu++03" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+
+                            Base Portability Flags
+                            ----------------------
+  400.perlbench: -DSPEC_CPU_LINUX_IA32
+ 462.libquantum: -DSPEC_CPU_LINUX
+  483.xalancbmk: -DSPEC_CPU_LINUX
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 471.omnetpp (base) had invalid runs!                                       #
+# 456.hmmer (base) had invalid runs!                                         #
+# 445.gobmk (base) had invalid runs!                                         #
+# 458.sjeng (base) had invalid runs!                                         #
+# 429.mcf (base) had invalid runs!                                           #
+# 473.astar (base) had invalid runs!                                         #
+# 483.xalancbmk (base) had invalid runs!                                     #
+# 400.perlbench (base) had invalid runs!                                     #
+# 462.libquantum (base) had invalid runs!                                    #
+# 401.bzip2 (base) had invalid runs!                                         #
+# 403.gcc (base) had invalid runs!                                           #
+# Run of 400.perlbench (base) was not valid; status is RE                    #
+# Run of 401.bzip2 (base) was not valid; status is RE                        #
+# Run of 403.gcc (base) was not valid; status is RE                          #
+# Run of 429.mcf (base) was not valid; status is RE                          #
+# Run of 445.gobmk (base) was not valid; status is RE                        #
+# Run of 456.hmmer (base) was not valid; status is RE                        #
+# Run of 458.sjeng (base) was not valid; status is RE                        #
+# Run of 462.libquantum (base) was not valid; status is RE                   #
+# Run of 471.omnetpp (base) was not valid; status is RE                      #
+# Run of 473.astar (base) was not valid; status is RE                        #
+# Run of 483.xalancbmk (base) was not valid; status is RE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)  #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 403.gcc: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 429.mcf: copy 0 non-zero return code (exit code=11, signal=0)        #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 458.sjeng: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 462.libquantum: copy 0 non-zero return code (exit code=11, signal=0) #
+# Error 471.omnetpp: copy 0 non-zero return code (exit code=1, signal=0)     #
+# Error 473.astar: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 473.astar: copy 0 non-zero return code (exit code=11, signal=0)      #
+# Error 483.xalancbmk: copy 0 non-zero return code (exit code=11, signal=0)  #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Tue Jul  6 01:15:48 2021 by CPU2006 ASCII formatter v6128.

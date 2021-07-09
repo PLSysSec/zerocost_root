@@ -1,0 +1,285 @@
+==============================================================================
+Debug log for CPU2006.  This file contains very detailed debugging
+output from the CPU2006 tools (as if "--verbose 99" had been specified) and is
+typically useful only to developers of the CPU2006 toolset.   
+
+For a successful run, this debug log will be removed automatically, unless you
+specify "--keeptmp" on the command line, or "keeptmp=1" in your config file.
+
+If you file a support request with cpu2006support@spec.org, you may be
+asked to submit this file.
+------------------------------------------------------------------------------
+
+Environment variables that should have been set or changed by shrc:
+SPEC: /mnt/sata/Code/zerocost/zerocost-specbenchmark
+PATH: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/Code/LibrarySandboxing/emsdk:/home/shr/Code/LibrarySandboxing/emsdk/upstream/emscripten:/home/shr/Code/LibrarySandboxing/emsdk/node/14.15.5_64bit/bin:/home/shr/.cargo/bin:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/bin:/home/shr/.local/bin:/home/shr/.nvm/versions/node/v15.5.1/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/opt/cmake/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin:/opt/wabt/bin/:/home/shr/go/bin:/bin:/home/shr/go/bin
+SPECPERLLIB: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin:/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/lib
+LD_LIBRARY_PATH: /home/shr/Code/zerocost/libnsl/build/lib/
+DYLD_LIBRARY_PATH: 
+LC_ALL: C
+LC_LANG: C
+SPECDB_PWD: /mnt/sata/Code/zerocost/zerocost-specbenchmark/config
+------------------------------------------------------------------------------
+
+Runspec's verbose version output:
+                 This is the SPEC CPU2006 benchmark tools suite.
+
+Version summary:
+    CPU2006 version: 1.1
+ Benchmarks version: 110
+      Tools version: 111
+    runspec version: 6152 ($Id: runspec 6152 2008-05-07 05:25:30Z cloyce $)
+
+Tools information:
+ Tools package installed: linux-suse101-AMD64
+ File locking method: fcntl(2) (probably network-safe)
+Mode |  UID  |  GID  |   Size  |    Modified Date   | Name
+0755 | 1000  | 1000  |  197376 | 17-May-2007 10:05:18 | specmake
+0755 | 1000  | 1000  | 1269511 | 17-May-2007 10:05:18 | specperl
+0755 | 1000  | 1000  |   25160 | 17-May-2007 10:05:18 | specinvoke
+0755 | 1000  | 1000  |   28176 | 17-May-2007 10:05:18 | specinvoke_pm
+0755 | 1000  | 1000  |   87352 | 17-May-2007 10:05:18 | specbzip2
+0755 | 1000  | 1000  |   20056 | 17-May-2007 10:05:18 | specmd5sum
+0755 | 1000  | 1000  |    7647 | 04-Jul-2021 18:11:47 | specdiff
+0755 | 1000  | 1000  |   86555 | 04-Jul-2021 18:11:47 | specpp
+0755 | 1000  | 1000  |  264960 | 17-May-2007 10:05:18 | specrxp
+0755 | 1000  | 1000  |  121917 | 04-Jul-2021 18:11:47 | runspec
+
+Version info for specinvoke (specinvoke): Version: 5000
+Version info for specmake (specmake): GNU Make 3.81
+Version info for specbzip2 (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specbzip2): bzip2 v1.0.3, 15-Feb-2005
+Version info for specpp (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specperl): filepp version 1.7.1SPEC
+Version info for specperl (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specperl): This is specperl, v5.8.8 built for x86_64-linux
+                           For more detail on specperl, say 'specperl -V'
+
+==============================================================================
+
+1625500959.62: runspec v6152 started at Mon Jul  5 09:02:38 2021 on "shr-Desktop"
+1625500959.62: runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+1625500959.62: runspec: runspec --config=linux32-i386-clangzerocost.cfg --action=build CINT2006
+1625500959.62: toolset: linux-suse101-AMD64
+
+1625500959.62(0.04s): Locating benchmarks...Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU(?:=\S*)?(?=\s|$)' for DSPEC_CPU in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]USPEC_CPU(?:=\S*)?(?=\s|$)' for USPEC_CPU in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DNDEBUG(?:=\S*)?(?=\s|$)' for DNDEBUG in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]UNDEBUG(?:=\S*)?(?=\s|$)' for UNDEBUG in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_WINDOWS(?:=\S*)?(?=\s|$)' for DSPEC_CPU_WINDOWS in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_ILP32(?:=\S*)?(?=\s|$)' for DSPEC_CPU_ILP32 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_P64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_P64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_LP64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_LP64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_ILP64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_ILP64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625500959.66: Reading suite directory for 'CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '464.h264ref'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/464.h264ref/Spec/object.pm in 0.000162840s
+1625500959.66:     Instantiated Spec::Benchmark::h264ref464 in 0.000126839s
+1625500959.66:     Finding src.alts took 0.000025988s
+1625500959.66:   Setting up h264ref took 0.000438213s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '400.perlbench'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/Spec/object.pm in 0.000550985s
+1625500959.66:     Instantiated Spec::Benchmark::perlbench400 in 0.000071049s
+1625500959.66:     Finding src.alts took 0.000020027s
+1625500959.66:   Setting up perlbench took 0.000746965s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '483.xalancbmk'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/Spec/object.pm in 0.000442982s
+1625500959.66:     Instantiated Spec::Benchmark::xalancbmk483 in 0.000092983s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up xalancbmk took 0.000654936s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_fortran.bset'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '403.gcc'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/Spec/object.pm in 0.000138998s
+1625500959.66:     Instantiated Spec::Benchmark::gcc403 in 0.000059128s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up gcc took 0.000314951s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '462.libquantum'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/Spec/object.pm in 0.000108004s
+1625500959.66:     Instantiated Spec::Benchmark::libquantum462 in 0.000044823s
+1625500959.66:     Finding src.alts took 0.000017881s
+1625500959.66:   Setting up libquantum took 0.000264168s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '445.gobmk'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/Spec/object.pm in 0.000128984s
+1625500959.66:     Instantiated Spec::Benchmark::gobmk445 in 0.000046968s
+1625500959.66:     Finding src.alts took 0.000017881s
+1625500959.66:   Setting up gobmk took 0.000286818s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '453.povray'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/453.povray/Spec/object.pm in 0.000147820s
+1625500959.66:     Instantiated Spec::Benchmark::povray453 in 0.000072002s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up povray took 0.000334978s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '450.soplex'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/450.soplex/Spec/object.pm in 0.000170946s
+1625500959.66:     Instantiated Spec::Benchmark::soplex450 in 0.000046015s
+1625500959.66:     Finding src.alts took 0.000017881s
+1625500959.66:   Setting up soplex took 0.000331163s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '481.wrf'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/481.wrf/Spec/object.pm in 0.000787973s
+1625500959.66:     Instantiated Spec::Benchmark::wrf481 in 0.000099897s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up wrf took 0.001009226s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_c_cpp.bset'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '458.sjeng'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/Spec/object.pm in 0.000091076s
+1625500959.66:     Instantiated Spec::Benchmark::sjeng458 in 0.000045061s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up sjeng took 0.000250101s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '435.gromacs'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/435.gromacs/Spec/object.pm in 0.000126123s
+1625500959.66:     Instantiated Spec::Benchmark::gromacs435 in 0.000057936s
+1625500959.66:     Finding src.alts took 0.000017881s
+1625500959.66:   Setting up gromacs took 0.000298023s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_cpp.bset'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'CFP2006.bset'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_c.bset'
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '465.tonto'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/465.tonto/Spec/object.pm in 0.000888109s
+1625500959.66:     Instantiated Spec::Benchmark::tonto465 in 0.000087976s
+1625500959.66:     Finding src.alts took 0.000020027s
+1625500959.66:   Setting up tonto took 0.001098871s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '437.leslie3d'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/437.leslie3d/Spec/object.pm in 0.000095844s
+1625500959.66:     Instantiated Spec::Benchmark::leslie3d437 in 0.000048161s
+1625500959.66:     Finding src.alts took 0.000018120s
+1625500959.66:   Setting up leslie3d took 0.000256062s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '447.dealII'
+1625500959.66:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/447.dealII/Spec/object.pm in 0.000360012s
+1625500959.66:     Instantiated Spec::Benchmark::dealII447 in 0.000064850s
+1625500959.66:     Finding src.alts took 0.000020981s
+1625500959.66:   Setting up dealII took 0.000563860s
+
+1625500959.66:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '434.zeusmp'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/434.zeusmp/Spec/object.pm in 0.000114918s
+1625500959.67:     Instantiated Spec::Benchmark::zeusmp434 in 0.000055075s
+1625500959.67:     Finding src.alts took 0.000017881s
+1625500959.67:   Setting up zeusmp took 0.000286102s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'CINT2006.bset'
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '998.specrand'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/998.specrand/Spec/object.pm in 0.000113964s
+1625500959.67:     Instantiated Spec::Benchmark::specrand998 in 0.000046968s
+1625500959.67:     Finding src.alts took 0.000018120s
+1625500959.67:   Setting up specrand took 0.000278950s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '436.cactusADM'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/436.cactusADM/Spec/object.pm in 0.000256062s
+1625500959.67:     Instantiated Spec::Benchmark::cactusADM436 in 0.000075102s
+1625500959.67:     Finding src.alts took 0.000019073s
+1625500959.67:   Setting up cactusADM took 0.000447989s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '454.calculix'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/454.calculix/Spec/object.pm in 0.000279903s
+1625500959.67:     Instantiated Spec::Benchmark::calculix454 in 0.000072002s
+1625500959.67:     Finding src.alts took 0.000019073s
+1625500959.67:   Setting up calculix took 0.000469923s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '999.specrand'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/Spec/object.pm in 0.000098944s
+1625500959.67:     Instantiated Spec::Benchmark::specrand999 in 0.000043869s
+1625500959.67:     Finding src.alts took 0.000017881s
+1625500959.67:   Setting up specrand took 0.000252008s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '444.namd'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/444.namd/Spec/object.pm in 0.000128031s
+1625500959.67:     Instantiated Spec::Benchmark::namd444 in 0.000050068s
+1625500959.67:     Finding src.alts took 0.000018120s
+1625500959.67:   Setting up namd took 0.000289917s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_mixed.bset'
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '471.omnetpp'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/Spec/object.pm in 0.000119925s
+1625500959.67:     Instantiated Spec::Benchmark::omnetpp471 in 0.000051975s
+1625500959.67:     Finding src.alts took 0.000017881s
+1625500959.67:   Setting up omnetpp took 0.000284195s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '429.mcf'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/Spec/object.pm in 0.000103951s
+1625500959.67:     Instantiated Spec::Benchmark::mcf429 in 0.000047922s
+1625500959.67:     Finding src.alts took 0.000018120s
+1625500959.67:   Setting up mcf took 0.000261068s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '473.astar'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/Spec/object.pm in 0.000155926s
+1625500959.67:     Instantiated Spec::Benchmark::astar473 in 0.000045061s
+1625500959.67:     Finding src.alts took 0.000017166s
+1625500959.67:   Setting up astar took 0.000310898s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '482.sphinx3'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/482.sphinx3/Spec/object.pm in 0.000302792s
+1625500959.67:     Instantiated Spec::Benchmark::sphinx3482 in 0.000061989s
+1625500959.67:     Finding src.alts took 0.000020981s
+1625500959.67:   Setting up sphinx3 took 0.000487089s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '459.GemsFDTD'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/459.GemsFDTD/Spec/object.pm in 0.000161171s
+1625500959.67:     Instantiated Spec::Benchmark::GemsFDTD459 in 0.000045061s
+1625500959.67:     Finding src.alts took 0.000019073s
+1625500959.67:   Setting up GemsFDTD took 0.000320911s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '470.lbm'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/470.lbm/Spec/object.pm in 0.000100136s
+1625500959.67:     Instantiated Spec::Benchmark::lbm470 in 0.000045776s
+1625500959.67:     Finding src.alts took 0.000019073s
+1625500959.67:   Setting up lbm took 0.000258923s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '416.gamess'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/416.gamess/Spec/object.pm in 0.000154018s
+1625500959.67:     Instantiated Spec::Benchmark::gamess416 in 0.000056982s
+1625500959.67:     Finding src.alts took 0.000017881s
+1625500959.67:   Setting up gamess took 0.000326157s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '401.bzip2'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/Spec/object.pm in 0.000109911s
+1625500959.67:     Instantiated Spec::Benchmark::bzip2401 in 0.000044107s
+1625500959.67:     Finding src.alts took 0.000020981s
+1625500959.67:   Setting up bzip2 took 0.000273943s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '456.hmmer'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/Spec/object.pm in 0.000154972s
+1625500959.67:     Instantiated Spec::Benchmark::hmmer456 in 0.000047922s
+1625500959.67:     Finding src.alts took 0.000018835s
+1625500959.67:   Setting up hmmer took 0.000313997s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '410.bwaves'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/410.bwaves/Spec/object.pm in 0.000093937s
+1625500959.67:     Instantiated Spec::Benchmark::bwaves410 in 0.000049829s
+1625500959.67:     Finding src.alts took 0.000016928s
+1625500959.67:   Setting up bwaves took 0.000252962s
+
+1625500959.67:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '433.milc'
+1625500959.67:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/433.milc/Spec/object.pm in 0.000134945s
+1625500959.67:     Instantiated Spec::Benchmark::milc433 in 0.000053883s
+1625500959.67:     Finding src.alts took 0.000018835s
+1625500959.67:   Setting up milc took 0.000299931s
+
+1625500959.67: Setting up suite took 0.014737844s
+1625500959.67: Reading suite directory for 'flags-mandatory.xml', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625500959.67: Reading suite directory for 'version.txt', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625500959.67: Reading suite directory for 'Makefile.defaults', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625500959.67: found 31 benchmarks in 7 benchsets.
+1625500959.67: Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+1625500959.68: Can't find benchmark 'CINT2006'
+1625500959.68: Can't parse 'CINT2006' into a benchmark
+
+1625500959.68: No benchmarks specified!
+
+1625500959.68: The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.003.log
+1625500959.68: The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.003.log.debug
+
+1625500959.69: *
+1625500959.69: * Temporary files were NOT deleted; keeping temporaries such as
+1625500959.69: * /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.003.log.debug
+1625500959.69: * (These may be large!)
+1625500959.69: *
+1625500959.69: runspec finished at Mon Jul  5 09:02:39 2021; 1 total seconds elapsed

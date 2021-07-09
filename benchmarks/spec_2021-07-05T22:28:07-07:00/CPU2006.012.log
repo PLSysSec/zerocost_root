@@ -1,0 +1,603 @@
+runspec v6152 started at Mon Jul  5 20:29:08 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-nacl.cfg --nobuild --action=run --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = NaCl
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc
+username  = shr
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/exe/perlbench_base.NaCl does not exist
+  NOT Building 400.perlbench base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base NaCl default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base NaCl default
+
+------------------------------------------------------------------------
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/exe/Xalan_base.NaCl does not exist
+  NOT Building 483.xalancbmk base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base NaCl default
+
+Build errors: 400.perlbench(base; nobuild), 483.xalancbmk(base; nobuild)
+
+Setting Up Run Directories
+  Setting up 401.bzip2 ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 403.gcc ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 429.mcf ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 445.gobmk ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 456.hmmer ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 458.sjeng ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 462.libquantum ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 471.omnetpp ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 473.astar ref base NaCl default: existing (run_base_ref_NaCl.0000)
+  Setting up 999.specrand ref base NaCl default: existing (run_base_ref_NaCl.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 401.bzip2 ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000
+    -o input.source.out -e input.source.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl input.program 280 (timed)
+    -o text.html.out -e text.html.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl text.html 280 (timed)
+    -o input.combined.out -e input.combined.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/bzip2_base.NaCl input.combined 200 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:11 2021 (1625542151)
+Stop command: Mon Jul  5 20:31:44 2021 (1625542304)
+Elapsed time for command: 00:02:33 (153)
+Workload elapsed time (0:1) = 0.263436 seconds
+Workload elapsed time (0:2) = 29.43535 seconds
+Workload elapsed time (0:3) = 43.462986 seconds
+Workload elapsed time (0:4) = 0.218354 seconds
+Workload elapsed time (0:5) = 0.219406 seconds
+Workload elapsed time (0:6) = 71.463023 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Mon Jul  5 20:31:36 2021.  Total elapsed time: 145.062555
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:31:44 2021 (1625542304)
+Stop command: Mon Jul  5 20:31:45 2021 (1625542305)
+Elapsed time for command: 00:00:01 (1)
+
+****************************************
+Contents of input.source.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594472,4154928576:20:29:11.207128] BYPASSING ALL ACL CHECKS
+[594472,4154928576:20:29:11.207444] Native Client module will be loaded at base address 0x00000000b7a70000
+[594472,4154928576:20:29:11.213300] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of text.html.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594527,4154285504:20:30:24.548099] BYPASSING ALL ACL CHECKS
+[594527,4154285504:20:30:24.548201] Native Client module will be loaded at base address 0x00000000755e0000
+[594527,4154285504:20:30:24.550906] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of liberty.jpg.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594496,4154858944:20:29:40.866690] BYPASSING ALL ACL CHECKS
+[594496,4154858944:20:29:40.866791] Native Client module will be loaded at base address 0x0000000078ce0000
+[594496,4154858944:20:29:40.869492] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of input.program.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594524,4154711488:20:30:24.329720] BYPASSING ALL ACL CHECKS
+[594524,4154711488:20:30:24.329822] Native Client module will be loaded at base address 0x00000000b7a3b000
+[594524,4154711488:20:30:24.332508] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of input.combined.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594530,4154064320:20:30:24.767539] BYPASSING ALL ACL CHECKS
+[594530,4154064320:20:30:24.767648] Native Client module will be loaded at base address 0x00000000b799d000
+[594530,4154064320:20:30:24.770346] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of chicken.jpg.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594480,4154924480:20:29:11.431383] BYPASSING ALL ACL CHECKS
+[594480,4154924480:20:29:11.431488] Native Client module will be loaded at base address 0x00000000b7a6f000
+[594480,4154924480:20:29:11.434278] NaCl launching app on new thread
+
+****************************************
+
+*** Miscompare of text.html.out; for details see
+    /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000/text.html.out.mis
+0002:  Loading Input Data
+       spec_init: Error mallocing memory!
+       ^
+'text.html.out' short
+
+*** Miscompare of input.source.out; for details see
+    /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000/input.source.out.mis
+0002:  Loading Input Data
+       spec_init: Error mallocing memory!
+       ^
+'input.source.out' short
+
+*** Miscompare of input.program.out; for details see
+    /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_NaCl.0000/input.program.out.mis
+0002:  Loading Input Data
+       spec_init: Error mallocing memory!
+       ^
+'input.program.out' short
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:11 2021 (1625542151)
+  Stop:     Mon Jul  5 20:31:44 2021 (1625542304)
+  Elapsed:  00:02:33 (153)
+  Reported: 145 62727000 145.062727
+ Error 401.bzip2 base ref ratio=66.52, runtime=145.062727
+
+-----------------------------------
+  Running 403.gcc ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_NaCl.0000
+    -o 166.out -e 166.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl 166.i -o 166.s (timed)
+    -o 200.out -e 200.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl g23.i -o g23.s (timed)
+    -o s04.out -e s04.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gcc_base.NaCl scilab.i -o scilab.s (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:31:45 2021 (1625542305)
+Stop command: Mon Jul  5 20:35:02 2021 (1625542502)
+Elapsed time for command: 00:03:17 (197)
+Workload elapsed time (0:1) = 16.363124 seconds
+Workload elapsed time (0:2) = 28.390675 seconds
+Workload elapsed time (0:3) = 25.276501 seconds
+Workload elapsed time (0:4) = 18.726088 seconds
+Workload elapsed time (0:5) = 21.761673 seconds
+Workload elapsed time (0:6) = 40.683391 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=1, signal=0)
+
+
+****************************************
+Contents of g23.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594679,4154899904:20:34:16.303761] BYPASSING ALL ACL CHECKS
+[594679,4154899904:20:34:16.303863] Native Client module will be loaded at base address 0x00000000b7a69000
+[594679,4154899904:20:34:16.326144] NaCl launching app on new thread
+
+gcc_base.NaCl: Cannot allocate 288523680 bytes
+
+****************************************
+
+****************************************
+Contents of s04.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594682,4153933248:20:34:23.208512] BYPASSING ALL ACL CHECKS
+[594682,4153933248:20:34:23.208640] Native Client module will be loaded at base address 0x000000000c630000
+[594682,4153933248:20:34:23.232241] NaCl launching app on new thread
+
+gcc_base.NaCl: Cannot allocate 81486632 bytes
+
+****************************************
+
+****************************************
+Contents of c-typeck.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594625,4154109376:20:32:29.856007] BYPASSING ALL ACL CHECKS
+[594625,4154109376:20:32:29.856111] Native Client module will be loaded at base address 0x00000000b79a8000
+[594625,4154109376:20:32:29.878273] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of expr2.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594657,4154162624:20:33:35.620337] BYPASSING ALL ACL CHECKS
+[594657,4154162624:20:33:35.620437] Native Client module will be loaded at base address 0x00000000b79b5000
+[594657,4154162624:20:33:35.642757] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of 166.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594585,4154211776:20:31:45.102164] BYPASSING ALL ACL CHECKS
+[594585,4154211776:20:31:45.102264] Native Client module will be loaded at base address 0x000000000c4f0000
+[594585,4154211776:20:31:45.125382] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of 200.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594609,4154154432:20:32:01.465314] BYPASSING ALL ACL CHECKS
+[594609,4154154432:20:32:01.465421] Native Client module will be loaded at base address 0x000000005ce80000
+[594609,4154154432:20:32:01.487818] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of cp-decl.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594634,4154252736:20:32:55.132453] BYPASSING ALL ACL CHECKS
+[594634,4154252736:20:32:55.132555] Native Client module will be loaded at base address 0x00000000b79cb000
+[594634,4154252736:20:32:55.154845] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of scilab.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594698,4153937344:20:34:42.949692] BYPASSING ALL ACL CHECKS
+[594698,4153937344:20:34:42.949801] Native Client module will be loaded at base address 0x00000000b797e000
+[594698,4153937344:20:34:42.972890] NaCl launching app on new thread
+
+****************************************
+
+****************************************
+Contents of expr.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594649,4154756544:20:33:13.858663] BYPASSING ALL ACL CHECKS
+[594649,4154756544:20:33:13.858765] Native Client module will be loaded at base address 0x00000000b7a46000
+[594649,4154756544:20:33:13.880941] NaCl launching app on new thread
+
+****************************************
+Workload elapsed time (0:7) = 6.904414 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=1, signal=0)
+
+Workload elapsed time (0:8) = 19.741324 seconds
+Workload elapsed time (0:9) = 11.227491 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Mon Jul  5 20:34:54 2021.  Total elapsed time: 189.074681
+Benchmark Times:
+  Start:    Mon Jul  5 20:31:45 2021 (1625542305)
+  Stop:     Mon Jul  5 20:35:02 2021 (1625542502)
+  Elapsed:  00:03:17 (197)
+  Reported: 189 74967000 189.074967
+ Error 403.gcc base ref ratio=42.58, runtime=189.074967
+
+-----------------------------------
+  Running 429.mcf ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_NaCl.0000
+    -o inp.out -e inp.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/mcf_base.NaCl inp.in (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:35:02 2021 (1625542502)
+Stop command: Mon Jul  5 20:35:02 2021 (1625542502)
+Elapsed time for command: 00:00:00 (0)
+
+429.mcf: copy 0 non-zero return code (exit code=127, signal=0)
+
+
+****************************************
+Contents of inp.err
+****************************************
+DEBUG MODE ENABLED (bypass acl)
+[594717,4154215872:20:35:02.208762] BYPASSING ALL ACL CHECKS
+[594717,4154215872:20:35:02.208865] Native Client module will be loaded at base address 0x00000000b79c2000
+[594717,4154215872:20:35:02.211603] NaCl launching app on new thread
+
+****************************************
+Workload elapsed time (0:1) = 0.004977 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Mon Jul  5 20:35:02 2021.  Total elapsed time: 0.004977
+Benchmark Times:
+  Start:    Mon Jul  5 20:35:02 2021 (1625542502)
+  Stop:     Mon Jul  5 20:35:02 2021 (1625542502)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 5048000 0.005048
+ Error 429.mcf base ref ratio=1806656.10, runtime=0.005048
+
+-----------------------------------
+  Running 445.gobmk ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gobmk_base.NaCl --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gobmk_base.NaCl --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gobmk_base.NaCl --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gobmk_base.NaCl --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/gobmk_base.NaCl --quiet --mode gtp (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:35:02 2021 (1625542502)
+Stop command: Mon Jul  5 20:41:46 2021 (1625542906)
+Elapsed time for command: 00:06:44 (404)
+Workload elapsed time (0:1) = 55.928552 seconds
+Workload elapsed time (0:2) = 141.411906 seconds
+Workload elapsed time (0:3) = 69.230887 seconds
+Workload elapsed time (0:4) = 54.684376 seconds
+Workload elapsed time (0:5) = 74.477959 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Mon Jul  5 20:41:38 2021.  Total elapsed time: 395.73368
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:41:46 2021 (1625542906)
+Stop command: Mon Jul  5 20:41:47 2021 (1625542907)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 20:35:02 2021 (1625542502)
+  Stop:     Mon Jul  5 20:41:46 2021 (1625542906)
+  Elapsed:  00:06:44 (404)
+  Reported: 395 733819000 395.733819
+ Success 445.gobmk base ref ratio=26.51, runtime=395.733819
+
+-----------------------------------
+  Running 456.hmmer ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000
+    -o nph3.out -e nph3.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/hmmer_base.NaCl nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/hmmer_base.NaCl --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:41:47 2021 (1625542907)
+Stop command: Mon Jul  5 20:47:16 2021 (1625543236)
+Elapsed time for command: 00:05:29 (329)
+Workload elapsed time (0:1) = 100.316618 seconds
+Workload elapsed time (0:2) = 220.770588 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Mon Jul  5 20:47:08 2021.  Total elapsed time: 321.087206
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:47:16 2021 (1625543236)
+Stop command: Mon Jul  5 20:47:16 2021 (1625543236)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:41:47 2021 (1625542907)
+  Stop:     Mon Jul  5 20:47:16 2021 (1625543236)
+  Elapsed:  00:05:29 (329)
+  Reported: 321 87286000 321.087286
+ Success 456.hmmer base ref ratio=29.06, runtime=321.087286
+
+-----------------------------------
+  Running 458.sjeng ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000
+    -o ref.out -e ref.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/sjeng_base.NaCl ref.txt (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:47:16 2021 (1625543236)
+Stop command: Mon Jul  5 20:54:11 2021 (1625543651)
+Elapsed time for command: 00:06:55 (415)
+Workload elapsed time (0:1) = 406.434439 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Mon Jul  5 20:54:03 2021.  Total elapsed time: 406.434439
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:54:11 2021 (1625543651)
+Stop command: Mon Jul  5 20:54:11 2021 (1625543651)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:47:16 2021 (1625543236)
+  Stop:     Mon Jul  5 20:54:11 2021 (1625543651)
+  Elapsed:  00:06:55 (415)
+  Reported: 406 434495000 406.434495
+ Success 458.sjeng base ref ratio=29.77, runtime=406.434495
+
+-----------------------------------
+  Running 462.libquantum ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000
+    -o ref.out -e ref.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/libquantum_base.NaCl 1397 8 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:54:11 2021 (1625543651)
+Stop command: Mon Jul  5 20:59:26 2021 (1625543966)
+Elapsed time for command: 00:05:15 (315)
+Workload elapsed time (0:1) = 307.348144 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Mon Jul  5 20:59:18 2021.  Total elapsed time: 307.348144
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:59:26 2021 (1625543966)
+Stop command: Mon Jul  5 20:59:27 2021 (1625543967)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 20:54:11 2021 (1625543651)
+  Stop:     Mon Jul  5 20:59:26 2021 (1625543966)
+  Elapsed:  00:05:15 (315)
+  Reported: 307 348204000 307.348204
+ Success 462.libquantum base ref ratio=67.42, runtime=307.348204
+
+-----------------------------------
+  Running 471.omnetpp ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000
+    -o omnetpp.log -e omnetpp.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/omnetpp_base.NaCl omnetpp.ini (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:59:27 2021 (1625543967)
+Stop command: Mon Jul  5 21:03:50 2021 (1625544230)
+Elapsed time for command: 00:04:23 (263)
+Workload elapsed time (0:1) = 255.038464 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Mon Jul  5 21:03:42 2021.  Total elapsed time: 255.038464
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 21:03:50 2021 (1625544230)
+Stop command: Mon Jul  5 21:03:50 2021 (1625544230)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:59:27 2021 (1625543967)
+  Stop:     Mon Jul  5 21:03:50 2021 (1625544230)
+  Elapsed:  00:04:23 (263)
+  Reported: 255 38519000 255.038519
+ Success 471.omnetpp base ref ratio=24.51, runtime=255.038519
+
+-----------------------------------
+  Running 473.astar ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000
+    -o BigLakes2048.out -e BigLakes2048.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/astar_base.NaCl BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/astar_base.NaCl rivers.cfg (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 21:03:50 2021 (1625544230)
+Stop command: Mon Jul  5 21:10:08 2021 (1625544608)
+Elapsed time for command: 00:06:18 (378)
+Workload elapsed time (0:1) = 135.797069 seconds
+Workload elapsed time (0:2) = 233.284575 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Mon Jul  5 21:10:00 2021.  Total elapsed time: 369.081644
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 21:10:08 2021 (1625544608)
+Stop command: Mon Jul  5 21:10:08 2021 (1625544608)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 21:03:50 2021 (1625544230)
+  Stop:     Mon Jul  5 21:10:08 2021 (1625544608)
+  Elapsed:  00:06:18 (378)
+  Reported: 369 81709000 369.081709
+ Success 473.astar base ref ratio=19.02, runtime=369.081709
+
+-----------------------------------
+  Running 999.specrand ref base NaCl default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000
+    -o rand.234923.out -e rand.234923.err /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/opt-linux-x86-32/staging/sel_ldr -a -B /home/shr/Code/LibrarySandboxing/Sandboxing_NaCl/native_client/scons-out-firefox/nacl_irt-x86-32/staging/irt_core.nexe -- ../run_base_ref_NaCl.0000/specrand_base.NaCl 1255432124 234923 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 21:10:08 2021 (1625544608)
+Stop command: Mon Jul  5 21:10:14 2021 (1625544614)
+Elapsed time for command: 00:00:06 (6)
+Workload elapsed time (0:1) = 2.443802 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Mon Jul  5 21:10:10 2021.  Total elapsed time: 2.443802
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_NaCl.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 21:10:14 2021 (1625544614)
+Stop command: Mon Jul  5 21:10:18 2021 (1625544618)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Mon Jul  5 21:10:08 2021 (1625544608)
+  Stop:     Mon Jul  5 21:10:14 2021 (1625544614)
+  Elapsed:  00:00:06 (6)
+  Reported: 2 443875000 2.443875
+ Success 999.specrand base ref ratio=4.09, runtime=2.443875
+Error: 1x400.perlbench 1x401.bzip2 1x403.gcc 1x429.mcf 1x483.xalancbmk
+Success: 1x445.gobmk 1x456.hmmer 1x458.sjeng 1x462.libquantum 1x471.omnetpp 1x473.astar 1x999.specrand
+Producing Raw Reports
+mach: default
+  ext: NaCl
+    size: ref
+      set: int
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.012.ref.rsf
+Doing flag reduction: done
+        format: ASCII -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.012.ref.txt
+      set: fp
+      set: all_c_cpp
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.012.ref.1.rsf
+  "all_c_cpp" is not a valid benchset name; this file cannot be formatted
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.012.log
+The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.012.log.debug
+
+runspec finished at Mon Jul  5 21:10:23 2021; 2475 total seconds elapsed

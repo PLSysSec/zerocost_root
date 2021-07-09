@@ -1,0 +1,29 @@
+runspec v6152 started at Tue Jul  6 22:03:38 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clangzerocost.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = SegmentZero
+Size      = ref
+Machine   = default
+benchmarks= 458.sjeng
+outputs   = asc
+username  = shr
+Benchmarks selected: 458.sjeng
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base SegmentZero default
+
+
+Build Complete
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log
+
+runspec finished at Tue Jul  6 22:03:39 2021; 1 total seconds elapsed

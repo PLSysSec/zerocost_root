@@ -1,0 +1,84 @@
+runspec v6152 started at Mon Jul  5 19:10:32 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-nacl.cfg --nobuild --action=run --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = NaCl
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc
+username  = shr
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/exe/perlbench_base.NaCl, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  NOT Building 400.perlbench base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 7581cd2736277f1507e2e129faf92225)
+  NOT Building 401.bzip2 base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: ea1fa28376b63f39a04ca8411a9064db)
+  NOT Building 403.gcc base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 3a77d34d5db7e2484d6ccdfe6eeffdb6)
+  NOT Building 429.mcf base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 3d84ca6258bd5db8b44e6050251be0d2)
+  NOT Building 445.gobmk base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 2a9080897894bcba4dc1d60bc023e8a3)
+  NOT Building 456.hmmer base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 7e12de039c52d1cbcd8dce58c9c58a0f)
+  NOT Building 458.sjeng base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 8115ad46f3a53882fd8f6444ff6679df)
+  NOT Building 462.libquantum base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 95e9cbe2c788e16a08f521f4494150fc)
+  NOT Building 471.omnetpp base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 142936929bcdbb03e80c5b9f17ada0dc)
+  NOT Building 473.astar base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+When checking options for /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/exe/Xalan_base.NaCl, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  NOT Building 483.xalancbmk base NaCl default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: f9277fc99708dc10cc0dea28c6f8dceb)
+  NOT Building 999.specrand base NaCl default; nobuild is on
+
+Build errors: 400.perlbench(base; nobuild), 401.bzip2(base; nobuild), 403.gcc(base; nobuild), 429.mcf(base; nobuild), 445.gobmk(base; nobuild), 456.hmmer(base; nobuild), 458.sjeng(base; nobuild), 462.libquantum(base; nobuild), 471.omnetpp(base; nobuild), 473.astar(base; nobuild), 483.xalancbmk(base; nobuild), 999.specrand(base; nobuild)
+
+Setting Up Run Directories
+
+-----------------------------------
+Running Benchmarks
+
+NOTICE: Nothing to run!  No results will be generated.
+
+
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.006.log
+
+runspec finished at Mon Jul  5 19:10:36 2021; 4 total seconds elapsed

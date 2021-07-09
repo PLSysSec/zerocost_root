@@ -1,0 +1,82 @@
+runspec v6152 started at Mon Jul  5 19:22:11 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clangzerocost.cfg --nobuild --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = SegmentZero
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc
+username  = shr
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: dd3cf5f374fb4f50d9bbe6b0c2851f2c)(expected: 184bb589c86fac854e0405474578aa5a)
+  NOT Building 400.perlbench base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: b7d3046e55d8035ef3e4fd6e49a62fd5)(expected: 90ea584cc9045d18453a7e320c7786eb)
+  NOT Building 401.bzip2 base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 10a5dd75f49f9ecd4a4b1bc2f44e09ed)(expected: 0624fcce2464ee140b282c2d8fea2884)
+  NOT Building 403.gcc base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 2e9dd7d894e1fe002d4ac3ad0e5eb337)(expected: 82d99ca4fcbaeaddc67317b4b1fc9ba9)
+  NOT Building 429.mcf base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: f94ac82425b9a1ac66095c62be560664)(expected: 97125c8a78f194fb71e233f29808e799)
+  NOT Building 445.gobmk base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 3c09c5bd95c2963ed613b7f325328a7f)(expected: 77da645eec5957129001b13a07294deb)
+  NOT Building 456.hmmer base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 083cf8df06488b0c1113fd72b9af7848)(expected: 9f6c491fec6cc2b61f19a6fb36bd9b39)
+  NOT Building 458.sjeng base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: f47edb454f6b39ac4fe2ecd31970c7bd)(expected: 79bad0a8aa3c6793072c065ca570c9b6)
+  NOT Building 462.libquantum base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 6b65855ac436bfc4339f2fd0362fb3a5)(expected: c02284aee550bf9915be73f3697f6a93)
+  NOT Building 471.omnetpp base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: cc1acfda6870dd983307c8cc1240e740)(expected: f16d4f6d5ba810bf3314f23774d0718f)
+  NOT Building 473.astar base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: 7dd4ceb664616a2d604674d1d5383d74)(expected: ed3351719579f93b85c2e230c47fdacd)
+  NOT Building 483.xalancbmk base SegmentZero default; nobuild is on
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: c62326488e2bf21245fb1bb1aada8222)(expected: e92507c1319b7057d79875776535622a)
+  NOT Building 999.specrand base SegmentZero default; nobuild is on
+
+Build errors: 400.perlbench(base; nobuild), 401.bzip2(base; nobuild), 403.gcc(base; nobuild), 429.mcf(base; nobuild), 445.gobmk(base; nobuild), 456.hmmer(base; nobuild), 458.sjeng(base; nobuild), 462.libquantum(base; nobuild), 471.omnetpp(base; nobuild), 473.astar(base; nobuild), 483.xalancbmk(base; nobuild), 999.specrand(base; nobuild)
+
+Setting Up Run Directories
+
+-----------------------------------
+Running Benchmarks
+
+NOTICE: Nothing to run!  No results will be generated.
+
+
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.008.log
+
+runspec finished at Mon Jul  5 19:22:17 2021; 6 total seconds elapsed

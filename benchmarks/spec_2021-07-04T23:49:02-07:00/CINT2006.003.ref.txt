@@ -1,0 +1,184 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 471.omnetpp (base) had invalid runs!                                       #
+# 456.hmmer (base) had invalid runs!                                         #
+# 458.sjeng (base) had invalid runs!                                         #
+# 473.astar (base) had invalid runs!                                         #
+# 483.xalancbmk (base) had invalid runs!                                     #
+# Run of 456.hmmer (base) was not valid; status is CE                        #
+# Run of 458.sjeng (base) was not valid; status is RE                        #
+# Run of 471.omnetpp (base) was not valid; status is RE                      #
+# Run of 473.astar (base) was not valid; status is CE                        #
+# Run of 483.xalancbmk (base) was not valid; status is CE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 456.hmmer: Error with make!                                          #
+# Error 458.sjeng: copy 0 non-zero return code (exit code=1, signal=0)       #
+# Error 471.omnetpp: copy 0 non-zero return code (exit code=1, signal=0)     #
+# Error 473.astar: Error with make!                                          #
+# Error 483.xalancbmk: Error with make!                                      #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                      Tyan Tyan Thunder KKQS Pro (S4882)
+                           Sun Jul  4 19:13:05 2021
+
+CPU2006 License: 0                                       Test date: Jul-2021
+Test sponsor: Turbo Computers                Hardware availability: Dec-9999
+Tested by:    Turbo Computers                Software availability: Dec-9999
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer        9330         --            CE                                 
+458.sjeng       12100      0.087            RE                                 
+462.libquantum  20720    315         65.7   *                                  
+464.h264ref                                 NR                                 
+471.omnetpp      6250      0.020            RE                                 
+473.astar        7020         --            CE                                 
+483.xalancbmk    6900         --            CE                                 
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum  20720    315         65.7   *                                  
+464.h264ref                                 NR                                 
+471.omnetpp                                 NR                                 
+473.astar                                   NR                                 
+483.xalancbmk                               NR                                 
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: AMD Opteron 256
+ CPU Characteristics:  
+             CPU MHz: 3000
+                 FPU: Integrated
+      CPU(s) enabled: 1 core, 1 chip, 1 core/chip
+    CPU(s) orderable: 1 chip
+       Primary Cache: 64 KB I + 64 KB D on chip per chip
+     Secondary Cache: 1 MB I+D on chip per chip
+            L3 Cache: None
+         Other Cache: None
+              Memory: 2 GB (2 x 1GB DDR333 CL2.5)
+      Disk Subsystem: SATA
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: SUSE Linux 10.1 (for i386)
+            Compiler: gcc , g++ & gfortran 4.2 Snapshot 20060715 (for
+                      i386)
+       Auto Parallel: No
+         File System: ext3
+        System State: runlevel 3
+       Base Pointers: 32-bit
+       Peak Pointers: 32-bit
+      Other Software: None
+
+
+                                General Notes
+                                -------------
+    
+     400.perlbench: -DSPEC_CPU_LINUX_IA32
+     462.libquantum: -DSPEC_CPU_LINUX
+     C base flags: -O2
+     C++ base flags: -O2
+     Fortran base flags: -O2
+
+                              Base Unknown Flags
+                              ------------------
+      458.sjeng: "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in CC)
+                 "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+ 462.libquantum: "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in CC)
+                 "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in LD)
+                 "-O2" (in COPTIMIZE)
+
+    471.omnetpp: "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in CXX)
+                 "/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl" (in LD)
+                 "-O2" (in CXXOPTIMIZE)
+
+
+                            Base Portability Flags
+                            ----------------------
+ 462.libquantum: -DSPEC_CPU_LINUX
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp (base) did not have enough runs!                               #
+# 456.hmmer (base) did not have enough runs!                                 #
+# 445.gobmk (base) did not have enough runs!                                 #
+# 458.sjeng (base) did not have enough runs!                                 #
+# 429.mcf (base) did not have enough runs!                                   #
+# 473.astar (base) did not have enough runs!                                 #
+# 483.xalancbmk (base) did not have enough runs!                             #
+# 400.perlbench (base) did not have enough runs!                             #
+# 464.h264ref (base) did not have enough runs!                               #
+# 462.libquantum (base) did not have enough runs!                            #
+# 401.bzip2 (base) did not have enough runs!                                 #
+# 403.gcc (base) did not have enough runs!                                   #
+# 471.omnetpp (base) had invalid runs!                                       #
+# 456.hmmer (base) had invalid runs!                                         #
+# 458.sjeng (base) had invalid runs!                                         #
+# 473.astar (base) had invalid runs!                                         #
+# 483.xalancbmk (base) had invalid runs!                                     #
+# Run of 456.hmmer (base) was not valid; status is CE                        #
+# Run of 458.sjeng (base) was not valid; status is RE                        #
+# Run of 471.omnetpp (base) was not valid; status is RE                      #
+# Run of 473.astar (base) was not valid; status is CE                        #
+# Run of 483.xalancbmk (base) was not valid; status is CE                    #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+# Error 456.hmmer: Error with make!                                          #
+# Error 458.sjeng: copy 0 non-zero return code (exit code=1, signal=0)       #
+# Error 471.omnetpp: copy 0 non-zero return code (exit code=1, signal=0)     #
+# Error 473.astar: Error with make!                                          #
+# Error 483.xalancbmk: Error with make!                                      #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2008 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.1.
+Report generated on Sun Jul  4 19:19:23 2021 by CPU2006 ASCII formatter v6128.

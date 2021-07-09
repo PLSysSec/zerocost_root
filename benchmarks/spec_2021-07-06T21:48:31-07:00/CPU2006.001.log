@@ -1,0 +1,77 @@
+runspec v6152 started at Tue Jul  6 21:48:31 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clangzerocost.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = SegmentZero
+Size      = ref
+Machine   = default
+benchmarks= 458.sjeng
+outputs   = asc
+username  = shr
+Benchmarks selected: 458.sjeng
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base SegmentZero default
+
+
+Setting Up Run Directories
+  Setting up 458.sjeng ref base SegmentZero default: existing (run_base_ref_SegmentZero.0001)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 458.sjeng ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001
+    -o ref.out -e ref.err ../run_base_ref_SegmentZero.0001/sjeng_base.SegmentZero ref.txt (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Tue Jul  6 21:48:32 2021 (1625633312)
+Stop command: Tue Jul  6 21:59:38 2021 (1625633978)
+Elapsed time for command: 00:11:06 (666)
+Workload elapsed time (0:1) = 658.110812 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Tue Jul  6 21:59:30 2021.  Total elapsed time: 658.110812
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Tue Jul  6 21:59:38 2021 (1625633978)
+Stop command: Tue Jul  6 21:59:38 2021 (1625633978)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Tue Jul  6 21:48:32 2021 (1625633312)
+  Stop:     Tue Jul  6 21:59:38 2021 (1625633978)
+  Elapsed:  00:11:06 (666)
+  Reported: 658 110866000 658.110866
+ Success 458.sjeng base ref ratio=18.39, runtime=658.110866
+Success: 1x458.sjeng
+Producing Raw Reports
+mach: default
+  ext: SegmentZero
+    size: ref
+      set: int
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.001.ref.rsf
+Parsing flags for 458.sjeng base: done
+Doing flag reduction: done
+        format: ASCII -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.001.ref.txt
+      set: fp
+      set: all_c_cpp
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.001.ref.1.rsf
+  "all_c_cpp" is not a valid benchset name; this file cannot be formatted
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log
+
+runspec finished at Tue Jul  6 21:59:44 2021; 673 total seconds elapsed

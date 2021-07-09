@@ -1,0 +1,508 @@
+runspec v6152 started at Mon Jul  5 19:39:28 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clang.cfg --nobuild --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clang.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = Stock
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc
+username  = shr
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base Stock default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base Stock default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base Stock default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base Stock default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base Stock default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base Stock default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base Stock default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base Stock default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base Stock default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base Stock default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base Stock default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base Stock default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 401.bzip2 ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 403.gcc ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 429.mcf ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 445.gobmk ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 456.hmmer ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 458.sjeng ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 462.libquantum ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 471.omnetpp ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 473.astar ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 483.xalancbmk ref base Stock default: existing (run_base_ref_Stock.0000)
+  Setting up 999.specrand ref base Stock default: existing (run_base_ref_Stock.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 400.perlbench ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_Stock.0000/perlbench_base.Stock -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_Stock.0000/perlbench_base.Stock -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_Stock.0000/perlbench_base.Stock -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 19:39:33 2021 (1625539173)
+Stop command: Mon Jul  5 19:43:11 2021 (1625539391)
+Elapsed time for command: 00:03:38 (218)
+Workload elapsed time (0:1) = 113.795373 seconds
+Workload elapsed time (0:2) = 36.597625 seconds
+Workload elapsed time (0:3) = 60.00521 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Mon Jul  5 19:43:03 2021.  Total elapsed time: 210.398208
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000'
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'diffmail.4.800.10.17.19.300.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'splitmail.1600.12.26.16.4500.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 19:43:11 2021 (1625539391)
+Stop command: Mon Jul  5 19:43:12 2021 (1625539392)
+Elapsed time for command: 00:00:01 (1)
+
+****************************************
+Contents of checkspam.2500.5.25.11.150.1.1.1.1.err
+****************************************
+configuration file "./rules/20_body_tests.cf" requires version 2.61 of SpamAssassin, but this is code version 2.61. Maybe you need to use the -C switch, or remove the old config files? Skipping this file at lib/Mail/SpamAssassin/Conf.pm line 364.
+
+****************************************
+
+*** Miscompare of checkspam.2500.5.25.11.150.1.1.1.1.out; for details see
+    /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_Stock.0000/checkspam.2500.5.25.11.150.1.1.1.1.out.mis
+9967:    ...replaced by 7a28fea1fc84a1853907c2ee8fd4fae3
+         ...replaced by be80c47bc922f7fe195c125c05da687e
+                        ^
+Benchmark Times:
+  Start:    Mon Jul  5 19:39:33 2021 (1625539173)
+  Stop:     Mon Jul  5 19:43:11 2021 (1625539391)
+  Elapsed:  00:03:38 (218)
+  Reported: 210 398297000 210.398297
+ Error 400.perlbench base ref ratio=46.44, runtime=210.398297
+
+-----------------------------------
+  Running 401.bzip2 ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000
+    -o input.source.out -e input.source.err ../run_base_ref_Stock.0000/bzip2_base.Stock input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err ../run_base_ref_Stock.0000/bzip2_base.Stock chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err ../run_base_ref_Stock.0000/bzip2_base.Stock liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err ../run_base_ref_Stock.0000/bzip2_base.Stock input.program 280 (timed)
+    -o text.html.out -e text.html.err ../run_base_ref_Stock.0000/bzip2_base.Stock text.html 280 (timed)
+    -o input.combined.out -e input.combined.err ../run_base_ref_Stock.0000/bzip2_base.Stock input.combined 200 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 19:43:12 2021 (1625539392)
+Stop command: Mon Jul  5 19:49:36 2021 (1625539776)
+Elapsed time for command: 00:06:24 (384)
+Workload elapsed time (0:1) = 79.833001 seconds
+Workload elapsed time (0:2) = 24.292545 seconds
+Workload elapsed time (0:3) = 39.606435 seconds
+Workload elapsed time (0:4) = 80.645653 seconds
+Workload elapsed time (0:5) = 90.349114 seconds
+Workload elapsed time (0:6) = 61.264802 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Mon Jul  5 19:49:28 2021.  Total elapsed time: 375.99155
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000'
+comparing 'chicken.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.combined.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.source.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'liberty.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'text.html.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 19:49:36 2021 (1625539776)
+Stop command: Mon Jul  5 19:49:36 2021 (1625539776)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 19:43:12 2021 (1625539392)
+  Stop:     Mon Jul  5 19:49:36 2021 (1625539776)
+  Elapsed:  00:06:24 (384)
+  Reported: 375 991722000 375.991722
+ Success 401.bzip2 base ref ratio=25.67, runtime=375.991722
+
+-----------------------------------
+  Running 403.gcc ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000
+    -o 166.out -e 166.err ../run_base_ref_Stock.0000/gcc_base.Stock 166.i -o 166.s (timed)
+    -o 200.out -e 200.err ../run_base_ref_Stock.0000/gcc_base.Stock 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_Stock.0000/gcc_base.Stock c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_Stock.0000/gcc_base.Stock cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err ../run_base_ref_Stock.0000/gcc_base.Stock expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err ../run_base_ref_Stock.0000/gcc_base.Stock expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err ../run_base_ref_Stock.0000/gcc_base.Stock g23.i -o g23.s (timed)
+    -o s04.out -e s04.err ../run_base_ref_Stock.0000/gcc_base.Stock s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err ../run_base_ref_Stock.0000/gcc_base.Stock scilab.i -o scilab.s (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 19:49:37 2021 (1625539777)
+Stop command: Mon Jul  5 19:52:44 2021 (1625539964)
+Elapsed time for command: 00:03:07 (187)
+Workload elapsed time (0:1) = 12.705928 seconds
+Workload elapsed time (0:2) = 22.251839 seconds
+Workload elapsed time (0:3) = 17.03456 seconds
+Workload elapsed time (0:4) = 14.565583 seconds
+Workload elapsed time (0:5) = 18.452773 seconds
+Workload elapsed time (0:6) = 20.76676 seconds
+Workload elapsed time (0:7) = 31.632367 seconds
+Workload elapsed time (0:8) = 33.284942 seconds
+Workload elapsed time (0:9) = 8.488644 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Mon Jul  5 19:52:36 2021.  Total elapsed time: 179.183396
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000'
+comparing '166.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing '200.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'c-typeck.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'cp-decl.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'expr2.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'g23.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 's04.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'scilab.s' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 19:52:44 2021 (1625539964)
+Stop command: Mon Jul  5 19:52:45 2021 (1625539965)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 19:49:37 2021 (1625539777)
+  Stop:     Mon Jul  5 19:52:44 2021 (1625539964)
+  Elapsed:  00:03:07 (187)
+  Reported: 179 183614000 179.183614
+ Success 403.gcc base ref ratio=44.93, runtime=179.183614
+
+-----------------------------------
+  Running 429.mcf ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000
+    -o inp.out -e inp.err ../run_base_ref_Stock.0000/mcf_base.Stock inp.in (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 19:52:45 2021 (1625539965)
+Stop command: Mon Jul  5 19:55:29 2021 (1625540129)
+Elapsed time for command: 00:02:44 (164)
+Workload elapsed time (0:1) = 156.019903 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Mon Jul  5 19:55:21 2021.  Total elapsed time: 156.019903
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000'
+comparing 'inp.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'mcf.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 19:55:29 2021 (1625540129)
+Stop command: Mon Jul  5 19:55:30 2021 (1625540130)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 19:52:45 2021 (1625539965)
+  Stop:     Mon Jul  5 19:55:29 2021 (1625540129)
+  Elapsed:  00:02:44 (164)
+  Reported: 156 19977000 156.019977
+ Success 429.mcf base ref ratio=58.45, runtime=156.019977
+
+-----------------------------------
+  Running 445.gobmk ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err ../run_base_ref_Stock.0000/gobmk_base.Stock --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err ../run_base_ref_Stock.0000/gobmk_base.Stock --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err ../run_base_ref_Stock.0000/gobmk_base.Stock --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err ../run_base_ref_Stock.0000/gobmk_base.Stock --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err ../run_base_ref_Stock.0000/gobmk_base.Stock --quiet --mode gtp (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 19:55:30 2021 (1625540130)
+Stop command: Mon Jul  5 20:00:48 2021 (1625540448)
+Elapsed time for command: 00:05:18 (318)
+Workload elapsed time (0:1) = 44.176094 seconds
+Workload elapsed time (0:2) = 110.163947 seconds
+Workload elapsed time (0:3) = 54.349639 seconds
+Workload elapsed time (0:4) = 43.067516 seconds
+Workload elapsed time (0:5) = 58.438133 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Mon Jul  5 20:00:40 2021.  Total elapsed time: 310.195329
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000'
+comparing '13x13.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'nngs.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'score2.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevorc.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'trevord.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:00:48 2021 (1625540448)
+Stop command: Mon Jul  5 20:00:49 2021 (1625540449)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 19:55:30 2021 (1625540130)
+  Stop:     Mon Jul  5 20:00:48 2021 (1625540448)
+  Elapsed:  00:05:18 (318)
+  Reported: 310 195467000 310.195467
+ Success 445.gobmk base ref ratio=33.82, runtime=310.195467
+
+-----------------------------------
+  Running 456.hmmer ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000
+    -o nph3.out -e nph3.err ../run_base_ref_Stock.0000/hmmer_base.Stock nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err ../run_base_ref_Stock.0000/hmmer_base.Stock --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:00:49 2021 (1625540449)
+Stop command: Mon Jul  5 20:06:27 2021 (1625540787)
+Elapsed time for command: 00:05:38 (338)
+Workload elapsed time (0:1) = 100.264625 seconds
+Workload elapsed time (0:2) = 230.193779 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Mon Jul  5 20:06:19 2021.  Total elapsed time: 330.458404
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000'
+comparing 'nph3.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'retro.out' with abstol=1e-05, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:06:27 2021 (1625540787)
+Stop command: Mon Jul  5 20:06:28 2021 (1625540788)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 20:00:49 2021 (1625540449)
+  Stop:     Mon Jul  5 20:06:27 2021 (1625540787)
+  Elapsed:  00:05:38 (338)
+  Reported: 330 458485000 330.458485
+ Success 456.hmmer base ref ratio=28.23, runtime=330.458485
+
+-----------------------------------
+  Running 458.sjeng ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000
+    -o ref.out -e ref.err ../run_base_ref_Stock.0000/sjeng_base.Stock ref.txt (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:06:28 2021 (1625540788)
+Stop command: Mon Jul  5 20:12:16 2021 (1625541136)
+Elapsed time for command: 00:05:48 (348)
+Workload elapsed time (0:1) = 340.128437 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Mon Jul  5 20:12:08 2021.  Total elapsed time: 340.128437
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:12:16 2021 (1625541136)
+Stop command: Mon Jul  5 20:12:16 2021 (1625541136)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:06:28 2021 (1625540788)
+  Stop:     Mon Jul  5 20:12:16 2021 (1625541136)
+  Elapsed:  00:05:48 (348)
+  Reported: 340 128499000 340.128499
+ Success 458.sjeng base ref ratio=35.57, runtime=340.128499
+
+-----------------------------------
+  Running 462.libquantum ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000
+    -o ref.out -e ref.err ../run_base_ref_Stock.0000/libquantum_base.Stock 1397 8 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:12:16 2021 (1625541136)
+Stop command: Mon Jul  5 20:17:15 2021 (1625541435)
+Elapsed time for command: 00:04:59 (299)
+Workload elapsed time (0:1) = 290.721851 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Mon Jul  5 20:17:07 2021.  Total elapsed time: 290.721851
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:17:15 2021 (1625541435)
+Stop command: Mon Jul  5 20:17:15 2021 (1625541435)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:12:16 2021 (1625541136)
+  Stop:     Mon Jul  5 20:17:15 2021 (1625541435)
+  Elapsed:  00:04:59 (299)
+  Reported: 290 721955000 290.721955
+ Success 462.libquantum base ref ratio=71.27, runtime=290.721955
+
+-----------------------------------
+  Running 471.omnetpp ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_Stock.0000/omnetpp_base.Stock omnetpp.ini (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:17:15 2021 (1625541435)
+Stop command: Mon Jul  5 20:21:25 2021 (1625541685)
+Elapsed time for command: 00:04:10 (250)
+Workload elapsed time (0:1) = 241.542035 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Mon Jul  5 20:21:17 2021.  Total elapsed time: 241.542035
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000'
+comparing 'omnetpp.log' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'omnetpp.sca' with abstol=1e-06, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=1e-05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:21:25 2021 (1625541685)
+Stop command: Mon Jul  5 20:21:25 2021 (1625541685)
+Elapsed time for command: 00:00:00 (0)
+Benchmark Times:
+  Start:    Mon Jul  5 20:17:15 2021 (1625541435)
+  Stop:     Mon Jul  5 20:21:25 2021 (1625541685)
+  Elapsed:  00:04:10 (250)
+  Reported: 241 542088000 241.542088
+ Success 471.omnetpp base ref ratio=25.88, runtime=241.542088
+
+-----------------------------------
+  Running 473.astar ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_Stock.0000/astar_base.Stock BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err ../run_base_ref_Stock.0000/astar_base.Stock rivers.cfg (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:21:26 2021 (1625541686)
+Stop command: Mon Jul  5 20:26:15 2021 (1625541975)
+Elapsed time for command: 00:04:49 (289)
+Workload elapsed time (0:1) = 107.629524 seconds
+Workload elapsed time (0:2) = 174.041122 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Mon Jul  5 20:26:07 2021.  Total elapsed time: 281.670646
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000'
+comparing 'BigLakes2048.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'rivers.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.001, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:26:15 2021 (1625541975)
+Stop command: Mon Jul  5 20:26:16 2021 (1625541976)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 20:21:26 2021 (1625541686)
+  Stop:     Mon Jul  5 20:26:15 2021 (1625541975)
+  Elapsed:  00:04:49 (289)
+  Reported: 281 670712000 281.670712
+ Success 473.astar base ref ratio=24.92, runtime=281.670712
+
+-----------------------------------
+  Running 483.xalancbmk ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000
+    -o ref.out -e ref.err ../run_base_ref_Stock.0000/Xalan_base.Stock -v t5.xml xalanc.xsl (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:26:16 2021 (1625541976)
+Stop command: Mon Jul  5 20:28:38 2021 (1625542118)
+Elapsed time for command: 00:02:22 (142)
+Workload elapsed time (0:1) = 134.556747 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Mon Jul  5 20:28:30 2021.  Total elapsed time: 134.556747
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000'
+comparing 'ref.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:28:38 2021 (1625542118)
+Stop command: Mon Jul  5 20:28:39 2021 (1625542119)
+Elapsed time for command: 00:00:01 (1)
+Benchmark Times:
+  Start:    Mon Jul  5 20:26:16 2021 (1625541976)
+  Stop:     Mon Jul  5 20:28:38 2021 (1625542118)
+  Elapsed:  00:02:22 (142)
+  Reported: 134 556804000 134.556804
+ Success 483.xalancbmk base ref ratio=51.28, runtime=134.556804
+
+-----------------------------------
+  Running 999.specrand ref base Stock default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000
+    -o rand.234923.out -e rand.234923.err ../run_base_ref_Stock.0000/specrand_base.Stock 1255432124 234923 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:39 2021 (1625542119)
+Stop command: Mon Jul  5 20:28:39 2021 (1625542119)
+Elapsed time for command: 00:00:00 (0)
+Workload elapsed time (0:1) = 0.079926 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Mon Jul  5 20:28:39 2021.  Total elapsed time: 0.079926
+comparing files in '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000'
+comparing 'rand.234923.out' with abstol=, binary=, calctol=0, cw=, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -E -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_Stock.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Start command: Mon Jul  5 20:28:39 2021 (1625542119)
+Stop command: Mon Jul  5 20:28:43 2021 (1625542123)
+Elapsed time for command: 00:00:04 (4)
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:39 2021 (1625542119)
+  Stop:     Mon Jul  5 20:28:39 2021 (1625542119)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 79977000 0.079977
+ Success 999.specrand base ref ratio=125.04, runtime=0.079977
+Error: 1x400.perlbench
+Success: 1x401.bzip2 1x403.gcc 1x429.mcf 1x445.gobmk 1x456.hmmer 1x458.sjeng 1x462.libquantum 1x471.omnetpp 1x473.astar 1x483.xalancbmk 1x999.specrand
+Producing Raw Reports
+mach: default
+  ext: Stock
+    size: ref
+      set: int
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.010.ref.rsf
+Doing flag reduction: done
+        format: ASCII -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.010.ref.txt
+      set: fp
+      set: all_c_cpp
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.010.ref.1.rsf
+  "all_c_cpp" is not a valid benchset name; this file cannot be formatted
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.010.log
+The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.010.log.debug
+
+runspec finished at Mon Jul  5 20:28:48 2021; 2960 total seconds elapsed

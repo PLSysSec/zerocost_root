@@ -1,0 +1,698 @@
+runspec v6152 started at Mon Jul  5 20:28:47 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clangzerocost.cfg --nobuild --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clangzerocost.cfg'
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = SegmentZero
+Size      = ref
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,445.gobmk,456.hmmer,458.sjeng,462.libquantum,471.omnetpp,473.astar,483.xalancbmk,999.specrand
+outputs   = asc
+username  = shr
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 471.omnetpp, 473.astar, 483.xalancbmk, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 400.perlbench base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 403.gcc base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 429.mcf base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 445.gobmk base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 456.hmmer base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 458.sjeng base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 462.libquantum base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 471.omnetpp base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 473.astar base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 483.xalancbmk base SegmentZero default
+
+------------------------------------------------------------------------
+  Up to date 999.specrand base SegmentZero default
+
+
+Setting Up Run Directories
+  Setting up 400.perlbench ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 401.bzip2 ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 403.gcc ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 429.mcf ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 445.gobmk ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 456.hmmer ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 458.sjeng ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 462.libquantum ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 471.omnetpp ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 473.astar ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 483.xalancbmk ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+  Setting up 999.specrand ref base SegmentZero default: existing (run_base_ref_SegmentZero.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 400.perlbench ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_SegmentZero.0000
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_ref_SegmentZero.0000/perlbench_base.SegmentZero -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_ref_SegmentZero.0000/perlbench_base.SegmentZero -I./lib diffmail.pl 4 800 10 17 19 300 (timed)
+    -o splitmail.1600.12.26.16.4500.out -e splitmail.1600.12.26.16.4500.err ../run_base_ref_SegmentZero.0000/perlbench_base.SegmentZero -I./lib splitmail.pl 1600 12 26 16 4500 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:51 2021 (1625542131)
+Stop command: Mon Jul  5 20:28:52 2021 (1625542132)
+Elapsed time for command: 00:00:01 (1)
+
+400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of diffmail.4.800.10.17.19.300.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of splitmail.1600.12.26.16.4500.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of checkspam.2500.5.25.11.150.1.1.1.1.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.107298 seconds
+
+400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.10689 seconds
+
+400.perlbench: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:3) = 0.106816 seconds
+Copy 0 of 400.perlbench (base ref) run 1 finished at Mon Jul  5 20:28:51 2021.  Total elapsed time: 0.321004
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:51 2021 (1625542131)
+  Stop:     Mon Jul  5 20:28:52 2021 (1625542132)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 321121000 0.321121
+ Error 400.perlbench base ref ratio=30424.67, runtime=0.321121
+
+-----------------------------------
+  Running 401.bzip2 ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_SegmentZero.0000
+    -o input.source.out -e input.source.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero input.source 280 (timed)
+    -o chicken.jpg.out -e chicken.jpg.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero chicken.jpg 30 (timed)
+    -o liberty.jpg.out -e liberty.jpg.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero liberty.jpg 30 (timed)
+    -o input.program.out -e input.program.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero input.program 280 (timed)
+    -o text.html.out -e text.html.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero text.html 280 (timed)
+    -o input.combined.out -e input.combined.err ../run_base_ref_SegmentZero.0000/bzip2_base.SegmentZero input.combined 200 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:52 2021 (1625542132)
+Stop command: Mon Jul  5 20:28:55 2021 (1625542135)
+Elapsed time for command: 00:00:03 (3)
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of input.source.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of text.html.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of liberty.jpg.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of input.program.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of input.combined.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of chicken.jpg.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.173231 seconds
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.173987 seconds
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:3) = 0.172716 seconds
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:4) = 0.174365 seconds
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:5) = 0.174468 seconds
+
+401.bzip2: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:6) = 0.172645 seconds
+Copy 0 of 401.bzip2 (base ref) run 1 finished at Mon Jul  5 20:28:53 2021.  Total elapsed time: 1.041412
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:52 2021 (1625542132)
+  Stop:     Mon Jul  5 20:28:55 2021 (1625542135)
+  Elapsed:  00:00:03 (3)
+  Reported: 1 41569000 1.041569
+ Error 401.bzip2 base ref ratio=9264.87, runtime=1.041569
+
+-----------------------------------
+  Running 403.gcc ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_SegmentZero.0000
+    -o 166.out -e 166.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero 166.i -o 166.s (timed)
+    -o 200.out -e 200.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero 200.i -o 200.s (timed)
+    -o c-typeck.out -e c-typeck.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero c-typeck.i -o c-typeck.s (timed)
+    -o cp-decl.out -e cp-decl.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero cp-decl.i -o cp-decl.s (timed)
+    -o expr.out -e expr.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero expr.i -o expr.s (timed)
+    -o expr2.out -e expr2.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero expr2.i -o expr2.s (timed)
+    -o g23.out -e g23.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero g23.i -o g23.s (timed)
+    -o s04.out -e s04.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero s04.i -o s04.s (timed)
+    -o scilab.out -e scilab.err ../run_base_ref_SegmentZero.0000/gcc_base.SegmentZero scilab.i -o scilab.s (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:55 2021 (1625542135)
+Stop command: Mon Jul  5 20:28:58 2021 (1625542138)
+Elapsed time for command: 00:00:03 (3)
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of g23.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of s04.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of c-typeck.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of expr2.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of 166.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of 200.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of cp-decl.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of scilab.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of expr.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.107433 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.10787 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:3) = 0.107339 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:4) = 0.107399 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:5) = 0.107296 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:6) = 0.108213 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:7) = 0.108121 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:8) = 0.107657 seconds
+
+403.gcc: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:9) = 0.108694 seconds
+Copy 0 of 403.gcc (base ref) run 1 finished at Mon Jul  5 20:28:56 2021.  Total elapsed time: 0.970022
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:55 2021 (1625542135)
+  Stop:     Mon Jul  5 20:28:58 2021 (1625542138)
+  Elapsed:  00:00:03 (3)
+  Reported: 0 970295000 0.970295
+ Error 403.gcc base ref ratio=8296.45, runtime=0.970295
+
+-----------------------------------
+  Running 429.mcf ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_SegmentZero.0000
+    -o inp.out -e inp.err ../run_base_ref_SegmentZero.0000/mcf_base.SegmentZero inp.in (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:58 2021 (1625542138)
+Stop command: Mon Jul  5 20:28:58 2021 (1625542138)
+Elapsed time for command: 00:00:00 (0)
+
+429.mcf: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of inp.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.107046 seconds
+Copy 0 of 429.mcf (base ref) run 1 finished at Mon Jul  5 20:28:58 2021.  Total elapsed time: 0.107046
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:58 2021 (1625542138)
+  Stop:     Mon Jul  5 20:28:58 2021 (1625542138)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 107111000 0.107111
+ Error 429.mcf base ref ratio=85145.32, runtime=0.107111
+
+-----------------------------------
+  Running 445.gobmk ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_SegmentZero.0000
+    -i 13x13.tst -o 13x13.out -e 13x13.err ../run_base_ref_SegmentZero.0000/gobmk_base.SegmentZero --quiet --mode gtp (timed)
+    -i nngs.tst -o nngs.out -e nngs.err ../run_base_ref_SegmentZero.0000/gobmk_base.SegmentZero --quiet --mode gtp (timed)
+    -i score2.tst -o score2.out -e score2.err ../run_base_ref_SegmentZero.0000/gobmk_base.SegmentZero --quiet --mode gtp (timed)
+    -i trevorc.tst -o trevorc.out -e trevorc.err ../run_base_ref_SegmentZero.0000/gobmk_base.SegmentZero --quiet --mode gtp (timed)
+    -i trevord.tst -o trevord.out -e trevord.err ../run_base_ref_SegmentZero.0000/gobmk_base.SegmentZero --quiet --mode gtp (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:28:58 2021 (1625542138)
+Stop command: Mon Jul  5 20:29:00 2021 (1625542140)
+Elapsed time for command: 00:00:02 (2)
+
+445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of trevorc.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of trevord.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of 13x13.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of score2.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of nngs.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.108281 seconds
+
+445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.108177 seconds
+
+445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:3) = 0.108283 seconds
+
+445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:4) = 0.107994 seconds
+
+445.gobmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:5) = 0.107159 seconds
+Copy 0 of 445.gobmk (base ref) run 1 finished at Mon Jul  5 20:28:59 2021.  Total elapsed time: 0.539894
+Benchmark Times:
+  Start:    Mon Jul  5 20:28:58 2021 (1625542138)
+  Stop:     Mon Jul  5 20:29:00 2021 (1625542140)
+  Elapsed:  00:00:02 (2)
+  Reported: 0 540047000 0.540047
+ Error 445.gobmk base ref ratio=19424.24, runtime=0.540047
+
+-----------------------------------
+  Running 456.hmmer ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_SegmentZero.0000
+    -o nph3.out -e nph3.err ../run_base_ref_SegmentZero.0000/hmmer_base.SegmentZero nph3.hmm swiss41 (timed)
+    -o retro.out -e retro.err ../run_base_ref_SegmentZero.0000/hmmer_base.SegmentZero --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:00 2021 (1625542140)
+Stop command: Mon Jul  5 20:29:01 2021 (1625542141)
+Elapsed time for command: 00:00:01 (1)
+
+456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of retro.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of nph3.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.109425 seconds
+
+456.hmmer: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.107581 seconds
+Copy 0 of 456.hmmer (base ref) run 1 finished at Mon Jul  5 20:29:00 2021.  Total elapsed time: 0.217006
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:00 2021 (1625542140)
+  Stop:     Mon Jul  5 20:29:01 2021 (1625542141)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 217098000 0.217098
+ Error 456.hmmer base ref ratio=42975.98, runtime=0.217098
+
+-----------------------------------
+  Running 458.sjeng ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0000
+    -o ref.out -e ref.err ../run_base_ref_SegmentZero.0000/sjeng_base.SegmentZero ref.txt (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:01 2021 (1625542141)
+Stop command: Mon Jul  5 20:29:01 2021 (1625542141)
+Elapsed time for command: 00:00:00 (0)
+
+458.sjeng: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.107279 seconds
+Copy 0 of 458.sjeng (base ref) run 1 finished at Mon Jul  5 20:29:01 2021.  Total elapsed time: 0.107279
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:01 2021 (1625542141)
+  Stop:     Mon Jul  5 20:29:01 2021 (1625542141)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 107340000 0.10734
+ Error 458.sjeng base ref ratio=112725.92, runtime=0.107340
+
+-----------------------------------
+  Running 462.libquantum ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_SegmentZero.0000
+    -o ref.out -e ref.err ../run_base_ref_SegmentZero.0000/libquantum_base.SegmentZero 1397 8 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:01 2021 (1625542141)
+Stop command: Mon Jul  5 20:29:02 2021 (1625542142)
+Elapsed time for command: 00:00:01 (1)
+
+462.libquantum: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.107955 seconds
+Copy 0 of 462.libquantum (base ref) run 1 finished at Mon Jul  5 20:29:01 2021.  Total elapsed time: 0.107955
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:01 2021 (1625542141)
+  Stop:     Mon Jul  5 20:29:02 2021 (1625542142)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 108002000 0.108002
+ Error 462.libquantum base ref ratio=191848.30, runtime=0.108002
+
+-----------------------------------
+  Running 471.omnetpp ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_SegmentZero.0000
+    -o omnetpp.log -e omnetpp.err ../run_base_ref_SegmentZero.0000/omnetpp_base.SegmentZero omnetpp.ini (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:02 2021 (1625542142)
+Stop command: Mon Jul  5 20:29:02 2021 (1625542142)
+Elapsed time for command: 00:00:00 (0)
+
+471.omnetpp: copy 0 non-zero return code (exit code=1, signal=0)
+
+Workload elapsed time (0:1) = 0.002261 seconds
+Copy 0 of 471.omnetpp (base ref) run 1 finished at Mon Jul  5 20:29:02 2021.  Total elapsed time: 0.002261
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:02 2021 (1625542142)
+  Stop:     Mon Jul  5 20:29:02 2021 (1625542142)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 2335000 0.002335
+ Error 471.omnetpp base ref ratio=2676659.53, runtime=0.002335
+
+-----------------------------------
+  Running 473.astar ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_SegmentZero.0000
+    -o BigLakes2048.out -e BigLakes2048.err ../run_base_ref_SegmentZero.0000/astar_base.SegmentZero BigLakes2048.cfg (timed)
+    -o rivers.out -e rivers.err ../run_base_ref_SegmentZero.0000/astar_base.SegmentZero rivers.cfg (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:02 2021 (1625542142)
+Stop command: Mon Jul  5 20:29:03 2021 (1625542143)
+Elapsed time for command: 00:00:01 (1)
+
+473.astar: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of rivers.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+
+****************************************
+Contents of BigLakes2048.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.10773 seconds
+
+473.astar: copy 0 non-zero return code (exit code=11, signal=0)
+
+Workload elapsed time (0:2) = 0.107874 seconds
+Copy 0 of 473.astar (base ref) run 1 finished at Mon Jul  5 20:29:02 2021.  Total elapsed time: 0.215604
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:02 2021 (1625542142)
+  Stop:     Mon Jul  5 20:29:03 2021 (1625542143)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 215692000 0.215692
+ Error 473.astar base ref ratio=32546.41, runtime=0.215692
+
+-----------------------------------
+  Running 483.xalancbmk ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_SegmentZero.0000
+    -o ref.out -e ref.err ../run_base_ref_SegmentZero.0000/Xalan_base.SegmentZero -v t5.xml xalanc.xsl (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:03 2021 (1625542143)
+Stop command: Mon Jul  5 20:29:03 2021 (1625542143)
+Elapsed time for command: 00:00:00 (0)
+
+483.xalancbmk: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of ref.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.10857 seconds
+Copy 0 of 483.xalancbmk (base ref) run 1 finished at Mon Jul  5 20:29:03 2021.  Total elapsed time: 0.10857
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:03 2021 (1625542143)
+  Stop:     Mon Jul  5 20:29:03 2021 (1625542143)
+  Elapsed:  00:00:00 (0)
+  Reported: 0 108631000 0.108631
+ Error 483.xalancbmk base ref ratio=63517.78, runtime=0.108631
+
+-----------------------------------
+  Running 999.specrand ref base SegmentZero default
+Commands to run:
+    -C /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_SegmentZero.0000
+    -o rand.234923.out -e rand.234923.err ../run_base_ref_SegmentZero.0000/specrand_base.SegmentZero 1255432124 234923 (timed)
+Specinvoke: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specinvoke -d /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/run/run_base_ref_SegmentZero.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Start command: Mon Jul  5 20:29:03 2021 (1625542143)
+Stop command: Mon Jul  5 20:29:04 2021 (1625542144)
+Elapsed time for command: 00:00:01 (1)
+
+999.specrand: copy 0 non-zero return code (exit code=11, signal=0)
+
+
+****************************************
+Contents of rand.234923.err
+****************************************
+Segmentation fault (core dumped)
+
+****************************************
+Workload elapsed time (0:1) = 0.108102 seconds
+Copy 0 of 999.specrand (base ref) run 1 finished at Mon Jul  5 20:29:03 2021.  Total elapsed time: 0.108102
+Benchmark Times:
+  Start:    Mon Jul  5 20:29:03 2021 (1625542143)
+  Stop:     Mon Jul  5 20:29:04 2021 (1625542144)
+  Elapsed:  00:00:01 (1)
+  Reported: 0 108169000 0.108169
+ Error 999.specrand base ref ratio=92.45, runtime=0.108169
+Error: 1x400.perlbench 1x401.bzip2 1x403.gcc 1x429.mcf 1x445.gobmk 1x456.hmmer 1x458.sjeng 1x462.libquantum 1x471.omnetpp 1x473.astar 1x483.xalancbmk 1x999.specrand
+Producing Raw Reports
+mach: default
+  ext: SegmentZero
+    size: ref
+      set: int
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.011.ref.rsf
+Doing flag reduction: done
+        format: ASCII -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.011.ref.txt
+      set: fp
+      set: all_c_cpp
+NOTICE: sw_compiler is longer than 50 characters and will be split
+        format: raw -> /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CINT2006.011.ref.1.rsf
+  "all_c_cpp" is not a valid benchset name; this file cannot be formatted
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.011.log
+The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.011.log.debug
+
+runspec finished at Mon Jul  5 20:29:09 2021; 22 total seconds elapsed

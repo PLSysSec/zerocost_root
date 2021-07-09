@@ -1,0 +1,44 @@
+runspec v6152 started at Thu Jul  8 09:21:57 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clang.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clang.cfg'
+
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = Stock
+Size      = ref
+Machine   = default
+benchmarks= 458.sjeng
+outputs   = asc
+username  = shr
+Benchmarks selected: 458.sjeng
+Compiling Binaries
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: a89dc3704bb6a1d43ae52d8ef1ce7e06)(expected: 959114a65416bd11e8852c09cc9ba471)
+  Building 458.sjeng base Stock default: (build_base_Stock.0000)
+
+/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/src/neval.c is corrupt!
+
+ Since this run is not reportable, you may avoid this error in the future
+ by setting
+   strict_rundir_verify = 0
+ in your config file.
+
+ERROR: src directory for 458.sjeng contains corrupt files.
+       Is your SPEC CPU2006 distribution corrupt, or have you changed any
+       of the files listed above?
+*** Error building 458.sjeng
+
+Build errors: 458.sjeng(base; CE)
+
+Build Complete
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log
+The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.001.log.debug
+
+runspec finished at Thu Jul  8 09:21:58 2021; 1 total seconds elapsed

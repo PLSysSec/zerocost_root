@@ -1,0 +1,22 @@
+runspec v6152 started at Mon Jul  5 09:02:38 2021 on "shr-Desktop"
+runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+runspec: runspec --config=linux32-i386-clang.cfg --action=build CINT2006
+toolset: linux-suse101-AMD64
+
+Locating benchmarks...found 31 benchmarks in 7 benchsets.
+Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-clang.cfg'
+
+Can't find benchmark 'CINT2006'
+Can't parse 'CINT2006' into a benchmark
+
+No benchmarks specified!
+
+The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.002.log
+The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.002.log.debug
+
+*
+* Temporary files were NOT deleted; keeping temporaries such as
+* /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.002.log.debug
+* (These may be large!)
+*
+runspec finished at Mon Jul  5 09:02:39 2021; 1 total seconds elapsed

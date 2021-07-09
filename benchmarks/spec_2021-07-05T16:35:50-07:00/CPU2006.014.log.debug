@@ -1,0 +1,2099 @@
+==============================================================================
+Debug log for CPU2006.  This file contains very detailed debugging
+output from the CPU2006 tools (as if "--verbose 99" had been specified) and is
+typically useful only to developers of the CPU2006 toolset.   
+
+For a successful run, this debug log will be removed automatically, unless you
+specify "--keeptmp" on the command line, or "keeptmp=1" in your config file.
+
+If you file a support request with cpu2006support@spec.org, you may be
+asked to submit this file.
+------------------------------------------------------------------------------
+
+Environment variables that should have been set or changed by shrc:
+SPEC: /mnt/sata/Code/zerocost/zerocost-specbenchmark
+PATH: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/home/shr/Code/LibrarySandboxing/emsdk:/home/shr/Code/LibrarySandboxing/emsdk/upstream/emscripten:/home/shr/Code/LibrarySandboxing/emsdk/node/14.15.5_64bit/bin:/home/shr/.cargo/bin:/home/shr/.mozbuild/git-cinnabar:/home/shr/.mozbuild/arcanist_git/bin:/home/shr/.mozbuild/moz-phab:/home/shr/.opam/system/bin:/home/shr/bin:/home/shr/.local/bin:/home/shr/.nvm/versions/node/v15.5.1/bin:/home/shr/.cabal/bin:/home/shr/.ghcup/bin:/opt/cmake/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shr/.dotnet/tools:/opt/z3/bin:/home/shr/Code/fstar_master/FStar/bin:/home/shr/Code/fstar_master/kremlin:/opt/wabt/bin/:/home/shr/go/bin:/bin:/home/shr/go/bin
+SPECPERLLIB: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin:/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/lib
+LD_LIBRARY_PATH: /home/shr/Code/zerocost/libnsl/build/lib/
+DYLD_LIBRARY_PATH: 
+LC_ALL: C
+LC_LANG: C
+SPECDB_PWD: /mnt/sata/Code/zerocost/zerocost-specbenchmark/config
+------------------------------------------------------------------------------
+
+Runspec's verbose version output:
+                 This is the SPEC CPU2006 benchmark tools suite.
+
+Version summary:
+    CPU2006 version: 1.1
+ Benchmarks version: 110
+      Tools version: 111
+    runspec version: 6152 ($Id: runspec 6152 2008-05-07 05:25:30Z cloyce $)
+
+Tools information:
+ Tools package installed: linux-suse101-AMD64
+ File locking method: fcntl(2) (probably network-safe)
+Mode |  UID  |  GID  |   Size  |    Modified Date   | Name
+0755 | 1000  | 1000  |  197376 | 17-May-2007 10:05:18 | specmake
+0755 | 1000  | 1000  | 1269511 | 17-May-2007 10:05:18 | specperl
+0755 | 1000  | 1000  |   25160 | 17-May-2007 10:05:18 | specinvoke
+0755 | 1000  | 1000  |   28176 | 17-May-2007 10:05:18 | specinvoke_pm
+0755 | 1000  | 1000  |   87352 | 17-May-2007 10:05:18 | specbzip2
+0755 | 1000  | 1000  |   20056 | 17-May-2007 10:05:18 | specmd5sum
+0755 | 1000  | 1000  |    7647 | 04-Jul-2021 18:11:47 | specdiff
+0755 | 1000  | 1000  |   86555 | 04-Jul-2021 18:11:47 | specpp
+0755 | 1000  | 1000  |  264960 | 17-May-2007 10:05:18 | specrxp
+0755 | 1000  | 1000  |  121917 | 04-Jul-2021 18:11:47 | runspec
+
+Version info for specinvoke (specinvoke): Version: 5000
+Version info for specmake (specmake): GNU Make 3.81
+Version info for specbzip2 (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specbzip2): bzip2 v1.0.3, 15-Feb-2005
+Version info for specpp (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specperl): filepp version 1.7.1SPEC
+Version info for specperl (/mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/specperl): This is specperl, v5.8.8 built for x86_64-linux
+                           For more detail on specperl, say 'specperl -V'
+
+==============================================================================
+
+1625515557.37: runspec v6152 started at Mon Jul  5 13:05:56 2021 on "shr-Desktop"
+1625515557.37: runspec is: /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec
+1625515557.37: runspec: runspec --config=linux32-i386-nacl.cfg --action=build all_c_cpp
+1625515557.37: toolset: linux-suse101-AMD64
+
+1625515557.37(0.03s): Locating benchmarks...Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU(?:=\S*)?(?=\s|$)' for DSPEC_CPU in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]USPEC_CPU(?:=\S*)?(?=\s|$)' for USPEC_CPU in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DNDEBUG(?:=\S*)?(?=\s|$)' for DNDEBUG in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]UNDEBUG(?:=\S*)?(?=\s|$)' for UNDEBUG in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_WINDOWS(?:=\S*)?(?=\s|$)' for DSPEC_CPU_WINDOWS in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_ILP32(?:=\S*)?(?=\s|$)' for DSPEC_CPU_ILP32 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_P64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_P64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_LP64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_LP64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU_ILP64(?:=\S*)?(?=\s|$)' for DSPEC_CPU_ILP64 in /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/flags-mandatory.xml
+1625515557.40: Reading suite directory for 'CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '464.h264ref'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/464.h264ref/Spec/object.pm in 0.000166893s
+1625515557.40:     Instantiated Spec::Benchmark::h264ref464 in 0.000126123s
+1625515557.40:     Finding src.alts took 0.000025034s
+1625515557.40:   Setting up h264ref took 0.000442028s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '400.perlbench'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/Spec/object.pm in 0.000533819s
+1625515557.40:     Instantiated Spec::Benchmark::perlbench400 in 0.000072002s
+1625515557.40:     Finding src.alts took 0.000020027s
+1625515557.40:   Setting up perlbench took 0.000727892s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '483.xalancbmk'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/Spec/object.pm in 0.000442982s
+1625515557.40:     Instantiated Spec::Benchmark::xalancbmk483 in 0.000091791s
+1625515557.40:     Finding src.alts took 0.000018120s
+1625515557.40:   Setting up xalancbmk took 0.000655174s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_fortran.bset'
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '403.gcc'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/403.gcc/Spec/object.pm in 0.000140190s
+1625515557.40:     Instantiated Spec::Benchmark::gcc403 in 0.000058889s
+1625515557.40:     Finding src.alts took 0.000018835s
+1625515557.40:   Setting up gcc took 0.000314951s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '462.libquantum'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/462.libquantum/Spec/object.pm in 0.000103951s
+1625515557.40:     Instantiated Spec::Benchmark::libquantum462 in 0.000045061s
+1625515557.40:     Finding src.alts took 0.000017166s
+1625515557.40:   Setting up libquantum took 0.000258923s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '445.gobmk'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/445.gobmk/Spec/object.pm in 0.000128984s
+1625515557.40:     Instantiated Spec::Benchmark::gobmk445 in 0.000046968s
+1625515557.40:     Finding src.alts took 0.000017881s
+1625515557.40:   Setting up gobmk took 0.000286818s
+
+1625515557.40:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '453.povray'
+1625515557.40:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/453.povray/Spec/object.pm in 0.000147104s
+1625515557.41:     Instantiated Spec::Benchmark::povray453 in 0.000072002s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up povray took 0.000334978s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '450.soplex'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/450.soplex/Spec/object.pm in 0.000173807s
+1625515557.41:     Instantiated Spec::Benchmark::soplex450 in 0.000046968s
+1625515557.41:     Finding src.alts took 0.000019073s
+1625515557.41:   Setting up soplex took 0.000339985s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '481.wrf'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/481.wrf/Spec/object.pm in 0.000970840s
+1625515557.41:     Instantiated Spec::Benchmark::wrf481 in 0.000154972s
+1625515557.41:     Finding src.alts took 0.000030041s
+1625515557.41:   Setting up wrf took 0.001312971s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_c_cpp.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '458.sjeng'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/458.sjeng/Spec/object.pm in 0.000113010s
+1625515557.41:     Instantiated Spec::Benchmark::sjeng458 in 0.000047922s
+1625515557.41:     Finding src.alts took 0.000018835s
+1625515557.41:   Setting up sjeng took 0.000293970s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '435.gromacs'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/435.gromacs/Spec/object.pm in 0.000130177s
+1625515557.41:     Instantiated Spec::Benchmark::gromacs435 in 0.000058889s
+1625515557.41:     Finding src.alts took 0.000017881s
+1625515557.41:   Setting up gromacs took 0.000302076s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_cpp.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'CFP2006.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_c.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '465.tonto'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/465.tonto/Spec/object.pm in 0.000878096s
+1625515557.41:     Instantiated Spec::Benchmark::tonto465 in 0.000088930s
+1625515557.41:     Finding src.alts took 0.000019073s
+1625515557.41:   Setting up tonto took 0.001087189s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '437.leslie3d'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/437.leslie3d/Spec/object.pm in 0.000111103s
+1625515557.41:     Instantiated Spec::Benchmark::leslie3d437 in 0.000051975s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up leslie3d took 0.000275850s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '447.dealII'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/447.dealII/Spec/object.pm in 0.000350952s
+1625515557.41:     Instantiated Spec::Benchmark::dealII447 in 0.000059843s
+1625515557.41:     Finding src.alts took 0.000020027s
+1625515557.41:   Setting up dealII took 0.000534058s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '434.zeusmp'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/434.zeusmp/Spec/object.pm in 0.000105858s
+1625515557.41:     Instantiated Spec::Benchmark::zeusmp434 in 0.000051975s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up zeusmp took 0.000268936s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'CINT2006.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '998.specrand'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/998.specrand/Spec/object.pm in 0.000103951s
+1625515557.41:     Instantiated Spec::Benchmark::specrand998 in 0.000045061s
+1625515557.41:     Finding src.alts took 0.000017881s
+1625515557.41:   Setting up specrand took 0.000262976s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '436.cactusADM'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/436.cactusADM/Spec/object.pm in 0.000248909s
+1625515557.41:     Instantiated Spec::Benchmark::cactusADM436 in 0.000072956s
+1625515557.41:     Finding src.alts took 0.000019073s
+1625515557.41:   Setting up cactusADM took 0.000440121s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '454.calculix'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/454.calculix/Spec/object.pm in 0.000272989s
+1625515557.41:     Instantiated Spec::Benchmark::calculix454 in 0.000072956s
+1625515557.41:     Finding src.alts took 0.000019073s
+1625515557.41:   Setting up calculix took 0.000460863s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '999.specrand'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/Spec/object.pm in 0.000099897s
+1625515557.41:     Instantiated Spec::Benchmark::specrand999 in 0.000041962s
+1625515557.41:     Finding src.alts took 0.000016928s
+1625515557.41:   Setting up specrand took 0.000252962s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '444.namd'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/444.namd/Spec/object.pm in 0.000123978s
+1625515557.41:     Instantiated Spec::Benchmark::namd444 in 0.000051022s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up namd took 0.000288963s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', 'all_mixed.bset'
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '471.omnetpp'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/471.omnetpp/Spec/object.pm in 0.000118971s
+1625515557.41:     Instantiated Spec::Benchmark::omnetpp471 in 0.000051975s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up omnetpp took 0.000283003s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '429.mcf'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/429.mcf/Spec/object.pm in 0.000100136s
+1625515557.41:     Instantiated Spec::Benchmark::mcf429 in 0.000048161s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up mcf took 0.000256062s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '473.astar'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/Spec/object.pm in 0.000180006s
+1625515557.41:     Instantiated Spec::Benchmark::astar473 in 0.000047207s
+1625515557.41:     Finding src.alts took 0.000018120s
+1625515557.41:   Setting up astar took 0.000347137s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '482.sphinx3'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/482.sphinx3/Spec/object.pm in 0.000306129s
+1625515557.41:     Instantiated Spec::Benchmark::sphinx3482 in 0.000062943s
+1625515557.41:     Finding src.alts took 0.000022173s
+1625515557.41:   Setting up sphinx3 took 0.000490904s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '459.GemsFDTD'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/459.GemsFDTD/Spec/object.pm in 0.000159979s
+1625515557.41:     Instantiated Spec::Benchmark::GemsFDTD459 in 0.000059128s
+1625515557.41:     Finding src.alts took 0.000019073s
+1625515557.41:   Setting up GemsFDTD took 0.000353098s
+
+1625515557.41:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '470.lbm'
+1625515557.41:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/470.lbm/Spec/object.pm in 0.000104904s
+1625515557.41:     Instantiated Spec::Benchmark::lbm470 in 0.000049114s
+1625515557.42:     Finding src.alts took 0.000020981s
+1625515557.42:   Setting up lbm took 0.000295162s
+
+1625515557.42:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '416.gamess'
+1625515557.42:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/416.gamess/Spec/object.pm in 0.000159025s
+1625515557.42:     Instantiated Spec::Benchmark::gamess416 in 0.000056982s
+1625515557.42:     Finding src.alts took 0.000017881s
+1625515557.42:   Setting up gamess took 0.000331163s
+
+1625515557.42:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '401.bzip2'
+1625515557.42:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/401.bzip2/Spec/object.pm in 0.000111818s
+1625515557.42:     Instantiated Spec::Benchmark::bzip2401 in 0.000042915s
+1625515557.42:     Finding src.alts took 0.000016928s
+1625515557.42:   Setting up bzip2 took 0.000263929s
+
+1625515557.42:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '456.hmmer'
+1625515557.42:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/456.hmmer/Spec/object.pm in 0.000154018s
+1625515557.42:     Instantiated Spec::Benchmark::hmmer456 in 0.000047207s
+1625515557.42:     Finding src.alts took 0.000019073s
+1625515557.42:   Setting up hmmer took 0.000315905s
+
+1625515557.42:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '410.bwaves'
+1625515557.42:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/410.bwaves/Spec/object.pm in 0.000089884s
+1625515557.42:     Instantiated Spec::Benchmark::bwaves410 in 0.000051022s
+1625515557.42:     Finding src.alts took 0.000017881s
+1625515557.42:   Setting up bwaves took 0.000247002s
+
+1625515557.42:   Reading benchmark directory for '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec', '433.milc'
+1625515557.42:     Evaluated /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/433.milc/Spec/object.pm in 0.000136137s
+1625515557.42:     Instantiated Spec::Benchmark::milc433 in 0.000056028s
+1625515557.42:     Finding src.alts took 0.000018120s
+1625515557.42:   Setting up milc took 0.000303984s
+
+1625515557.42: Setting up suite took 0.015152931s
+1625515557.42: Reading suite directory for 'flags-mandatory.xml', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625515557.42: Reading suite directory for 'version.txt', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625515557.42: Reading suite directory for 'Makefile.defaults', '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec'
+1625515557.42: found 31 benchmarks in 7 benchsets.
+1625515557.42: Reading config file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg'
+
+1625515557.43:   '400.perlbench' added
+1625515557.43:   '473.astar' added
+1625515557.43:   '483.xalancbmk' added
+1625515557.43:   '999.specrand' added
+1625515557.43(0.16s): Loading "http://www.spec.org/auto/cpu2006/current_version" for version check: OK
+
+1625515557.59: NOTICE: There is a newer version of the suite available from SPEC.
+1625515557.59:   Version 1.200 was released on Tue Aug 16 18:10:33 2011
+
+1625515557.59:                        ----------------------------------
+1625515557.59:                        The run will continue in 5 seconds
+1625515557.59:                        ----------------------------------
+
+1625515562.59: Verbosity = 5
+1625515562.59: Action    = build
+1625515562.59: Tune      = base
+1625515562.59: Ext       = NaCl
+1625515562.59: Size      = ref
+1625515562.59: Machine   = default
+1625515562.59: benchmarks= 400.perlbench,473.astar,483.xalancbmk,999.specrand
+1625515562.59: outputs   = asc, pdf, Screen, html
+1625515562.59: username  = shr
+1625515562.59: Benchmarks selected: 400.perlbench, 473.astar, 483.xalancbmk, 999.specrand
+1625515562.60: Compiling Binaries
+
+1625515562.60: ------------------------------------------------------------------------
+1625515562.60: When checking options for /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/exe/perlbench_base.NaCl, no MD5 sums were
+1625515562.60:   found in the config file.  They will be installed after build.
+1625515562.60:   Building 400.perlbench base NaCl default: (build_base_NaCl.0000)
+1625515562.64: Comparing MD5 hashes:
+1625515562.64:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/src/Makefile
+1625515562.64:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000/Makefile
+1625515562.65: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000/Makefile.deps':
+
+1625515562.65: # These are the build dependencies
+
+1625515562.65: $(addsuffix $(OBJ), $(basename perl.c)): perl.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename doio.c)): doio.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perlhost.h)): perlhost.h iperlsys.h vmem.h vdir.h perlio.h
+1625515562.65: $(addsuffix $(OBJ), $(basename universal.c)): universal.c perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename locale.c)): locale.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename win32thread.c)): win32thread.c win32.h win32iop.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename op.c)): op.c keywords.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename av.c)): av.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename gv.c)): gv.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perly.c)): perly.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename proto.h)): proto.h pp_proto.h
+1625515562.65: $(addsuffix $(OBJ), $(basename xsutils.c)): xsutils.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename mg.c)): mg.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Base64.c)): Base64.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perllib.c)): perllib.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename IO.c)): IO.c poll.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename iperlsys.h)): iperlsys.h perlio.h
+1625515562.65: $(addsuffix $(OBJ), $(basename toke.c)): toke.c keywords.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename doop.c)): doop.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Storable.c)): Storable.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perlapi.c)): perlapi.c perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Dumper.c)): Dumper.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perlmain.c)): perlmain.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename hparser.c)): hparser.c hctype.h tokenpos.h
+1625515562.65: $(addsuffix $(OBJ), $(basename sv.c)): sv.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename HiRes.c)): HiRes.c const-c.inc XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename taint.c)): taint.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename perlio.c)): perlio.c perlsdio.h perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pad.c)): pad.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename DynaLoader.c)): DynaLoader.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename regcomp.c)): regcomp.c INTERN.h regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename utf8.c)): utf8.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename util.c)): util.c specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename scope.c)): scope.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename miniperlmain.c)): miniperlmain.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename win32io.c)): win32io.c perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename config.h)): config.h spec_config.h
+1625515562.65: $(addsuffix $(OBJ), $(basename attrs.c)): attrs.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename XSUB.h)): XSUB.h perlapi.h
+1625515562.65: $(addsuffix $(OBJ), $(basename numeric.c)): numeric.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp_pack.c)): pp_pack.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Cwd.c)): Cwd.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename MD5.c)): MD5.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp_hot.c)): pp_hot.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename poll.c)): poll.c poll.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp_sys.c)): pp_sys.c reentr.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename run.c)): run.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename globals.c)): globals.c INTERN.h perlapi.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename regexec.c)): regexec.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Hostname.c)): Hostname.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Peek.c)): Peek.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp_ctl.c)): pp_ctl.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename win32sck.c)): win32sck.c win32iop.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename Parser.c)): Parser.c hparser.h parser-util.c hparser.c hctype.h tokenpos.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename hv.c)): hv.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename deb.c)): deb.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp_sort.c)): pp_sort.c specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename pp.c)): pp.c reentr.h keywords.h specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename win32.c)): win32.c win32iop.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: $(addsuffix $(OBJ), $(basename dump.c)): dump.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+1625515562.65: # End dependencies
+1625515562.66: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000/Makefile.spec':
+1625515562.66: TUNE=base
+1625515562.66: EXT=NaCl
+1625515562.66: NUMBER=400
+1625515562.66: NAME=perlbench
+1625515562.66: SOURCES= av.c deb.c doio.c doop.c dump.c globals.c gv.c hv.c locale.c mg.c \
+1625515562.66: 	 numeric.c op.c pad.c perl.c perlapi.c perlio.c perlmain.c perly.c pp.c \
+1625515562.66: 	 pp_ctl.c pp_hot.c pp_pack.c pp_sort.c pp_sys.c regcomp.c regexec.c run.c \
+1625515562.66: 	 scope.c sv.c taint.c toke.c universal.c utf8.c util.c xsutils.c Base64.c \
+1625515562.66: 	 Cwd.c Dumper.c HiRes.c IO.c Peek.c attrs.c poll.c stdio.c DynaLoader.c \
+1625515562.66: 	 MD5.c Storable.c Parser.c specrand.c Hostname.c Opcode.c
+1625515562.66: EXEBASE=perlbench
+1625515562.66: NEED_MATH=yes
+1625515562.66: BENCHLANG=C
+1625515562.66: ONESTEP=
+1625515562.66: CONESTEP=
+
+1625515562.66: BENCH_FLAGS      = -DPERL_CORE
+1625515562.66: CC               = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl
+1625515562.66: COPTIMIZE        = -O2
+1625515562.66: CPORTABILITY     = -DSPEC_CPU_LINUX_IA32
+1625515562.66: CXX              = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl
+1625515562.66: CXXOPTIMIZE      = -O2
+1625515562.66: FC               = /usr/local/bin/gfortran
+1625515562.66: FOPTIMIZE        = -O2
+1625515562.66: FPBASE           = yes
+1625515562.66: OS               = unix
+1625515562.66: absolutely_no_locking = 0
+1625515562.66: abstol           = 
+1625515562.66: action           = build
+1625515562.66: allow_extension_override = 0
+1625515562.66: backup_config    = 1
+1625515562.66: baseexe          = perlbench
+1625515562.66: basepeak         = 0
+1625515562.66: benchdir         = benchspec
+1625515562.66: benchmark        = 400.perlbench
+1625515562.66: binary           = 
+1625515562.66: bindir           = exe
+1625515562.66: build_in_build_dir = 1
+1625515562.66: builddir         = build
+1625515562.66: bundleaction     = 
+1625515562.66: bundlename       = 
+1625515562.66: calctol          = 0
+1625515562.66: changedmd5       = 0
+1625515562.66: check_integrity  = 1
+1625515562.66: check_md5        = 1
+1625515562.66: check_version    = 1
+1625515562.66: command_add_redirect = 0
+1625515562.66: commanderrfile   = speccmds.err
+1625515562.66: commandexe       = perlbench_base.NaCl
+1625515562.66: commandfile      = speccmds.cmd
+1625515562.66: commandoutfile   = speccmds.out
+1625515562.66: commandstdoutfile = speccmds.stdout
+1625515562.66: compareerrfile   = compare.err
+1625515562.66: comparefile      = compare.cmd
+1625515562.66: compareoutfile   = compare.out
+1625515562.66: comparestdoutfile = compare.stdout
+1625515562.66: compile_error    = 0
+1625515562.66: compwhite        = 
+1625515562.66: configdir        = config
+1625515562.66: configpath       = /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg
+1625515562.66: copies           = 1
+1625515562.66: datadir          = data
+1625515562.66: delay            = 0
+1625515562.66: deletebinaries   = 0
+1625515562.66: deletework       = 0
+1625515562.66: difflines        = 10
+1625515562.66: dirprot          = 511
+1625515562.66: endian           = 12345678
+1625515562.66: env_vars         = 0
+1625515562.66: exitvals         = spec_exit
+1625515562.66: expand_notes     = 0
+1625515562.66: expid            = 
+1625515562.66: ext              = NaCl
+1625515562.66: fake             = 0
+1625515562.66: feedback         = 1
+1625515562.66: flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+1625515562.66: floatcompare     = 
+1625515562.66: help             = 0
+1625515562.66: http_proxy       = 
+1625515562.66: http_timeout     = 30
+1625515562.66: hw_avail         = Dec-9999
+1625515562.66: hw_cpu_char      = 
+1625515562.66: hw_cpu_mhz       = 3000
+1625515562.66: hw_cpu_name      = AMD Opteron 256
+1625515562.66: hw_disk          = SATA
+1625515562.66: hw_fpu           = Integrated
+1625515562.66: hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+1625515562.66: hw_model         = Tyan Thunder KKQS Pro (S4882)
+1625515562.66: hw_nchips        = 1
+1625515562.66: hw_ncores        = 1
+1625515562.66: hw_ncoresperchip = 1
+1625515562.66: hw_ncpuorder     = 1 chip
+1625515562.66: hw_nthreadspercore = 1
+1625515562.66: hw_ocache        = None
+1625515562.66: hw_pcache        = 64 KB I + 64 KB D on chip per chip
+1625515562.66: hw_scache        = 1 MB I+D on chip per chip
+1625515562.66: hw_tcache        = None
+1625515562.66: hw_vendor        = Tyan
+1625515562.66: ignore_errors    = yes
+1625515562.66: ignore_sigint    = 0
+1625515562.66: ignorecase       = 
+1625515562.66: info_wrap_columns = 50
+1625515562.66: inputdir         = input
+1625515562.66: iteration        = -1
+1625515562.66: iterations       = 3
+1625515562.66: keeptmp          = 0
+1625515562.66: license_num      = 0
+1625515562.66: line_width       = 0
+1625515562.66: locking          = 1
+1625515562.66: log              = CPU2006
+1625515562.66: log_line_width   = 0
+1625515562.66: log_timestamp    = 0
+1625515562.66: logname          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log
+1625515562.66: lognum           = 014
+1625515562.66: mach             = default
+1625515562.66: mail_reports     = all
+1625515562.66: mailcompress     = 0
+1625515562.66: mailmethod       = smtp
+1625515562.66: mailport         = 25
+1625515562.66: mailserver       = 127.0.0.1
+1625515562.66: mailto           = 
+1625515562.66: make             = specmake
+1625515562.66: make_no_clobber  = 0
+1625515562.66: makeflags        = -j8
+1625515562.66: max_active_compares = 0
+1625515562.66: mean_anyway      = 0
+1625515562.66: min_report_runs  = 3
+1625515562.66: minimize_builddirs = 0
+1625515562.66: minimize_rundirs = 0
+1625515562.66: name             = perlbench
+1625515562.66: need_math        = yes
+1625515562.66: no_input_handler = close
+1625515562.66: no_monitor       = 
+1625515562.66: note_preenv      = 0
+1625515562.66: notes0100        =  C base flags: -O2
+1625515562.66: notes0110        =  C++ base flags: -O2
+1625515562.66: notes0120        =  Fortran base flags: -O2
+1625515562.66: notes25          = 
+1625515562.66: notes35          =  400.perlbench: -DSPEC_CPU_LINUX_IA32
+1625515562.66: notes_wrap_columns = 0
+1625515562.66: notes_wrap_indent =   
+1625515562.66: num              = 400
+1625515562.66: obiwan           = 
+1625515562.66: os_exe_ext       = 
+1625515562.66: output           = asc
+1625515562.66: output_format    = asc, pdf, Screen, html
+1625515562.66: output_root      = 
+1625515562.66: outputdir        = output
+1625515562.66: parallel_setup   = 1
+1625515562.66: parallel_setup_prefork = 
+1625515562.66: parallel_setup_type = fork
+1625515562.66: parallel_test    = 0
+1625515562.66: parallel_test_submit = 0
+1625515562.66: path             = /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench
+1625515562.66: plain_train      = 1
+1625515562.66: preenv           = 1
+1625515562.66: prefix           = 
+1625515562.66: prepared_by      = 
+1625515562.66: ranks            = 1
+1625515562.66: rate             = 0
+1625515562.66: realuser         = your name here
+1625515562.66: rebuild          = 0
+1625515562.66: reftime          = reftime
+1625515562.66: reltol           = 
+1625515562.66: reportable       = 1
+1625515562.66: resultdir        = result
+1625515562.66: review           = 0
+1625515562.66: run              = all
+1625515562.66: rundir           = run
+1625515562.66: runspec          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec --config=linux32-i386-nacl.cfg --action=build all_c_cpp
+1625515562.66: safe_eval        = 1
+1625515562.66: section_specifier_fatal = 1
+1625515562.66: sendmail         = /usr/sbin/sendmail
+1625515562.66: setpgrp_enabled  = 1
+1625515562.66: setprocgroup     = 1
+1625515562.66: shrate           = 0
+1625515562.66: sigint           = 2
+1625515562.66: size             = ref
+1625515562.66: size_class       = ref
+1625515562.66: skipabstol       = 
+1625515562.66: skipobiwan       = 
+1625515562.66: skipreltol       = 
+1625515562.66: skiptol          = 
+1625515562.66: smarttune        = base
+1625515562.66: specdiff         = specdiff
+1625515562.66: specmake         = Makefile.YYYtArGeTYYYspec
+1625515562.66: specrun          = specinvoke
+1625515562.66: speed            = 0
+1625515562.66: srcalt           = 
+1625515562.66: srcdir           = src
+1625515562.66: stagger          = 10
+1625515562.66: strict_rundir_verify = 1
+1625515562.66: sw_avail         = Dec-9999
+1625515562.66: sw_base_ptrsize  = 32-bit
+1625515562.66: sw_compiler      = gcc , g++ & gfortran 4.2 Snapshot 20060715 (for i386)
+1625515562.66: sw_file          = ext3
+1625515562.66: sw_os            = SUSE Linux 10.1 (for i386)
+1625515562.66: sw_other         = None
+1625515562.66: sw_peak_ptrsize  = 32-bit
+1625515562.66: sw_state         = runlevel 3
+1625515562.66: sysinfo_program  = 
+1625515562.66: table            = 1
+1625515562.66: teeout           = yes
+1625515562.66: teerunout        = yes
+1625515562.66: test_date        = Jul-2021
+1625515562.66: test_sponsor     = Turbo Computers
+1625515562.66: tester           = 
+1625515562.66: top              = /mnt/sata/Code/zerocost/zerocost-specbenchmark
+1625515562.66: train_with       = train
+1625515562.66: tune             = base
+1625515562.66: uid              = 1000
+1625515562.66: unbuffer         = 1
+1625515562.66: update-flags     = 0
+1625515562.66: use_submit_for_speed = 0
+1625515562.66: username         = shr
+1625515562.66: vendor           = anon
+1625515562.66: vendor_makefiles = 0
+1625515562.66: verbose          = 5
+1625515562.66: version          = 0
+1625515562.66: version_url      = http://www.spec.org/auto/cpu2006/current_version
+1625515562.66: worklist         = list
+1625515562.66: OUTPUT_RMFILES   = diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.out suns.out validate
+1625515562.66:   Compile for '400.perlbench' started at: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.66: Issuing make.clean command 'specmake -j8 clean'
+1625515562.66: specmake -j8 clean 2> make.clean.err | tee make.clean.out
+1625515562.66: Start make.clean command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.67: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000'
+1625515562.67: rm -rf perlbench
+1625515562.67: rm -rf perlbench.exe
+1625515562.67: rm -rf *.o  diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.out suns.out validate
+1625515562.67: find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+1625515562.67: rm -rf core
+1625515562.67: rm -rf 
+1625515562.67: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000'
+1625515562.67: Tee child 447756 exited with code 0 (exit code=0, signal=0)
+1625515562.67: Stop make.clean command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.67: Elapsed time for make.clean command: 00:00:00 (0)
+1625515562.67: Issuing make command 'specmake -j8 build'
+1625515562.67: specmake -j8 build 2> make.err | tee make.out
+1625515562.67: Start make command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.68: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000'
+1625515562.68: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o av.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        av.c
+1625515562.68: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o deb.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        deb.c
+1625515562.68: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o doio.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        doio.c
+1625515562.68: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o doop.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        doop.c
+1625515562.69: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.69: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.69: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.69: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o dump.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        dump.c
+1625515562.69: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.69: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o globals.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        globals.c
+1625515562.70: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.70: In file included from deb.c:23:
+1625515562.70: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.70: In file included from av.c:22:
+1625515562.70: ./perl.h:886:#   include <arpa/inet.h>13
+1625515562.70: :            ^ 
+1625515562.70: fatal error: 'arpa/inet.h' file not found
+1625515562.70: #   include <arpa/inet.h>
+1625515562.70:             ^
+1625515562.70: In file included from doio.c:25:
+1625515562.70: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.70: #   include <arpa/inet.h>
+1625515562.70:             ^
+1625515562.71: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o gv.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O2        -DSPEC_CPU_LINUX_IA32        gv.c
+1625515562.72: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.72: In file included from doop.c:22:
+1625515562.72: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.72: #   include <arpa/inet.h>
+1625515562.72:             ^
+1625515562.72: 1 error generated.
+1625515562.73: specmake[1]: *** [deb.o] Error 1
+1625515562.73: specmake[1]: *** Waiting for unfinished jobs....
+1625515562.73: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.73: In file included from dump.c:25:
+1625515562.73: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.73: #   include <arpa/inet.h>
+1625515562.73:             ^
+1625515562.74: 1 error generated.
+1625515562.75: specmake[1]: *** [doio.o] Error 1
+1625515562.75: In file included from gv.c:35:
+1625515562.75: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.75: #   include <arpa/inet.h>
+1625515562.75:             ^
+1625515562.75: 1 error generated.
+1625515562.75: specmake[1]: *** [av.o] Error 1
+1625515562.76: In file included from globals.c:35:
+1625515562.76: ./perl.h:886:13: fatal error: 'arpa/inet.h' file not found
+1625515562.76: #   include <arpa/inet.h>
+1625515562.76:             ^
+1625515562.77: 1 error generated.
+1625515562.77: specmake[1]: *** [doop.o] Error 1
+1625515562.77: 1 error generated.
+1625515562.77: specmake[1]: *** [dump.o] Error 1
+1625515562.78: 1 error generated.
+1625515562.78: specmake[1]: *** [gv.o] Error 1
+1625515562.79: 1 error generated.
+1625515562.79: specmake[1]: *** [globals.o] Error 1
+1625515562.79: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000'
+1625515562.79: Tee child 447767 exited with code 512 (exit code=2, signal=0)
+1625515562.79: Stop make command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.79: Elapsed time for make command: 00:00:00 (0)
+1625515562.79: Error with make 'specmake -j8 build': check file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/400.perlbench/build/build_base_NaCl.0000/make.err'
+1625515562.79:   Command returned exit code 2
+1625515562.80:   Error with make!
+1625515562.80:   Compile for '400.perlbench' ended at: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.80:   Elapsed compile for '400.perlbench': 00:00:00 (0)
+1625515562.80: *** Error building 400.perlbench
+
+1625515562.80: ------------------------------------------------------------------------
+1625515562.80: When checking options for /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/exe/astar_base.NaCl, no MD5 sums were
+1625515562.80:   found in the config file.  They will be installed after build.
+1625515562.80:   Building 473.astar base NaCl default: (build_base_NaCl.0000)
+1625515562.81: Comparing MD5 hashes:
+1625515562.81:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/src/Makefile
+1625515562.81:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000/Makefile
+1625515562.82: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000/Makefile.deps':
+
+1625515562.82: # These are the build dependencies
+
+1625515562.82: # End dependencies
+1625515562.82: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000/Makefile.spec':
+1625515562.82: TUNE=base
+1625515562.82: EXT=NaCl
+1625515562.82: NUMBER=473
+1625515562.82: NAME=astar
+1625515562.82: SOURCES= CreateWay_.cpp Places_.cpp RegBounds_.cpp RegMng_.cpp Way2_.cpp \
+1625515562.82: 	 WayInit_.cpp Library.cpp Random.cpp Region_.cpp RegWay_.cpp Way_.cpp
+1625515562.82: EXEBASE=astar
+1625515562.82: NEED_MATH=yes
+1625515562.82: BENCHLANG=CXX
+1625515562.82: ONESTEP=
+1625515562.82: CXXONESTEP=
+
+1625515562.82: BENCH_FLAGS      = -DSPEC_CPU_LITTLE_ENDIAN
+1625515562.82: CC               = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl
+1625515562.82: COPTIMIZE        = -O2
+1625515562.82: CXX              = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl
+1625515562.82: CXXOPTIMIZE      = -O2
+1625515562.82: FC               = /usr/local/bin/gfortran
+1625515562.82: FOPTIMIZE        = -O2
+1625515562.82: FPBASE           = yes
+1625515562.82: OS               = unix
+1625515562.82: absolutely_no_locking = 0
+1625515562.82: abstol           = 
+1625515562.82: action           = build
+1625515562.82: allow_extension_override = 0
+1625515562.82: backup_config    = 1
+1625515562.82: baseexe          = astar
+1625515562.82: basepeak         = 0
+1625515562.82: benchdir         = benchspec
+1625515562.82: benchmark        = 473.astar
+1625515562.82: binary           = 
+1625515562.82: bindir           = exe
+1625515562.82: build_in_build_dir = 1
+1625515562.82: builddir         = build
+1625515562.82: bundleaction     = 
+1625515562.82: bundlename       = 
+1625515562.82: calctol          = 0
+1625515562.82: changedmd5       = 0
+1625515562.82: check_integrity  = 1
+1625515562.82: check_md5        = 1
+1625515562.82: check_version    = 1
+1625515562.82: command_add_redirect = 0
+1625515562.82: commanderrfile   = speccmds.err
+1625515562.82: commandexe       = astar_base.NaCl
+1625515562.82: commandfile      = speccmds.cmd
+1625515562.82: commandoutfile   = speccmds.out
+1625515562.82: commandstdoutfile = speccmds.stdout
+1625515562.82: compareerrfile   = compare.err
+1625515562.82: comparefile      = compare.cmd
+1625515562.82: compareoutfile   = compare.out
+1625515562.82: comparestdoutfile = compare.stdout
+1625515562.82: compile_error    = 0
+1625515562.82: compwhite        = 
+1625515562.82: configdir        = config
+1625515562.82: configpath       = /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg
+1625515562.82: copies           = 1
+1625515562.82: datadir          = data
+1625515562.82: delay            = 0
+1625515562.82: deletebinaries   = 0
+1625515562.82: deletework       = 0
+1625515562.82: difflines        = 10
+1625515562.82: dirprot          = 511
+1625515562.82: endian           = 12345678
+1625515562.82: env_vars         = 0
+1625515562.82: exitvals         = spec_exit
+1625515562.82: expand_notes     = 0
+1625515562.82: expid            = 
+1625515562.82: ext              = NaCl
+1625515562.82: fake             = 0
+1625515562.82: feedback         = 1
+1625515562.82: flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+1625515562.82: floatcompare     = 
+1625515562.82: help             = 0
+1625515562.82: http_proxy       = 
+1625515562.82: http_timeout     = 30
+1625515562.82: hw_avail         = Dec-9999
+1625515562.82: hw_cpu_char      = 
+1625515562.82: hw_cpu_mhz       = 3000
+1625515562.82: hw_cpu_name      = AMD Opteron 256
+1625515562.82: hw_disk          = SATA
+1625515562.82: hw_fpu           = Integrated
+1625515562.82: hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+1625515562.82: hw_model         = Tyan Thunder KKQS Pro (S4882)
+1625515562.82: hw_nchips        = 1
+1625515562.82: hw_ncores        = 1
+1625515562.82: hw_ncoresperchip = 1
+1625515562.82: hw_ncpuorder     = 1 chip
+1625515562.82: hw_nthreadspercore = 1
+1625515562.82: hw_ocache        = None
+1625515562.82: hw_pcache        = 64 KB I + 64 KB D on chip per chip
+1625515562.82: hw_scache        = 1 MB I+D on chip per chip
+1625515562.82: hw_tcache        = None
+1625515562.82: hw_vendor        = Tyan
+1625515562.82: ignore_errors    = yes
+1625515562.82: ignore_sigint    = 0
+1625515562.82: ignorecase       = 
+1625515562.82: info_wrap_columns = 50
+1625515562.82: inputdir         = input
+1625515562.82: iteration        = -1
+1625515562.82: iterations       = 3
+1625515562.82: keeptmp          = 0
+1625515562.82: license_num      = 0
+1625515562.82: line_width       = 0
+1625515562.82: locking          = 1
+1625515562.82: log              = CPU2006
+1625515562.82: log_line_width   = 0
+1625515562.82: log_timestamp    = 0
+1625515562.82: logname          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log
+1625515562.82: lognum           = 014
+1625515562.82: mach             = default
+1625515562.82: mail_reports     = all
+1625515562.82: mailcompress     = 0
+1625515562.82: mailmethod       = smtp
+1625515562.82: mailport         = 25
+1625515562.82: mailserver       = 127.0.0.1
+1625515562.82: mailto           = 
+1625515562.82: make             = specmake
+1625515562.82: make_no_clobber  = 0
+1625515562.82: makeflags        = -j8
+1625515562.82: max_active_compares = 0
+1625515562.82: mean_anyway      = 0
+1625515562.82: min_report_runs  = 3
+1625515562.82: minimize_builddirs = 0
+1625515562.82: minimize_rundirs = 0
+1625515562.82: name             = astar
+1625515562.82: need_math        = yes
+1625515562.82: no_input_handler = close
+1625515562.82: no_monitor       = 
+1625515562.82: note_preenv      = 0
+1625515562.82: notes0100        =  C base flags: -O2
+1625515562.82: notes0110        =  C++ base flags: -O2
+1625515562.82: notes0120        =  Fortran base flags: -O2
+1625515562.82: notes25          = 
+1625515562.82: notes_wrap_columns = 0
+1625515562.82: notes_wrap_indent =   
+1625515562.82: num              = 473
+1625515562.82: obiwan           = 
+1625515562.82: os_exe_ext       = 
+1625515562.82: output           = asc
+1625515562.82: output_format    = asc, pdf, Screen, html
+1625515562.82: output_root      = 
+1625515562.82: outputdir        = output
+1625515562.82: parallel_setup   = 1
+1625515562.82: parallel_setup_prefork = 
+1625515562.82: parallel_setup_type = fork
+1625515562.82: parallel_test    = 0
+1625515562.82: parallel_test_submit = 0
+1625515562.82: path             = /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar
+1625515562.82: plain_train      = 1
+1625515562.82: preenv           = 1
+1625515562.82: prefix           = 
+1625515562.82: prepared_by      = 
+1625515562.82: ranks            = 1
+1625515562.82: rate             = 0
+1625515562.82: realuser         = your name here
+1625515562.82: rebuild          = 0
+1625515562.82: reftime          = reftime
+1625515562.82: reltol           = 0.001
+1625515562.82: reportable       = 1
+1625515562.82: resultdir        = result
+1625515562.82: review           = 0
+1625515562.82: run              = all
+1625515562.82: rundir           = run
+1625515562.82: runspec          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec --config=linux32-i386-nacl.cfg --action=build all_c_cpp
+1625515562.82: safe_eval        = 1
+1625515562.82: section_specifier_fatal = 1
+1625515562.82: sendmail         = /usr/sbin/sendmail
+1625515562.82: setpgrp_enabled  = 1
+1625515562.82: setprocgroup     = 1
+1625515562.82: shrate           = 0
+1625515562.82: sigint           = 2
+1625515562.82: size             = ref
+1625515562.82: size_class       = ref
+1625515562.82: skipabstol       = 
+1625515562.82: skipobiwan       = 
+1625515562.82: skipreltol       = 
+1625515562.82: skiptol          = 
+1625515562.82: smarttune        = base
+1625515562.82: specdiff         = specdiff
+1625515562.82: specmake         = Makefile.YYYtArGeTYYYspec
+1625515562.82: specrun          = specinvoke
+1625515562.82: speed            = 0
+1625515562.82: srcalt           = 
+1625515562.82: srcdir           = src
+1625515562.82: stagger          = 10
+1625515562.82: strict_rundir_verify = 1
+1625515562.82: sw_avail         = Dec-9999
+1625515562.82: sw_base_ptrsize  = 32-bit
+1625515562.82: sw_compiler      = gcc , g++ & gfortran 4.2 Snapshot 20060715 (for i386)
+1625515562.82: sw_file          = ext3
+1625515562.82: sw_os            = SUSE Linux 10.1 (for i386)
+1625515562.82: sw_other         = None
+1625515562.82: sw_peak_ptrsize  = 32-bit
+1625515562.82: sw_state         = runlevel 3
+1625515562.82: sysinfo_program  = 
+1625515562.82: table            = 1
+1625515562.82: teeout           = yes
+1625515562.82: teerunout        = yes
+1625515562.82: test_date        = Jul-2021
+1625515562.82: test_sponsor     = Turbo Computers
+1625515562.82: tester           = 
+1625515562.82: top              = /mnt/sata/Code/zerocost/zerocost-specbenchmark
+1625515562.82: train_with       = train
+1625515562.82: tune             = base
+1625515562.82: uid              = 1000
+1625515562.82: unbuffer         = 1
+1625515562.82: update-flags     = 0
+1625515562.82: use_submit_for_speed = 0
+1625515562.82: username         = shr
+1625515562.82: vendor           = anon
+1625515562.82: vendor_makefiles = 0
+1625515562.82: verbose          = 5
+1625515562.82: version          = 0
+1625515562.82: version_url      = http://www.spec.org/auto/cpu2006/current_version
+1625515562.82: worklist         = list
+1625515562.82: OUTPUT_RMFILES   = BigLakes1024.out rivers1.out
+1625515562.82:   Compile for '473.astar' started at: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.82: Issuing make.clean command 'specmake -j8 clean'
+1625515562.82: specmake -j8 clean 2> make.clean.err | tee make.clean.out
+1625515562.82: Start make.clean command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.82: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000'
+1625515562.82: rm -rf astar
+1625515562.82: rm -rf astar.exe
+1625515562.82: rm -rf *.o  BigLakes1024.out rivers1.out
+1625515562.83: find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+1625515562.83: rm -rf core
+1625515562.83: rm -rf 
+1625515562.83: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000'
+1625515562.96: Tee child 447785 exited with code 0 (exit code=0, signal=0)
+1625515562.96: Stop make.clean command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.96: Elapsed time for make.clean command: 00:00:00 (0)
+1625515562.96: Issuing make command 'specmake -j8 build'
+1625515562.96: specmake -j8 build 2> make.err | tee make.out
+1625515562.96: Start make command: Mon Jul  5 13:06:02 2021 (1625515562)
+1625515562.96: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000'
+1625515562.96: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o CreateWay_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          CreateWay_.cpp
+1625515562.96: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Places_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          Places_.cpp
+1625515562.96: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o RegBounds_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          RegBounds_.cpp
+1625515562.96: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o RegMng_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          RegMng_.cpp
+1625515562.96: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Way2_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          Way2_.cpp
+1625515562.96: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.96: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.96: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.97: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o WayInit_.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          WayInit_.cpp
+1625515562.97: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Library.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          Library.cpp
+1625515562.97: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Random.o -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LITTLE_ENDIAN   -O2          Random.cpp
+1625515562.97: clang++clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.97: : warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.97: RegBounds_.cpp:6:10: fatal error: 'memory.h' file not found
+1625515562.97: #include <memory.h>
+1625515562.97:          ^
+1625515562.97: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.97: Places_.cpp:3:10: fatal error: 'memory.h' file not found
+1625515562.97: #include <memory.h>
+1625515562.97:          ^
+1625515562.98: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.98: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515562.98: Way2_.cpp:4:10: fatal error: 'memory.h' file not found
+1625515562.98: #include <memory.h>
+1625515562.98:          ^
+1625515562.99: RegMng_.cpp:3:10: fatal error: 'memory.h' file not found
+1625515562.99: #include <memory.h>
+1625515562.99:          ^
+1625515562.99: 1 error generated.
+1625515563.00: specmake[1]: *** [RegBounds_.o] Error 1
+1625515563.00: specmake[1]: *** Waiting for unfinished jobs....
+1625515563.00: CreateWay_.cpp:633:5: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+1625515563.00:     else
+1625515563.00:     ^
+1625515563.00: 1 error generated.
+1625515563.00: specmake[1]: *** [Places_.o] Error 1
+1625515563.00: 1 error generated.
+1625515563.01: WayInit_.cpp:168:3: error: use of undeclared identifier 'memset'
+1625515563.01:   memset(maparp,0,size*sizeof(maparp[0]));
+1625515563.01:   ^
+1625515563.01: specmake[1]: *** [Way2_.o] Error 1
+1625515563.01: WayInit_.cpp:169:3: error: use of undeclared identifier 'memset'
+1625515563.01:   memset(waymap,0,size*sizeof(waymap[0]));
+1625515563.01:   ^
+1625515563.01: 2 errors generated.
+1625515563.01: specmake[1]: *** [WayInit_.o] Error 1
+1625515563.03: Library.cpp:80:29: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Ways quantity : %"PRId64"\n",wayqu);
+1625515563.03:                             ^
+1625515563.03:                              
+1625515563.03: Library.cpp:81:32: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Total way length : %"PRId64"\n",waylength);
+1625515563.03:                                ^
+1625515563.03:                                 
+1625515563.03: Library.cpp:84:33: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Reg ways quantity : %"PRId64"\n",regwayqu);
+1625515563.03:                                 ^
+1625515563.03:                                  
+1625515563.03: Library.cpp:85:36: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Total reg way length : %"PRId64"\n",regwaylength);
+1625515563.03:                                    ^
+1625515563.03:                                     
+1625515563.03: Library.cpp:88:35: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("River ways quantity : %"PRId64"\n",riverwayqu);
+1625515563.03:                                   ^
+1625515563.03:                                    
+1625515563.03: Library.cpp:89:38: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Total river way length : %"PRId64"\n",riverwaylength);
+1625515563.03:                                      ^
+1625515563.03:                                       
+1625515563.03: Library.cpp:91:34: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Land ways quantity : %"PRId64"\n",landwayqu);
+1625515563.03:                                  ^
+1625515563.03:                                   
+1625515563.03: Library.cpp:92:37: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+1625515563.03:   printf("Total land way length : %"PRId64"\n",landwaylength);
+1625515563.03:                                     ^
+1625515563.03:                                      
+1625515563.03: 8 errors generated.
+1625515563.03: 1 error generated.
+1625515563.03: specmake[1]: *** [Library.o] Error 1
+1625515563.03: specmake[1]: *** [RegMng_.o] Error 1
+1625515563.10: 1 warning generated.
+1625515563.11: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000'
+1625515563.11: Tee child 447796 exited with code 512 (exit code=2, signal=0)
+1625515563.11: Stop make command: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.11: Elapsed time for make command: 00:00:01 (1)
+1625515563.12: Error with make 'specmake -j8 build': check file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/473.astar/build/build_base_NaCl.0000/make.err'
+1625515563.12:   Command returned exit code 2
+1625515563.12:   Error with make!
+1625515563.12:   Compile for '473.astar' ended at: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.12:   Elapsed compile for '473.astar': 00:00:01 (1)
+1625515563.12: *** Error building 473.astar
+
+1625515563.12: ------------------------------------------------------------------------
+1625515563.12: When checking options for /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/exe/Xalan_base.NaCl, no MD5 sums were
+1625515563.12:   found in the config file.  They will be installed after build.
+1625515563.12:   Building 483.xalancbmk base NaCl default: (build_base_NaCl.0000)
+1625515563.47: Comparing MD5 hashes:
+1625515563.47:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/src/Makefile
+1625515563.47:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000/Makefile
+1625515563.48: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000/Makefile.deps':
+
+1625515563.48: # These are the build dependencies
+
+1625515563.48: # End dependencies
+1625515563.48: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000/Makefile.spec':
+1625515563.48: TUNE=base
+1625515563.48: EXT=NaCl
+1625515563.48: NUMBER=483
+1625515563.48: NAME=xalancbmk
+1625515563.48: SOURCES= AIXPlatformUtils.cpp CSetDefs.cpp BinHTTPURLInputStream.cpp \
+1625515563.48: 	 Win32PlatformUtils.cpp Win32MsgLoader.cpp Win32TransService.cpp \
+1625515563.48: 	 Win32TransService2.cpp WinSockNetAccessor.cpp SunCCDefs.cpp \
+1625515563.48: 	 SolarisPlatformUtils.cpp GCCDefs.cpp LinuxPlatformUtils.cpp \
+1625515563.48: 	 MIPSproDefs.cpp IRIXPlatformUtils.cpp HPCCDefs.cpp HPPlatformUtils.cpp \
+1625515563.48: 	 WFXMLScanner.cpp ASCIIRangeFactory.cpp AbstractDOMParser.cpp \
+1625515563.48: 	 AbstractNumericFacetValidator.cpp AbstractNumericValidator.cpp \
+1625515563.48: 	 AbstractStringValidator.cpp AllContentModel.cpp \
+1625515563.48: 	 AnySimpleTypeDatatypeValidator.cpp AnyURIDatatypeValidator.cpp \
+1625515563.48: 	 AttrImpl.cpp AttrMapImpl.cpp AttrNSImpl.cpp BMPattern.cpp Base64.cpp \
+1625515563.48: 	 Base64BinaryDatatypeValidator.cpp BinFileInputStream.cpp \
+1625515563.48: 	 BinFileOutputStream.cpp BinInputStream.cpp BinMemInputStream.cpp \
+1625515563.48: 	 BinMemOutputStream.cpp BinOutputStream.cpp BitSet.cpp \
+1625515563.48: 	 BlockRangeFactory.cpp BooleanDatatypeValidator.cpp CDATASectionImpl.cpp \
+1625515563.48: 	 CMAny.cpp CMBinaryOp.cpp CMUnaryOp.cpp CharToken.cpp \
+1625515563.48: 	 CharacterDataImpl.cpp ChildNode.cpp ClosureToken.cpp CommentImpl.cpp \
+1625515563.48: 	 ComplexTypeInfo.cpp ConcatToken.cpp ConditionToken.cpp \
+1625515563.48: 	 ContentLeafNameTypeVector.cpp ContentSpecNode.cpp DFAContentModel.cpp \
+1625515563.48: 	 DGXMLScanner.cpp DOMAttrImpl.cpp DOMAttrMapImpl.cpp DOMAttrNSImpl.cpp \
+1625515563.48: 	 DOMBuilderImpl.cpp DOMCDATASectionImpl.cpp DOMCharacterDataImpl.cpp \
+1625515563.48: 	 DOMChildNode.cpp DOMCommentImpl.cpp DOMConfigurationImpl.cpp \
+1625515563.48: 	 DOMDeepNodeListImpl.cpp DOMDocumentFragmentImpl.cpp DOMDocumentImpl.cpp \
+1625515563.48: 	 DOMDocumentTypeImpl.cpp DOMElementImpl.cpp DOMElementNSImpl.cpp \
+1625515563.48: 	 DOMEntityImpl.cpp DOMEntityReferenceImpl.cpp DOMErrorImpl.cpp \
+1625515563.48: 	 DOMException.cpp DOMImplementationImpl.cpp DOMImplementationRegistry.cpp \
+1625515563.48: 	 DOMLocatorImpl.cpp DOMNamedNodeMapImpl.cpp DOMNodeIDMap.cpp \
+1625515563.48: 	 DOMNodeImpl.cpp DOMNodeIteratorImpl.cpp DOMNodeListImpl.cpp \
+1625515563.48: 	 DOMNodeVector.cpp DOMNormalizer.cpp DOMNotationImpl.cpp \
+1625515563.48: 	 DOMParentNode.cpp DOMParser.cpp DOMProcessingInstructionImpl.cpp \
+1625515563.48: 	 DOMRangeException.cpp DOMRangeImpl.cpp DOMString.cpp DOMStringPool.cpp \
+1625515563.48: 	 DOMTextImpl.cpp DOMTreeWalkerImpl.cpp DOMTypeInfoImpl.cpp \
+1625515563.48: 	 DOMWriterImpl.cpp DOMXPathException.cpp DOM_Attr.cpp \
+1625515563.48: 	 DOM_CDATASection.cpp DOM_CharacterData.cpp DOM_Comment.cpp \
+1625515563.48: 	 DOM_DOMException.cpp DOM_DOMImplementation.cpp DOM_Document.cpp \
+1625515563.48: 	 DOM_DocumentFragment.cpp DOM_DocumentType.cpp DOM_Element.cpp \
+1625515563.48: 	 DOM_Entity.cpp DOM_EntityReference.cpp DOM_NamedNodeMap.cpp DOM_Node.cpp \
+1625515563.48: 	 DOM_NodeFilter.cpp DOM_NodeIterator.cpp DOM_NodeList.cpp \
+1625515563.48: 	 DOM_Notation.cpp DOM_ProcessingInstruction.cpp DOM_Range.cpp \
+1625515563.48: 	 DOM_RangeException.cpp DOM_Text.cpp DOM_TreeWalker.cpp DOM_XMLDecl.cpp \
+1625515563.48: 	 DStringPool.cpp DTDAttDef.cpp DTDAttDefList.cpp DTDElementDecl.cpp \
+1625515563.48: 	 DTDEntityDecl.cpp DTDGrammar.cpp DTDScanner.cpp DTDValidator.cpp \
+1625515563.48: 	 DatatypeValidator.cpp DatatypeValidatorFactory.cpp \
+1625515563.48: 	 DateDatatypeValidator.cpp DateTimeDatatypeValidator.cpp \
+1625515563.48: 	 DateTimeValidator.cpp DayDatatypeValidator.cpp \
+1625515563.48: 	 DecimalDatatypeValidator.cpp DeepNodeListImpl.cpp \
+1625515563.48: 	 DefaultPanicHandler.cpp DocumentFragmentImpl.cpp DocumentImpl.cpp \
+1625515563.48: 	 DocumentTypeImpl.cpp DomMemDebug.cpp DoubleDatatypeValidator.cpp \
+1625515563.48: 	 Dummy.cpp DurationDatatypeValidator.cpp ENTITYDatatypeValidator.cpp \
+1625515563.48: 	 ElemStack.cpp ElementDefinitionImpl.cpp ElementImpl.cpp \
+1625515563.48: 	 ElementNSImpl.cpp EncodingValidator.cpp EntityImpl.cpp \
+1625515563.48: 	 EntityReferenceImpl.cpp FieldActivator.cpp FieldValueMap.cpp \
+1625515563.48: 	 FloatDatatypeValidator.cpp GeneralAttributeCheck.cpp Grammar.cpp \
+1625515563.48: 	 GrammarResolver.cpp HashPtr.cpp HashXMLCh.cpp HeaderDummy.cpp HexBin.cpp \
+1625515563.48: 	 HexBinaryDatatypeValidator.cpp IC_Field.cpp IC_Key.cpp IC_KeyRef.cpp \
+1625515563.48: 	 IC_Selector.cpp IC_Unique.cpp IDDatatypeValidator.cpp \
+1625515563.48: 	 IDREFDatatypeValidator.cpp IGXMLScanner.cpp IGXMLScanner2.cpp \
+1625515563.48: 	 IconvTransService.cpp IdentityConstraint.cpp InMemMsgLoader.cpp \
+1625515563.48: 	 InputSource.cpp KVStringPair.cpp ListDatatypeValidator.cpp \
+1625515563.48: 	 LocalFileFormatTarget.cpp LocalFileInputSource.cpp Match.cpp \
+1625515563.48: 	 MemBufFormatTarget.cpp MemBufInputSource.cpp MemoryManagerArrayImpl.cpp \
+1625515563.48: 	 MemoryManagerImpl.cpp MixedContentModel.cpp ModifierToken.cpp \
+1625515563.48: 	 MonthDatatypeValidator.cpp MonthDayDatatypeValidator.cpp Mutexes.cpp \
+1625515563.48: 	 NCNameDatatypeValidator.cpp NOTATIONDatatypeValidator.cpp \
+1625515563.48: 	 NameDatatypeValidator.cpp NamedNodeMapImpl.cpp NamespaceScope.cpp \
+1625515563.48: 	 NodeIDMap.cpp NodeImpl.cpp NodeIteratorImpl.cpp NodeListImpl.cpp \
+1625515563.48: 	 NodeVector.cpp NotationImpl.cpp Op.cpp OpFactory.cpp PSVIAttribute.cpp \
+1625515563.48: 	 PSVIAttributeList.cpp PSVIElement.cpp PSVIItem.cpp PanicHandler.cpp \
+1625515563.48: 	 ParenToken.cpp ParentNode.cpp ParserForXMLSchema.cpp PlatformUtils.cpp \
+1625515563.48: 	 ProcessingInstructionImpl.cpp QName.cpp QNameDatatypeValidator.cpp \
+1625515563.48: 	 RangeFactory.cpp RangeImpl.cpp RangeToken.cpp RangeTokenMap.cpp \
+1625515563.48: 	 ReaderMgr.cpp RefCountedImpl.cpp RegularExpression.cpp RegxParser.cpp \
+1625515563.48: 	 RegxUtil.cpp SAX2XMLReaderImpl.cpp SAXException.cpp \
+1625515563.48: 	 SAXParseException.cpp SAXParser.cpp SGXMLScanner.cpp SchemaAttDef.cpp \
+1625515563.48: 	 SchemaAttDefList.cpp SchemaElementDecl.cpp SchemaGrammar.cpp \
+1625515563.48: 	 SchemaInfo.cpp SchemaSymbols.cpp SchemaValidator.cpp \
+1625515563.48: 	 SimpleContentModel.cpp StdInInputSource.cpp StdOutFormatTarget.cpp \
+1625515563.48: 	 StringDatatypeValidator.cpp StringPool.cpp StringToken.cpp \
+1625515563.48: 	 SubstitutionGroupComparator.cpp SynchronizedStringPool.cpp TextImpl.cpp \
+1625515563.48: 	 TimeDatatypeValidator.cpp Token.cpp TokenFactory.cpp TransService.cpp \
+1625515563.48: 	 TraverseSchema.cpp TreeWalkerImpl.cpp URLInputSource.cpp \
+1625515563.48: 	 UnicodeRangeFactory.cpp UnionDatatypeValidator.cpp UnionToken.cpp \
+1625515563.48: 	 ValidationContextImpl.cpp ValueStore.cpp ValueStoreCache.cpp \
+1625515563.48: 	 VecAttrListImpl.cpp VecAttributesImpl.cpp WFXMLScanner.cpp \
+1625515563.48: 	 Wrapper4DOMInputSource.cpp Wrapper4InputSource.cpp \
+1625515563.48: 	 XML256TableTranscoder.cpp XML88591Transcoder.cpp XMLASCIITranscoder.cpp \
+1625515563.48: 	 XMLAbstractDoubleFloat.cpp XMLAttDef.cpp XMLAttDefList.cpp XMLAttr.cpp \
+1625515563.48: 	 XMLBigDecimal.cpp XMLBigInteger.cpp XMLBuffer.cpp XMLBufferMgr.cpp \
+1625515563.48: 	 XMLCanRepGroup.cpp XMLChTranscoder.cpp XMLChar.cpp XMLContentModel.cpp \
+1625515563.48: 	 XMLDTDDescription.cpp XMLDTDDescriptionImpl.cpp XMLDateTime.cpp \
+1625515563.48: 	 XMLDeclImpl.cpp XMLDouble.cpp XMLEBCDICTranscoder.cpp XMLElementDecl.cpp \
+1625515563.48: 	 XMLEntityDecl.cpp XMLException.cpp XMLFloat.cpp XMLFormatter.cpp \
+1625515563.48: 	 XMLGrammarDescription.cpp XMLGrammarPoolImpl.cpp \
+1625515563.48: 	 XMLIBM1047Transcoder.cpp XMLIBM1140Transcoder.cpp XMLMsgLoader.cpp \
+1625515563.48: 	 XMLNotationDecl.cpp XMLNumber.cpp XMLRangeFactory.cpp XMLReader.cpp \
+1625515563.48: 	 XMLRecognizer.cpp XMLRefInfo.cpp XMLScanner.cpp XMLScannerResolver.cpp \
+1625515563.48: 	 XMLSchemaDescription.cpp XMLSchemaDescriptionImpl.cpp XMLString.cpp \
+1625515563.48: 	 XMLStringTokenizer.cpp XMLUCSTranscoder.cpp XMLURL.cpp \
+1625515563.48: 	 XMLUTF16Transcoder.cpp XMLUTF8Transcoder.cpp XMLUni.cpp \
+1625515563.48: 	 XMLUniCharacter.cpp XMLUri.cpp XMLValidator.cpp XMLWin1252Transcoder.cpp \
+1625515563.48: 	 XMemory.cpp XObjectComparator.cpp XPathMatcher.cpp XPathMatcherStack.cpp \
+1625515563.48: 	 XPathSymbols.cpp XProtoType.cpp XSAnnotation.cpp \
+1625515563.48: 	 XSAttributeDeclaration.cpp XSAttributeGroupDefinition.cpp \
+1625515563.48: 	 XSAttributeUse.cpp XSComplexTypeDefinition.cpp XSDDOMParser.cpp \
+1625515563.48: 	 XSDElementNSImpl.cpp XSDErrorReporter.cpp XSDLocator.cpp \
+1625515563.48: 	 XSElementDeclaration.cpp XSFacet.cpp XSIDCDefinition.cpp XSModel.cpp \
+1625515563.48: 	 XSModelGroup.cpp XSModelGroupDefinition.cpp XSMultiValueFacet.cpp \
+1625515563.48: 	 XSNamespaceItem.cpp XSNotationDeclaration.cpp XSObject.cpp \
+1625515563.48: 	 XSObjectFactory.cpp XSParticle.cpp XSSimpleTypeDefinition.cpp \
+1625515563.48: 	 XSTypeDefinition.cpp XSWildcard.cpp XSerializeEngine.cpp \
+1625515563.48: 	 XTemplateComparator.cpp XTemplateSerializer.cpp XUtil.cpp \
+1625515563.48: 	 XercesAttGroupInfo.cpp XercesDOMParser.cpp XercesElementWildcard.cpp \
+1625515563.48: 	 XercesGroupInfo.cpp XercesXPath.cpp YearDatatypeValidator.cpp \
+1625515563.48: 	 YearMonthDatatypeValidator.cpp sax2Dummy.cpp DOMServices.cpp \
+1625515563.48: 	 DOMSupport.cpp DOMSupportDefault.cpp DOMSupportException.cpp \
+1625515563.48: 	 DOMSupportInit.cpp TreeWalker.cpp XalanDocumentPrefixResolver.cpp \
+1625515563.48: 	 XalanNamespacesStack.cpp AttributeListImpl.cpp AttributesImpl.cpp \
+1625515563.48: 	 DOMStringHelper.cpp DOMStringPrintWriter.cpp DoubleSupport.cpp \
+1625515563.48: 	 Writer.cpp ExecutionContext.cpp FormatterListener.cpp \
+1625515563.48: 	 NamedNodeMapAttributeList.cpp NullPrintWriter.cpp \
+1625515563.48: 	 PlatformSupportInit.cpp PrefixResolver.cpp PrintWriter.cpp \
+1625515563.48: 	 Resettable.cpp StdBinInputStream.cpp StringTokenizer.cpp URISupport.cpp \
+1625515563.48: 	 XSLException.cpp XalanBitmap.cpp XalanDOMStringCache.cpp \
+1625515563.48: 	 XalanDOMStringAllocator.cpp XalanDOMStringHashTable.cpp \
+1625515563.48: 	 XalanDOMStringPool.cpp XalanDecimalFormatSymbols.cpp \
+1625515563.48: 	 XalanEncodingPropertyCache.cpp XalanFStreamOutputStream.cpp \
+1625515563.48: 	 XalanFileOutputStream.cpp XalanICUMessageLoader.cpp \
+1625515563.48: 	 XalanInMemoryMessageLoader.cpp XalanMessageLoader.cpp \
+1625515563.48: 	 XalanNLSMessageLoader.cpp XalanNullOutputStream.cpp \
+1625515563.48: 	 XalanNumberFormat.cpp XalanOutputStream.cpp \
+1625515563.48: 	 XalanOutputStreamPrintWriter.cpp XalanParsedURI.cpp \
+1625515563.48: 	 XalanReferenceCountedObject.cpp XalanSimplePrefixResolver.cpp \
+1625515563.48: 	 XalanStdOutputStream.cpp XalanTranscodingServices.cpp \
+1625515563.48: 	 XalanToXercesTranscoderWrapper.cpp XalanUTF16Transcoder.cpp \
+1625515563.48: 	 XalanXMLChar.cpp NodeNameTreeWalker.cpp ICUResHandler.cpp \
+1625515563.48: 	 InMemHandler.cpp MsgFileOutputStream.cpp NLSHandler.cpp SAX2Handler.cpp \
+1625515563.48: 	 XalanMsgLib.cpp FormatterToDOM.cpp FormatterToHTML.cpp \
+1625515563.48: 	 FormatterToNull.cpp FormatterToText.cpp FormatterToXML.cpp \
+1625515563.48: 	 FormatterToXMLBase.cpp FormatterToXML_UTF16.cpp FormatterToXML_UTF8.cpp \
+1625515563.48: 	 XMLSupportInit.cpp FormatterTreeWalker.cpp XMLParserLiaison.cpp \
+1625515563.48: 	 XMLSupportException.cpp XalanHTMLElementsProperties.cpp \
+1625515563.48: 	 ElementPrefixResolverProxy.cpp FormatterStringLengthCounter.cpp \
+1625515563.48: 	 Function.cpp FunctionConcat.cpp FunctionContains.cpp FunctionID.cpp \
+1625515563.48: 	 FunctionLang.cpp FunctionNamespaceURI.cpp FunctionNormalizeSpace.cpp \
+1625515563.48: 	 FunctionStartsWith.cpp FunctionString.cpp FunctionSubstring.cpp \
+1625515563.48: 	 FunctionSubstringAfter.cpp FunctionSubstringBefore.cpp \
+1625515563.48: 	 FunctionTranslate.cpp MutableNodeRefList.cpp NodeRefList.cpp \
+1625515563.48: 	 NodeRefListBase.cpp XBoolean.cpp XNodeSet.cpp XNodeSetAllocator.cpp \
+1625515563.48: 	 XNodeSetBase.cpp XNodeSetNodeProxy.cpp XNodeSetNodeProxyAllocator.cpp \
+1625515563.48: 	 XNodeSetResultTreeFragProxy.cpp XNull.cpp XNumber.cpp \
+1625515563.48: 	 XNumberAllocator.cpp XNumberBase.cpp XObject.cpp XObjectFactory.cpp \
+1625515563.48: 	 XObjectFactoryDefault.cpp XObjectResultTreeFragProxy.cpp \
+1625515563.48: 	 XObjectResultTreeFragProxyBase.cpp XObjectResultTreeFragProxyText.cpp \
+1625515563.48: 	 XObjectTypeCallback.cpp XPath.cpp XPathAllocator.cpp \
+1625515563.48: 	 XPathConstructionContext.cpp XPathConstructionContextDefault.cpp \
+1625515563.48: 	 XPathEnvSupport.cpp XPathEnvSupportDefault.cpp XPathEvaluator.cpp \
+1625515563.48: 	 XPathExecutionContext.cpp XPathExecutionContextDefault.cpp \
+1625515563.48: 	 XPathExpression.cpp XPathFactory.cpp XPathFactoryBlock.cpp \
+1625515563.48: 	 XPathFactoryDefault.cpp XPathFunctionTable.cpp XPathInit.cpp \
+1625515563.48: 	 XPathParserException.cpp XPathProcessor.cpp XPathProcessorImpl.cpp \
+1625515563.48: 	 XSpan.cpp XString.cpp XStringAdapter.cpp XStringAdapterAllocator.cpp \
+1625515563.48: 	 XStringAllocator.cpp XStringBase.cpp XStringCached.cpp \
+1625515563.48: 	 XStringCachedAllocator.cpp XStringReference.cpp \
+1625515563.48: 	 XStringReferenceAllocator.cpp XToken.cpp XTokenNumberAdapter.cpp \
+1625515563.48: 	 XUnknown.cpp XTokenNumberAdapterAllocator.cpp XTokenStringAdapter.cpp \
+1625515563.48: 	 XTokenStringAdapterAllocator.cpp \
+1625515563.48: 	 XalanDocumentFragmentNodeRefListBaseProxy.cpp XalanQName.cpp \
+1625515563.48: 	 XalanQNameByReference.cpp XalanQNameByValue.cpp \
+1625515563.48: 	 XalanQNameByValueAllocator.cpp XalanXPathException.cpp XPathCAPI.cpp \
+1625515563.48: 	 AVTPart.cpp AVT.cpp AVTPartSimple.cpp AVTPartXPath.cpp Constants.cpp \
+1625515563.48: 	 CountersTable.cpp ElemApplyImport.cpp ElemApplyTemplates.cpp \
+1625515563.48: 	 ElemAttribute.cpp ElemChoose.cpp ElemAttributeSet.cpp \
+1625515563.48: 	 ElemCallTemplate.cpp ElemComment.cpp ElemCopy.cpp ElemCopyOf.cpp \
+1625515563.48: 	 ElemDecimalFormat.cpp ElemElement.cpp ElemEmpty.cpp ElemFallback.cpp \
+1625515563.48: 	 ElemExtensionCall.cpp ElemForEach.cpp ElemForwardCompatible.cpp \
+1625515563.48: 	 ElemIf.cpp ElemLiteralResult.cpp ElemMessage.cpp ElemNumber.cpp \
+1625515563.48: 	 ElemOtherwise.cpp ElemPI.cpp ElemParam.cpp ElemSort.cpp ElemTemplate.cpp \
+1625515563.48: 	 ElemTemplateElement.cpp ElemText.cpp ElemTextLiteral.cpp ElemUse.cpp \
+1625515563.48: 	 ElemValueOf.cpp ElemVariable.cpp ElemWhen.cpp ElemWithParam.cpp \
+1625515563.48: 	 ExtensionFunctionHandler.cpp ExtensionNSHandler.cpp FunctionCurrent.cpp \
+1625515563.48: 	 FunctionDocument.cpp FunctionElementAvailable.cpp \
+1625515563.48: 	 FunctionFormatNumber.cpp FunctionFunctionAvailable.cpp \
+1625515563.48: 	 FunctionGenerateID.cpp FunctionKey.cpp FunctionSystemProperty.cpp \
+1625515563.48: 	 FunctionUnparsedEntityURI.cpp GenerateEvent.cpp KeyTable.cpp \
+1625515563.48: 	 NamespacesHandler.cpp NodeSortKey.cpp NodeSorter.cpp \
+1625515563.48: 	 OutputContextStack.cpp ProblemListener.cpp ProblemListenerDefault.cpp \
+1625515563.48: 	 ResultNamespacesStack.cpp SelectionEvent.cpp Stylesheet.cpp \
+1625515563.48: 	 StylesheetExecutionContext.cpp StylesheetConstructionContext.cpp \
+1625515563.48: 	 StylesheetConstructionContextDefault.cpp \
+1625515563.48: 	 StylesheetExecutionContextDefault.cpp StylesheetHandler.cpp \
+1625515563.48: 	 StylesheetRoot.cpp TopLevelArg.cpp TraceListener.cpp \
+1625515563.48: 	 TraceListenerDefault.cpp TracerEvent.cpp VariablesStack.cpp \
+1625515563.48: 	 XResultTreeFrag.cpp XResultTreeFragAllocator.cpp XSLTEngineImpl.cpp \
+1625515563.48: 	 XSLTInit.cpp XSLTInputSource.cpp XSLTProcessor.cpp \
+1625515563.48: 	 XSLTProcessorEnvSupport.cpp XSLTProcessorEnvSupportDefault.cpp \
+1625515563.48: 	 XSLTProcessorException.cpp XSLTResultTarget.cpp XalanAVTAllocator.cpp \
+1625515563.48: 	 XalanAVTPartSimpleAllocator.cpp XalanAVTPartXPathAllocator.cpp \
+1625515563.48: 	 XalanElemApplyTemplatesAllocator.cpp XalanElemAttributeAllocator.cpp \
+1625515563.48: 	 XalanElemAttributeSetAllocator.cpp XalanElemCallTemplateAllocator.cpp \
+1625515563.48: 	 XalanElemElementAllocator.cpp XalanElemEmptyAllocator.cpp \
+1625515563.48: 	 XalanElemLiteralResultAllocator.cpp XalanElemTemplateAllocator.cpp \
+1625515563.48: 	 XalanElemTextAllocator.cpp XalanElemTextLiteralAllocator.cpp \
+1625515563.48: 	 XalanTemplate.cpp XalanElemValueOfAllocator.cpp \
+1625515563.48: 	 XalanElemVariableAllocator.cpp XalanNumberingResourceBundle.cpp \
+1625515563.48: 	 XalanSourceTreeDocumentAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeDocumentFragmentAllocator.cpp XalanSpaceNodeTester.cpp \
+1625515563.48: 	 XalanAttr.cpp XalanCDataSection.cpp XalanCharacterData.cpp \
+1625515563.48: 	 XalanComment.cpp XalanDOMException.cpp XalanDOMImplementation.cpp \
+1625515563.48: 	 XalanDOMInit.cpp XalanDOMString.cpp XalanDocument.cpp \
+1625515563.48: 	 XalanDocumentFragment.cpp XalanDocumentType.cpp XalanElement.cpp \
+1625515563.48: 	 XalanEmptyNamedNodeMap.cpp XalanEntity.cpp XalanEntityReference.cpp \
+1625515563.48: 	 XalanNamedNodeMap.cpp XalanNode.cpp XalanNodeList.cpp \
+1625515563.48: 	 XalanNodeListDummy.cpp XalanNodeListSurrogate.cpp XalanNotation.cpp \
+1625515563.48: 	 XalanProcessingInstruction.cpp XalanText.cpp XalanEXSLTCommon.cpp \
+1625515563.48: 	 XalanEXSLTDateTime.cpp XalanEXSLTDynamic.cpp XalanEXSLTMath.cpp \
+1625515563.48: 	 XalanEXSLTSet.cpp XalanEXSLTString.cpp FunctionDifference.cpp \
+1625515563.48: 	 FunctionDistinct.cpp FunctionEvaluate.cpp FunctionHasSameNodes.cpp \
+1625515563.48: 	 FunctionIntersection.cpp FunctionNodeSet.cpp XalanExtensions.cpp \
+1625515563.48: 	 FormatterToSourceTree.cpp XalanSourceTreeAttr.cpp \
+1625515563.48: 	 XalanSourceTreeAttrNS.cpp XalanSourceTreeAttributeAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeAttributeNSAllocator.cpp XalanSourceTreeComment.cpp \
+1625515563.48: 	 XalanSourceTreeCommentAllocator.cpp XalanSourceTreeContentHandler.cpp \
+1625515563.48: 	 XalanSourceTreeDOMSupport.cpp XalanSourceTreeDocument.cpp \
+1625515563.48: 	 XalanSourceTreeDocumentFragment.cpp XalanSourceTreeElement.cpp \
+1625515563.48: 	 XalanSourceTreeElementA.cpp XalanSourceTreeElementAAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeElementANS.cpp XalanSourceTreeElementANSAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeElementNA.cpp XalanSourceTreeElementNAAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeElementNANS.cpp XalanSourceTreeElementNANSAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeHelper.cpp XalanSourceTreeInit.cpp \
+1625515563.48: 	 XalanSourceTreeParserLiaison.cpp \
+1625515563.48: 	 XalanSourceTreeProcessingInstruction.cpp \
+1625515563.48: 	 XalanSourceTreeProcessingInstructionAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeText.cpp XalanSourceTreeTextAllocator.cpp \
+1625515563.48: 	 XalanSourceTreeTextIWS.cpp XalanSourceTreeTextIWSAllocator.cpp \
+1625515563.48: 	 XalanCAPI.cpp XalanCompiledStylesheetDefault.cpp \
+1625515563.48: 	 XalanDefaultDocumentBuilder.cpp XalanDefaultParsedSource.cpp \
+1625515563.48: 	 XalanParsedSource.cpp XalanSourceTreeWrapperParsedSource.cpp \
+1625515563.48: 	 XalanTransformer.cpp XalanTransformerOutputStream.cpp \
+1625515563.48: 	 XalanTransformerProblemListener.cpp XercesDOMParsedSource.cpp \
+1625515563.48: 	 XercesDOMWrapperParsedSource.cpp FormatterToXercesDOM.cpp \
+1625515563.48: 	 XercesAttrWrapper.cpp XercesAttrWrapperAllocator.cpp \
+1625515563.48: 	 XercesCDATASectionWrapper.cpp XercesCommentWrapper.cpp \
+1625515563.48: 	 XercesDOMException.cpp XercesDOMFormatterWalker.cpp \
+1625515563.48: 	 XercesDOMImplementationWrapper.cpp XercesDOMSupport.cpp \
+1625515563.48: 	 XercesDOMWalker.cpp XercesDOMWrapperException.cpp \
+1625515563.48: 	 XercesDocumentTypeWrapper.cpp XercesDocumentWrapper.cpp \
+1625515563.48: 	 XercesEntityWrapper.cpp XercesElementWrapper.cpp \
+1625515563.48: 	 XercesElementWrapperAllocator.cpp XercesEntityReferenceWrapper.cpp \
+1625515563.48: 	 XercesLiaisonXalanDOMStringPool.cpp XercesNamedNodeMapAttributeList.cpp \
+1625515563.48: 	 XercesParserLiaison.cpp FormatterToDeprecatedXercesDOM.cpp \
+1625515563.48: 	 XercesAttrBridge.cpp XercesAttributeBridgeAllocator.cpp \
+1625515563.48: 	 XercesBridgeHelper.cpp XercesBridgeNavigator.cpp \
+1625515563.48: 	 XercesCDATASectionBridge.cpp XercesCommentBridge.cpp \
+1625515563.48: 	 XercesDOMImplementationBridge.cpp XercesDOM_NodeHack.cpp \
+1625515563.48: 	 XercesDocumentBridge.cpp XercesDocumentFragmentBridge.cpp \
+1625515563.48: 	 XercesDocumentTypeBridge.cpp XercesElementBridge.cpp \
+1625515563.48: 	 XercesElementBridgeAllocator.cpp XercesEntityBridge.cpp \
+1625515563.48: 	 XercesEntityReferenceBridge.cpp XercesNamedNodeMapBridge.cpp \
+1625515563.48: 	 XercesNodeListBridge.cpp XercesNotationBridge.cpp \
+1625515563.48: 	 XercesProcessingInstructionBridge.cpp XercesTextBridge.cpp \
+1625515563.48: 	 XercesTextBridgeAllocator.cpp XercesToXalanNodeMap.cpp \
+1625515563.48: 	 XercesTreeWalker.cpp XercesNamedNodeMapWrapper.cpp \
+1625515563.48: 	 XercesNodeListWrapper.cpp XercesNotationWrapper.cpp \
+1625515563.48: 	 XercesProcessingInstructionWrapper.cpp XercesTextWrapper.cpp \
+1625515563.48: 	 XercesTextWrapperAllocator.cpp XercesWrapperHelper.cpp \
+1625515563.48: 	 XercesWrapperNavigator.cpp XercesWrapperToXalanNodeMap.cpp XalanExe.cpp
+1625515563.48: EXEBASE=Xalan
+1625515563.48: NEED_MATH=
+1625515563.48: BENCHLANG=CXX
+1625515563.48: ONESTEP=
+1625515563.48: CXXONESTEP=
+
+1625515563.48: BENCH_CXXFLAGS   = -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER
+1625515563.48: CC               = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl
+1625515563.48: COPTIMIZE        = -O2
+1625515563.48: CXX              = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl
+1625515563.48: CXXOPTIMIZE      = -O2
+1625515563.48: CXXPORTABILITY   = -DSPEC_CPU_LINUX
+1625515563.48: FC               = /usr/local/bin/gfortran
+1625515563.48: FOPTIMIZE        = -O2
+1625515563.48: FPBASE           = yes
+1625515563.48: OS               = unix
+1625515563.48: absolutely_no_locking = 0
+1625515563.48: abstol           = 
+1625515563.48: action           = build
+1625515563.48: allow_extension_override = 0
+1625515563.48: backup_config    = 1
+1625515563.48: baseexe          = Xalan
+1625515563.48: basepeak         = 0
+1625515563.48: benchdir         = benchspec
+1625515563.48: benchmark        = 483.xalancbmk
+1625515563.48: binary           = 
+1625515563.48: bindir           = exe
+1625515563.48: build_in_build_dir = 1
+1625515563.48: builddir         = build
+1625515563.48: bundleaction     = 
+1625515563.48: bundlename       = 
+1625515563.48: calctol          = 0
+1625515563.48: changedmd5       = 0
+1625515563.48: check_integrity  = 1
+1625515563.48: check_md5        = 1
+1625515563.48: check_version    = 1
+1625515563.48: command_add_redirect = 0
+1625515563.48: commanderrfile   = speccmds.err
+1625515563.48: commandexe       = Xalan_base.NaCl
+1625515563.48: commandfile      = speccmds.cmd
+1625515563.48: commandoutfile   = speccmds.out
+1625515563.48: commandstdoutfile = speccmds.stdout
+1625515563.48: compareerrfile   = compare.err
+1625515563.48: comparefile      = compare.cmd
+1625515563.48: compareoutfile   = compare.out
+1625515563.48: comparestdoutfile = compare.stdout
+1625515563.48: compile_error    = 0
+1625515563.48: compwhite        = 
+1625515563.48: configdir        = config
+1625515563.48: configpath       = /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg
+1625515563.48: copies           = 1
+1625515563.48: datadir          = data
+1625515563.48: delay            = 0
+1625515563.48: deletebinaries   = 0
+1625515563.48: deletework       = 0
+1625515563.48: difflines        = 10
+1625515563.48: dirprot          = 511
+1625515563.48: endian           = 12345678
+1625515563.48: env_vars         = 0
+1625515563.48: exitvals         = spec_exit
+1625515563.48: expand_notes     = 0
+1625515563.48: expid            = 
+1625515563.48: ext              = NaCl
+1625515563.48: fake             = 0
+1625515563.48: feedback         = 1
+1625515563.48: flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+1625515563.48: floatcompare     = 
+1625515563.48: help             = 0
+1625515563.48: http_proxy       = 
+1625515563.48: http_timeout     = 30
+1625515563.48: hw_avail         = Dec-9999
+1625515563.48: hw_cpu_char      = 
+1625515563.48: hw_cpu_mhz       = 3000
+1625515563.48: hw_cpu_name      = AMD Opteron 256
+1625515563.48: hw_disk          = SATA
+1625515563.48: hw_fpu           = Integrated
+1625515563.48: hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+1625515563.48: hw_model         = Tyan Thunder KKQS Pro (S4882)
+1625515563.48: hw_nchips        = 1
+1625515563.48: hw_ncores        = 1
+1625515563.48: hw_ncoresperchip = 1
+1625515563.48: hw_ncpuorder     = 1 chip
+1625515563.48: hw_nthreadspercore = 1
+1625515563.48: hw_ocache        = None
+1625515563.48: hw_pcache        = 64 KB I + 64 KB D on chip per chip
+1625515563.48: hw_scache        = 1 MB I+D on chip per chip
+1625515563.48: hw_tcache        = None
+1625515563.48: hw_vendor        = Tyan
+1625515563.48: ignore_errors    = yes
+1625515563.48: ignore_sigint    = 0
+1625515563.48: ignorecase       = 
+1625515563.48: info_wrap_columns = 50
+1625515563.48: inputdir         = input
+1625515563.48: iteration        = -1
+1625515563.48: iterations       = 3
+1625515563.48: keeptmp          = 0
+1625515563.48: license_num      = 0
+1625515563.48: line_width       = 0
+1625515563.48: locking          = 1
+1625515563.48: log              = CPU2006
+1625515563.48: log_line_width   = 0
+1625515563.48: log_timestamp    = 0
+1625515563.48: logname          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log
+1625515563.48: lognum           = 014
+1625515563.48: mach             = default
+1625515563.48: mail_reports     = all
+1625515563.48: mailcompress     = 0
+1625515563.48: mailmethod       = smtp
+1625515563.48: mailport         = 25
+1625515563.48: mailserver       = 127.0.0.1
+1625515563.48: mailto           = 
+1625515563.48: make             = specmake
+1625515563.48: make_no_clobber  = 0
+1625515563.48: makeflags        = -j8
+1625515563.48: max_active_compares = 0
+1625515563.48: mean_anyway      = 0
+1625515563.48: min_report_runs  = 3
+1625515563.48: minimize_builddirs = 0
+1625515563.48: minimize_rundirs = 0
+1625515563.48: name             = xalancbmk
+1625515563.48: need_math        = 
+1625515563.48: no_input_handler = close
+1625515563.48: no_monitor       = 
+1625515563.48: note_preenv      = 0
+1625515563.48: notes0100        =  C base flags: -O2
+1625515563.48: notes0110        =  C++ base flags: -O2
+1625515563.48: notes0120        =  Fortran base flags: -O2
+1625515563.48: notes25          = 
+1625515563.48: notes_wrap_columns = 0
+1625515563.48: notes_wrap_indent =   
+1625515563.48: num              = 483
+1625515563.48: obiwan           = 
+1625515563.48: os_exe_ext       = 
+1625515563.48: output           = asc
+1625515563.48: output_format    = asc, pdf, Screen, html
+1625515563.48: output_root      = 
+1625515563.48: outputdir        = output
+1625515563.48: parallel_setup   = 1
+1625515563.48: parallel_setup_prefork = 
+1625515563.48: parallel_setup_type = fork
+1625515563.48: parallel_test    = 0
+1625515563.48: parallel_test_submit = 0
+1625515563.48: path             = /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk
+1625515563.48: plain_train      = 1
+1625515563.48: preenv           = 1
+1625515563.48: prefix           = 
+1625515563.48: prepared_by      = 
+1625515563.48: ranks            = 1
+1625515563.48: rate             = 0
+1625515563.48: realuser         = your name here
+1625515563.48: rebuild          = 0
+1625515563.48: reftime          = reftime
+1625515563.48: reltol           = 
+1625515563.48: reportable       = 1
+1625515563.48: resultdir        = result
+1625515563.48: review           = 0
+1625515563.48: run              = all
+1625515563.48: rundir           = run
+1625515563.48: runspec          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec --config=linux32-i386-nacl.cfg --action=build all_c_cpp
+1625515563.48: safe_eval        = 1
+1625515563.48: section_specifier_fatal = 1
+1625515563.48: sendmail         = /usr/sbin/sendmail
+1625515563.48: setpgrp_enabled  = 1
+1625515563.48: setprocgroup     = 1
+1625515563.48: shrate           = 0
+1625515563.48: sigint           = 2
+1625515563.48: size             = ref
+1625515563.48: size_class       = ref
+1625515563.48: skipabstol       = 
+1625515563.48: skipobiwan       = 
+1625515563.48: skipreltol       = 
+1625515563.48: skiptol          = 
+1625515563.48: smarttune        = base
+1625515563.48: specdiff         = specdiff
+1625515563.48: specmake         = Makefile.YYYtArGeTYYYspec
+1625515563.48: specrun          = specinvoke
+1625515563.48: speed            = 0
+1625515563.48: srcalt           = 
+1625515563.48: srcdir           = src
+1625515563.48: stagger          = 10
+1625515563.48: strict_rundir_verify = 1
+1625515563.48: sw_avail         = Dec-9999
+1625515563.48: sw_base_ptrsize  = 32-bit
+1625515563.48: sw_compiler      = gcc , g++ & gfortran 4.2 Snapshot 20060715 (for i386)
+1625515563.48: sw_file          = ext3
+1625515563.48: sw_os            = SUSE Linux 10.1 (for i386)
+1625515563.48: sw_other         = None
+1625515563.48: sw_peak_ptrsize  = 32-bit
+1625515563.48: sw_state         = runlevel 3
+1625515563.48: sysinfo_program  = 
+1625515563.48: table            = 1
+1625515563.48: teeout           = yes
+1625515563.48: teerunout        = yes
+1625515563.48: test_date        = Jul-2021
+1625515563.48: test_sponsor     = Turbo Computers
+1625515563.48: tester           = 
+1625515563.48: top              = /mnt/sata/Code/zerocost/zerocost-specbenchmark
+1625515563.48: train_with       = train
+1625515563.48: tune             = base
+1625515563.48: uid              = 1000
+1625515563.48: unbuffer         = 1
+1625515563.48: update-flags     = 0
+1625515563.48: use_submit_for_speed = 0
+1625515563.48: username         = shr
+1625515563.48: vendor           = anon
+1625515563.48: vendor_makefiles = 0
+1625515563.48: verbose          = 5
+1625515563.48: version          = 0
+1625515563.48: version_url      = http://www.spec.org/auto/cpu2006/current_version
+1625515563.48: worklist         = list
+1625515563.48: OUTPUT_RMFILES   = train.out
+1625515563.48:   Compile for '483.xalancbmk' started at: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.48: Issuing make.clean command 'specmake -j8 clean'
+1625515563.48: specmake -j8 clean 2> make.clean.err | tee make.clean.out
+1625515563.48: Start make.clean command: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.49: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000'
+1625515563.49: rm -rf Xalan
+1625515563.49: rm -rf Xalan.exe
+1625515563.49: rm -rf *.o  train.out
+1625515563.49: find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+1625515563.50: rm -rf core
+1625515563.50: rm -rf 
+1625515563.50: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000'
+1625515563.51: Tee child 447825 exited with code 0 (exit code=0, signal=0)
+1625515563.51: Stop make.clean command: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.51: Elapsed time for make.clean command: 00:00:00 (0)
+1625515563.51: Issuing make command 'specmake -j8 build'
+1625515563.51: specmake -j8 build 2> make.err | tee make.out
+1625515563.51: Start make command: Mon Jul  5 13:06:03 2021 (1625515563)
+1625515563.51: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000'
+1625515563.51: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AIXPlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AIXPlatformUtils.cpp
+1625515563.51: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o CSetDefs.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      CSetDefs.cpp
+1625515563.52: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.52: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o BinHTTPURLInputStream.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      BinHTTPURLInputStream.cpp
+1625515563.52: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Win32PlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      Win32PlatformUtils.cpp
+1625515563.52: clang++/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Win32MsgLoader.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      Win32MsgLoader.cpp
+1625515563.53: : warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.53: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.53: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.53: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Win32TransService.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      Win32TransService.cpp
+1625515563.53: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o Win32TransService2.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      Win32TransService2.cpp
+1625515563.53: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.54: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.54: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o WinSockNetAccessor.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      WinSockNetAccessor.cpp
+1625515563.55: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.56: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o SunCCDefs.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      SunCCDefs.cpp
+1625515563.56: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o SolarisPlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      SolarisPlatformUtils.cpp
+1625515563.56: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.57: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o GCCDefs.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      GCCDefs.cpp
+1625515563.57: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.57: clang++/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o LinuxPlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      LinuxPlatformUtils.cpp
+1625515563.58: : warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.58: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.59: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o MIPSproDefs.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      MIPSproDefs.cpp
+1625515563.59: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.59: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o IRIXPlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      IRIXPlatformUtils.cpp
+1625515563.60: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o HPCCDefs.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      HPCCDefs.cpp
+1625515563.60: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.61: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o HPPlatformUtils.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      HPPlatformUtils.cpp
+1625515563.61: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o WFXMLScanner.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      WFXMLScanner.cpp
+1625515563.61: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.61: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.61: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o ASCIIRangeFactory.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      ASCIIRangeFactory.cpp
+1625515563.61: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.62: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.63: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.64: LinuxPlatformUtils.cpp:231:65: error: invalid token at start of a preprocessor expression
+1625515563.64: #if defined(SPEC_CPU_MACOSX) || defined(SPEC_CPU_MACOSX_GCC) || #defined(NACL32BUILD)
+1625515563.64:                                                                 ^
+1625515563.64: LinuxPlatformUtils.cpp:234:13: fatal error: 'linux/limits.h' file not found
+1625515563.64: #include    <linux/limits.h>           //for PATH_MAX
+1625515563.64:             ^
+1625515563.64: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AbstractDOMParser.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AbstractDOMParser.cpp
+1625515563.65: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AbstractNumericFacetValidator.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AbstractNumericFacetValidator.cpp
+1625515563.65: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.66: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AbstractNumericValidator.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AbstractNumericValidator.cpp
+1625515563.66: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.68: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AbstractStringValidator.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AbstractStringValidator.cpp
+1625515563.68: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.69: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl -c -o AllContentModel.o -DSPEC_CPU -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_NATIVE_TRANSCODER -DXML_USE_INMEM_MESSAGELOADER  -O2    -DSPEC_CPU_LINUX      AllContentModel.cpp
+1625515563.69: 2 errors generated.
+1625515563.69: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.71: specmake[1]: *** [LinuxPlatformUtils.o] Error 1
+1625515563.71: specmake[1]: *** Waiting for unfinished jobs....
+1625515563.73: clang++: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515563.79: In file included from WFXMLScanner.cpp:65:
+1625515563.79: In file included from ./xercesc/internal/WFXMLScanner.hpp:93:
+1625515563.79: In file included from ./xercesc/internal/XMLScanner.hpp:319:
+1625515563.79: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.79: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.79: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.79: In file included from ./xercesc/validators/schema/SchemaElementDecl.hpp:181:
+1625515563.79: In file included from ./xercesc/validators/schema/ComplexTypeInfo.hpp:79:
+1625515563.80: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.80:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.80:       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.81: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: note: place parentheses around the '&&' expression to silence this warning
+1625515563.81:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.81:                             ^
+1625515563.81:       (                                                                                    )
+1625515563.81: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.81:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.81:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.81: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.81:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.81:                          ^
+1625515563.81:       (                                                                              )
+1625515563.84: In file included from WFXMLScanner.cpp:65:
+1625515563.84: In file included from ./xercesc/internal/WFXMLScanner.hpp:93:
+1625515563.84: In file included from ./xercesc/internal/XMLScanner.hpp:319:
+1625515563.84: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.84: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.84: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.84: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.84:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.84:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.84: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.84:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.84:                          ^
+1625515563.84:       (                                                                              )
+1625515563.84: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.84:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.84:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.84: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.84:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.84:                          ^
+1625515563.84:       (                                                                              )
+1625515563.87: In file included from AbstractNumericFacetValidator.cpp:149:
+1625515563.87: In file included from ./xercesc/internal/XTemplateSerializer.hpp:90:
+1625515563.87: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.87:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.87:       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.87: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: note: place parentheses around the '&&' expression to silence this warning
+1625515563.87:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.87:                             ^
+1625515563.87:       (                                                                                    )
+1625515563.87(0.01s): ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.88:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.88:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.88: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.88:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.88:                          ^
+1625515563.88:       (                                                                              )
+1625515563.88: In file included from AbstractDOMParser.cpp:72:
+1625515563.88: In file included from ./xercesc/internal/XMLScannerResolver.hpp:77:
+1625515563.88: In file included from ./xercesc/internal/XMLScanner.hpp:319:
+1625515563.88: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.88: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.88: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.88: In file included from ./xercesc/validators/schema/SchemaElementDecl.hpp:181:
+1625515563.88: In file included from ./xercesc/validators/schema/ComplexTypeInfo.hpp:79:
+1625515563.88: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.88:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.88:       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.88: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: note: place parentheses around the '&&' expression to silence this warning
+1625515563.88:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.88:                             ^
+1625515563.88:       (                                                                                    )
+1625515563.88: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.88:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.88:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.88: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.88:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.88:                          ^
+1625515563.88:       (                                                                              )
+1625515563.89: In file included from AbstractDOMParser.cpp:72:
+1625515563.89: In file included from ./xercesc/internal/XMLScannerResolver.hpp:77:
+1625515563.89: In file included from ./xercesc/internal/XMLScanner.hpp:319:
+1625515563.89: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.89: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.89: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.89: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.89:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.89:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.89: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.89:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.89:                          ^
+1625515563.89:       (                                                                              )
+1625515563.89: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.89:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.89:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.89: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.89:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.89:                          ^
+1625515563.89:       (                                                                              )
+1625515563.90: In file included from AbstractNumericFacetValidator.cpp:149:
+1625515563.90: In file included from ./xercesc/internal/XTemplateSerializer.hpp:91:
+1625515563.90: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.90:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.90:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.90: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.90:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.90:                          ^
+1625515563.90:       (                                                                              )
+1625515563.90: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.90:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.90:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.90: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.90:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.90:                          ^
+1625515563.90:       (                                                                              )
+1625515563.92: In file included from AllContentModel.cpp:104:
+1625515563.92: In file included from ./xercesc/validators/schema/SubstitutionGroupComparator.hpp:66:
+1625515563.92: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.92: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.92: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.92: In file included from ./xercesc/validators/schema/SchemaElementDecl.hpp:181:
+1625515563.93: In file included from ./xercesc/validators/schema/ComplexTypeInfo.hpp:79:
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.93:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.93:       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: note: place parentheses around the '&&' expression to silence this warning
+1625515563.93:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.93:                             ^
+1625515563.93:       (                                                                                    )
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.93:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.93:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~In file included from AbstractStringValidator.cpp:165:
+1625515563.93: In file included from ./xercesc/internal/XTemplateSerializer.hpp:90:
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.93:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.93:       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:494:29: note: place parentheses around the '&&' expression to silence this warning
+1625515563.93:    if(fAnyDatatypeValidator && fAnyDatatypeValidator->getType() == DatatypeValidator::Union ||
+1625515563.93:                             ^
+1625515563.93:       (                                                                                    )
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.93:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.93:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.93:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.93:                          ^
+1625515563.93:       (                                                                              )
+
+1625515563.93: ./xercesc/validators/schema/SchemaAttDef.hpp:495:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.93:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.93:                          ^
+1625515563.93:       (                                                                              )
+1625515563.95: In file included from AbstractStringValidator.cpp:165:
+1625515563.95: In file included from ./xercesc/internal/XTemplateSerializer.hpp:91In file included from AllContentModel.cpp:104:
+1625515563.95: In file included from ./xercesc/validators/schema/SubstitutionGroupComparator.hpp:66:
+1625515563.95: In file included from ./xercesc/validators/common/GrammarResolver.hpp:65:
+1625515563.95: In file included from ./xercesc/framework/XMLGrammarPool.hpp:104:
+1625515563.95: In file included from ./xercesc/framework/psvi/XSModel.hpp:104:
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.95:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.95:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.95:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.95:                          ^
+1625515563.95:       (                                                                              )
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.95:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.95:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.95:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.95:                          ^
+1625515563.95:       (                                                                              )
+1625515563.95: :
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.95:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.95:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:745:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.95:    if(fXsiSimpleTypeInfo && fXsiSimpleTypeInfo->getType() == DatatypeValidator::Union ||
+1625515563.95:                          ^
+1625515563.95:       (                                                                              )
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: warning: '&&' within '||' [-Wlogical-op-parentheses]
+1625515563.95:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.95:       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1625515563.95: ./xercesc/validators/schema/SchemaElementDecl.hpp:746:26: note: place parentheses around the '&&' expression to silence this warning
+1625515563.95:       fDatatypeValidator && fDatatypeValidator->getType() == DatatypeValidator::Union)
+1625515563.95:                          ^
+1625515563.95:       (                                                                              )
+1625515563.98: AbstractDOMParser.cpp:1117:20: warning: 6 enumeration values not handled in switch: 'AttTypes_Unknown', 'Simple', 'Any_Any'... [-Wswitch]
+1625515563.98:             switch(type)
+1625515563.98:                    ^
+1625515563.98: AbstractDOMParser.cpp:1176:20: warning: 8 enumeration values not handled in switch: 'DefAttTypes_Unknown', 'Default', 'Required_And_Fixed'... [-Wswitch]
+1625515563.98:             switch(def)
+1625515563.98:                    ^
+1625515564.11: 4 warnings generated.
+1625515564.22: 4 warnings generated.
+1625515564.33: 4 warnings generated.
+1625515564.51: 4 warnings generated.
+1625515564.55: 6 warnings generated.
+1625515564.58: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000'
+1625515564.58: Tee child 447836 exited with code 512 (exit code=2, signal=0)
+1625515564.58: Stop make command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.58: Elapsed time for make command: 00:00:01 (1)
+1625515564.58: Error with make 'specmake -j8 build': check file '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/483.xalancbmk/build/build_base_NaCl.0000/make.err'
+1625515564.58:   Command returned exit code 2
+1625515564.58:   Error with make!
+1625515564.58:   Compile for '483.xalancbmk' ended at: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.58:   Elapsed compile for '483.xalancbmk': 00:00:01 (1)
+1625515564.58: *** Error building 483.xalancbmk
+
+1625515564.58: ------------------------------------------------------------------------
+1625515564.89: Tee child 447911 exited with code 0 (exit code=0, signal=0)
+1625515564.89: MD5 mismatch for options (stored: 489cbedcd9fadab68921f9f510b58909)
+1625515564.89:   Building 999.specrand base NaCl default: (build_base_NaCl.0000)
+1625515564.89: Comparing MD5 hashes:
+1625515564.89:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/src/Makefile
+1625515564.89:   d84b4ba86f793c8e9c8f2eb4dcb7b461 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000/Makefile
+1625515564.91: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000/Makefile.deps':
+
+1625515564.91: # These are the build dependencies
+
+1625515564.91: # End dependencies
+1625515564.91: Wrote to makefile '/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000/Makefile.spec':
+1625515564.91: TUNE=base
+1625515564.91: EXT=NaCl
+1625515564.91: NUMBER=999
+1625515564.91: NAME=specrand
+1625515564.91: SOURCES= main.c specrand.c
+1625515564.91: EXEBASE=specrand
+1625515564.91: NEED_MATH=
+1625515564.91: BENCHLANG=C
+1625515564.91: ONESTEP=
+1625515564.91: CONESTEP=
+
+1625515564.91: CC               = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl
+1625515564.91: COPTIMIZE        = -O2
+1625515564.91: CXX              = /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang++ -m32  -Wl,--allow-multiple-definition -std=gnu++0x -DNACL32BUILD -target i686-nacl
+1625515564.91: CXXOPTIMIZE      = -O2
+1625515564.91: FC               = /usr/local/bin/gfortran
+1625515564.91: FOPTIMIZE        = -O2
+1625515564.91: FPBASE           = yes
+1625515564.91: OS               = unix
+1625515564.91: absolutely_no_locking = 0
+1625515564.91: abstol           = 
+1625515564.91: action           = build
+1625515564.91: allow_extension_override = 0
+1625515564.91: backup_config    = 1
+1625515564.91: baseexe          = specrand
+1625515564.91: basepeak         = 0
+1625515564.91: benchdir         = benchspec
+1625515564.91: benchmark        = 999.specrand
+1625515564.91: binary           = 
+1625515564.91: bindir           = exe
+1625515564.91: build_in_build_dir = 1
+1625515564.91: builddir         = build
+1625515564.91: bundleaction     = 
+1625515564.91: bundlename       = 
+1625515564.91: calctol          = 0
+1625515564.91: changedmd5       = 0
+1625515564.91: check_integrity  = 1
+1625515564.91: check_md5        = 1
+1625515564.91: check_version    = 1
+1625515564.91: command_add_redirect = 0
+1625515564.91: commanderrfile   = speccmds.err
+1625515564.91: commandexe       = specrand_base.NaCl
+1625515564.91: commandfile      = speccmds.cmd
+1625515564.91: commandoutfile   = speccmds.out
+1625515564.91: commandstdoutfile = speccmds.stdout
+1625515564.91: compareerrfile   = compare.err
+1625515564.91: comparefile      = compare.cmd
+1625515564.91: compareoutfile   = compare.out
+1625515564.91: comparestdoutfile = compare.stdout
+1625515564.91: compile_error    = 0
+1625515564.91: compwhite        = 
+1625515564.91: configdir        = config
+1625515564.91: configpath       = /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg
+1625515564.91: copies           = 1
+1625515564.91: datadir          = data
+1625515564.91: delay            = 0
+1625515564.91: deletebinaries   = 0
+1625515564.91: deletework       = 0
+1625515564.91: difflines        = 10
+1625515564.91: dirprot          = 511
+1625515564.91: endian           = 12345678
+1625515564.91: env_vars         = 0
+1625515564.91: exitvals         = spec_exit
+1625515564.91: expand_notes     = 0
+1625515564.91: expid            = 
+1625515564.91: ext              = NaCl
+1625515564.91: fake             = 0
+1625515564.91: feedback         = 1
+1625515564.91: flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+1625515564.91: floatcompare     = 1
+1625515564.91: help             = 0
+1625515564.91: http_proxy       = 
+1625515564.91: http_timeout     = 30
+1625515564.91: hw_avail         = Dec-9999
+1625515564.91: hw_cpu_char      = 
+1625515564.91: hw_cpu_mhz       = 3000
+1625515564.91: hw_cpu_name      = AMD Opteron 256
+1625515564.91: hw_disk          = SATA
+1625515564.91: hw_fpu           = Integrated
+1625515564.91: hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+1625515564.91: hw_model         = Tyan Thunder KKQS Pro (S4882)
+1625515564.91: hw_nchips        = 1
+1625515564.91: hw_ncores        = 1
+1625515564.91: hw_ncoresperchip = 1
+1625515564.91: hw_ncpuorder     = 1 chip
+1625515564.91: hw_nthreadspercore = 1
+1625515564.91: hw_ocache        = None
+1625515564.91: hw_pcache        = 64 KB I + 64 KB D on chip per chip
+1625515564.91: hw_scache        = 1 MB I+D on chip per chip
+1625515564.91: hw_tcache        = None
+1625515564.91: hw_vendor        = Tyan
+1625515564.91: ignore_errors    = yes
+1625515564.91: ignore_sigint    = 0
+1625515564.91: ignorecase       = 
+1625515564.91: info_wrap_columns = 50
+1625515564.91: inputdir         = input
+1625515564.91: iteration        = -1
+1625515564.91: iterations       = 3
+1625515564.91: keeptmp          = 0
+1625515564.91: license_num      = 0
+1625515564.91: line_width       = 0
+1625515564.91: locking          = 1
+1625515564.91: log              = CPU2006
+1625515564.91: log_line_width   = 0
+1625515564.91: log_timestamp    = 0
+1625515564.91: logname          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log
+1625515564.91: lognum           = 014
+1625515564.91: mach             = default
+1625515564.91: mail_reports     = all
+1625515564.91: mailcompress     = 0
+1625515564.91: mailmethod       = smtp
+1625515564.91: mailport         = 25
+1625515564.91: mailserver       = 127.0.0.1
+1625515564.91: mailto           = 
+1625515564.91: make             = specmake
+1625515564.91: make_no_clobber  = 0
+1625515564.91: makeflags        = -j8
+1625515564.91: max_active_compares = 0
+1625515564.91: mean_anyway      = 0
+1625515564.91: min_report_runs  = 3
+1625515564.91: minimize_builddirs = 0
+1625515564.91: minimize_rundirs = 0
+1625515564.91: name             = specrand
+1625515564.91: need_math        = 
+1625515564.91: no_input_handler = close
+1625515564.91: no_monitor       = 
+1625515564.91: note_preenv      = 0
+1625515564.91: notes0100        =  C base flags: -O2
+1625515564.91: notes0110        =  C++ base flags: -O2
+1625515564.91: notes0120        =  Fortran base flags: -O2
+1625515564.91: notes25          = 
+1625515564.91: notes_wrap_columns = 0
+1625515564.91: notes_wrap_indent =   
+1625515564.91: num              = 999
+1625515564.91: obiwan           = 
+1625515564.91: os_exe_ext       = 
+1625515564.91: output           = asc
+1625515564.91: output_format    = asc, pdf, Screen, html
+1625515564.91: output_root      = 
+1625515564.91: outputdir        = output
+1625515564.91: parallel_setup   = 1
+1625515564.91: parallel_setup_prefork = 
+1625515564.91: parallel_setup_type = fork
+1625515564.91: parallel_test    = 0
+1625515564.91: parallel_test_submit = 0
+1625515564.91: path             = /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand
+1625515564.91: plain_train      = 1
+1625515564.91: preenv           = 1
+1625515564.91: prefix           = 
+1625515564.91: prepared_by      = 
+1625515564.91: ranks            = 1
+1625515564.91: rate             = 0
+1625515564.91: realuser         = your name here
+1625515564.91: rebuild          = 0
+1625515564.91: reftime          = reftime
+1625515564.91: reltol           = 
+1625515564.91: reportable       = 1
+1625515564.91: resultdir        = result
+1625515564.91: review           = 0
+1625515564.91: run              = all
+1625515564.91: rundir           = run
+1625515564.91: runspec          = /mnt/sata/Code/zerocost/zerocost-specbenchmark/bin/runspec --config=linux32-i386-nacl.cfg --action=build all_c_cpp
+1625515564.91: safe_eval        = 1
+1625515564.91: section_specifier_fatal = 1
+1625515564.91: sendmail         = /usr/sbin/sendmail
+1625515564.91: setpgrp_enabled  = 1
+1625515564.91: setprocgroup     = 1
+1625515564.91: shrate           = 0
+1625515564.91: sigint           = 2
+1625515564.91: size             = ref
+1625515564.91: size_class       = ref
+1625515564.91: skipabstol       = 
+1625515564.91: skipobiwan       = 
+1625515564.91: skipreltol       = 
+1625515564.91: skiptol          = 
+1625515564.91: smarttune        = base
+1625515564.91: specdiff         = specdiff
+1625515564.91: specmake         = Makefile.YYYtArGeTYYYspec
+1625515564.91: specrun          = specinvoke
+1625515564.91: speed            = 0
+1625515564.91: srcalt           = 
+1625515564.91: srcdir           = src
+1625515564.91: stagger          = 10
+1625515564.91: strict_rundir_verify = 1
+1625515564.91: sw_avail         = Dec-9999
+1625515564.91: sw_base_ptrsize  = 32-bit
+1625515564.91: sw_compiler      = gcc , g++ & gfortran 4.2 Snapshot 20060715 (for i386)
+1625515564.91: sw_file          = ext3
+1625515564.91: sw_os            = SUSE Linux 10.1 (for i386)
+1625515564.91: sw_other         = None
+1625515564.91: sw_peak_ptrsize  = 32-bit
+1625515564.91: sw_state         = runlevel 3
+1625515564.91: sysinfo_program  = 
+1625515564.91: table            = 1
+1625515564.91: teeout           = yes
+1625515564.91: teerunout        = yes
+1625515564.91: test_date        = Jul-2021
+1625515564.91: test_sponsor     = Turbo Computers
+1625515564.91: tester           = 
+1625515564.91: top              = /mnt/sata/Code/zerocost/zerocost-specbenchmark
+1625515564.91: train_with       = train
+1625515564.91: tune             = base
+1625515564.91: uid              = 1000
+1625515564.91: unbuffer         = 1
+1625515564.91: update-flags     = 0
+1625515564.91: use_submit_for_speed = 0
+1625515564.91: username         = shr
+1625515564.91: vendor           = anon
+1625515564.91: vendor_makefiles = 0
+1625515564.91: verbose          = 5
+1625515564.91: version          = 0
+1625515564.91: version_url      = http://www.spec.org/auto/cpu2006/current_version
+1625515564.91: worklist         = list
+1625515564.91: OUTPUT_RMFILES   = rand.3.out
+1625515564.91:   Compile for '999.specrand' started at: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.91: Issuing make.clean command 'specmake -j8 clean'
+1625515564.91: specmake -j8 clean 2> make.clean.err | tee make.clean.out
+1625515564.91: Start make.clean command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.91: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515564.91: rm -rf specrand
+1625515564.91: rm -rf specrand.exe
+1625515564.91: rm -rf *.o  rand.3.out
+1625515564.92: find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+1625515564.92: rm -rf core
+1625515564.92: rm -rf 
+1625515564.92: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515564.92: Tee child 447932 exited with code 0 (exit code=0, signal=0)
+1625515564.92: Stop make.clean command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.92: Elapsed time for make.clean command: 00:00:00 (0)
+1625515564.92: Issuing make command 'specmake -j8 build'
+1625515564.92: specmake -j8 build 2> make.err | tee make.out
+1625515564.92: Start make command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.93: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515564.93: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o main.o -DSPEC_CPU -DNDEBUG    -O2                main.c
+1625515564.93: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o specrand.o -DSPEC_CPU -DNDEBUG    -O2                specrand.c
+1625515564.93: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515564.93: clang: warning: -Wl,--allow-multiple-definition: 'linker' input unused
+1625515564.95: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl   -O2          main.o specrand.o                     -o specrand
+1625515564.98: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515564.98: Tee child 447943 exited with code 0 (exit code=0, signal=0)
+1625515564.99: Stop make command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.99: Elapsed time for make command: 00:00:00 (0)
+1625515564.99: Issuing options command 'specmake -j8 options'
+1625515564.99: specmake -j8 options 2> options.err | tee options.out
+1625515564.99: Start options command: Mon Jul  5 13:06:04 2021 (1625515564)
+1625515564.99: specmake[1]: Entering directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515564.99: COMP: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl -c -o options.o -DSPEC_CPU -DNDEBUG    -O2                <source>
+1625515564.99: C: CC="/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl"
+1625515564.99: C: COBJOPT="-c -o options"
+1625515565.00: P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+1625515565.00: P: BENCH_FLAGS=""
+1625515565.00: P: BENCH_CFLAGS=""
+1625515565.00: O: OPTIMIZE=""
+1625515565.00: O: COPTIMIZE="-O2"
+1625515565.00: P: PORTABILITY=""
+1625515565.00: P: CPORTABILITY=""
+1625515565.00: O: EXTRA_CFLAGS=""
+1625515565.00: O: EXTRA_OPTIMIZE=""
+1625515565.00: O: EXTRA_COPTIMIZE=""
+1625515565.00: P: EXTRA_PORTABILITY=""
+1625515565.00: P: EXTRA_CPORTABILITY=""
+1625515565.00: LINK: /home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl   -O2          <objects>           -o options
+1625515565.00: C: LD="/home/shr/Code/zerocost/Sandboxing_NaCl/native_client/toolchain/linux_x86/pnacl_newlib_raw/bin/clang -m32  -Wl,--allow-multiple-definition -DNACL32BUILD -target i686-nacl"
+1625515565.00: O: COPTIMIZE="-O2"
+1625515565.00: C: LDOUT="-o options"
+1625515565.00: specmake[1]: Leaving directory `/mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/build/build_base_NaCl.0000'
+1625515565.13: Tee child 447952 exited with code 0 (exit code=0, signal=0)
+1625515565.13: Stop options command: Mon Jul  5 13:06:05 2021 (1625515565)
+1625515565.13: Elapsed time for options command: 00:00:01 (1)
+1625515565.13:   Compile for '999.specrand' ended at: Mon Jul  5 13:06:05 2021 (1625515565)
+1625515565.13:   Elapsed compile for '999.specrand': 00:00:01 (1)
+1625515565.13: Comparing MD5 hashes:
+1625515565.13:   74ab588fd368b6f1a650e0faf37ab610 specrand
+1625515565.13:   74ab588fd368b6f1a650e0faf37ab610 /mnt/sata/Code/zerocost/zerocost-specbenchmark/benchspec/CPU2006/999.specrand/exe/specrand_base.NaCl
+1625515565.42: Tee child 447973 exited with code 0 (exit code=0, signal=0)
+1625515565.42: update_config_md5(Spec::Config=HASH(0x41b37b0), NaCl, default) called
+1625515565.42: Found new MD5 signature for 999.specrand=base=NaCl=default
+1625515565.42: Updating config file /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg
+1625515565.42: /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg will be saved as /mnt/sata/Code/zerocost/zerocost-specbenchmark/config/linux32-i386-nacl.cfg.2021-07-05_1306
+
+1625515565.42: Build errors: 400.perlbench(base; CE), 473.astar(base; CE), 483.xalancbmk(base; CE)
+1625515565.42: Build successes: 999.specrand(base)
+
+1625515565.42: Build Complete
+
+1625515565.42: The log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log
+1625515565.42: The debug log for this run is in /mnt/sata/Code/zerocost/zerocost-specbenchmark/result/CPU2006.014.log.debug
+
+1625515565.42: runspec finished at Mon Jul  5 13:06:05 2021; 9 total seconds elapsed

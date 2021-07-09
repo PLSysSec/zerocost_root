@@ -1,0 +1,1764 @@
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="generator" content="SPEC CPU2006 Tools 6101 (HTML v6128)" />
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=2" />
+<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<meta name="author" content="Turbo Computers" />
+<meta name="description" content="Invalid CINT2006 result for Tyan Thunder KKQS Pro (S4882); base: --; peak: Not Run" />
+<meta name="keywords" content="Invalid CINT2006 SPEC www.spec.org Tyan Tyan Thunder KKQS Pro (S4882) Turbo Computers Base --" />
+<style type="text/css" id="internalScreen" media="screen">
+<!--
+body {
+  margin:  1em;
+  border:  0;
+  padding: 0;
+  background: white;
+  color:      black;
+  font-family: "Times Roman", times, serif;
+}
+
+.tt {
+  font-family: monospace;
+}
+
+div.flagClass > h2 {
+  border-bottom: 1px dotted black;
+  width: 80%;
+  font-family: sans-serif;
+}
+
+div.flagDesc {
+  clear: both;
+  background-color: rgb(255, 245, 220);
+  border: 1px solid blue; /* XXX This is for debugging */ 
+  margin: 0 auto;
+  width: 90%;
+}
+
+li.flagName {
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: block;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 125%;
+  white-space: nowrap;
+}
+
+/* (presumably short) informationals all get grouped together near the top
+ * of the flag description block.
+ */
+.flagOrigin, .flagDescClass, .flagDescCompiler, .flagDescRE, .flagDescParallel, .flagVar {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  padding: 0.25em;
+  margin: 0 0 0.25em 0;
+}
+
+.flagDescClass::before {
+  content: "Flag Class: ";
+}
+.flagDescCompiler::before {
+  content: "Compilers that recognize this flag: ";
+}
+.flagDescRE::before {
+  content: "Regular Expression: ";
+}
+.flagDescParallel::before {
+  content: "Indicates automatic parallelization: ";
+}
+.flagVar::before {
+  content: "Found In: ";
+}
+
+span.flagDescInc {
+  border-bottom: 1px solid black;
+}
+
+/* The description text stands alone. */
+.descText {
+  clear: both;
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* This is a separate class so that in the print style sheet it can
+ * be ignored.
+ * Also, 'style="clear:both;"' is longer than 'class="clear"'
+ */
+.clear {
+  clear: both;
+}
+
+/* This is really for the link _to_ the flag report */
+li.unknown > a:link, a:visited { text-decoration: none; }
+
+.monospace {
+  font-family: Courier, "Courier New", monospace;
+}
+
+ul.flagDescList {
+  clear: both;
+  list-style-type: none;
+}
+
+/* Arrange for each flag description to have some headroom. */
+ul.flagDescList > li {
+  margin: 2em 0 0 0;
+}
+
+ul.flagDesc {
+  list-style-type: none;
+}
+
+div.flagTOC {
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+ul.flagTOC {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.flagTOC > li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+  margin: 0;
+  padding: 0.25em 0 0.25em 0;
+  float: left;
+  display: inline-block; /* Fix IE bug; compliant browsers will ignore this */
+  width: 24.3%;
+  min-height: 1.5em;
+  overflow: hidden; /* If the table gets squeezed too much, don't let the
+                     * text overlap
+                     */
+  white-space: nowrap;
+}
+
+ul.SubMenu li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+}
+
+ul.SubMenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0 0 0 2em;
+  padding: 0.25em 5em 0.25em 0.5em;
+  white-space: nowrap;
+}
+
+li:hover > ul.SubMenu, ul.SubMenu:hover {
+  display: block;
+}
+
+ul.SubMenu > li:hover, ul.flagTOC > li:hover {
+  background-color: rgb(176, 196, 238); /* lightsteelgray... almost */
+  border: 1px solid rgb(128, 128, 128);
+}
+
+
+.resultpage a:link, .resultpage a:visited {
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: inherit;
+}
+
+.resultpage {
+  margin: auto;
+  padding: 0;
+  width: 800px;
+}
+
+div.logo {
+  float: left;
+  width: 38px;
+  height: 57px;
+}
+
+.titlebarcontainer, .resultstable, .ncsection {
+  border: solid 1px;
+  width: 100%;
+  float: left;
+}
+
+.ncsection {
+  background-color: white;
+  color: black;
+}
+
+.titlebar {
+  float: left;
+  padding: 0em 1em 0em 1em;
+  text-align: center;
+  width: 91%;
+}
+
+div.titlebar > h1, div.titlebar > p {
+  margin: 0 1em 0 1em;
+}
+
+div.ncsection {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.systembar {
+  float: left;
+  width: 65%;
+  font-size: 150%;
+  margin: 0;
+  padding: 0.1em;
+  border-right: solid 1px black;
+}
+
+.metricbar {
+  padding: 0.1em;
+  margin: 0;
+  float: right;
+  width: 33%;
+  height: 50%;
+  font-size: 120%;
+}
+
+.metricbar#base {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+.metricbar#peak {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+}
+
+.metricbar p {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.datebar p, .systembar p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Datebar stuff for older results */
+.datebar p {
+  float: left;
+  border-left: solid 1px black;
+}
+
+span.item {
+  float: left;
+  margin: 0;
+  padding: 0.1em 0 0.1em 0.5em;
+}
+
+span.value {
+  float: right;
+  padding: 0.1em 0.5em 0.1em 0;
+}
+
+div.datebar {
+  width: 100%;
+  float: left;
+  min-height: 100%;
+  border: solid 1px black;
+}
+
+p#test_sponsor         { width: 48%; }
+p#tester               { width: 48%; }
+p#license_num          { width: 24%; }
+p#test_date            { width: 23%; }
+p#hw_avail, p#sw_avail { width: 25%; }
+
+/* Table-based datebar on newer results */
+table.datebar {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  border-collapse: collapse;
+  border: solid 1px black;
+  table-layout: fixed;
+}
+
+table.datebar th {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0.5em;
+  padding: 0 0.5em 0 0.25em;
+}
+
+table.datebar td {
+  text-align: left;
+  padding: 0 0.5em 0 0;
+}
+
+th#license_num          { width: 17%; }
+th#test_sponsor         { width: 17%; }
+th#tester               { width: 17%; }
+th#test_date            { width: 22%; }
+th#hw_avail             { width: 22%; }
+th#sw_avail             { width: 22%; }
+td#license_num_val      { width: 52%; }
+td#test_sponsor_val     { width: 52%; }
+td#tester_val           { width: 52%; }
+td#test_date_val        { width: 13%; white-space: nowrap; }
+td#hw_avail_val         { width: 13%; white-space: nowrap; }
+td#sw_avail_val         { width: 13%; white-space: nowrap; }
+
+
+div.graph {
+  margin: auto;
+}
+
+div.sysdesc > h2 {
+  text-align: center;
+  background-color: #c8c8c8;
+  color: black;
+  padding: 0.5em 0 0.5em 0;
+  margin: 0;
+} 
+  
+div.sysdesc {
+  margin: 0.5em 0 0.5em 0;
+}
+
+div.infobox, div.sysdesc {
+  float: left;
+  width: 100%;
+  padding: 0;
+  border: solid 1px black;
+}
+
+div.infobox table {
+  width: 49%;
+  float: left;
+}
+
+div.infobox table tr {
+  vertical-align: top;
+}
+
+div.infobox table#Hardware,
+div.infobox table#BenchmarkSoftware {
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+div.infobox table#Systems {
+  width: 100%;
+}
+
+div.infobox table#Systems tbody th {
+  width: 20%;
+}
+
+div.infobox thead th {
+  font-size: 200%;
+}
+
+div.infobox tbody th {
+  text-align: left;
+}
+
+.resultstable h2, div.notes h2 {
+  text-align: center;
+  margin: 0.1em;
+}
+
+div.notes h3 {
+  margin: 0.1em;
+}
+
+div.notes table {
+  width: 100%;
+}
+
+div.notes table tr td {
+  text-align: right;
+  vertical-align: top;
+}
+
+/* Alas, IE6... if only you didn't suck so much...
+div.notes table tr td + td {
+*/
+div.notes table td.al {
+  text-align: left;
+  width: 85%;
+}
+
+div.notes table tr td {
+  padding-bottom: 1em;
+}
+
+div.notes table.portability tr td {
+  padding: 0em;
+}
+
+div.notes table.portability {
+  padding: 1em;
+}
+
+.resultstable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultstable th.basecol, .resultstable th.peakcol {
+  padding: 0.1em;
+  font-size: 90%;
+}
+
+.resultstable th {
+  border: solid 2px black;
+}
+
+.resultstable td {
+  border: solid 1px #b8b8b8;
+}
+
+td.bm, th.bm { 
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+td.secs { 
+  border-left: solid 2px black;
+}
+
+td.ratio { 
+  border-right: solid 2px black;
+}
+
+.resultstable tfoot td {
+  text-align: center;
+  border: solid 2px black;
+}
+
+th.basecol {
+  background-color: #c8c8c8;
+  color: black;
+}
+td.basecol {
+  text-align: right;
+  background-color: transparent;
+  color: black;
+}
+
+th.peakcol {
+  text-align: center;
+}
+
+.peakcol {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+  text-align: right;
+}
+
+td.bm {
+  /* Basically, the benchmark name and copies columns */
+  background-color: #c8c8c8;
+  color: black;
+}
+
+span.selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.selected a:link, .selected a:visited {
+  border-bottom: 0;
+}
+
+div.notes {
+  width: 100%;
+  float: left;
+  border: solid 1px black;
+}
+
+div.flagfooter {
+  text-align: center;
+}
+
+div.errors {
+  border: solid 2px red;
+}
+div.errors h2 {
+  background-color: transparent;
+  color: red;
+}
+
+div.footer {
+  border: none;
+}
+
+/* People find the "double underline" confusing.  And Safari 1.3 doesn't deal
+ * well with attempting to disable the border for userflag links.  So just
+ * give up and don't decorate user flags specially.
+********************
+span.userflag {
+  text-decoration: underline;
+}
+
+.userflag a:link {
+  border-bottom: 0;
+}
+********************
+*/
+
+/* Keep flags from being wrapped */
+span.userflag, span.flagtext {
+  white-space: nowrap;
+}
+/* Most of the screen-specific CSS is also the common CSS */
+
+/* Style for the non-image W3C marking at the bottom of the page, courtesy of
+ * Marek Prokop (http://www.sovavsiti.cz/css/w3c_buttons.html)
+ */
+.w3cbutton3 {
+  margin: 1em 1em 0 0;
+  width: 9em;
+  border: 1px solid #ccc;
+  font-family: helvetica,arial,sans-serif;
+  font-size: 70%;
+  font-weight: bold;
+  float: left;
+}
+.w3cbutton3 a {
+  display: block;
+  width: 100%;
+}
+.w3cbutton3 a:link,
+.w3cbutton3 a:visited,
+.w3cbutton3 a:hover {
+  background-color: #fc6;
+  color: #000;
+  text-decoration: none;
+  border-bottom: none;
+}
+.w3cbutton3 span.w3c {
+  padding: 0 0.4em;
+  background-color: #fff;
+  color: #0c479d;
+}
+
+-->
+</style>
+<style type="text/css" id="internalPrint" media="print">
+<!--
+body {
+  margin:  1em;
+  border:  0;
+  padding: 0;
+  background: white;
+  color:      black;
+  font-family: "Times Roman", times, serif;
+}
+
+.tt {
+  font-family: monospace;
+}
+
+div.flagClass > h2 {
+  border-bottom: 1px dotted black;
+  width: 80%;
+  font-family: sans-serif;
+}
+
+div.flagDesc {
+  clear: both;
+  background-color: rgb(255, 245, 220);
+  border: 1px solid blue; /* XXX This is for debugging */ 
+  margin: 0 auto;
+  width: 90%;
+}
+
+li.flagName {
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: block;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 125%;
+  white-space: nowrap;
+}
+
+/* (presumably short) informationals all get grouped together near the top
+ * of the flag description block.
+ */
+.flagOrigin, .flagDescClass, .flagDescCompiler, .flagDescRE, .flagDescParallel, .flagVar {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  padding: 0.25em;
+  margin: 0 0 0.25em 0;
+}
+
+.flagDescClass::before {
+  content: "Flag Class: ";
+}
+.flagDescCompiler::before {
+  content: "Compilers that recognize this flag: ";
+}
+.flagDescRE::before {
+  content: "Regular Expression: ";
+}
+.flagDescParallel::before {
+  content: "Indicates automatic parallelization: ";
+}
+.flagVar::before {
+  content: "Found In: ";
+}
+
+span.flagDescInc {
+  border-bottom: 1px solid black;
+}
+
+/* The description text stands alone. */
+.descText {
+  clear: both;
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* This is a separate class so that in the print style sheet it can
+ * be ignored.
+ * Also, 'style="clear:both;"' is longer than 'class="clear"'
+ */
+.clear {
+  clear: both;
+}
+
+/* This is really for the link _to_ the flag report */
+li.unknown > a:link, a:visited { text-decoration: none; }
+
+.monospace {
+  font-family: Courier, "Courier New", monospace;
+}
+
+ul.flagDescList {
+  clear: both;
+  list-style-type: none;
+}
+
+/* Arrange for each flag description to have some headroom. */
+ul.flagDescList > li {
+  margin: 2em 0 0 0;
+}
+
+ul.flagDesc {
+  list-style-type: none;
+}
+
+div.flagTOC {
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+ul.flagTOC {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.flagTOC > li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+  margin: 0;
+  padding: 0.25em 0 0.25em 0;
+  float: left;
+  display: inline-block; /* Fix IE bug; compliant browsers will ignore this */
+  width: 24.3%;
+  min-height: 1.5em;
+  overflow: hidden; /* If the table gets squeezed too much, don't let the
+                     * text overlap
+                     */
+  white-space: nowrap;
+}
+
+ul.SubMenu li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+}
+
+ul.SubMenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0 0 0 2em;
+  padding: 0.25em 5em 0.25em 0.5em;
+  white-space: nowrap;
+}
+
+li:hover > ul.SubMenu, ul.SubMenu:hover {
+  display: block;
+}
+
+ul.SubMenu > li:hover, ul.flagTOC > li:hover {
+  background-color: rgb(176, 196, 238); /* lightsteelgray... almost */
+  border: 1px solid rgb(128, 128, 128);
+}
+
+
+.resultpage a:link, .resultpage a:visited {
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: inherit;
+}
+
+.resultpage {
+  margin: auto;
+  padding: 0;
+  width: 800px;
+}
+
+div.logo {
+  float: left;
+  width: 38px;
+  height: 57px;
+}
+
+.titlebarcontainer, .resultstable, .ncsection {
+  border: solid 1px;
+  width: 100%;
+  float: left;
+}
+
+.ncsection {
+  background-color: white;
+  color: black;
+}
+
+.titlebar {
+  float: left;
+  padding: 0em 1em 0em 1em;
+  text-align: center;
+  width: 91%;
+}
+
+div.titlebar > h1, div.titlebar > p {
+  margin: 0 1em 0 1em;
+}
+
+div.ncsection {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.systembar {
+  float: left;
+  width: 65%;
+  font-size: 150%;
+  margin: 0;
+  padding: 0.1em;
+  border-right: solid 1px black;
+}
+
+.metricbar {
+  padding: 0.1em;
+  margin: 0;
+  float: right;
+  width: 33%;
+  height: 50%;
+  font-size: 120%;
+}
+
+.metricbar#base {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+.metricbar#peak {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+}
+
+.metricbar p {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.datebar p, .systembar p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Datebar stuff for older results */
+.datebar p {
+  float: left;
+  border-left: solid 1px black;
+}
+
+span.item {
+  float: left;
+  margin: 0;
+  padding: 0.1em 0 0.1em 0.5em;
+}
+
+span.value {
+  float: right;
+  padding: 0.1em 0.5em 0.1em 0;
+}
+
+div.datebar {
+  width: 100%;
+  float: left;
+  min-height: 100%;
+  border: solid 1px black;
+}
+
+p#test_sponsor         { width: 48%; }
+p#tester               { width: 48%; }
+p#license_num          { width: 24%; }
+p#test_date            { width: 23%; }
+p#hw_avail, p#sw_avail { width: 25%; }
+
+/* Table-based datebar on newer results */
+table.datebar {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  border-collapse: collapse;
+  border: solid 1px black;
+  table-layout: fixed;
+}
+
+table.datebar th {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0.5em;
+  padding: 0 0.5em 0 0.25em;
+}
+
+table.datebar td {
+  text-align: left;
+  padding: 0 0.5em 0 0;
+}
+
+th#license_num          { width: 17%; }
+th#test_sponsor         { width: 17%; }
+th#tester               { width: 17%; }
+th#test_date            { width: 22%; }
+th#hw_avail             { width: 22%; }
+th#sw_avail             { width: 22%; }
+td#license_num_val      { width: 52%; }
+td#test_sponsor_val     { width: 52%; }
+td#tester_val           { width: 52%; }
+td#test_date_val        { width: 13%; white-space: nowrap; }
+td#hw_avail_val         { width: 13%; white-space: nowrap; }
+td#sw_avail_val         { width: 13%; white-space: nowrap; }
+
+
+div.graph {
+  margin: auto;
+}
+
+div.sysdesc > h2 {
+  text-align: center;
+  background-color: #c8c8c8;
+  color: black;
+  padding: 0.5em 0 0.5em 0;
+  margin: 0;
+} 
+  
+div.sysdesc {
+  margin: 0.5em 0 0.5em 0;
+}
+
+div.infobox, div.sysdesc {
+  float: left;
+  width: 100%;
+  padding: 0;
+  border: solid 1px black;
+}
+
+div.infobox table {
+  width: 49%;
+  float: left;
+}
+
+div.infobox table tr {
+  vertical-align: top;
+}
+
+div.infobox table#Hardware,
+div.infobox table#BenchmarkSoftware {
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+div.infobox table#Systems {
+  width: 100%;
+}
+
+div.infobox table#Systems tbody th {
+  width: 20%;
+}
+
+div.infobox thead th {
+  font-size: 200%;
+}
+
+div.infobox tbody th {
+  text-align: left;
+}
+
+.resultstable h2, div.notes h2 {
+  text-align: center;
+  margin: 0.1em;
+}
+
+div.notes h3 {
+  margin: 0.1em;
+}
+
+div.notes table {
+  width: 100%;
+}
+
+div.notes table tr td {
+  text-align: right;
+  vertical-align: top;
+}
+
+/* Alas, IE6... if only you didn't suck so much...
+div.notes table tr td + td {
+*/
+div.notes table td.al {
+  text-align: left;
+  width: 85%;
+}
+
+div.notes table tr td {
+  padding-bottom: 1em;
+}
+
+div.notes table.portability tr td {
+  padding: 0em;
+}
+
+div.notes table.portability {
+  padding: 1em;
+}
+
+.resultstable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultstable th.basecol, .resultstable th.peakcol {
+  padding: 0.1em;
+  font-size: 90%;
+}
+
+.resultstable th {
+  border: solid 2px black;
+}
+
+.resultstable td {
+  border: solid 1px #b8b8b8;
+}
+
+td.bm, th.bm { 
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+td.secs { 
+  border-left: solid 2px black;
+}
+
+td.ratio { 
+  border-right: solid 2px black;
+}
+
+.resultstable tfoot td {
+  text-align: center;
+  border: solid 2px black;
+}
+
+th.basecol {
+  background-color: #c8c8c8;
+  color: black;
+}
+td.basecol {
+  text-align: right;
+  background-color: transparent;
+  color: black;
+}
+
+th.peakcol {
+  text-align: center;
+}
+
+.peakcol {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+  text-align: right;
+}
+
+td.bm {
+  /* Basically, the benchmark name and copies columns */
+  background-color: #c8c8c8;
+  color: black;
+}
+
+span.selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.selected a:link, .selected a:visited {
+  border-bottom: 0;
+}
+
+div.notes {
+  width: 100%;
+  float: left;
+  border: solid 1px black;
+}
+
+div.flagfooter {
+  text-align: center;
+}
+
+div.errors {
+  border: solid 2px red;
+}
+div.errors h2 {
+  background-color: transparent;
+  color: red;
+}
+
+div.footer {
+  border: none;
+}
+
+/* People find the "double underline" confusing.  And Safari 1.3 doesn't deal
+ * well with attempting to disable the border for userflag links.  So just
+ * give up and don't decorate user flags specially.
+********************
+span.userflag {
+  text-decoration: underline;
+}
+
+.userflag a:link {
+  border-bottom: 0;
+}
+********************
+*/
+
+/* Keep flags from being wrapped */
+span.userflag, span.flagtext {
+  white-space: nowrap;
+}
+/* Classes that contain links - useless on paper */
+.flagTOC, .SubMenu, .NoPrint {
+  display: none;
+}
+
+/* Don't decorate links - they're not clickable */
+a {
+  text-decoration: none;
+  background: inherit;
+  color: inherit;
+}
+
+.resultpage {
+  width: 100%;
+}
+
+.w3cbutton3 {
+  display: none;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+body { background-image: url(invalid.gif) }
+-->
+</style>
+
+<title>Invalid CINT2006 Result: Tyan Tyan Thunder KKQS Pro (S4882) (test sponsored by Turbo Computers)</title>
+</head>
+
+<body>
+<div class="resultpage">
+ <div class="titlebarcontainer">
+  <div class="logo">
+  </div>
+  <div class="titlebar">
+   <h1><span style="color: red">Invalid</span> SPEC&reg; CINT2006 Result</h1>
+   <p style="font-size: smaller">Copyright 2006-2008 Standard Performance Evaluation Corporation</p>
+  </div>
+ </div>
+ <div class="titlebarcontainer">
+  <div class="systembar">
+   <p>Tyan</p>
+   <p>Tyan Thunder KKQS Pro (S4882)</p>
+  </div>
+  <div class="metricbar" id="peak">
+    <p><span class="item"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#SPECint2006">SPECint&reg;2006</a> = </span>
+       <span class="value">Not Run</span></p>
+  </div>
+  <div class="metricbar" id="base">
+    <p><span class="item"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#SPECintbase2006">SPECint_base2006</a> = </span>
+       <span class="value">--</span></p>
+  </div>
+ </div>
+ <table class="datebar">
+  <tbody>
+   <tr>
+    <th id="license_num"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPU2006license">CPU2006 license:</a></th>
+    <td id="license_num_val">0</td>
+    <th id="test_date"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Testdate">Test date:</a></th>
+    <td id="test_date_val">Jul-2021</td>
+   </tr>
+   <tr>
+    <th id="test_sponsor"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Testsponsor">Test sponsor:</a></th>
+    <td id="test_sponsor_val">Turbo Computers</td>
+    <th id="hw_avail"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#HardwareAvailability">Hardware Availability:</a></th>
+    <td id="hw_avail_val">Dec-9999</td>
+   </tr>
+   <tr>
+    <th id="tester"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Testedby">Tested by:</a></th>
+    <td id="tester_val">Turbo Computers</td>
+    <th id="sw_avail"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#SoftwareAvailability">Software Availability:</a></th>
+    <td id="sw_avail_val">Dec-9999</td>
+   </tr>
+  </tbody>
+ </table>
+ <div class="graph">
+  <img src="CINT2006.009.ref.gif" alt="Benchmark results graph" height="606" width="799" />
+ </div>
+ <div class="infobox">
+  <table id="Hardware"
+         summary="Details of hardware configuration for the system under test">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Hardware">Hardware</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPUName">CPU Name</a>:</th>
+     <td>AMD Opteron 256</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPUCharacteristics">CPU Characteristics</a>:</th>
+     <td> </td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPUMHz">CPU MHz</a>:</th>
+     <td>3000</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#FPU">FPU</a>:</th>
+     <td>Integrated</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPUsenabled">CPU(s) enabled</a>:</th>
+     <td>1 core, 1 chip, 1 core/chip</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#CPUsorderable">CPU(s) orderable</a>:</th>
+     <td>1 chip</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#PrimaryCache">Primary Cache</a>:</th>
+     <td>64 KB I + 64 KB D on chip per chip</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#SecondaryCache">Secondary Cache</a>:</th>
+     <td>1 MB I+D on chip per chip</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#L3Cache">L3 Cache</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#OtherCache">Other Cache</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Memory">Memory</a>:</th>
+     <td>2 GB (2 x 1GB DDR333 CL2.5)</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#DiskSubsystem">Disk Subsystem</a>:</th>
+     <td>SATA</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#OtherHardware">Other Hardware</a>:</th>
+     <td>--</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="Software"
+         summary="Details of software configuration for the system under test">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Software">Software</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#OperatingSystem">Operating System</a>:</th>
+     <td>SUSE Linux 10.1 (for i386)</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Compiler">Compiler</a>:</th>
+     <td>gcc , g++ &amp; gfortran 4.2 Snapshot 20060715 (for<br />
+i386)<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#AutoParallel">Auto Parallel</a>:</th>
+     <td>No</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#FileSystem">File System</a>:</th>
+     <td>ext3</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#SystemState">System State</a>:</th>
+     <td>runlevel 3</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#BasePointers">Base Pointers</a>:</th>
+     <td>32-bit</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#PeakPointers">Peak Pointers</a>:</th>
+     <td>32-bit</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#OtherSoftware">Other Software</a>:</th>
+     <td>None</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="errors notes">
+  <h2><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Errors">Errors</a></h2>
+  <pre>
+'reportable' flag not set during run
+471.omnetpp (base) did not have enough runs!
+456.hmmer (base) did not have enough runs!
+445.gobmk (base) did not have enough runs!
+458.sjeng (base) did not have enough runs!
+429.mcf (base) did not have enough runs!
+473.astar (base) did not have enough runs!
+483.xalancbmk (base) did not have enough runs!
+400.perlbench (base) did not have enough runs!
+464.h264ref (base) did not have enough runs!
+462.libquantum (base) did not have enough runs!
+401.bzip2 (base) did not have enough runs!
+403.gcc (base) did not have enough runs!
+Unknown flags were used! See
+     <a href="http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl">http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl</a>
+for information about how to get rid of this error.
+  </pre>
+ </div>
+ <div class="resultstable">
+  <h2><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#ResultsTable">Results Table</a></h2>
+  <table summary="Detailed per-benchmark result data">
+   <colgroup>
+    <col id="benchmark" />
+    <col id="baseres" span="6" />
+    <col id="peakres" span="6" />
+   </colgroup>
+   <thead>
+    <tr>
+     <th rowspan="2"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Benchmark">Benchmark</a></th>
+     <th class="basecol" colspan="6">Base</th>
+     <th class="peakcol" colspan="6">Peak</th>
+    </tr>
+    <tr>
+     <th class="basecol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="basecol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="basecol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol secs" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio" ><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Ratio">Ratio</a></th>
+    </tr>
+   </thead>
+   <tfoot>
+    <tr>
+     <td colspan="13">Results appear in the <a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#RunOrder">order in which they were run</a>. Bold underlined text <a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median">indicates a median measurement</a>.</td>
+    </tr>
+   </tfoot>
+   <tbody>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/400.perlbench.html">400.perlbench</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/401.bzip2.html">401.bzip2</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/403.gcc.html">403.gcc</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/429.mcf.html">429.mcf</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/445.gobmk.html">445.gobmk</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/456.hmmer.html">456.hmmer</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">330</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">28.3</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/458.sjeng.html">458.sjeng</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">339</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">35.6</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/462.libquantum.html">462.libquantum</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">290</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">71.3</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/464.h264ref.html">464.h264ref</a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/471.omnetpp.html">471.omnetpp</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">237</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">26.3</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/473.astar.html">473.astar</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">280</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">25.1</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/cpu2006/Docs/483.xalancbmk.html">483.xalancbmk</a></td>
+     <td class="basecol secs selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">133</span></a></td>
+     <td class="basecol ratio selected"><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#Median"><span class="selected">51.8</span></a></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="basecol secs"></td>
+     <td class="basecol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+     <td class="peakcol secs"></td>
+     <td class="peakcol ratio"></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="notes">
+  <h2><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#GeneralNotes">General Notes</a></h2>
+  <pre>
+
+ 400.perlbench: -DSPEC_CPU_LINUX_IA32
+ 462.libquantum: -DSPEC_CPU_LINUX
+ C base flags: -O2
+ C++ base flags: -O2
+ Fortran base flags: -O2
+</pre>
+ </div>
+ <div class="flags notes" id="unknown">
+  <h2><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#BaseUnknownFlags">Base Unknown Flags</a></h2>
+  <table class="unknown">
+   <tr>
+   <td>456.hmmer:</td>
+   <td class="al">
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">CC</span>)
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">COPTIMIZE</span>)
+   </td>
+   </tr>
+   <tr>
+   <td>458.sjeng:</td>
+   <td class="al">
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">CC</span>)
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">COPTIMIZE</span>)
+   </td>
+   </tr>
+   <tr>
+   <td>462.libquantum:</td>
+   <td class="al">
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">CC</span>)
+    "<span class="tt">clang -flto -m32 -Wl,--allow-multiple-definition</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">COPTIMIZE</span>)
+   </td>
+   </tr>
+   <tr>
+   <td>471.omnetpp:</td>
+   <td class="al">
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">CXX</span>)
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">CXXOPTIMIZE</span>)
+   </td>
+   </tr>
+   <tr>
+   <td>473.astar:</td>
+   <td class="al">
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">CXX</span>)
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">CXXOPTIMIZE</span>)
+   </td>
+   </tr>
+   <tr>
+   <td>483.xalancbmk:</td>
+   <td class="al">
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">CXX</span>)
+    "<span class="tt">clang++ -flto -m32 -Wl,--allow-multiple-definition -std=gnu++03</span>" (in <span class="tt">LD</span>)
+    "<span class="tt">-O2</span>" (in <span class="tt">CXXOPTIMIZE</span>)
+   </td>
+   </tr>
+  </table>
+ </div>
+ <div class="flags notes" id="base_portability">
+  <h2><a href="http://www.spec.org/auto/cpu2006/Docs/result-fields.html#BasePortabilityFlags">Base Portability Flags</a></h2>
+  <table class="portability">
+   <tr>
+   <td>462.libquantum:</td>
+   <td class="al">
+    &nbsp;<span class="flagtext"><a href="CINT2006.009.ref.flags.html#b462.libquantum_baseCPORTABILITY_DSPEC_CPU_LINUX">-DSPEC_CPU_LINUX</a></span>&nbsp;
+   </td>
+   </tr>
+   <tr>
+   <td>483.xalancbmk:</td>
+   <td class="al">
+    &nbsp;<span class="flagtext"><a href="CINT2006.009.ref.flags.html#b483.xalancbmk_baseCXXPORTABILITY_DSPEC_CPU_LINUX">-DSPEC_CPU_LINUX</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+ </div>
+ <div class="notes footer">
+<p>
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+</p>
+ </div>
+ <div class="notes footer">
+  <p>For questions about this result, please contact the tester.<br />
+   For other inquiries, please contact <a href="mailto:webmaster@spec.org">webmaster@spec.org</a><br />
+   Copyright 2006-2008 Standard Performance Evaluation Corporation<br />
+   Tested with SPEC CPU2006 v1.1.<br />
+   Report generated on Sun Jul  4 21:55:37 2021 by SPEC CPU2006 HTML formatter v6128.</p>
+ </div>
+ <div class="w3cbutton3">
+   <a href="http://validator.w3.org/check?uri=referer">
+     <span class="w3c">W3C</span>
+     <span class="spec">XHTML 1.0</span>
+   </a>
+ </div>
+ <div class="w3cbutton3">
+   <a href="http://jigsaw.w3.org/css-validator/check/referer">
+     <span class="w3c">W3C</span>
+     <span class="spec">CSS</span>
+   </a>
+ </div>
+</div>
+</body>
+</html>
+<!-- The following is an encoded version of the raw file that was used to
+     produce this result. Use the extract_raw script to retrieve it. -->
+<!-- BEGIN GZIP CINT2006.009.ref.rsf
+@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
+END -->
