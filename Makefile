@@ -140,11 +140,9 @@ SPEC_BUILDS=$(NACL_BUILDS) $(NATIVE_BUILDS)
 
 $(SPEC_PATH): # libnsl/build/lib/libnsl.so.1
 	cd $(shell realpath $(SPEC_PATH)/..) && git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
-	# LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" SPEC_INSTALL_NOCHECK=1 SPEC_FORCE_INSTALL=1
-	cd $(SPEC_PATH) && sh install.sh -f
+	cd $(SPEC_PATH) && SPEC_INSTALL_NOCHECK=1 SPEC_FORCE_INSTALL=1 sh install.sh -f
 
 build_spec: $(SPEC_PATH)
-	export LD_LIBRARY_PATH="$(CURR_DIR)/libnsl/build/lib/" && \
 	cd $(SPEC_PATH) && source shrc && \
 	cd config && \
 	for spec_build in $(NATIVE_BUILDS); do \
