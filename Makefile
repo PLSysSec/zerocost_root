@@ -19,55 +19,55 @@ SPEC_PATH := ./zerocost-specbenchmark
 CORE_COUNT= $(shell nproc --all)
 
 lucet_sandbox_compiler:
-	git clone git@github.com:PLSysSec/lucet_sandbox_compiler.git $@
+	git clone https://github.com/PLSysSec/lucet_sandbox_compiler.git $@
 	cd $@ && git checkout lucet-wasi-wasmsbx && git submodule update --init --recursive
 
 Sandboxing_NaCl :
 	git clone https://github.com/shravanrn/Sandboxing_NaCl.git $@
 
 rlbox_lucet_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
+	git clone https://github.com/PLSysSec/rlbox_lucet_sandbox.git $@
 	cd $@ && git checkout zerocost
 
 zerocost_heavy_trampoline:
-	git clone git@github.com:PLSysSec/zerocost_heavy_trampoline.git $@
+	git clone https://github.com/PLSysSec/zerocost_heavy_trampoline.git $@
 
 zerocost_testing_sandbox:
-	git clone git@github.com:PLSysSec/zerocost_testing_sandbox.git $@
+	git clone https://github.com/PLSysSec/zerocost_testing_sandbox.git $@
 
 rlbox_lucetstock_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_lucet_sandbox.git $@
+	git clone https://github.com/PLSysSec/rlbox_lucet_sandbox.git $@
 	cd $@ && git checkout lucet-transitions
 
 rlbox_mpk_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_mpk_sandbox.git $@
+	git clone https://github.com/PLSysSec/rlbox_mpk_sandbox.git $@
 	cd $@ && git checkout ideal
 
 rlbox_segmentsfizerocost_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
+	git clone https://github.com/PLSysSec/rlbox_segmentsfizerocost_sandbox.git $@
 
 rlbox_nacl_sandbox:
-	git clone git@github.com:PLSysSec/rlbox_nacl_sandbox.git $@
+	git clone https://github.com/PLSysSec/rlbox_nacl_sandbox.git $@
 
 rlbox_sandboxing_api:
-	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
+	git clone https://github.com/PLSysSec/rlbox_sandboxing_api.git $@
 	cd $@ && git checkout gettimeofday
 
 zerocost-libjpeg-turbo:
-	git clone git@github.com:PLSysSec/zerocost-libjpeg-turbo.git $@
+	git clone https://github.com/PLSysSec/zerocost-libjpeg-turbo.git $@
 
 zerocost_testing_firefox:
-	git clone git@github.com:PLSysSec/zerocost_testing_firefox.git $@
+	git clone https://github.com/PLSysSec/zerocost_testing_firefox.git $@
 
 web_resource_crawler:
-	git clone git@github.com:shravanrn/web_resource_crawler.git $@
+	git clone https://github.com/shravanrn/web_resource_crawler.git $@
 	cd $@ && git checkout zerocost
 
 rlbox_lucet_directcall_benchmarks:
-	git clone git@github.com:PLSysSec/rlbox_lucet_directcall_benchmarks.git $@
+	git clone https://github.com/PLSysSec/rlbox_lucet_directcall_benchmarks.git $@
 
 zerocost_llvm:
-	git clone git@github.com:PLSysSec/zerocost_llvm.git $@
+	git clone https://github.com/PLSysSec/zerocost_llvm.git $@
 
 $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang: zerocost_llvm
 	mkdir -p $(OUTPUT_PATH)/zerocost_llvm
