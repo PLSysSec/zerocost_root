@@ -13,9 +13,6 @@ OUTPUT_PATH := $(CURR_DIR)/ffbuilds
 CURR_USER := ${USER}
 CURR_PATH := ${PATH}
 
-SPEC_PATH := ./zerocost-specbenchmark
-# SPEC_PATH := /mnt/sata/Code/zerocost/zerocost-specbenchmark
-
 CORE_COUNT= $(shell nproc --all)
 
 lucet_sandbox_compiler:
@@ -136,48 +133,6 @@ zerocost_clang: $(OUTPUT_PATH)/zerocost_llvm_install/bin/clang
 
 NATIVE_BUILDS=linux32-i386-clang linux32-i386-clangzerocost
 NACL_BUILDS=linux32-i386-nacl
-SPEC_BUILDS=$(NACL_BUILDS) $(NATIVE_BUILDS)
-
-$(SPEC_PATH): # libnsl/build/lib/libnsl.so.1
-	cd $(shell realpath $(SPEC_PATH)/..) && git clone git@github.com:PLSysSec/zerocost-specbenchmark.git
-	cd $(SPEC_PATH) && SPEC_INSTALL_NOCHECK=1 SPEC_FORCE_INSTALL=1 sh install.sh -f
-
-build_spec: $(SPEC_PATH)
-	cd $(SPEC_PATH) && source shrc && \
-	cd config && \
-	for spec_build in $(NATIVE_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
-	done && \
-	for spec_build in $(NACL_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
-	done
-
-# echo "Cleaning dirs" && \
-# for spec_build in $(SPEC_BUILDS); do \
-# 	runspec --config=$$spec_build.cfg --action=clobber all_c_cpp 2&>1 > /dev/null; \
-# done && \
-#  2>&1 | grep -i "building"
-
-run_spec:
-	cd $(SPEC_PATH) && source shrc && cd config && \
-	for spec_build in $(NATIVE_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
-	done && \
-	for spec_build in $(NACL_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref --nacl all_c_cpp; \
-	done
-	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  \
-		"$(SPEC_PATH)/result/spec_results=Stock:Stock,NaCl:NaCl,SegmentZero:SegmentZero" -n 3 --usePercent
-	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
-
-run_spec_native:
-	cd $(SPEC_PATH) && source shrc && cd config && \
-	for spec_build in $(NATIVE_BUILDS); do \
-		runspec --config=$$spec_build.cfg --action=build --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
-		runspec --config=$$spec_build.cfg --action=run --define cores=1 --iterations=1 --noreportable --size=ref all_c_cpp; \
-	done
-	python3 spec_stats.py -i $(SPEC_PATH)/result --filter  "$(SPEC_PATH)/result/spec_results=Stock:Stock,SegmentZero:SegmentZero" -n 2 --usePercent
-	mv $(SPEC_PATH)/result/ benchmarks/spec_$(shell date --iso=seconds)
 
 build: build_check zerocost_clang
 	cd lucet_sandbox_compiler && cargo build --release
