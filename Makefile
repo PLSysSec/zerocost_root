@@ -48,6 +48,7 @@ rlbox_segmentsfizerocost_sandbox:
 
 rlbox_nacl_sandbox:
 	git clone git@github.com:PLSysSec/rlbox_nacl_sandbox.git $@
+	cd $@ && git checkout original_rlbox_fork
 
 rlbox_sandboxing_api:
 	git clone git@github.com:PLSysSec/rlbox_sandboxing_api.git $@
